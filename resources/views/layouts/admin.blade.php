@@ -43,7 +43,7 @@
 
     <!--! The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags !-->
     <!--! BEGIN: Apps Title-->
-    <title>Apteke 2</title>
+    <title>Zooma Farm</title>
     <!--! END:  Apps Title-->
     <!--! BEGIN: Favicon-->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/admins/assets/images/favicon.ico') }}">
@@ -69,7 +69,7 @@
 <!--! ================================================================ !-->
 <!--! [Start] Navigation Manu !-->
 <!--! ================================================================ !-->
-<x-pages.sidebar></x-pages.sidebar>
+<x-admin.sidebar></x-admin.sidebar>
 <!--! ================================================================ !-->
 <!--! [End]  Navigation Manu !-->
 <!--! ================================================================ !-->
@@ -77,7 +77,7 @@
 <!--! ================================================================ !-->
 <!--! [Start] Header !-->
 <!--! ================================================================ !-->
-<x-pages.header></x-pages.header>
+<x-admin.header></x-admin.header>
 <!--! ================================================================ !-->
 <!--! [End] Header !-->
 <!--! ================================================================ !-->

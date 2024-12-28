@@ -1,0 +1,41 @@
+.country-list{display:flex;flex-wrap:wrap;justify-content:space-between}
+.country-list .country-item-lnk{flex-basis:33%;color:#001965}
+.country-list .country-item-lnk .country-item{display:flex;align-items:baseline}
+.country-list .country-item-lnk .country-item .icon{margin-right:26px;font-size:16px}
+.country-list .country-item-lnk .country-item .country-name{font-size:20px;line-height:36px}
+.country-list::after{content:"";flex-basis:33%}
+@media only screen and (max-width:1280px){.country-list .country-item-lnk .country-item{margin-top:8px}
+.country-list .country-item-lnk .country-item .icon{margin-right:20px}
+.country-list .country-item-lnk .country-item .country-name{font-size:17px;line-height:28px}
+}
+@media only screen and (max-width:768px){.country-list .country-item-lnk .country-item .icon{margin-right:11px}
+.country-list .country-item-lnk .country-item .country-name{font-size:17px;line-height:28px}
+}
+@media only screen and (max-width:525px){.country-list{height:0;overflow:hidden;padding:0;border-left:solid 1px #001965;margin-left:6px}
+.country-list .country-item-lnk{flex-basis:100%}
+.country-list .country-item-lnk .country-item .icon{margin-right:12px}
+.country-list .country-item-lnk .country-item .country-name{font-size:16px;line-height:44px}
+}
+.country-page .country-current-selected{align-items:center;display:none}
+.country-page .country-current-selected .text{color:#001965}
+.country-page .country-page-title{color:#001965}
+.country-page .grouped-area{position:relative}
+.country-page .grouped-area .grouped-name{font-weight:bold;color:#001965}
+.country-page .grouped-area .icon-plus{position:absolute;left:-10px;top:8px;font-size:36px;display:none;transition:cubic-bezier(0.25,0.1,0.25,1) .2s}
+.country-page .country-page-footer{border-top:solid 1px #001965}
+.country-page .country-page-footer .text{color:#001965}
+.country-page .country-page-footer .text.list-question{font-weight:bold}
+.country-page .country-page-footer .list-lnk{display:flex;align-items:center}
+.country-page .country-page-footer .list-lnk .text{margin-right:12px}
+@media only screen and (max-width:1280px){.country-page .country-current-selected{display:flex}
+.country-page .country-page-title{margin-top:20px}
+}
+@media only screen and (max-width:525px){.country-page .country-selector-title{font-size:64px;line-height:68px}
+.country-page .grouped-area{margin-bottom:0}
+.country-page .grouped-area .grouped-name{position:relative;padding:12px 0 12px 40px;margin-bottom:0}
+.country-page .grouped-area.expanded .country-list{height:auto;padding:4px 28px}
+.country-page .grouped-area.expanded .icon-plus{transform:rotate(45deg)}
+.country-page .grouped-area .icon-plus{display:block}
+.country-page .grouped-area.m-l-bottom{margin-bottom:12px}
+.country-page .grouped-area.m-l-bottom:last-child{margin-bottom:52px}
+}

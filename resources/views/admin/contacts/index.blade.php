@@ -11,7 +11,7 @@
                         <h5 class="m-b-10">Список контактов</h5>
                     </div>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admins.dashboard') }}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Главная</a></li>
                         <li class="breadcrumb-item">Контакты</li>
                     </ul>
                 </div>

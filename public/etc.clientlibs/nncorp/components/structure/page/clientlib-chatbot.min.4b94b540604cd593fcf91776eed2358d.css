@@ -1,0 +1,225 @@
+@keyframes show{from{display:none;opacity:0}
+to{display:block;opacity:1}
+}
+@keyframes hide{from{display:block;opacity:1}
+to{display:none;opacity:0}
+}
+@keyframes slideUp20{from{bottom:-20px;opacity:0;display:none}
+to{bottom:0;opacity:1;display:block}
+}
+@keyframes slideUp40{from{bottom:-40px;opacity:0}
+to{bottom:0;opacity:1}
+}
+@keyframes slideUpHide20{from{top:0;opacity:1;display:block}
+to{top:-20px;opacity:0;display:none}
+}
+@keyframes slideDown20{from{top:-20px;opacity:0;display:none}
+to{top:0;opacity:1;display:block}
+}
+@keyframes slideDownHide20{from{bottom:0;opacity:1;display:block}
+to{bottom:-20px;opacity:0;display:none}
+}
+@keyframes slideDownHide40{from{bottom:0;opacity:1;display:block}
+to{bottom:-40px;opacity:0;display:none}
+}
+@keyframes slideRight10{from{left:-10px;opacity:0;display:none}
+to{left:0;opacity:1;display:inline}
+}
+@keyframes slideLeft10{from{left:10px;opacity:0;display:none}
+to{left:0;opacity:1;display:inline}
+}
+@keyframes slideLeftHide10{from{left:0;opacity:1;display:inline}
+to{left:-10px;opacity:0;display:none}
+}
+@keyframes slideRightHide10{from{left:-10px;opacity:1}
+to{left:0;opacity:0}
+}
+@keyframes slideRightHide20{from{left:-20px;opacity:1}
+to{left:0;opacity:0}
+}
+@keyframes slideRightHideArrow20{0{right:20px;opacity:1}
+100%{right:10px;opacity:0}
+}
+@keyframes slideRightFromMinus10NoOpacity{from{left:-10px}
+to{left:0}
+}
+@keyframes slideRightFromMinus20NoOpacity{from{left:-20px}
+to{left:0}
+}
+@keyframes slideLeftMinus10NoOpacity{from{left:0}
+to{left:-10px}
+}
+@keyframes slideLeftMinus20NoOpacity{from{left:0}
+to{left:-20px}
+}
+@keyframes slideLeftMinus18NoOpacity{from{left:0}
+to{left:-18px}
+}
+@keyframes slideLeftMinus10{from{left:0;opacity:0}
+to{left:-10px;opacity:1}
+}
+@keyframes slideLeftMinus20{from{left:0;opacity:0}
+to{left:-20px;opacity:1}
+}
+@keyframes slideLeftMinusArrow20{0{right:10px;opacity:0}
+100%{right:20px;opacity:1}
+}
+@keyframes slideToRightNoOpacity10{from{left:0;position:relative}
+to{left:10px}
+}
+@keyframes slideToLeftNoOpacity10{from{left:10px;position:relative}
+to{left:0}
+}
+@keyframes slideToRightNoOpacity20{from{left:0;position:relative}
+to{left:20px}
+}
+@keyframes slideToLeftNoOpacity20{from{left:20px;position:relative}
+to{left:0}
+}
+@keyframes slideToRightNoOpacity30{from{left:0;position:relative}
+to{left:30px}
+}
+@keyframes slideToLeftNoOpacity30{from{left:30px;position:relative}
+to{left:0}
+}
+@keyframes showUnderline{from{width:0}
+to{width:100%}
+}
+@keyframes hideUnderline{from{width:100%}
+to{width:0}
+}
+@keyframes showOverlay{0{left:-100%;opacity:0;display:none}
+1%{left:-178px;opacity:0;display:none}
+100%{left:0;opacity:1;display:block}
+}
+@keyframes hideOverlay{0{left:0;opacity:1;display:block}
+99%{left:-178px;opacity:0;display:none}
+100%{left:-100%;opacity:0;display:none}
+}
+@keyframes showOverlayMobile{from{width:0;opacity:0;display:none}
+1%{width:100%;left:0;opacity:0;display:none}
+100%{width:100%;left:0;opacity:1;display:block}
+}
+@keyframes hideOverlayMobile{from{width:100%;opacity:1;left:0;display:block}
+99%{width:100%;opacity:0;left:0;display:none}
+100%{width:0;opacity:0;left:-100%;display:none}
+}
+@keyframes underline{0{width:100%;opacity:1}
+50%{width:100%;opacity:0}
+51%{width:0;opacity:1}
+100%{width:100%}
+}
+@keyframes underlineMultiline{0{border-bottom-color:#001965}
+50%{border-bottom-color:transparent}
+51%{background-size:0 1px;border-bottom-color:transparent}
+100%{background-size:100% 1px;border-bottom-color:transparent}
+}
+@keyframes showUderlinefromLeft{0{opacity:1;left:0;width:0}
+100%{left:0;width:100%;opacity:1}
+}
+@keyframes showUderlinefromRight{0{opacity:0;right:0;width:0}
+1%{opacity:1;right:0;width:0}
+100%{right:0;width:100%;opacity:1}
+}
+@keyframes showByScale{from{transform:scale(0);opacity:0}
+to{transform:scale(1);opacity:1}
+}
+@keyframes hideByScale{from{transform:scale(1);opacity:1}
+to{transform:scale(0);opacity:0}
+}
+@keyframes showByShadow{from{box-shadow:0 0 0 #000}
+to{box-shadow:-2px -2px 50px rgba(0,0,0,0)}
+}
+@keyframes hideByShadow{from{box-shadow:-2px -2px 50px rgba(0,0,0,0)}
+to{box-shadow:0 0 0 #000}
+}
+@keyframes zoomIn{from{transform:scale(1)}
+to{transform:scale(1.1)}
+}
+@keyframes zoomOut{from{transform:scale(1.1)}
+to{transform:scale(1)}
+}
+@keyframes yearIndicatorZoomOut{from{transform:scale(0)}
+to{transform:scale(1)}
+}
+@keyframes firstLastYearIndicatorZoomOut{from{transform:scale(0.7);opacity:.7}
+to{transform:scale(1);opacity:1}
+}
+@keyframes backgroundZoomOut{from{width:60%;height:60%}
+to{width:100%;height:calc(100% - 120px)}
+}
+@keyframes imageZoomOut{from{width:70%;margin-right:10%}
+to{width:100%;margin-right:0}
+}
+@keyframes showChatbotWithOpacity{0{left:-100%;opacity:0;display:none}
+1%{left:0;opacity:0;display:none}
+100%{left:0;opacity:1;display:block}
+}
+@keyframes hideChatbotWithOpacity{0{left:0;opacity:1;display:block}
+99%{left:0;opacity:0;display:none}
+100%{left:-100%;opacity:0;display:none}
+}
+@keyframes showChatbotRightWithOpacity{0{right:-100%;opacity:0;display:none}
+1%{right:0;opacity:0;display:none}
+100%{right:0;opacity:1;display:block}
+}
+@keyframes hideChatbotRightWithOpacity{0{right:0;opacity:1;display:block}
+99%{right:0;opacity:0;display:none}
+100%{right:-100%;opacity:0;display:none}
+}
+@keyframes setBackgroundColor{0{background-color:transparent}
+100%{background-color:#001965}
+}
+.chat-application{position:fixed;bottom:30px;z-index:6}
+.chat-application.chatbot-left{left:30px}
+.chat-application.chatbot-right{right:30px;width:60px}
+.chat-application .chat-header{height:74px;border-top-left-radius:8px;border-top-right-radius:8px;background-color:#001965;padding:12px 8px;z-index:2;position:relative}
+.chat-application .chat-header .supporter-button{background:#fff;border:0;width:50px;height:50px;border-radius:60px;margin-right:12px}
+.chat-application .chat-header .icon-supporter{background-size:34px 34px;width:34px;height:34px;display:block;z-index:6}
+.chat-application .chat-header .bot-name{font-size:20px}
+.chat-application .chat-header .right-button{width:40px;height:40px;position:absolute;top:auto;right:8px}
+.chat-application .chat-header .right-button button{width:40px;height:40px;background:0;border-style:none;overflow:hidden;cursor:pointer;padding:0}
+.chat-application .chat-header .three-dot-button .icon{font-size:120px}
+.chat-application .chat-header .mobile-close-button{display:none}
+.chat-application .chat-header .mobile-close-button .icon{font-size:40px}
+.chat-application .chat-header .more-options{position:absolute;left:0;top:100%;width:100%;z-index:2}
+.chat-application .chat-header .more-options .link{color:#001965}
+.chat-application .chat-header .more-options .option{width:100%;border-top:0;border-left:0;border-right:0;border-bottom:solid 1px #ebe8e5;height:52px;background-color:#fbfbfa;color:#001965}
+.chat-application .chat-container{border:0;width:100%;overflow:hidden;height:calc(100% - 74px)}
+.chat-application .chat-button-box{margin-top:4px}
+.chat-application .chat-button-box .chat-button{width:60px;height:60px;padding:0;background:0;border:0;border-radius:100px}
+.chat-application .chat-button-box .chat-button .icon{font-size:60px}
+.chat-application .chat-button-box .chat-support-button{background-color:#f7f6f5}
+.chat-application .chat-box{transition:.3s cubic-bezier(0.25,0.1,0.25,1);border:solid 1px #001965;border-radius:8px;overflow:hidden}
+.chat-application.close .chat-box{width:0;height:0;border:0;background-color:transparent}
+.chat-application.close .chat-header{position:relative}
+.chat-application.close .chat-header .three-dot-button{position:relative}
+.chat-application.open .chat-box{width:450px;height:570px;animation:setBackgroundColor .1s forwards;animation-delay:.3s}
+.chat-application.open .chat-box.chat-box-right{margin-left:calc(100% - 450px)}
+.chat-application.open .chat-header{width:100%;box-sizing:border-box}
+.chat-application.fullscreen.open .chat-box,.chat-application.fullscreen.close .chat-box{width:450px;height:100%;position:fixed;border-radius:0;border:0;top:0}
+.chat-application.fullscreen .chat-button-box{margin-top:0}
+.chat-application.fullscreen .chat-header{border-radius:0}
+.chat-application.fullscreen .chat-header .mobile-close-button{display:block}
+.chat-application.fullscreen .chat-header .right-button{width:80px}
+.chat-application.fullscreen .chat-header .more-options .option{border:0;border-bottom:solid 1px #ebe8e5}
+.chat-application.fullscreen.close .chat-box.chat-box-left{animation:hideChatbotWithOpacity .3s forwards cubic-bezier(0.25,0.1,0.25,1)}
+.chat-application.fullscreen.close .chat-box.chat-box-right{animation:hideChatbotRightWithOpacity .3s forwards cubic-bezier(0.25,0.1,0.25,1)}
+.chat-application.fullscreen.open .chat-box.chat-box-left{animation:showChatbotWithOpacity .3s forwards cubic-bezier(0.25,0.1,0.25,1)}
+.chat-application.fullscreen.open .chat-box.chat-box-right{animation:showChatbotRightWithOpacity .3s forwards cubic-bezier(0.25,0.1,0.25,1)}
+@media only screen and (max-width:1280px){.chat-application{left:auto}
+.chat-application.chatbot-left{left:30px}
+.chat-application.chatbot-right{right:30px;width:60px}
+.chat-application .chat-button-box{margin-top:0}
+.chat-application .chat-header{border-radius:0}
+.chat-application .chat-header .mobile-close-button{display:block}
+.chat-application .chat-header .right-button{width:80px}
+.chat-application .chat-header .more-options .option{border:0;border-bottom:solid 1px #ebe8e5}
+.chat-application.open .chat-box,.chat-application.close .chat-box{width:100%;height:100%;position:fixed;border-radius:0;border:0;top:0}
+.chat-application.open .chat-box.chat-box-right,.chat-application.close .chat-box.chat-box-right{margin-left:0}
+.chat-application.close .chat-box{animation:hideChatbotWithOpacity .3s forwards cubic-bezier(0.25,0.1,0.25,1)}
+.chat-application.open .chat-box{animation:showChatbotWithOpacity .3s forwards cubic-bezier(0.25,0.1,0.25,1)}
+}
+@media only screen and (max-width:525px){.chat-application.chatbot-left{left:unset;right:90px;top:30px}
+.chat-application.chatbot-right{right:90px;top:30px}
+}

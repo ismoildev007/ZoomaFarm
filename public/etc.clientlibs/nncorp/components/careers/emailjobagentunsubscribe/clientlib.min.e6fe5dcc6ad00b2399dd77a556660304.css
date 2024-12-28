@@ -1,0 +1,57 @@
+.emailjobagentunsubscribe-wrapper{height:100%;overflow:hidden;align-content:center}
+.emailjobagentunsubscribe-wrapper .titlegrid{background-color:transparent}
+.emailjobagentunsubscribe-wrapper .title-desktop{display:block}
+.emailjobagentunsubscribe-wrapper .title-mobile{display:none}
+.emailjobagentunsubscribe-wrapper .columns .left-column{min-height:1px}
+.emailjobagentunsubscribe-wrapper .columns:last-child{margin-bottom:0}
+.emailjobagentunsubscribe-wrapper .columns:last-child .section-wrapper:last-child{margin-bottom:0}
+.emailjobagentunsubscribe-wrapper .lava{color:#f05555}
+.emailjobagentunsubscribe-wrapper .tagline{font-weight:bold}
+.emailjobagentunsubscribe-wrapper .titleframe{position:relative;margin-top:-78px;top:78px}
+.emailjobagentunsubscribe-wrapper .titleframe.small{position:relative;margin-top:-44px;top:44px}
+.emailjobagentunsubscribe-wrapper .titleframe.xsmall{position:relative;margin-top:-32px;top:32px}
+.emailjobagentunsubscribe-wrapper .subsubheader{font-weight:bold}
+.emailjobagentunsubscribe-wrapper .frame-box.frame-padding{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.frame-padding.small{padding-top:115px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding.small{padding-top:78px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding.xsmall{padding-top:44px}
+.emailjobagentunsubscribe-wrapper .news-releases{display:flex;flex-wrap:wrap}
+.emailjobagentunsubscribe-wrapper .news-releases .form-control{flex-basis:50%}
+.emailjobagentunsubscribe-wrapper .news-releases-mobile{display:none}
+.emailjobagentunsubscribe-wrapper .checkbox-group label p{line-height:24px;font-size:16px}
+@media(max-width:2000px){.emailjobagentunsubscribe-wrapper .titleframe{margin-top:-78px;top:78px}
+.emailjobagentunsubscribe-wrapper .titleframe.small{margin-top:-44px;top:44px}
+.emailjobagentunsubscribe-wrapper .frame-box.frame-padding{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.frame-padding.small{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding.small{padding-top:100px}
+}
+@media(max-width:1280px){.emailjobagentunsubscribe-wrapper [type="checkbox"]:checked+label:after{top:10px !important}
+.emailjobagentunsubscribe-wrapper [type="checkbox"]:checked+label:before{top:3px !important}
+.emailjobagentunsubscribe-wrapper .titleframe{margin-top:-38px;top:38px}
+.emailjobagentunsubscribe-wrapper .titleframe.small{margin-top:-38px;top:38px}
+.emailjobagentunsubscribe-wrapper .titleframe.xsmall{margin-top:-24px;top:24px}
+.emailjobagentunsubscribe-wrapper .frame-box.frame-padding{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding{padding-top:100px}
+.emailjobagentunsubscribe-wrapper .frame-box.frame-padding.small{padding-top:78px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding.small{padding-top:78px}
+.emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding.xsmall{padding-top:36px}
+}
+@media(max-width:525px){.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .submit-button-wrapper{display:flex;justify-content:center}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .news-releases-mobile{display:block}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .news-releases{display:none}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .title-desktop{display:none}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .title-mobile{display:block}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .columns{flex-wrap:wrap}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .intro{width:100%}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .titleframe{margin-top:-28px;top:28px}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .titleframe.xsmall{margin-top:-20px;top:20px}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .frame-padding{background-color:transparent !important}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .frame-box.frame-padding{padding-top:78px;padding-bottom:0}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .no-frame-padding{padding-top:0}
+.emailjobagentunsubscribe .emailjobagentunsubscribe-wrapper .frame-box.no-frame-padding.xsmall{padding-top:32px}
+.emailjobagentunsubscribe .component-padding{padding-bottom:0 !important}
+}
+@media(min-width:525px){.mobile-background{background:transparent !important}
+}

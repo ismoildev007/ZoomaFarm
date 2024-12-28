@@ -1,0 +1,32 @@
+@keyframes circle-animate{0{width:1px;height:1px}
+100%{width:10px;height:10px}
+}
+.loading-indicator{display:none;justify-content:center;min-height:20px;align-items:center;width:100%}
+.loading-indicator.blue .cir{background-color:#001965}
+.loading-indicator.white .cir{background-color:#fff}
+.loading-indicator.show{display:flex}
+.loading-indicator .hide{display:none}
+.loading-indicator .cir{width:1px;height:1px;border-radius:100px;margin:5px;animation:circle-animate .6s infinite alternate cubic-bezier(0.25,0.1,0.25,1)}
+.loading-indicator .cir-2{animation-delay:.2s}
+.loading-indicator .cir-3{animation-delay:.4s}
+.loading-button{display:flex;align-items:center;justify-content:center;background:0;border:0;border-radius:85px;width:164px;height:50px}
+.loading-button.loading .text{display:none}
+.loading-button.loading .loading-indicator{display:flex}
+.loading-button .text{display:block;text-align:center;font-size:16px;line-height:22px;width:100%}
+.loading-button .loading-indicator{display:none}
+@media only screen and (max-width:1280px){.loading-button.button.button-link-animation-desktop .text{animation:none !important}
+.loading-button.button.button-link-animation-desktop .icon-right-arrow{display:none !important}
+}
+.search-result{color:#001965}
+.search-result .result-item{color:#001965;display:block}
+.search-result .result-item .infotext{color:#939aa7;word-break:break-all;max-width:100%}
+.search-result .result-item .h2{font-weight:bold;word-break:break-all;max-width:100%}
+.search-result .loading-button-wrapper{display:flex;justify-content:center}
+.search-result .loading-button-wrapper.show{display:flex}
+.search-result .loading-button-wrapper.hide{display:none}
+.nncorp-search .container{color:#001965}
+.nncorp-search .search-form{position:relative}
+.nncorp-search .search-form .search-text{width:100%;border:0;border-bottom:solid 1px #001965;height:80;padding:20px 0;font-size:20px;line-height:36px;color:#001965}
+.nncorp-search .search-form .search-text::placeholder{color:#939aa7;padding-left:10px}
+.nncorp-search .search-form .search-btn{position:absolute;right:0;top:0;background:0;border:0;padding:20px}
+.nncorp-search .search-form .search-btn .icon{font-size:40px}

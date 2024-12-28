@@ -1,0 +1,39 @@
+.ln-wrapper{color:#001965}
+.ln-wrapper.standard{margin-top:-100px}
+.ln-wrapper.standard .ln-header{transform:translateY(100px)}
+.ln-wrapper.standard .ln-box{padding-top:158px}
+.ln-wrapper.small{margin-top:-64px}
+.ln-wrapper.small .ln-header{transform:translateY(64px)}
+.ln-wrapper.small .ln-box{padding-top:115px}
+.ln-wrapper .ln-container{position:relative}
+.ln-wrapper .ln-container .ln-link-list{display:flex;flex-wrap:wrap;justify-content:space-between}
+.ln-wrapper .ln-container .ln-link-list .ln-link-item{flex-basis:calc(((100vw - 330px) / 24) * 6);color:#001965}
+.ln-wrapper .ln-container .ln-link-list .ln-link-item .job-name{font-weight:bold}
+.ln-wrapper .ln-container .ln-link-list .ln-link-item .infotext{margin:20px 0}
+.ln-wrapper .ln-container .ln-footer{height:80px;width:100%;display:flex;align-items:center;border-top:solid 1px #939aa7}
+.ln-wrapper .ln-container .ln-footer .all-jobs-lnk{color:#001965}
+.ln-wrapper .ln-container .ln-footer .all-jobs-lnk .icon{margin-left:10px;font-size:12px}
+@media only screen and (max-width:2000px){.ln-wrapper.standard{margin-top:-78px}
+.ln-wrapper.standard .ln-header{transform:translateY(78px)}
+.ln-wrapper.standard .ln-box{padding-top:130px}
+.ln-wrapper.small{margin-top:-51px}
+.ln-wrapper.small .ln-header{transform:translateY(51px)}
+.ln-wrapper.small .ln-box{padding-top:96px}
+}
+@media only screen and (max-width:1280px){.ln-wrapper.standard{margin-top:-48px}
+.ln-wrapper.standard .ln-header{transform:translateY(48px)}
+.ln-wrapper.standard .ln-box{padding-top:100px}
+.ln-wrapper.small{margin-top:-36px}
+.ln-wrapper.small .ln-header{transform:translateY(36px)}
+.ln-wrapper.small .ln-box{padding-top:88px}
+.ln-wrapper .ln-container .ln-link-list .ln-link-item{flex-basis:calc(((100vw / 24)) * 6);margin-bottom:40px}
+}
+@media only screen and (max-width:525px){.ln-wrapper.standard{margin-top:0}
+.ln-wrapper.standard .ln-header{transform:translateY(0)}
+.ln-wrapper.standard .ln-box{padding-top:40px}
+.ln-wrapper.small{margin-top:0}
+.ln-wrapper.small .ln-header{transform:translateY(0)}
+.ln-wrapper.small .ln-box{padding-top:40px}
+.ln-wrapper .ln-box{background-color:transparent !important}
+.ln-wrapper .ln-container .ln-link-list .ln-link-item{flex-basis:100%}
+}

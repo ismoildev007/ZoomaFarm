@@ -1,0 +1,146 @@
+.contact-info-wrapper .phone,
+.contact-info-wrapper .email {
+    display: flex;
+}
+.relatedemployee-wrapper {
+    position: relative;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+.relatedemployee-wrapper .image-video-content-wrapper {
+    position: relative;
+    width: 100%;
+}
+.relatedemployee-wrapper .image-video-content-wrapper .video {
+    padding-bottom: 56.25%;
+    width: 100%;
+    position: relative;
+    height: 0;
+}
+.relatedemployee-wrapper .image-video-content-wrapper .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.relatedemployee-wrapper .name {
+    font-weight: bold;
+}
+.outer-container .container-grid-header {
+    color: #001965;
+}
+.outer-container.shift.frame .rowcontainer,
+.outer-container.shift.frameinverted .rowcontainer {
+    top: -120px;
+    position: relative;
+}
+.outer-container.shift.frame .frame-padding,
+.outer-container.shift.frameinverted .frame-padding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 120px;
+}
+.contentgrid_row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contentgrid_row .bottom_align .image-video .image-video-content-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+.contentgrid_row:last-child {
+    margin-bottom: 0;
+}
+.contentgrid_row:last-child .column {
+    margin-bottom: 0;
+}
+.contentgrid_row:not(:last-child) .column.has-content-true {
+    margin-bottom: 52px;
+}
+.contentgrid_row .column {
+    box-sizing: border-box;
+    clear: none;
+}
+.contentgrid_row .column.has-content-false {
+    margin-bottom: 0;
+}
+.contentgrid_row .column:last-child {
+    margin-right: 0;
+}
+.contentgrid_row .column .contactcard .image-video-content-wrapper img {
+    height: 100%;
+    object-fit: cover;
+}
+.contentgrid_row .columns-3 {
+    width: calc(((100vw - 330px) / 24) * 6);
+}
+.contentgrid_row .columns-2 {
+    width: calc(((100vw - 330px) / 24) * 9);
+}
+.contentgrid_row .columns-1 {
+    width: 100%;
+    margin-right: 0;
+}
+.image-video-content-wrapper img,
+.image-video-content-wrapper video {
+    width: 100%;
+}
+@media only screen and (min-width: 1280px) {
+    .outer-container .container-grid-header .description.leadtext {
+        margin-bottom: 80px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    .contentgrid_row .columns-3 {
+        width: calc(((100vw / 24)) * 6);
+    }
+    .contentgrid_row .columns-2 {
+        width: calc(((100vw / 24)) * 9);
+    }
+}
+@media only screen and (max-width: 525px) {
+    .outer-container.shift.frame .rowcontainer,
+    .outer-container.shift.frameinverted .rowcontainer {
+        top: 0;
+    }
+    .outer-container.shift.frame .frame-padding,
+    .outer-container.shift.frameinverted .frame-padding {
+        margin-top: 0;
+        background-color: transparent !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .outer-container.frame .frame-padding,
+    .outer-container.frameinverted .frame-padding {
+        background-color: transparent !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .contentgrid_row {
+        margin-bottom: 0;
+        flex-wrap: wrap;
+    }
+    .contentgrid_row:not(:last-child) .column.has-content-true {
+        margin-bottom: 40px;
+    }
+    .contentgrid_row:last-child .column.has-content-true {
+        margin-bottom: 40px;
+    }
+    .contentgrid_row:last-child .column:last-child.has-content-true {
+        margin-bottom: 0;
+    }
+    .contentgrid_row .column {
+        height: initial !important;
+    }
+    .contentgrid_row .columns-3,
+    .contentgrid_row .columns-2 {
+        width: 100%;
+    }
+    .contentgrid_row .image-video-wrapper .image-video-content-wrapper {
+        height: initial !important;
+    }
+}

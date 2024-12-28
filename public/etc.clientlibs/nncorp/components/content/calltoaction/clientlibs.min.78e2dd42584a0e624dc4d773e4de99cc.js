@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){Array.from(document.getElementsByClassName("cta-container")).forEach(function(a){new Vue({el:a,mixins:[utilitiesMixin]})})});

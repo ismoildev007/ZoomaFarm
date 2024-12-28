@@ -13,16 +13,27 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->text('name_uz')->nullable();
-            $table->text('name_ru')->nullable();
-            $table->text('name_en')->nullable();
-            $table->text('content_uz')->nullable();
-            $table->text('content_ru')->nullable();
-            $table->text('content_en')->nullable();
+            $table->text('about_or_company_uz')->nullable();
+            $table->text('about_or_company_ru')->nullable();
+            $table->text('about_or_company_en')->nullable();
+            $table->text('description_title_uz')->nullable();
+            $table->text('description_title_ru')->nullable();
+            $table->text('description_title_en')->nullable();
             $table->text('description_uz')->nullable();
             $table->text('description_ru')->nullable();
             $table->text('description_en')->nullable();
-            $table->text('image')->nullable();
+            $table->text('content_title_uz')->nullable();
+            $table->text('content_title_ru')->nullable();
+            $table->text('content_title_en')->nullable();
+            $table->text('content_uz')->nullable();
+            $table->text('content_ru')->nullable();
+            $table->text('content_en')->nullable();
+            $table->string('clinical_trials')->nullable();
+            $table->string('insulin')->nullable();
+            $table->string('percent')->nullable();
+            $table->string('using_product')->nullable();
+            $table->string('image')->nullable();
+            $table->string('content_image')->nullable();
             $table->timestamps();
         });
     }

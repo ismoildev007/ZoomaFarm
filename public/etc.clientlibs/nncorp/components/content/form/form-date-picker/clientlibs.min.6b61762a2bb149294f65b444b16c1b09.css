@@ -1,0 +1,28 @@
+.vdp-datepicker-wrapper .vdp-datepicker__calendar header .prev:not(.disabled):hover,.vdp-datepicker-wrapper .vdp-datepicker__calendar header .next:not(.disabled):hover{background-color:transparent}
+.vdp-datepicker-wrapper .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,.vdp-datepicker-wrapper .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,.vdp-datepicker-wrapper .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover{border:0}
+.vdp-datepicker-wrapper .arrow-button{position:fixed;right:calc(((100vw / 24)) * 2);top:30px;background:0;border-radius:100px;width:60px;height:60px;border:solid 2px #fff;display:none}
+.vdp-datepicker-wrapper .arrow-button .icon-right-arrow-white{font-size:12px}
+.vdp-datepicker-wrapper .icon-date,.vdp-datepicker-wrapper .icon-datefrom,.vdp-datepicker-wrapper .icon-dateto{left:28px;top:calc((100% - 24px) / 2);font-size:24px;z-index:1;cursor:pointer}
+.vdp-datepicker-wrapper .calendar-class{background-color:#005ad2;color:#fff;border:0;border-radius:5px;padding:28px;width:332px;height:auto;top:calc(100% + 20px)}
+.vdp-datepicker-wrapper .calendar-class header{display:flex;justify-content:space-between;margin-bottom:20px}
+.vdp-datepicker-wrapper .calendar-class header .day__month_btn,.vdp-datepicker-wrapper .calendar-class header .month__year_btn,.vdp-datepicker-wrapper .calendar-class header span:nth-child(2){background-color:#fff;color:#001965;border-radius:176px;font-size:16px;line-height:26px;width:150px;height:40px;align-items:center;justify-content:center;display:flex}
+.vdp-datepicker-wrapper .calendar-class header .prev,.vdp-datepicker-wrapper .calendar-class header .next{font-family:'icomoon';text-indent:0;color:transparent;font-size:14px}
+.vdp-datepicker-wrapper .calendar-class header .prev::before,.vdp-datepicker-wrapper .calendar-class header .next::before{content:"\e911";color:white;position:absolute;font-family:'icomoon' !important;left:0;right:0}
+.vdp-datepicker-wrapper .calendar-class header .prev::after,.vdp-datepicker-wrapper .calendar-class header .next::after{content:"";display:none}
+.vdp-datepicker-wrapper .calendar-class header .prev :not(.disabled):hover,.vdp-datepicker-wrapper .calendar-class header .next :not(.disabled):hover{background-color:transparent}
+.vdp-datepicker-wrapper .calendar-class header .prev::before{transform:rotate(180deg)}
+.vdp-datepicker-wrapper .calendar-class .cell.day,.vdp-datepicker-wrapper .calendar-class .cell.month,.vdp-datepicker-wrapper .calendar-class .cell.year{padding:0;border:0}
+.vdp-datepicker-wrapper .calendar-class .cell.day{width:36px;height:36px;line-height:36px;padding:0;border:0;margin-right:4px}
+.vdp-datepicker-wrapper .calendar-class .cell.day.selected{background-color:#fff;border-radius:100px;color:#001965}
+.vdp-datepicker-wrapper .calendar-class .cell.day:nth-child(7n+7){margin-right:0}
+.vdp-datepicker-wrapper .calendar-class .cell.month,.vdp-datepicker-wrapper .calendar-class .cell.year{margin-top:14px}
+@media only screen and (max-width:525px){.vdp-datepicker-wrapper .calendar-class{position:fixed;width:100%;height:100%;top:0;left:0;display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:0;z-index:7;overflow:scroll}
+.vdp-datepicker-wrapper .calendar-class ~ .calendar-class{justify-content:initial;z-index:9}
+.vdp-datepicker-wrapper .calendar-class ​​​​ header,.vdp-datepicker-wrapper .calendar-class>div{width:344px;box-sizing:border-box}
+.vdp-datepicker-wrapper .calendar-class .cell.day{margin-right:14px}
+.vdp-datepicker-wrapper.open .arrow-button{display:block;z-index:8;right:calc(((100vw / 24)) * 2)}
+.vdp-datepicker-wrapper.closed-calendar .arrow-button{display:none}
+}
+@media only screen and (max-width:414px){.vdp-datepicker-wrapper .calendar-class header,.vdp-datepicker-wrapper .calendar-class>div{width:300px}
+.vdp-datepicker-wrapper .calendar-class .cell.day{margin-right:8px}
+}

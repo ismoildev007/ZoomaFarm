@@ -1,0 +1,108 @@
+.gradient-cover[v-cloak] {
+    display: none;
+}
+.gradient-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+.gradient-cover .gradient-item::after {
+    content: "";
+    position: absolute;
+}
+.gradient-cover .left-gradient::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0) 97.72%);
+}
+.gradient-cover .left-gradient-dynamic::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.0001) 97.72%);
+}
+.gradient-cover .right-gradient::after {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0) 97.72%);
+}
+.gradient-cover .right-gradient-dynamic::after {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.0001) 97.72%);
+}
+.gradient-cover .bottom-gradient::after {
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0) 97.72%);
+}
+.gradient-cover .bottom-gradient-dynamic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 120px;
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+}
+@media only screen and (max-width: 1280px) {
+    .gradient-cover .left-gradient::after {
+        width: 60%;
+    }
+    .gradient-cover .right-gradient {
+        display: none;
+    }
+    .gradient-cover.right-to-left-mode .right-gradient,
+    .gradient-cover.right-to-left-mode .right-gradient-dynamic {
+        display: unset !important;
+    }
+    .gradient-cover.right-to-left-mode .left-gradient,
+    .gradient-cover.right-to-left-mode .left-gradient-dynamic {
+        display: none;
+    }
+    .gradient-cover .bottom-gradient::after {
+        height: 50%;
+    }
+    .gradient-cover .right-gradient-dynamic {
+        display: none;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .gradient-cover .left-gradient {
+        display: none;
+    }
+    .gradient-cover .left-gradient::after {
+        height: 40%;
+    }
+    .gradient-cover .left-gradient-dynamic::after {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.0001) 97.72%);
+    }
+    .gradient-cover .bottom-gradient::after {
+        height: 50%;
+    }
+    .gradient-cover .bottom-gradient-dynamic {
+        padding-top: 80px;
+    }
+    .gradient-cover .top-gradient::after {
+        top: 0;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0) 97.72%);
+    }
+}

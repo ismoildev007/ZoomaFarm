@@ -11,7 +11,7 @@
                         <h5 class="m-b-10">Список кандидатов</h5>
                     </div>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admins.dashboard') }}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Главная</a></li>
                         <li class="breadcrumb-item">Кандидаты</li>
                     </ul>
                 </div>
@@ -26,11 +26,11 @@
                                 <div class="px-2 py-3">
                                     <div class="d-flex justify-content-between">
                                         <h4 class="bold">Кандидаты</h4>
-                                        <div class="">
-                                            <div class="dataTables_filter">
-                                                <a href="{{ route('candidants.create') }}" class="btn btn-sm btn-primary">Добавить</a>
-                                            </div>
-                                        </div>
+{{--                                        <div class="">--}}
+{{--                                            <div class="dataTables_filter">--}}
+{{--                                                <a href="{{ route('candidants.create') }}" class="btn btn-sm btn-primary">Добавить</a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
                                     </div>
                                 </div>
                                 <div class="table-responsive">

@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){Array.from(document.getElementsByClassName("links-overview-content")).forEach(function(a){new Vue({el:a,mixins:[utilitiesMixin]})})});

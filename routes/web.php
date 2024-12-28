@@ -9,19 +9,22 @@ use App\Http\Controllers\Admin\VacancyController;
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\auth\SuperAdminController;
 use App\Http\Controllers\auth\AdminController;
+use App\Http\Controllers\Page\MainController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LanguageController;
+
 
 
 //Admin panel login register start
-Route::get('/', [AuthController::class, 'login'])->name('login');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //Admin panel login register end
 
 
-Route::middleware(['auth'])->prefix('dashboard')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/',[SuperAdminController::class, 'superAdmin'])->name('superAdmin.dashboard');
-    Route::get('/admin',[AdminController::class, 'admin'])->name('admins.dashboard');
+    Route::get('/admin',[AdminController::class, 'admin'])->name('admin.dashboard');
     Route::resource('products', ProductController::class);
     Route::resource('news', NewsController::class);
     Route::resource('abouts', AboutController::class);
@@ -29,3 +32,16 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::resource('vacancies', VacancyController::class);
     Route::resource('candidants', CandidantController::class);
 });
+
+Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/about', [MainController::class, 'about'])->name('about');
+Route::get('/about-team', [MainController::class, 'aboutTeam'])->name('about.team');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+Route::get('/news', [MainController::class, 'news'])->name('news');
+Route::get('/news/{slug}', [MainController::class, 'singleNews'])->name('single.news');
+Route::get('/products', [MainController::class, 'products'])->name('products');
+Route::get('/products/{slug}', [MainController::class, 'singleProduct'])->name('single.product');
+Route::get('/vacancy', [MainController::class, 'vacancy'])->name('vacancy');
+Route::get('/candidant/{vacancy_id}', [MainController::class, 'candidant'])->name('candidant');
+
+Route::get('locale/{lang}',[LanguageController::class, 'setLocale']);

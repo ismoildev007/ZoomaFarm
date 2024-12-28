@@ -1,0 +1,30 @@
+.form-container-wrapper{margin-top:-100px;display:none}
+.form-container-wrapper.loaded{display:block}
+.form-container-wrapper .title-frame{position:relative}
+.form-container-wrapper .title-frame.mobile{display:none}
+.form-container-wrapper .title-frame.desktop{display:block}
+.form-container-wrapper .title-frame.large{top:62px}
+.form-container-wrapper .title-frame.small{top:40px}
+.form-container-wrapper .title-frame.xsmall{top:30px}
+.form-container-wrapper .frame-padding.has-title.large{padding-top:102px}
+.form-container-wrapper .frame-padding.has-title.small{padding-top:68px}
+.form-container-wrapper .frame-padding.has-title.xsmall{padding-top:44px}
+@media only screen and (max-width:2000px){.form-container-wrapper{margin-top:-79px}
+}
+@media only screen and (max-width:1280px){.form-container-wrapper{margin-top:-48px}
+.form-container-wrapper .title-frame.large{top:38px}
+.form-container-wrapper .title-frame.small{top:28px}
+.form-container-wrapper .title-frame.xsmall{top:22px}
+.form-container-wrapper .frame-padding.has-title.large{padding-top:76px}
+.form-container-wrapper .frame-padding.has-title.small{padding-top:52px}
+.form-container-wrapper .frame-padding.has-title.xsmall{padding-top:36px}
+}
+@media only screen and (max-width:525px){.form-container-wrapper{margin-top:-34px}
+.form-container-wrapper .title-frame{position:relative}
+.form-container-wrapper .title-frame.mobile{display:block}
+.form-container-wrapper .title-frame.desktop{display:none}
+.form-container-wrapper .title-frame.large{margin-bottom:28px}
+.form-container-wrapper .title-frame.small{margin-bottom:20px}
+.form-container-wrapper .title-frame.xsmall{margin-bottom:12px}
+body.page .top-margin .root .aem-Grid .aem-GridColumn:first-child .form-container-wrapper .frame-padding{padding-top:160px}
+}

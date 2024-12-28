@@ -1,0 +1,1 @@
+Vue.directive("click-outside",{bind:function(a,c,d){a.clickOutsideEvent=function(b){if(a!=b.target&&!a.contains(b.target))d.context[c.expression](b)};document.addEventListener("click",a.clickOutsideEvent)},unbind:function(a){document.removeEventListener("click",a.clickOutsideEvent)}});

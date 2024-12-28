@@ -1,0 +1,637 @@
+@keyframes show {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+@keyframes hide {
+    from {
+        display: block;
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+@keyframes slideUp20 {
+    from {
+        bottom: -20px;
+        opacity: 0;
+        display: none;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes slideUp40 {
+    from {
+        bottom: -40px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes slideUpHide20 {
+    from {
+        top: 0;
+        opacity: 1;
+        display: block;
+    }
+    to {
+        top: -20px;
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slideDown20 {
+    from {
+        top: -20px;
+        opacity: 0;
+        display: none;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes slideDownHide20 {
+    from {
+        bottom: 0;
+        opacity: 1;
+        display: block;
+    }
+    to {
+        bottom: -20px;
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slideDownHide40 {
+    from {
+        bottom: 0;
+        opacity: 1;
+        display: block;
+    }
+    to {
+        bottom: -40px;
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slideRight10 {
+    from {
+        left: -10px;
+        opacity: 0;
+        display: none;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+        display: inline;
+    }
+}
+@keyframes slideLeft10 {
+    from {
+        left: 10px;
+        opacity: 0;
+        display: none;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+        display: inline;
+    }
+}
+@keyframes slideLeftHide10 {
+    from {
+        left: 0;
+        opacity: 1;
+        display: inline;
+    }
+    to {
+        left: -10px;
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slideRightHide10 {
+    from {
+        left: -10px;
+        opacity: 1;
+    }
+    to {
+        left: 0;
+        opacity: 0;
+    }
+}
+@keyframes slideRightHide20 {
+    from {
+        left: -20px;
+        opacity: 1;
+    }
+    to {
+        left: 0;
+        opacity: 0;
+    }
+}
+@keyframes slideRightHideArrow20 {
+    0% {
+        right: 20px;
+        opacity: 1;
+    }
+    100% {
+        right: 10px;
+        opacity: 0;
+    }
+}
+@keyframes slideRightFromMinus10NoOpacity {
+    from {
+        left: -10px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes slideRightFromMinus20NoOpacity {
+    from {
+        left: -20px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes slideLeftMinus10NoOpacity {
+    from {
+        left: 0;
+    }
+    to {
+        left: -10px;
+    }
+}
+@keyframes slideLeftMinus20NoOpacity {
+    from {
+        left: 0;
+    }
+    to {
+        left: -20px;
+    }
+}
+@keyframes slideLeftMinus18NoOpacity {
+    from {
+        left: 0;
+    }
+    to {
+        left: -18px;
+    }
+}
+@keyframes slideLeftMinus10 {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+    to {
+        left: -10px;
+        opacity: 1;
+    }
+}
+@keyframes slideLeftMinus20 {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+    to {
+        left: -20px;
+        opacity: 1;
+    }
+}
+@keyframes slideLeftMinusArrow20 {
+    0% {
+        right: 10px;
+        opacity: 0;
+    }
+    100% {
+        right: 20px;
+        opacity: 1;
+    }
+}
+@keyframes slideToRightNoOpacity10 {
+    from {
+        left: 0;
+        position: relative;
+    }
+    to {
+        left: 10px;
+    }
+}
+@keyframes slideToLeftNoOpacity10 {
+    from {
+        left: 10px;
+        position: relative;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes slideToRightNoOpacity20 {
+    from {
+        left: 0;
+        position: relative;
+    }
+    to {
+        left: 20px;
+    }
+}
+@keyframes slideToLeftNoOpacity20 {
+    from {
+        left: 20px;
+        position: relative;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes slideToRightNoOpacity30 {
+    from {
+        left: 0;
+        position: relative;
+    }
+    to {
+        left: 30px;
+    }
+}
+@keyframes slideToLeftNoOpacity30 {
+    from {
+        left: 30px;
+        position: relative;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes showUnderline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes hideUnderline {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes showOverlay {
+    0% {
+        left: -100%;
+        opacity: 0;
+        display: none;
+    }
+    1% {
+        left: -178px;
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes hideOverlay {
+    0% {
+        left: 0;
+        opacity: 1;
+        display: block;
+    }
+    99% {
+        left: -178px;
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        left: -100%;
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes showOverlayMobile {
+    from {
+        width: 0;
+        opacity: 0;
+        display: none;
+    }
+    1% {
+        width: 100%;
+        left: 0;
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes hideOverlayMobile {
+    from {
+        width: 100%;
+        opacity: 1;
+        left: 0;
+        display: block;
+    }
+    99% {
+        width: 100%;
+        opacity: 0;
+        left: 0;
+        display: none;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+        left: -100%;
+        display: none;
+    }
+}
+@keyframes underline {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+    50% {
+        width: 100%;
+        opacity: 0;
+    }
+    51% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes underlineMultiline {
+    0% {
+        border-bottom-color: #001965;
+    }
+    50% {
+        border-bottom-color: transparent;
+    }
+    51% {
+        background-size: 0 1px;
+        border-bottom-color: transparent;
+    }
+    100% {
+        background-size: 100% 1px;
+        border-bottom-color: transparent;
+    }
+}
+@keyframes showUderlinefromLeft {
+    0% {
+        opacity: 1;
+        left: 0;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+}
+@keyframes showUderlinefromRight {
+    0% {
+        opacity: 0;
+        right: 0;
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+        right: 0;
+        width: 0;
+    }
+    100% {
+        right: 0;
+        width: 100%;
+        opacity: 1;
+    }
+}
+@keyframes showByScale {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes hideByScale {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes showByShadow {
+    from {
+        box-shadow: 0 0 0 #000;
+    }
+    to {
+        box-shadow: -2px -2px 50px rgba(0, 0, 0, 0);
+    }
+}
+@keyframes hideByShadow {
+    from {
+        box-shadow: -2px -2px 50px rgba(0, 0, 0, 0);
+    }
+    to {
+        box-shadow: 0 0 0 #000;
+    }
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes zoomOut {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes yearIndicatorZoomOut {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes firstLastYearIndicatorZoomOut {
+    from {
+        transform: scale(0.7);
+        opacity: 0.7;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes backgroundZoomOut {
+    from {
+        width: 60%;
+        height: 60%;
+    }
+    to {
+        width: 100%;
+        height: calc(100% - 120px);
+    }
+}
+@keyframes imageZoomOut {
+    from {
+        width: 70%;
+        margin-right: 10%;
+    }
+    to {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+.disclaimer-d-wrapper {
+    flex-basis: calc(((100vw - 330px) / 24) * 20);
+    position: relative;
+    z-index: 6;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, 50vh) translateY(200px);
+    -moz-transform: translate(-50%, 50vh) translateY(200px);
+    -ms-transform: translate(-50%, 50vh) translateY(200px);
+    -o-transform: translate(-50%, 50vh) translateY(200px);
+    transform: translate(-50%, 50vh) translateY(200px);
+    width: calc(((100vw - 330px) / 24) * 16);
+    border-radius: 3px;
+    box-shadow: 0 0 150px 0 rgba(147, 154, 167, 0.3);
+    background-color: #fff;
+    z-index: 1;
+    -webkit-transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -moz-transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -ms-transition: transform0 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -o-transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper.show {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-title {
+    background-color: #005ad2;
+    position: relative;
+    padding: 20px 0;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-title .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 20px;
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-content {
+    padding: 28px 0;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer a {
+    color: #001965;
+    border-bottom: 1px solid #001965;
+    padding-bottom: 2px;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer .dialog-footer-item .decline-wrapper {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 2px;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer .dialog-footer-item .decline-wrapper:after {
+    position: absolute;
+    background-color: #001965;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 1px;
+    width: 100%;
+}
+.disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer .dialog-footer-item .decline-wrapper:hover:after {
+    animation: showUnderline 0.3s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@media only screen and (max-width: 1280px) {
+    .disclaimer-d-wrapper {
+        flex-basis: calc(((100vw / 24)) * 10);
+    }
+    .disclaimer-d-wrapper .centerdialog-wrapper {
+        width: calc((calc(100vw / 24)) * 20);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .disclaimer-d-wrapper {
+        flex-basis: calc((calc(100vw / 24)) * 10);
+    }
+}
+@media only screen and (max-width: 525px) {
+    .disclaimer-d-wrapper {
+        flex-basis: calc((calc(100vw / 24)) * 20);
+    }
+    .disclaimer-d-wrapper .centerdialog-wrapper {
+        height: 100vh;
+        z-index: 6;
+        width: calc((calc(100vw / 24)) * 24);
+    }
+    .disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+    .disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer .dialog-footer-item {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer .dialog-footer-item .decline-wrapper {
+        margin-right: 0;
+        margin-top: 28px;
+    }
+    .disclaimer-d-wrapper .centerdialog-wrapper .dialog-footer .dialog-footer-item .button {
+        width: 100%;
+    }
+}

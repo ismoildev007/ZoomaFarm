@@ -1,0 +1,33 @@
+.introplaintext-wrapper{height:100%;overflow:hidden;align-content:center}
+.introplaintext-wrapper .titlegrid{background-color:transparent}
+.introplaintext-wrapper .columns .left-column{min-height:1px}
+.introplaintext-wrapper .columns:last-child{margin-bottom:0}
+.introplaintext-wrapper .columns:last-child .section-wrapper:last-child{margin-bottom:0}
+.introplaintext-wrapper .tagline{font-weight:bold}
+.introplaintext-wrapper .titleframe{position:relative;margin-top:-100px;top:100px}
+.introplaintext-wrapper .titleframe.small{position:relative;margin-top:-64px;top:64px}
+.introplaintext-wrapper .titleframe.xsmall{position:relative;margin-top:-28px;top:28px}
+.introplaintext-wrapper .subsubheader{font-weight:bold}
+.introplaintext-wrapper .frame-box.frame-padding,.introplaintext-wrapper .frame-box.no-frame-padding{padding-top:158px}
+.introplaintext-wrapper .frame-box.frame-padding.small,.introplaintext-wrapper .frame-box.no-frame-padding.small{padding-top:115px}
+.introplaintext-wrapper .frame-box.frame-padding.xsmall,.introplaintext-wrapper .frame-box.no-frame-padding.xsmall{padding-top:44px}
+@media(max-width:2000px){.introplaintext-wrapper .titleframe{margin-top:-78px;top:78px}
+.introplaintext-wrapper .titleframe.small{margin-top:-44px;top:44px}
+.introplaintext-wrapper .frame-box.frame-padding,.introplaintext-wrapper .frame-box.no-frame-padding{padding-top:130px}
+.introplaintext-wrapper .frame-box.frame-padding.small,.introplaintext-wrapper .frame-box.no-frame-padding.small{padding-top:96px}
+}
+@media(max-width:1280px){.introplaintext-wrapper .titleframe{margin-top:-48px;top:48px}
+.introplaintext-wrapper .titleframe.small{margin-top:-36px;top:36px}
+.introplaintext-wrapper .titleframe.xsmall{margin-top:-22px;top:22px}
+.introplaintext-wrapper .frame-box.frame-padding,.introplaintext-wrapper .frame-box.no-frame-padding{padding-top:100px}
+.introplaintext-wrapper .frame-box.frame-padding.small,.introplaintext-wrapper .frame-box.no-frame-padding.small{padding-top:88px}
+.introplaintext-wrapper .frame-box.frame-padding.xsmall,.introplaintext-wrapper .frame-box.no-frame-padding.xsmall{padding-top:36px}
+}
+@media(max-width:525px){.introplaintext-wrapper .columns{flex-wrap:wrap}
+.introplaintext-wrapper .intro{width:100%}
+.introplaintext-wrapper .titleframe{margin-top:-28px;top:28px}
+.introplaintext-wrapper .titleframe.xsmall{margin-top:-20px;top:20px}
+.introplaintext-wrapper .frame-padding{background-color:transparent !important}
+.introplaintext-wrapper .frame-box.frame-padding{padding-top:78px;padding-bottom:0}
+.introplaintext-wrapper .frame-box.frame-padding.xsmall,.introplaintext-wrapper .frame-box.no-frame-padding.xsmall{padding-top:32px}
+}

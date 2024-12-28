@@ -1,182 +1,229 @@
-<style>
-    .highlight {
-        background-color: yellow;
-        font-weight: bold;
-    }
-</style>
+<div class="header experiencefragment">
+    <div id="experiencefragment-b443ca1e56" class="cmp-experiencefragment cmp-experiencefragment--xf-header">
+        <div class="xf-content-height">
+            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                <div class="header aem-GridColumn aem-GridColumn--default--12">
+                    <div id="nncorp-header" class="nncorp-header">
+                        <div>
+                            <div id="headersettings">
+                                <input
+                                    type="hidden"
+                                    name="exitRampConfig"
+                                    ref="exitRampConfig"
+                                    value='{"exitRamp": "false", "exitRampMessage": "", "whitelistedURLs": "", "exitrampTitle": "","openExitRampTarget": "false"}'
+                                />
+                                <input type="hidden" name="removeLanguageNavigation" ref="removeLanguageNavigation" />
+                            </div>
 
-<header class="nxl-header">
-    <div class="header-wrapper">
-        <div class="header-left d-flex align-items-center gap-4">
-            <a href="javascript:void(0);" class="nxl-head-mobile-toggler" id="mobile-collapse">
-                <div class="hamburger hamburger--arrowturn">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
-                </div>
-            </a>
-            <div class="nxl-navigation-toggle">
-                <a href="javascript:void(0);" id="menu-mini-button">
-                    <i class="feather-align-left"></i>
-                </a>
-                <a href="javascript:void(0);" id="menu-expend-button" style="display: none">
-                    <i class="feather-arrow-right"></i>
-                </a>
-            </div>
-            <div class="nxl-lavel-mega-menu-toggle d-flex d-lg-none">
-                <a href="javascript:void(0);" id="nxl-lavel-mega-menu-open">
-                    <i class="feather-align-left"></i>
-                </a>
-            </div>
-        </div>
-        <div class="header-right ms-auto">
-            <div class="d-flex align-items-center">
-                <div class="nxl-h-item d-none d-sm-flex">
-                    <div class="full-screen-switcher">
-                        <a href="javascript:void(0);" class="nxl-head-link me-0" onclick="$('body').fullScreenHelper('toggle');">
-                            <i class="feather-maximize maximize"></i>
-                            <i class="feather-minimize minimize"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="nxl-h-item dark-light-theme">
-                    <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button">
-                        <i class="feather-moon"></i>
-                    </a>
-                    <a href="javascript:void(0);" class="nxl-head-link me-0 light-button" style="display: none">
-                        <i class="feather-sun"></i>
-                    </a>
-                </div>
-                <div class="dropdown nxl-h-item">
-                    <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside">
-                        <img src="https://crm.softbooking.uz/resource/img/user.avif" alt="user-image" class="img-fluid user-avtar me-0">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
-                        <div class="dropdown-header">
-                            <div class="d-flex align-items-center">
-                                <img src="https://crm.softbooking.uz/resource/img/user.avif" alt="user-image" class="img-fluid user-avtar">
-                                <div>
-                                    <h6 class="m-0 fs-14">{{ auth()->user()->full_name }}</h6>
-                                    <span class="fs-12">{{ auth()->user()->email }}</span>
+                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--24">
+                                <div class="tb-GridColumn tb-GridColumn--l--14">
+                                    <div id="left-side-header" class="left-side header-item" :class="showLeftHeader">
+                                        <a href="/" class="logo-lnk">
+                                            <span class="logo icon-logo-white m-m-right"></span>
+                                        </a>
+                                        <div class="left-side-header-content">
+                                            <div class="display-flex-center m-xxs-top">
+                                                <div class="country-selector-wrapper">
+                                                    <country-selector :color="'white'"> </country-selector>
+                                                </div>
+                                                <div class="nncorp-languagenavigation white">
+                                                    <nav class="cmp-languagenavigation">
+                                                        <ul class="cmp-languagenavigation__group">
+                                                            <li class="cmp-languagenavigation__item">
+                                                                <a href="{{ url('locale/en') }}" class="{{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
+                                                            </li>
+
+                                                            <li class="cmp-languagenavigation__item">
+                                                                <a href="{{ url('locale/ru') }}" class="{{ app()->getLocale() === 'ru' ? 'active' : '' }}">RU</a>
+                                                            </li>
+
+                                                            <li class="cmp-languagenavigation__item">
+                                                                <a href="{{ url('locale/uz') }}" class="{{ app()->getLocale() === 'uz' ? 'active' : '' }}">UZ</a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                            <div class="nncorp-breadcrumbs white"><div></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="right-side header-item">
+                                <div class="nncorp-navigation white">
+                                    <link
+                                        rel="stylesheet"
+                                        href="etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.a487e143b241d955686747a344b8a9b2.css"
+                                        type="text/css"
+                                    />
+
+                                    <nav
+                                        id="cmp-navigation"
+                                        class="cmp-navigation"
+                                        ref="cmp-navigation"
+                                        :class="handleNavAction"
+                                        role="navigation"
+                                        itemscope=""
+                                        itemtype="http://schema.org/SiteNavigationElement"
+                                    >
+                                        <div id="cmp-navigation__top-bar" class="top-bar" :class="{'navigation-display': isOverflowed}">
+                                            <ul class="cmp-navigation__group main-navigation">
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        :class="{dirty: navHoveredItems.includes('Bosh sahifa')}"
+                                                        v-on:mouseover="onLinkHover('Bosh sahifa')"
+                                                        v-on:click="openSubNav('Bosh sahifa')"
+                                                        class="cmp-navigation__item-link true"
+                                                    >
+                                                        <span class="text hyphenate">Bosh sahifa</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="javascript:void(0)"
+                                                        :class="{dirty: navHoveredItems.includes('Kompaniya haqida')}"
+                                                        v-on:mouseover="onLinkHover('Kompaniya haqida')"
+                                                        v-on:click="openSubNav('Kompaniya haqida')"
+                                                        aria-label="Kompaniya haqida"
+                                                        class="cmp-navigation__item-link true"
+                                                        onclick="openModal('modal1')"
+                                                    >
+                                                        <span class="text hyphenate">Kompaniya haqida</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="{{ route('products') }}"
+                                                        :class="{dirty: navHoveredItems.includes('Mahsulotlar')}"
+                                                        v-on:mouseover="onLinkHover('Mahsulotlar')"
+                                                        v-on:click="openSubNav('Mahsulotlar')"
+                                                        aria-label="Mahsulotlar"
+                                                        class="cmp-navigation__item-link true"
+                                                    >
+                                                        <span class="text hyphenate">Mahsulotlar</span>
+                                                    </a>
+                                                </li>
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="{{ route('vacancy') }}"
+                                                        :class="{dirty: navHoveredItems.includes('Bo‘sh ish o‘rinlari')}"
+                                                        v-on:mouseover="onLinkHover('Bo‘sh ish o‘rinlari')"
+                                                        v-on:click="openSubNav('Bo‘sh ish o‘rinlari')"
+                                                        aria-label="Bo‘sh ish o‘rinlari"
+                                                        class="cmp-navigation__item-link true"
+                                                    >
+                                                        <span class="text hyphenate">Bo‘sh ish o‘rinlari</span>
+                                                    </a>
+                                                </li>
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="{{ route('news') }}"
+                                                        :class="{dirty: navHoveredItems.includes('Yangiliklar')}"
+                                                        v-on:mouseover="onLinkHover('Yangiliklar')"
+                                                        v-on:click="openSubNav('Yangiliklar')"
+                                                        aria-label="Yangiliklar"
+                                                        class="cmp-navigation__item-link true"
+                                                    >
+                                                        <span class="text hyphenate">Yangiliklar</span>
+                                                    </a>
+                                                </li>
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="{{ route('contact') }}"
+                                                        :class="{dirty: navHoveredItems.includes('Biz bilan bog‘lanish')}"
+                                                        v-on:mouseover="onLinkHover('Biz bilan bog‘lanish')"
+                                                        v-on:click="openSubNav('Biz bilan bog‘lanish')"
+                                                        aria-label="Biz bilan bog‘lanish"
+                                                        class="cmp-navigation__item-link true"
+                                                    >
+                                                        <span class="text hyphenate">Biz bilan bog‘lanish</span>
+                                                    </a>
+                                                </li>
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                    <a
+                                                        href="uz/search.html"
+                                                        :class="{dirty: navHoveredItems.includes('Qidirish')}"
+                                                        v-on:mouseover="onLinkHover('Qidirish')"
+                                                        aria-label="Qidirish"
+                                                        class="cmp-navigation__item-link false"
+                                                    >
+                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"
+                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
+                                                                        ></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div v-if="!isTop && !tabletView" class="burger-float desktop" :class="{'top': isTop, 'not-top': !isTop}">
+                                            <button class="button burger-button" v-on:click="handleBurger" role="button" aria-label="Burger navigation button">
+                                                            <span class="icon icon-burger-float-blue"
+                                                            ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
+                                                                ><span class="path5"></span
+                                                                ></span>
+                                                <span class="icon icon-close-float-blue"
+                                                ><span class="path1"></span><span class="path2"></span><span class="path3"></span
+                                                    ></span>
+                                            </button>
+                                        </div>
+                                        <div class="burger-float mobile" v-on:click="openSubNav('')">
+                                            <button class="button burger-button" role="button" aria-label="Burger navigation button">
+                                                            <span class="icon icon-burger-float-blue"
+                                                            ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
+                                                                ><span class="path5"></span
+                                                                ></span>
+                                            </button>
+                                        </div>
+                                    </nav>
+
+                                    <script
+                                        type="text/javascript"
+                                        src="etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.818c37b0a1ad6bacc3b4dd33257cae1c.js"
+                                        async=""
+                                    ></script>
                                 </div>
                             </div>
                         </div>
-                        @auth
-                            <form class="d-block" action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <button type="submit" class="dropdown-item"><i class="feather-log-out"></i>
-                                    Выйти
-                                </button>
-                            </form>
-                        @endauth
+                        <!-- Modal -->
+                        <div id="modal1" class="modals">
+                            <div class="modal-content">
+                                <div class="" style="text-align: end; padding-top: 50px; padding-bottom: 150px">
+                                    <button class="close-btn" onclick="closeModal('modal1')">
+                                                    <span class="icon icon-times-white"
+                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
+                                                        ></span>
+                                    </button>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <span class="tagline hyphenate">Biz haqimizda</span>
+                                    </div>
+                                    <div class="">
+                                        <a href="{{ route('about') }}" aria-label="1-turdagi diabet" class="item m-s-bottom animate"
+                                        ><span class="text hyphenate">Kompaniya haqida ma'lumotlar</span></a
+                                        >
+                                    </div>
+                                    <div class="">
+                                        <a href="{{ route('about.team') }}" aria-label="Semizlik" class="item m-s-bottom animate"
+                                        ><span class="text hyphenate">Jamoa a'zolari</span></a
+                                        >
+                                    </div>
 
-                        <div class="dropdown-divider"></div>
+                                    <div class="">
+                                        <a href="{{ route('vacancy') }}" aria-label="Gemofiliya" class="item m-s-bottom animate"
+                                        ><span class="text hyphenate">Bo'sh ish o'rinlari</span></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
-
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const body = document.body;
-    const closeButton = document.querySelector('.search-count');
-
-    searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.trim();
-
-        clearHighlights();
-
-        if (searchTerm !== "") {
-            const matchCount = highlightText(body, searchTerm);
-            closeButton.textContent = `0/${matchCount}`;
-        } else {
-            closeButton.textContent = '';
-        }
-    });
-
-    function clearHighlights() {
-        const highlightedElements = document.querySelectorAll('.highlight');
-        highlightedElements.forEach(element => {
-            const parent = element.parentNode;
-            parent.replaceChild(document.createTextNode(element.textContent), element);
-            parent.normalize();
-        });
-    }
-
-    function highlightText(element, searchTerm) {
-        let matchCount = 0;
-
-        if (element.nodeType === Node.TEXT_NODE) {
-            const index = element.textContent.toLowerCase().indexOf(searchTerm.toLowerCase());
-            if (index !== -1) {
-                const highlightedSpan = document.createElement('span');
-                highlightedSpan.classList.add('highlight');
-                highlightedSpan.textContent = element.textContent.substring(index, index + searchTerm.length);
-
-                const afterText = element.splitText(index);
-                afterText.textContent = afterText.textContent.substring(searchTerm.length);
-
-                element.parentNode.insertBefore(highlightedSpan, afterText);
-                matchCount++;
-            }
-        } else if (element.nodeType === Node.ELEMENT_NODE && element.childNodes) {
-            element.childNodes.forEach(child => {
-                matchCount += highlightText(child, searchTerm); // Har bir chaqiriqda mos tushgan sonni qo'shish
-            });
-        }
-
-        return matchCount; // Umumiy topilgan natijalarni qaytarish
-    }
-
-    // Time
-    let reminderTriggered = false;
-    let timerInterval;
-
-    document.querySelector(".js-taymer").addEventListener("click", evt => {
-        evt.preventDefault();
-
-        if (!reminderTriggered) {
-            let startTime = new Date();
-            reminderTriggered = true;
-
-            const padZero = (num) => (num < 10 ? "0" + num : num);
-
-            const reminder = (number) => {
-                if (number >= 1) {
-                    document.querySelector(".js-timeout").textContent = Number(number);
-                }
-            };
-
-            const updateTime = () => {
-                const currentTime = new Date();
-                const timeDifference = currentTime - startTime;
-
-                let hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
-                let minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
-                let seconds = Math.floor((timeDifference / 1000) % 60);
-
-                hours = padZero(hours);
-                minutes = padZero(minutes);
-                seconds = padZero(seconds);
-
-                if (reminderTriggered) {
-                    document.querySelector('.js-taymer-manage').textContent = `${hours}:${minutes}:${seconds}`;
-                    document.querySelector(".js-taymer").textContent = "Остановить таймер";
-                }
-
-                reminder(hours);
-            };
-            updateTime();
-            timerInterval = setInterval(updateTime, 1000);
-
-        } else {
-            clearInterval(timerInterval);
-            reminderTriggered = false;
-            document.querySelector('.js-taymer-manage').textContent = "Таймеры не запущены!";
-            document.querySelector(".js-taymer").textContent = "Запустить таймер";
-        }
-    });
-</script>
+</div>
