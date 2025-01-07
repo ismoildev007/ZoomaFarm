@@ -10,6 +10,9 @@ class AboutSeeder extends Seeder
     public function run()
     {
         DB::table('abouts')->insert([
+            'short_content_uz' => 'Biz g‘oyalarni jiddiy surunkali kasalliklarga chalingan odamlar uchun yaxshiroq muolajalarga aylantiramiz.',
+            'short_content_ru' => 'Мы превращаем идеи в более эффективные методы лечения людей с серьезными хроническими заболеваниями.',
+            'short_content_en' => 'We turn ideas into better treatments for people with serious chronic diseases.',
             'about_or_company_uz' => 'Kashf qilish, ishlab chiqish va yetkazib berish
 
 Novo Nordisk deyarli 100 yil davomida og’ir surunkali kasallikka chalingan bemorlarning hayot sifatini yaxshilab kelmoqda, insulin ruchkalari va shunga o’xshash innovatsion mahsulotlar ishlab chiqarish bilan ularning muammolariga yechim topmoqda.
@@ -58,6 +61,9 @@ From our laboratories to our factory floors, we create and develop innovative bi
             'updated_at' => now(),
         ]);
         DB::table('abouts')->insert([
+            'short_content_uz' => 'Biz g‘oyalarni jiddiy surunkali kasalliklarga chalingan odamlar uchun yaxshiroq muolajalarga aylantiramiz.',
+            'short_content_ru' => 'Мы превращаем идеи в более эффективные методы лечения людей с серьезными хроническими заболеваниями.',
+            'short_content_en' => 'We turn ideas into better treatments for people with serious chronic diseases.',
             'about_or_company_uz' => 'Kashf qilish, ishlab chiqish va yetkazib berish
 
 Novo Nordisk deyarli 100 yil davomida og’ir surunkali kasallikka chalingan bemorlarning hayot sifatini yaxshilab kelmoqda, insulin ruchkalari va shunga o’xshash innovatsion mahsulotlar ishlab chiqarish bilan ularning muammolariga yechim topmoqda.

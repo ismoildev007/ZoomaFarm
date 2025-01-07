@@ -56,6 +56,10 @@
                                         @foreach (['uz', 'en', 'ru'] as $lang)
                                             <div class="tab-pane fade show {{ $lang == 'uz' ? 'active' : '' }}" id="{{ $lang }}Content">
                                                 <div class="form-group pb-3">
+                                                    <label for="short_content_{{ $lang }}">Чем мы занимаемся (кратко) ({{ strtoupper($lang) }}):</label>
+                                                    <textarea class="form-control" id="short_content_{{ $lang }}" name="short_content_{{ $lang }}" required>{{ old('short_content_' . $lang, optional($about)->{'short_content_' . $lang}) }}</textarea>
+                                                </div>
+                                                <div class="form-group pb-3">
                                                     <label for="about_or_company_{{ $lang }}">About or Company ({{ strtoupper($lang) }}):</label>
                                                     <div id="about_{{ $lang }}" style="height:200px;">{!! old('about_or_company_' . $lang, $about->{'about_or_company_' . $lang}) !!}</div>
                                                     <input type="hidden" id="about_or_company_{{ $lang }}" name="about_or_company_{{ $lang }}">

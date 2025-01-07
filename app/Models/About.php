@@ -10,6 +10,9 @@ class About extends Model
     use HasFactory;
 
     protected $fillable = [
+        'short_content_uz',
+        'short_content_ru',
+        'short_content_en',
         'description_uz',
         'description_ru',
         'description_en',

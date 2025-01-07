@@ -24,6 +24,7 @@
                 <?php
                 $about1 = \App\Models\About::find(1);
                 $about2 = \App\Models\About::find(2);
+                $contact = \App\Models\Contact::first();
                 ?>
                 <li class="nxl-item nxl-hasmenu">
                     <a href="{{ route('abouts.edit', $about1->id) }}" class="nxl-link">
@@ -56,7 +57,7 @@
                     </a>
                 </li>
                 <li class="nxl-item nxl-hasmenu">
-                    <a href="{{ route('contacts.index') }}" class="nxl-link">
+                    <a href="{{ route('contacts.edit', $contact->id) }}" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-mail"></i></span> <!-- Contact icon -->
                         <span class="nxl-mtext">Контакты</span>
                     </a>

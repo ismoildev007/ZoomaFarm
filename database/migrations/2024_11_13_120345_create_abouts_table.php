@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
+            $table->text('short_content_uz')->nullable();
+            $table->text('short_content_ru')->nullable();
+            $table->text('short_content_en')->nullable();
             $table->text('about_or_company_uz')->nullable();
             $table->text('about_or_company_ru')->nullable();
             $table->text('about_or_company_en')->nullable();
