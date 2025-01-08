@@ -1,5 +1,7 @@
 @extends('layouts.product-news-contact')
-
+<?php
+$lang = app()->getLocale();
+?>
 @section('content')
     <div class="root responsivegrid">
         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
@@ -27,53 +29,36 @@
                                 <div
                                     class="ln-container tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--2">
                                     <div class="ln-link-list">
-                                        <a href="./news-details.html" aria-label=""
-                                           class="ln-link-item m-l-bottom right-arrow-animation color-blue"
-                                        ><p class="job-name">
-                                                2024 yil 20 dekabr
-                                            </p>
-                                            <div class="location-info m-xxs-top">
-                                                <p class="paragraph-s">
-                                                    Novo Nordisk A/S: CagriSema REDEFINE 1 sinovida semirib ketgan yoki
-                                                    ortiqcha vaznli kattalarda yuqori vazn yo'qotishini
-                                                    namoyish etadi.
-                                                </p>
-                                            </div>
-                                            <div class="job-category m-xxs-top">
-                                                <p class="paragraph-s">
-                                                    <span class="icon icon-right-arrow m-xxs-left"></span>
-                                                </p></div
-                                            >
-                                        </a>
-                                        <a href="./news-details.html" aria-label=""
-                                           class="ln-link-item m-l-bottom right-arrow-animation color-blue"
-                                        ><p class="job-name">2024 yil 18 dekabr</p>
-                                            <div class="location-info m-xxs-top">
-                                                <p class="paragraph-s">
-                                                    Novo Holdings tomonidan Catalentni sotib olish va Novo Nordisk
-                                                    tomonidan Novo Holdingsdan uchta ishlab chiqarish
-                                                    maydonchasini sotib olish yakunlandi.
-                                                </p>
-                                            </div>
-                                            <div class="job-category m-xxs-top">
-                                                <p class="paragraph-s">Ko'proq o'qish<span
-                                                        class="icon icon-right-arrow m-xxs-left"></span></p></div
-                                            >
-                                        </a>
-                                        <a href="./news-details.html" aria-label=""
-                                           class="ln-link-item m-l-bottom right-arrow-animation color-blue"
-                                        ><p class="job-name">2024 yil 16 dekabr</p>
-                                            <div class="location-info m-xxs-top">
-                                                <p class="paragraph-s">
-                                                    Novo Nordisk Daniyaning Odense shahridagi yangi ishlab chiqarish
-                                                    zavodiga 8,5 milliard DKK sarmoya kiritadi
-                                                </p>
-                                            </div>
-                                            <div class="job-category m-xxs-top">
-                                                <p class="paragraph-s">Ko'proq o'qish<span
-                                                        class="icon icon-right-arrow m-xxs-left"></span></p></div
-                                            >
-                                        </a>
+                                        @if($newsLatest3->isNotEmpty())
+                                            @foreach($newsLatest3 as $item)
+                                                <a href="{{route('single.news',$item->id)}}" aria-label=""
+                                                   class="ln-link-item m-l-bottom right-arrow-animation color-blue">
+                                                    @php
+                                                        $date = \Carbon\Carbon::parse($item->date);
+                                                        $month = __('messages.months')[$date->month];
+                                                        $year = __('messages.year');
+                                                    @endphp
+
+                                                    <p class="job-name">
+                                                        {{ $date->year }} {{ $year }} {{ $date->day }} {{ $month }}
+                                                    </p>
+
+                                                    <div class="location-info m-xxs-top">
+                                                        <p class="paragraph-s">
+                                                            {{ $item['title_'.$lang] }}
+                                                        </p>
+                                                    </div>
+                                                    <div class="job-category m-xxs-top">
+                                                        <p class="paragraph-s">
+                                                            Ko'proq o'qish<span
+                                                                class="icon icon-right-arrow m-xxs-left"></span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            @endforeach
+                                        @else
+                                            <p>Yangiliklar topilmadi.</p>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -113,213 +98,80 @@
                                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                             >
                                                 <div class="rowcontainer">
-                                                    <div class="contentgrid_row">
-                                                        <div
-                                                            class="columns-1 column has-content-true column-0 top_align contentgrid_column">
-                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                                <div
-                                                                    class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                    <div class="image-video-wrapper">
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <img
-                                                                                src="https://www.novonordisk.com/content/dam/nncorp/global/en/media/images/latest-news/novo-nordisk-new-hillerod-facility-drawing.jpg.corpimgo.jpg"
-                                                                                alt="Xillerodda (Daniya) sifat nazorati binoning Architecht rasmlari."
-                                                                                loading="eager"
-                                                                            />
-                                                                        </div>
-                                                                        <p class="infotext color-blue m-xxs-bottom rtl-text">
-                                                                            ISHLAB CHIQARISH</p>
-                                                                        <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            Yangi zamonaviy sifat nazorati
-                                                                            laboratoriyasi
-                                                                        </h3>
-                                                                        <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                            Biz Xillerodda (Daniya) sifat nazorati
-                                                                            laboratoriyasini tashkil etish uchun 2,9
-                                                                            milliard Daniya
-                                                                            kroni sarmoya kiritmoqchimiz.
-                                                                        </p>
-                                                                        <div
-                                                                            class="link m-xs-top right-arrow-animation">
-                                                                            <a
-                                                                                href="./news-details.html"
-                                                                                target="_self"
-                                                                                aria-label="Yangi sifat nazorati laboratoriyasining rejalari haqida ko'proq bilib oling"
-                                                                                class="color-blue link-label m-xxs-right paragraph-s"
-                                                                            >Batafsil ma'lumot <span
-                                                                                    class="icon icon-right-arrow m-xxs-left"></span
-                                                                                ></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="contentgrid_row">
-                                                        <div
-                                                            class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                                <div
-                                                                    class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                    <div>
+                                                    @if($newsLatest1)
+                                                        <div class="contentgrid_row">
+                                                            <div class="columns-1 column has-content-true column-0 top_align contentgrid_column">
+                                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                                    <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                                         <div class="image-video-wrapper">
-                                                                            <div
-                                                                                class="image-video-content-wrapper m-xs-bottom">
-                                                                                <picture>
-                                                                                    <img
-                                                                                        src="https://www.novonordisk.com/content/dam/nncorp/global/en/sustainable-business/remed2/images/hero-header-keyvisual-1920x1080.jpg.corpimgo.jpg"
-                                                                                        alt="Qayta tayyorlangan Novo Nordisk qarshi jihozi tasviri"
-                                                                                        loading="eager"
-                                                                                    /></picture>
+                                                                            <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                <img src="{{ asset('storage/' . $newsLatest1->image) }}"
+                                                                                     alt="{{ $newsLatest1->title_uz }}"
+                                                                                     loading="eager" />
                                                                             </div>
-                                                                            <p class="infotext color-blue m-xxs-bottom rtl-text">
-                                                                                <span style="vertical-align: inherit">Barqarorlik</span>
+                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                {{ $newsLatest1->title_uz }}
+                                                                            </h3>
+                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
+                                                                                {!!   $newsLatest1->content_uz !!}
                                                                             </p>
-                                                                            <div>
-                                                                                <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                            <span
-                                                                                                style="vertical-align: inherit"
-                                                                                            >Ishlatilgan qurilmalarni qayta ishlash sanoatimizni qayta shakllantiradi</span
-                                                                                            >
-                                                                                </h3>
-                                                                                <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                            <span
-                                                                                                style="vertical-align: inherit"
-                                                                                            >Atrof-muhit muammolari hech qachon bugungi kundagidek muhim va dolzarb bo'lmagan.
-                                                                                                Ammo Novo Nordiskda biz hech qachon murakkablikning o'zgarish uchun to'siq
-                                                                                                bo'lishiga yo'l qo'ymaymiz.</span
-                                                                                            >
-                                                                                </p>
-                                                                                <div
-                                                                                    class="link m-xs-top right-arrow-animation">
-                                                                                    <a
-                                                                                        href="./news-details.html"
-                                                                                        target="_self"
-                                                                                        aria-label="ReMed deb nomlangan qurilmani qayta ishlash dasturi haqida ko'proq o'qing"
-                                                                                        class="color-blue link-label m-xxs-right paragraph-s"
-                                                                                    >
-                                                                                        <span
-                                                                                            style="vertical-align: inherit">Ko'proq o'qish</span>
-                                                                                        <span
-                                                                                            class="icon icon-right-arrow m-xxs-left"></span
-                                                                                        ></a>
-                                                                                </div>
+                                                                            <div class="link m-xs-top right-arrow-animation">
+                                                                                <a href="{{route('single.news',['id' => $item->id])}}"
+                                                                                   target="_self"
+                                                                                   aria-label="{{ $newsLatest1->title_uz }}"
+                                                                                   class="color-blue link-label m-xxs-right paragraph-s">
+                                                                                    Batafsil ma'lumot
+                                                                                    <span class="icon icon-right-arrow m-xxs-left"></span>
+                                                                                </a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div
-                                                            class="columns-3 column has-content-true column-1 top_align contentgrid_column">
-                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                    @endif
+
+
+                                                    <div class="contentgrid_row">
+                                                        @foreach($news as $item)
+                                                            <div
+                                                                class="columns-3 column has-content-true column-{{ $loop->index }} top_align contentgrid_column">
                                                                 <div
-                                                                    class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                    <div>
-                                                                        <div class="image-video-wrapper">
-                                                                            <div
-                                                                                class="image-video-content-wrapper m-xs-bottom">
-                                                                                <picture>
+                                                                    class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                                    <div
+                                                                        class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                        <div>
+                                                                            <div class="image-video-wrapper">
+                                                                                <div
+                                                                                    class="image-video-content-wrapper m-xs-bottom">
                                                                                     <img
-                                                                                        src="https://www.novonordisk.com/content/dam/nncorp/global/en/media/images/latest-news/frontpage-news/copi-pr-frontpage.jpg.corpimgo.jpg"
-                                                                                        alt="Meva yeyayotgan va kulayotgan bolalar surati"
-                                                                                        loading="eager"
-                                                                                    /></picture>
-                                                                            </div>
-                                                                            <p class="infotext color-blue m-xxs-bottom rtl-text">
-                                                                                <span style="vertical-align: inherit">BOLADA SEMIRISHNI OLDINI OLISH</span>
-                                                                            </p>
-                                                                            <div>
+                                                                                        src="{{ asset('storage/' . $item->image) }}"
+                                                                                        alt="{{ $item['title_'.$lang] }}"
+                                                                                        loading="eager"/>
+                                                                                </div>
                                                                                 <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                            <span
-                                                                                                style="vertical-align: inherit"
-                                                                                            >Bolalarda semirishning oldini olish bo'yicha yangi tashabbus</span
-                                                                                            >
+                                                                                    {{ $item['title_'.$lang] }}
                                                                                 </h3>
-                                                                                <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                            <span
-                                                                                                style="vertical-align: inherit"
-                                                                                            >Biz jismoniy faollik va yaxshi ovqatlanish orqali sog'lom turmush tarzini
-                                                                                                shakllantirish maqsadida dunyoning oltita shahriga 250 million Daniya krondan ortiq
-                                                                                                sarmoya kiritmoqdamiz.</span
-                                                                                            >
-                                                                                </p>
+
                                                                                 <div
                                                                                     class="link m-xs-top right-arrow-animation">
-                                                                                    <a
-                                                                                        href="./news-details.html"
-                                                                                        target="_self"
-                                                                                        aria-label="Bolalarda semirishning olish bo'yicha yangi tashabbusimiz haqida ko'proq bilib oling"
-                                                                                        class="color-blue link-label m-xxs-right paragraph-s"
-                                                                                    ><span style="vertical-align: inherit">Batafsil ma'lumot</span>
+                                                                                    <a href="{{route('single.news',['id' => $item->id])}}"
+                                                                                       target="_self"
+                                                                                       aria-label="{{ $item['title_'.$lang]}}"
+                                                                                       class="color-blue link-label m-xxs-right paragraph-s">
+                                                                                        Ko'proq o'qish
                                                                                         <span
-                                                                                            class="icon icon-right-arrow m-xxs-left"></span
-                                                                                        ></a>
+                                                                                            class="icon icon-right-arrow m-xxs-left"></span>
+                                                                                    </a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div
-                                                            class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                                <div
-                                                                    class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                    <div>
-                                                                        <div class="image-video-wrapper">
-                                                                            <div
-                                                                                class="image-video-content-wrapper m-xs-bottom">
-                                                                                <div
-                                                                                    aria-label="Daniyadagi Novo Nordisk ishlab chiqarish zavodi videosi"
-                                                                                    class="video">
-                                                                                    <div
-                                                                                        style="width: 100%; height: 0px; position: relative; padding-bottom: 56.25%">
-                                                                                        <iframe
-                                                                                            src="https://video.novonordisk.com/v.ihtml/player.html?token=d321c8d4b2ea9a538619babe9a4fa9f2&amp;source=embed&amp;photo%5fid=90458869"
-                                                                                            frameborder="0"
-                                                                                            scrolling="no"
-                                                                                            allowfullscreen="allowfullscreen"
-                                                                                            allow="autoplay; fullscreen"
-                                                                                            style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px"
-                                                                                            data-twentythree-gtm="yes"
-                                                                                        ></iframe>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <p class="infotext color-blue m-xxs-bottom rtl-text">
-                                                                                ISHLAB CHIQARISH</p>
-                                                                            <div>
-                                                                                <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                    Ishlab chiqarishni kengaytirish
-                                                                                </h3>
-                                                                                <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                    Biz Kalundborg, Daniyadagi ishlab
-                                                                                    chiqarish quvvatlarimizni
-                                                                                    kengaytirish uchun 42
-                                                                                    milliard Daniya krondan ortiq
-                                                                                    sarmoya kiritmoqdamiz.
-                                                                                </p>
-                                                                                <div
-                                                                                    class="link m-xs-top right-arrow-animation">
-                                                                                    <a
-                                                                                        href="./news-details.html"
-                                                                                        target="_self"
-                                                                                        aria-label="Investitsiyalar haqida ko'proq o'qing"
-                                                                                        class="color-blue link-label m-xxs-right paragraph-s"
-                                                                                    >Ko'proq o'qish <span
-                                                                                            class="icon icon-right-arrow m-xxs-left"></span
-                                                                                        ></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>

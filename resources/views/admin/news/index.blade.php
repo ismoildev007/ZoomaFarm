@@ -38,9 +38,7 @@
                                         <thead>
                                         <tr>
                                             <th>№</th>
-                                            <th>Заголовок (УЗ)</th>
                                             <th>Заголовок (РУ)</th>
-                                            <th>Заголовок (АН)</th>
                                             <th>Дата</th>
                                             <th>Изображение</th>
                                             <th class="text-end">Действия</th>
@@ -50,9 +48,7 @@
                                         @foreach ($news as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $item->title_uz }}</td>
                                                 <td>{{ $item->title_ru }}</td>
-                                                <td>{{ $item->title_en }}</td>
                                                 <td>{{ $item->date }}</td>
                                                 <td>
                                                     @if ($item->image)

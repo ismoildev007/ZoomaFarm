@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 
@@ -27,12 +28,20 @@ class MainController extends Controller
     }
     public function news()
     {
-        return view('pages.page-news');
+        $newsLatest1 = News::latest('date')->first();
+        $newsLatest3 = News::latest('date')->skip(1)->take(3)->get();
+        $news = News::latest('date')->skip(4)->take(PHP_INT_MAX)->get();
+
+        return view('pages.page-news', compact('newsLatest1', 'newsLatest3', 'news'));
     }
-    public function singleNews($slug)
+
+
+    public function singleNews($id)
     {
-        return view('pages.single-news');
+        $news = News::where('id', $id)->firstOrFail();
+        return view('pages.single-news', compact('news'));
     }
+
     public function products()
     {
         return view('pages.page-products');

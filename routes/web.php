@@ -38,7 +38,7 @@ Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/about-team', [MainController::class, 'aboutTeam'])->name('about.team');
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/news', [MainController::class, 'news'])->name('news');
-Route::get('/news/{slug}', [MainController::class, 'singleNews'])->name('single.news');
+Route::get('/news/{id}', [MainController::class, 'singleNews'])->name('single.news');
 Route::get('/products', [MainController::class, 'products'])->name('products');
 Route::get('/products/{slug}', [MainController::class, 'singleProduct'])->name('single.product');
 Route::get('/vacancy', [MainController::class, 'vacancy'])->name('vacancy');
