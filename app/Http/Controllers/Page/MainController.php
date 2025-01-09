@@ -13,7 +13,13 @@ class MainController extends Controller
 {
     public function home()
     {
-        return view('pages.home');
+        $lang = App::getLocale();
+        $latestProducts = Product::orderBy('created_at', 'desc')
+            ->take(3)
+            ->get(); // So‘nggi 3 ta boshqa mahsulot
+        $latestVacancy = Vacancy::orderBy('created_at', 'desc')->take(3)->get();
+        $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
+        return view('pages.home',compact('latestProducts','lang','latestVacancy','latestNews'));
     }
     public function about()
     {

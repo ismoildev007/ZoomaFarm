@@ -69,6 +69,12 @@
                     </a>
                 </li>
 
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{ route('orders.index') }}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-shopping-cart"></i></span> <!-- Shopping cart icon -->
+                        <span class="nxl-mtext">Заказы</span>
+                    </a>
+                </li>
 
                 {{--                @can('admins')--}}
 {{--                    <li class="nxl-item nxl-hasmenu">--}}

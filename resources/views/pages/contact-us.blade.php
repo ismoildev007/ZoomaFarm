@@ -39,7 +39,7 @@
                 />
 
                 <div class="form-container-wrapper gutters component-padding" :class="{loaded: loaded }">
-                    <form action="{{route('order.store')}}" class="cmp-form light" method="post">
+                    <form action="{{route('orders.store')}}" class="cmp-form light" method="post">
                         @csrf
                         <input type="hidden" ref="endpoint" value="/bin/nncorp/contact-us" />
                         <input

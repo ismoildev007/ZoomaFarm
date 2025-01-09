@@ -50,5 +50,6 @@ Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders.ind
 Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 Route::get('/admin/orders/{id}/edit', [OrderController::class, 'edit'])->name('orders.edit');
 Route::patch('/admin/orders/{id}', [OrderController::class, 'update'])->name('orders.update');
+Route::post('/orders/{order}/update-status', [OrderController::class,'updateStatus'])->name('orders.update-status');
 
 Route::get('locale/{lang}',[LanguageController::class, 'setLocale']);

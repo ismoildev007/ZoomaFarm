@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+    public function updateStatus(Request $request, $orderId)
+    {
+        $order = Order::findOrFail($orderId);
+        $order->status = $request->status;
+        $order->save();
+
+        return redirect()->back()->with('success', 'Zayafka muvaffaqiyatli qabul qilindi!');
+    }
     public function index()
     {
         $orders = Order::latest()->get();
@@ -15,6 +23,7 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
+
         $request->validate([
             'name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
