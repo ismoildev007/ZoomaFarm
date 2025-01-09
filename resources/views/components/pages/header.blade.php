@@ -54,7 +54,7 @@
                                 <div class="nncorp-navigation white">
                                     <link
                                         rel="stylesheet"
-                                        href="etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.a487e143b241d955686747a344b8a9b2.css"
+                                        href="/etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.a487e143b241d955686747a344b8a9b2.css"
                                         type="text/css"
                                     />
 
@@ -143,19 +143,19 @@
                                                         <span class="text hyphenate">Biz bilan bog‘lanish</span>
                                                     </a>
                                                 </li>
-                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="uz/search.html"
-                                                        :class="{dirty: navHoveredItems.includes('Qidirish')}"
-                                                        v-on:mouseover="onLinkHover('Qidirish')"
-                                                        aria-label="Qidirish"
-                                                        class="cmp-navigation__item-link false"
-                                                    >
-                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"
-                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                                                        ></span>
-                                                    </a>
-                                                </li>
+{{--                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">--}}
+{{--                                                    <a--}}
+{{--                                                        href="uz/search.html"--}}
+{{--                                                        :class="{dirty: navHoveredItems.includes('Qidirish')}"--}}
+{{--                                                        v-on:mouseover="onLinkHover('Qidirish')"--}}
+{{--                                                        aria-label="Qidirish"--}}
+{{--                                                        class="cmp-navigation__item-link false"--}}
+{{--                                                    >--}}
+{{--                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"--}}
+{{--                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span--}}
+{{--                                                                        ></span>--}}
+{{--                                                    </a>--}}
+{{--                                                </li>--}}
                                             </ul>
                                         </div>
 
@@ -182,7 +182,7 @@
 
                                     <script
                                         type="text/javascript"
-                                        src="etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.818c37b0a1ad6bacc3b4dd33257cae1c.js"
+                                        src="/etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.818c37b0a1ad6bacc3b4dd33257cae1c.js"
                                         async=""
                                     ></script>
                                 </div>

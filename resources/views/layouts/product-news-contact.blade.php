@@ -498,19 +498,19 @@
                                                             <span class="text hyphenate">Biz bilan bog‘lanish</span>
                                                         </a>
                                                     </li>
-                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="uz/search.html"
-                                                            :class="{dirty: navHoveredItems.includes('Qidirish')}"
-                                                            v-on:mouseover="onLinkHover('Qidirish')"
-                                                            aria-label="Qidirish"
-                                                            class="cmp-navigation__item-link false"
-                                                        >
-                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"
-                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                                                        ></span>
-                                                        </a>
-                                                    </li>
+{{--                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">--}}
+{{--                                                        <a--}}
+{{--                                                            href="uz/search.html"--}}
+{{--                                                            :class="{dirty: navHoveredItems.includes('Qidirish')}"--}}
+{{--                                                            v-on:mouseover="onLinkHover('Qidirish')"--}}
+{{--                                                            aria-label="Qidirish"--}}
+{{--                                                            class="cmp-navigation__item-link false"--}}
+{{--                                                        >--}}
+{{--                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"--}}
+{{--                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span--}}
+{{--                                                                        ></span>--}}
+{{--                                                        </a>--}}
+{{--                                                    </li>--}}
                                                 </ul>
                                             </div>
                                             <div v-if="!isTop && !tabletView" class="burger-float desktop" :class="{'top': isTop, 'not-top': !isTop}">

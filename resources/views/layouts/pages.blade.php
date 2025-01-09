@@ -8,20 +8,20 @@
 
     <link rel="stylesheet" href="pxc7vyl.css" />
 
-    <link rel="icon" type="image/x-icon" href="etc.clientlibs/nncorp/components/structure/page/clientlib/resources/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/etc.clientlibs/nncorp/components/structure/page/clientlib/resources/favicon.ico" />
 
-    <script type="text/javascript" src="etc.clientlibs/nncorp/clientlibs/vendor/clientlib-vuejs/production.min.js"></script>
+    <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/vendor/clientlib-vuejs/production.min.js"></script>
 
-    <script type="text/javascript" src="etc.clientlibs/nncorp/clientlibs/clientlib-mandatory-dependencies.min.39771107329330d8ebaec070d3be1c72.js"></script>
+    <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/clientlib-mandatory-dependencies.min.39771107329330d8ebaec070d3be1c72.js"></script>
 
-    <link rel="stylesheet" href="etc.clientlibs/nncorp/clientlibs/clientlib-grid.min.c4940434fd7690370948a7d29be572da.css" type="text/css" />
+    <link rel="stylesheet" href="/etc.clientlibs/nncorp/clientlibs/clientlib-grid.min.c4940434fd7690370948a7d29be572da.css" type="text/css" />
 
-    <link rel="stylesheet" href="etc.clientlibs/nncorp/clientlibs/vuejs/components/disclaimer-dialog.min.css" type="text/css" />
-    <link rel="stylesheet" href="etc.clientlibs/nncorp/clientlibs/vuejs/components/confirm-dialog.min.css" type="text/css" />
-    <link rel="stylesheet" href="etc.clientlibs/nncorp/clientlibs/vuejs/components/rnd-dialog.min.css" type="text/css" />
-    <link rel="stylesheet" href="etc.clientlibs/nncorp/clientlibs/clientlib-base.min.04e83f5fe1287293f33a58d52e650b13.css" type="text/css" />
+    <link rel="stylesheet" href="/etc.clientlibs/nncorp/clientlibs/vuejs/components/disclaimer-dialog.min.css" type="text/css" />
+    <link rel="stylesheet" href="/etc.clientlibs/nncorp/clientlibs/vuejs/components/confirm-dialog.min.css" type="text/css" />
+    <link rel="stylesheet" href="/etc.clientlibs/nncorp/clientlibs/vuejs/components/rnd-dialog.min.css" type="text/css" />
+    <link rel="stylesheet" href="/etc.clientlibs/nncorp/clientlibs/clientlib-base.min.04e83f5fe1287293f33a58d52e650b13.css" type="text/css" />
 
-    <link rel="stylesheet" href="etc.clientlibs/nncorp/clientlibs/clientlib-resetcss.min.6779423c663adcef9ece9d0b7dbb9bf6.css" type="text/css" />
+    <link rel="stylesheet" href="/etc.clientlibs/nncorp/clientlibs/clientlib-resetcss.min.6779423c663adcef9ece9d0b7dbb9bf6.css" type="text/css" />
 
     <script>
         (window.BOOMR_mq = window.BOOMR_mq || []).push([
@@ -292,7 +292,7 @@
     }
 </style>
 
-<body class="page basicpage" id="page-c79b6daff9">
+<body class="page basicpage" >
 <div class="container">
     <div id="pagesettings">
         <input type="hidden" name="currentPagePath" ref="currentPagePath" value="/content/nncorp/uz/uz/contact-us" />

@@ -118,99 +118,44 @@
                                     >
                                         <div>
                                             <div class="rowcontainer">
-                                                <div class="contentgrid_row">
-                                                    <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                <div class="image-video-wrapper">
-                                                                    <div class="image-video-content-wrapper m-xs-bottom">
-                                                                        <img
-                                                                            src="https://images.novonordisk.com/is/image/novonordiskas/NN_EVP_Beijing_RNGG_MCES_LLJG-16?wid=2000&fit=constrain&qlt=90"
-                                                                            alt="Wu Wei va Kasper Roseeuw, Novo Nordisk Xitoy"
-                                                                            loading="eager"
-                                                                        />
-                                                                    </div>
+                                                @foreach ($vacancies->chunk(3) as $vacancyChunk)
+                                                    <div class="contentgrid_row">
+                                                        @foreach ($vacancyChunk as $vacancy)
+                                                            <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                                    <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                        <div class="image-video-wrapper">
+                                                                            <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                <img
+                                                                                    src="{{ asset('storage/' . $vacancy->image) }}"
+                                                                                    alt="{{ $vacancy->{'name_' . $lang} }}"
+                                                                                    loading="eager"
+                                                                                />
+                                                                            </div>
 
-                                                                    <h3
-                                                                        class="color-blue subtext subheadline paragraph-s rtl-text"
-                                                                        v-html="applyContentStyle('Ariza berishingizdan avval ')"
-                                                                    ></h3>
-                                                                    <p
-                                                                        class="color-blue subtext paragraph-s paragraph-line-break rtl-text"
-                                                                        v-html="applyContentStyle('Agar siz bo‘sh ish o‘rniga ariza berishga tayyor bo‘lsangiz, nomzod profilini yarating.  Profilni yaratish oson va uni o‘zingiz uchun mos bo‘lgan bo‘sh ish o‘rnini topishdan avval yoki keyin qilish mumkin. Arizangizni nomzod profilingizda ko‘rishingiz mumkin.    ')"
-                                                                    ></p>
-                                                                    <div class="link m-xs-top right-arrow-animation">
-                                                                        <a href="../careers/job-agent.html" class="color-blue link-label m-xxs-right paragraph-s">
-                                                                            <span>Ishga kirish bo‘yicha arizangizni ko‘ring</span>
-                                                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                                                        </a>
+                                                                            <h3
+                                                                                class="color-blue subtext subheadline paragraph-s rtl-text"
+                                                                                v-html="applyContentStyle('{{ $vacancy->{'name_' . $lang} }}')"
+                                                                            ></h3>
+                                                                            <p
+                                                                                class="color-blue subtext paragraph-s paragraph-line-break rtl-text"
+                                                                                v-html="applyContentStyle('{{ $vacancy->{'content_' . $lang} }}')"
+                                                                            ></p>
+                                                                            <div class="link m-xs-top right-arrow-animation">
+                                                                                <a href="{{ route('contact') }}" class="color-blue link-label m-xxs-right paragraph-s">
+                                                                                    <span>Biz bilan bog'lanib va batafsil ma'lumot oling</span>
+                                                                                    <span class="icon icon-right-arrow m-xxs-left"></span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
-                                                    <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                <div class="image-video-wrapper">
-                                                                    <div class="image-video-content-wrapper m-xs-bottom">
-                                                                        <img
-                                                                            src="https://images.novonordisk.com/is/image/novonordiskas/NN_EVP_Beijing_RNGG_MCES_LLJG-16?wid=2000&fit=constrain&qlt=90"
-                                                                            alt="Wu Wei va Kasper Roseeuw, Novo Nordisk Xitoy"
-                                                                            loading="eager"
-                                                                        />
-                                                                    </div>
-
-                                                                    <h3
-                                                                        class="color-blue subtext subheadline paragraph-s rtl-text"
-                                                                        v-html="applyContentStyle('Ariza berishingizdan avval ')"
-                                                                    ></h3>
-                                                                    <p
-                                                                        class="color-blue subtext paragraph-s paragraph-line-break rtl-text"
-                                                                        v-html="applyContentStyle('Agar siz bo‘sh ish o‘rniga ariza berishga tayyor bo‘lsangiz, nomzod profilini yarating.  Profilni yaratish oson va uni o‘zingiz uchun mos bo‘lgan bo‘sh ish o‘rnini topishdan avval yoki keyin qilish mumkin. Arizangizni nomzod profilingizda ko‘rishingiz mumkin.    ')"
-                                                                    ></p>
-                                                                    <div class="link m-xs-top right-arrow-animation">
-                                                                        <a href="../careers/job-agent.html" class="color-blue link-label m-xxs-right paragraph-s">
-                                                                            <span>Ishga kirish bo‘yicha arizangizni ko‘ring</span>
-                                                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                <div class="image-video-wrapper">
-                                                                    <div class="image-video-content-wrapper m-xs-bottom">
-                                                                        <img
-                                                                            src="https://images.novonordisk.com/is/image/novonordiskas/NN_EVP_Beijing_RNGG_MCES_LLJG-16?wid=2000&fit=constrain&qlt=90"
-                                                                            alt="Wu Wei va Kasper Roseeuw, Novo Nordisk Xitoy"
-                                                                            loading="eager"
-                                                                        />
-                                                                    </div>
-
-                                                                    <h3
-                                                                        class="color-blue subtext subheadline paragraph-s rtl-text"
-                                                                        v-html="applyContentStyle('Ariza berishingizdan avval ')"
-                                                                    ></h3>
-                                                                    <p
-                                                                        class="color-blue subtext paragraph-s paragraph-line-break rtl-text"
-                                                                        v-html="applyContentStyle('Agar siz bo‘sh ish o‘rniga ariza berishga tayyor bo‘lsangiz, nomzod profilini yarating.  Profilni yaratish oson va uni o‘zingiz uchun mos bo‘lgan bo‘sh ish o‘rnini topishdan avval yoki keyin qilish mumkin. Arizangizni nomzod profilingizda ko‘rishingiz mumkin.    ')"
-                                                                    ></p>
-                                                                    <div class="link m-xs-top right-arrow-animation">
-                                                                        <a href="../careers/job-agent.html" class="color-blue link-label m-xxs-right paragraph-s">
-                                                                            <span>Ishga kirish bo‘yicha arizangizni ko‘ring</span>
-                                                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -220,225 +165,71 @@
                 </div>
             </div>
 
-            <div class="accordion aem-GridColumn aem-GridColumn--default--12">
-                <div class="cmp-accordion is-accordion gutters white" data-cmp-is="accordion" style="background-color: white">
-                    <div id="accordion" class="cmp-accordion-list component-padding-topAndBottom">
-                        <input ref="singleExpansion" type="hidden" value="false" />
-                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--xs--24">
-                            <div
-                                class="accordion-head tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--xs--2 tb-GridColumn tb-GridColumn--offset--l--2"
-                            >
-                                <p class="tagline m-xxs-bottom m-s-top" v-html="applyContentStyle('KSS')"></p>
-                                <h2 class="xsmalltitle m-xs-bottom" v-html="applyContentStyle('Odamlar bizdan tez\u002Dtez so‘rashadi')"></h2>
-                            </div>
-                            <div class="tb-GridColumn tb-GridColumn--l--22 tb-GridColumn--xs--24 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--0">
+        </div>
+        <div class="plaintext aem-GridColumn aem-GridColumn--default--12" style="margin-top: 25px">
+            <div
+                class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
+                style="background-color: #e2f0fa"
+            >
+                <div
+                    class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                    <div
+                        class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                        <h2 class="text plaintexttitle title color-blue smalltitle">So'ngi yangiliklar </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
+            <div class="layout-container-grid">
+                <div class="gutters component-padding-bottom color outer-container"
+                     style="background-color: rgb(226, 240, 250)">
+                    <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
+                        <div
+                            class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                            style="background-color: rgb(226, 240, 250)"
+                        >
+                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
                                 <div
-                                    id="accordion-item-0"
-                                    class="cmp-accordion__item"
-                                    :class="{'edit-mode': false}"
-                                    data-cmp-hook-accordion="item"
-                                    v-on:mouseover="onItemHover(0)"
+                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                 >
-                                    <div
-                                        class="cmp-accordion__item-background tb-Grid tb-Grid--22 tb-Grid--l--22 tb-Grid--m--22 tb-Grid--xs--24"
-                                        :style="{'background': background(0)}"
-                                        v-cloak=""
-                                    >
-                                        <div
-                                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--2 cmp-accordion__item-wrapper"
-                                        >
-                                            <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
-                                                <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
-                                                    <span class="cmp-accordion__title"><h3 class="h6">Arizamning holati qanday?</h3></span>
-                                                    <span class="icon icon-plus"
-                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                                        ></span>
-                                                </button>
-                                            </h2>
-                                            <div data-cmp-hook-accordion="panel" class="cmp-accordion__panel cmp-accordion__panel--hidden">
-                                                <div class="accordioncontent">
-                                                    <div class="ac-wrapper p-m-bottom">
-                                                        <p
-                                                            class="paragraph-l m-m-bottom"
-                                                            v-html="applyContentStyle('Bo‘sh ish o‘rni uchun ariza berganingizdan keyin profilingizga kirish va Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) akkordeonini tanlash orqali ishga yollash jarayonini holatini kuzatib borishingiz mumkin. ')"
-                                                        ></p>
-                                                        <div class="richtext color-blue paragraph-s">
-                                                            <p>
-                                                                Ariza berish jarayonidan tashqarida turib profilingizga kirish uchun veb-saytda  lavozimni tanlashingiz
-                                                                va <b style="">Apply now (Hozir ariza berish)</b> tugmasini bosishingiz kerak.   (Apply now) Hozir ariza
-                                                                berish tugmasini bosganingizdan keyin siz bo‘sh ish o‘rni sahifasiga o‘tkazilasiz, u yerda yuqori menyu
-                                                                panelidan <b style="">View Profile (Profilni ko‘rish)</b> bandini tanlashingiz, tizimga kirishingiz va <b
-                                                                    style=""
-                                                                >Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) </b
-                                                                >akkordeonini ochishingiz mumkin. 
-                                                            </p>
-                                                            <p>
-                                                                Tizimga kirganingizdan keyin siz o‘zingiz ariza bergan bo‘sh ish o‘rin(lar)ini ko‘rishingiz,
-                                                                ariza(lari)ngizni  va ariza(lari)ngiz holatini ko‘rishingiz mumkin.  
-                                                            </p>
+                                    <div class="rowcontainer">
+                                        <div class="contentgrid_row">
+                                            @foreach ($latestNews as $item)
+                                                <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
+                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                            <div>
+                                                                <a href="{{ route('single.news', $item->id) }}" aria-label="{{ $item->{'name_' . app()->getLocale()} }}">
+                                                                    <div class="image-video-wrapper">
+                                                                        <div class="image-video-content-wrapper m-xs-bottom">
+                                                                            <picture>
+                                                                                <img src="{{ asset('storage/' . $item->image) }}"
+                                                                                     alt="{{ $item->{'name_' . app()->getLocale()} }}"
+                                                                                     loading="eager" />
+                                                                            </picture>
+                                                                        </div>
+                                                                        <div class="right-arrow-animation">
+                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                {{ Str::limit($item    ->{'title_' . app()->getLocale()}, 35) }}
+                                                                            </h3>
+                                                                            <div class="link m-xs-top">
+                                                                                <a href="{{ route('single.news', $item->id) }}" target="_self"
+                                                                                   class="color-blue link-label paragraph-s">
+                                                                                    <span class="icon icon-right-arrow"></span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                        <div class="iframe-box p-s-top"></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
-                                </div>
-                                <div
-                                    id="accordion-item-0"
-                                    class="cmp-accordion__item"
-                                    :class="{'edit-mode': false}"
-                                    data-cmp-hook-accordion="item"
-                                    v-on:mouseover="onItemHover(0)"
-                                >
-                                    <div
-                                        class="cmp-accordion__item-background tb-Grid tb-Grid--22 tb-Grid--l--22 tb-Grid--m--22 tb-Grid--xs--24"
-                                        :style="{'background': background(0)}"
-                                        v-cloak=""
-                                    >
-                                        <div
-                                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--2 cmp-accordion__item-wrapper"
-                                        >
-                                            <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
-                                                <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
-                                                    <span class="cmp-accordion__title"><h3 class="h6">Arizamning holati qanday?</h3></span>
-                                                    <span class="icon icon-plus"
-                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                                        ></span>
-                                                </button>
-                                            </h2>
-                                            <div data-cmp-hook-accordion="panel" class="cmp-accordion__panel cmp-accordion__panel--hidden">
-                                                <div class="accordioncontent">
-                                                    <div class="ac-wrapper p-m-bottom">
-                                                        <p
-                                                            class="paragraph-l m-m-bottom"
-                                                            v-html="applyContentStyle('Bo‘sh ish o‘rni uchun ariza berganingizdan keyin profilingizga kirish va Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) akkordeonini tanlash orqali ishga yollash jarayonini holatini kuzatib borishingiz mumkin. ')"
-                                                        ></p>
-                                                        <div class="richtext color-blue paragraph-s">
-                                                            <p>
-                                                                Ariza berish jarayonidan tashqarida turib profilingizga kirish uchun veb-saytda  lavozimni tanlashingiz
-                                                                va <b style="">Apply now (Hozir ariza berish)</b> tugmasini bosishingiz kerak.   (Apply now) Hozir ariza
-                                                                berish tugmasini bosganingizdan keyin siz bo‘sh ish o‘rni sahifasiga o‘tkazilasiz, u yerda yuqori menyu
-                                                                panelidan <b style="">View Profile (Profilni ko‘rish)</b> bandini tanlashingiz, tizimga kirishingiz va <b
-                                                                    style=""
-                                                                >Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) </b
-                                                                >akkordeonini ochishingiz mumkin. 
-                                                            </p>
-                                                            <p>
-                                                                Tizimga kirganingizdan keyin siz o‘zingiz ariza bergan bo‘sh ish o‘rin(lar)ini ko‘rishingiz,
-                                                                ariza(lari)ngizni  va ariza(lari)ngiz holatini ko‘rishingiz mumkin.  
-                                                            </p>
-                                                        </div>
-                                                        <div class="iframe-box p-s-top"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="accordion-item-0"
-                                    class="cmp-accordion__item"
-                                    :class="{'edit-mode': false}"
-                                    data-cmp-hook-accordion="item"
-                                    v-on:mouseover="onItemHover(0)"
-                                >
-                                    <div
-                                        class="cmp-accordion__item-background tb-Grid tb-Grid--22 tb-Grid--l--22 tb-Grid--m--22 tb-Grid--xs--24"
-                                        :style="{'background': background(0)}"
-                                        v-cloak=""
-                                    >
-                                        <div
-                                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--2 cmp-accordion__item-wrapper"
-                                        >
-                                            <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
-                                                <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
-                                                    <span class="cmp-accordion__title"><h3 class="h6">Arizamning holati qanday?</h3></span>
-                                                    <span class="icon icon-plus"
-                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                                        ></span>
-                                                </button>
-                                            </h2>
-                                            <div data-cmp-hook-accordion="panel" class="cmp-accordion__panel cmp-accordion__panel--hidden">
-                                                <div class="accordioncontent">
-                                                    <div class="ac-wrapper p-m-bottom">
-                                                        <p
-                                                            class="paragraph-l m-m-bottom"
-                                                            v-html="applyContentStyle('Bo‘sh ish o‘rni uchun ariza berganingizdan keyin profilingizga kirish va Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) akkordeonini tanlash orqali ishga yollash jarayonini holatini kuzatib borishingiz mumkin. ')"
-                                                        ></p>
-                                                        <div class="richtext color-blue paragraph-s">
-                                                            <p>
-                                                                Ariza berish jarayonidan tashqarida turib profilingizga kirish uchun veb-saytda  lavozimni tanlashingiz
-                                                                va <b style="">Apply now (Hozir ariza berish)</b> tugmasini bosishingiz kerak.   (Apply now) Hozir ariza
-                                                                berish tugmasini bosganingizdan keyin siz bo‘sh ish o‘rni sahifasiga o‘tkazilasiz, u yerda yuqori menyu
-                                                                panelidan <b style="">View Profile (Profilni ko‘rish)</b> bandini tanlashingiz, tizimga kirishingiz va <b
-                                                                    style=""
-                                                                >Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) </b
-                                                                >akkordeonini ochishingiz mumkin. 
-                                                            </p>
-                                                            <p>
-                                                                Tizimga kirganingizdan keyin siz o‘zingiz ariza bergan bo‘sh ish o‘rin(lar)ini ko‘rishingiz,
-                                                                ariza(lari)ngizni  va ariza(lari)ngiz holatini ko‘rishingiz mumkin.  
-                                                            </p>
-                                                        </div>
-                                                        <div class="iframe-box p-s-top"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="accordion-item-0"
-                                    class="cmp-accordion__item"
-                                    :class="{'edit-mode': false}"
-                                    data-cmp-hook-accordion="item"
-                                    v-on:mouseover="onItemHover(0)"
-                                >
-                                    <div
-                                        class="cmp-accordion__item-background tb-Grid tb-Grid--22 tb-Grid--l--22 tb-Grid--m--22 tb-Grid--xs--24"
-                                        :style="{'background': background(0)}"
-                                        v-cloak=""
-                                    >
-                                        <div
-                                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--2 cmp-accordion__item-wrapper"
-                                        >
-                                            <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
-                                                <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
-                                                    <span class="cmp-accordion__title"><h3 class="h6">Arizamning holati qanday?</h3></span>
-                                                    <span class="icon icon-plus"
-                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                                        ></span>
-                                                </button>
-                                            </h2>
-                                            <div data-cmp-hook-accordion="panel" class="cmp-accordion__panel cmp-accordion__panel--hidden">
-                                                <div class="accordioncontent">
-                                                    <div class="ac-wrapper p-m-bottom">
-                                                        <p
-                                                            class="paragraph-l m-m-bottom"
-                                                            v-html="applyContentStyle('Bo‘sh ish o‘rni uchun ariza berganingizdan keyin profilingizga kirish va Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) akkordeonini tanlash orqali ishga yollash jarayonini holatini kuzatib borishingiz mumkin. ')"
-                                                        ></p>
-                                                        <div class="richtext color-blue paragraph-s">
-                                                            <p>
-                                                                Ariza berish jarayonidan tashqarida turib profilingizga kirish uchun veb-saytda  lavozimni tanlashingiz
-                                                                va <b style="">Apply now (Hozir ariza berish)</b> tugmasini bosishingiz kerak.   (Apply now) Hozir ariza
-                                                                berish tugmasini bosganingizdan keyin siz bo‘sh ish o‘rni sahifasiga o‘tkazilasiz, u yerda yuqori menyu
-                                                                panelidan <b style="">View Profile (Profilni ko‘rish)</b> bandini tanlashingiz, tizimga kirishingiz va <b
-                                                                    style=""
-                                                                >Jobs Applied (Ariza berilgan bo‘sh ish o‘rinlari) </b
-                                                                >akkordeonini ochishingiz mumkin. 
-                                                            </p>
-                                                            <p>
-                                                                Tizimga kirganingizdan keyin siz o‘zingiz ariza bergan bo‘sh ish o‘rin(lar)ini ko‘rishingiz,
-                                                                ariza(lari)ngizni  va ariza(lari)ngiz holatini ko‘rishingiz mumkin.  
-                                                            </p>
-                                                        </div>
-                                                        <div class="iframe-box p-s-top"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

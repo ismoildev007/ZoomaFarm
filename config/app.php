@@ -78,11 +78,12 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'uz'), // Asosiy tilni o'zbek tiliga sozlash
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'), // Standart holda ingliz tili ishlatiladi
 
-    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+    'faker_locale' => env('APP_FAKER_LOCALE', 'uz_UZ'), // Faker uchun o'zbek tilini o'rnating
+
 
     /*
     |--------------------------------------------------------------------------

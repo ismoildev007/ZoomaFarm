@@ -118,16 +118,52 @@
                                     <h5 class="card-title">Изображение продукта</h5>
                                 </div>
                                 <div class="card-body p-4">
+                                    <!-- Mavjud rasmni ko'rsatish -->
+                                    @if ($product->image)
+                                        <div class="mb-3">
+                                            <img src="{{ asset('storage/' . $product->image) }}" alt="Изображение продукта" class="img-fluid" width="100" >
+                                        </div>
+                                    @endif
+
+                                    <!-- Rasm yuklash -->
                                     <div class="form-group pb-3">
-                                        <label for="image">Image:</label>
+                                        <label for="image">Изображение:</label>
                                         <input type="file" class="form-control" id="image" name="image">
-                                        @if($product->image)
-                                            <img src="{{ asset('storage/' . $product->image) }}" alt="Product Image" width="100" class="mt-2">
-                                        @endif
+                                    </div>
+
+                                    <!-- Mavjud PDF faylni ko'rsatish -->
+                                    @if ($product->pdf)
+                                        <div class="mb-3">
+                                            <a href="{{ asset('storage/' . $product->pdf) }}" target="_blank" class="btn btn-info" >
+                                                Скачать текущий PDF
+                                            </a>
+                                        </div>
+                                    @endif
+
+                                    <!-- PDF fayl yuklash -->
+                                    <div class="form-group pb-3">
+                                        <label for="pdf">PDF файл:</label>
+                                        <input type="file" class="form-control" id="pdf" name="pdf">
+                                    </div>
+
+                                    <!-- Mavjud YouTube URLni ko'rsatish -->
+                                    @if ($product->video)
+                                        <div class="mb-3">
+                                            <label>Текущий YouTube URL:</label>
+                                            <p><a  href="{{ $product->video }}" target="_blank">{{ $product->video }}</a></p>
+                                        </div>
+                                    @endif
+
+                                    <!-- YouTube URL o'zgartirish -->
+                                    <div class="form-group pb-3">
+                                        <label for="video">YouTube URL:</label>
+                                        <input type="url" class="form-control" id="video" name="video" placeholder="Введите URL видео"
+                                               value="{{ old('video', $product->video) }}">
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
