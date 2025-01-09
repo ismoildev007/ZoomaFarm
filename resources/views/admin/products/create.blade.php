@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-    <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation" onsubmit="updateEditorContent()">
+    <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" novalidate
+          class="needs-validation" onsubmit="updateEditorContent()">
         @csrf
 
         <main class="nxl-container">
@@ -41,13 +42,16 @@
                                 <div class="card-body p-4">
                                     <ul class="nav-tab-items-wrapper nav nav-justified invoice-overview-tab-item">
                                         <li class="nav-item">
-                                            <a href="javascript:void(0);" class="nav-link active" data-bs-toggle="tab" data-bs-target="#uzContent">O'zbekcha</a>
+                                            <a href="javascript:void(0);" class="nav-link active" data-bs-toggle="tab"
+                                               data-bs-target="#uzContent">O'zbekcha</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#enContent">English</a>
+                                            <a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab"
+                                               data-bs-target="#enContent">English</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#ruContent">Русский</a>
+                                            <a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab"
+                                               data-bs-target="#ruContent">Русский</a>
                                         </li>
                                     </ul>
 
@@ -55,12 +59,14 @@
                                         <div class="tab-pane fade show active" id="uzContent">
                                             <div class="form-group pb-3">
                                                 <label for="name_uz">Название (UZ):</label>
-                                                <input type="text" class="form-control" id="name_uz" name="name_uz" value="{{ old('name_uz') }}" required>
+                                                <input type="text" class="form-control" id="name_uz" name="name_uz"
+                                                       value="{{ old('name_uz') }}" required>
                                             </div>
 
                                             <div class="form-group pb-3">
                                                 <label for="description_uz">Описание (UZ):</label>
-                                                <textarea class="form-control" id="description_uz" name="description_uz" rows="3">{{ old('description_uz') }}</textarea>
+                                                <textarea class="form-control" id="description_uz" name="description_uz"
+                                                          rows="3">{{ old('description_uz') }}</textarea>
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -73,12 +79,14 @@
                                         <div class="tab-pane fade" id="enContent">
                                             <div class="form-group pb-3">
                                                 <label for="name_en">Название (EN):</label>
-                                                <input type="text" class="form-control" id="name_en" name="name_en" value="{{ old('name_en') }}" required>
+                                                <input type="text" class="form-control" id="name_en" name="name_en"
+                                                       value="{{ old('name_en') }}" required>
                                             </div>
 
                                             <div class="form-group pb-3">
                                                 <label for="description_en">Описание (EN):</label>
-                                                <textarea class="form-control" id="description_en" name="description_en" rows="3">{{ old('description_en') }}</textarea>
+                                                <textarea class="form-control" id="description_en" name="description_en"
+                                                          rows="3">{{ old('description_en') }}</textarea>
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -91,12 +99,14 @@
                                         <div class="tab-pane fade" id="ruContent">
                                             <div class="form-group pb-3">
                                                 <label for="name_ru">Название (RU):</label>
-                                                <input type="text" class="form-control" id="name_ru" name="name_ru" value="{{ old('name_ru') }}" required>
+                                                <input type="text" class="form-control" id="name_ru" name="name_ru"
+                                                       value="{{ old('name_ru') }}" required>
                                             </div>
 
                                             <div class="form-group pb-3">
                                                 <label for="description_ru">Описание (RU):</label>
-                                                <textarea class="form-control" id="description_ru" name="description_ru" rows="3">{{ old('description_ru') }}</textarea>
+                                                <textarea class="form-control" id="description_ru" name="description_ru"
+                                                          rows="3">{{ old('description_ru') }}</textarea>
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -119,8 +129,19 @@
                                         <label for="image">Изображение:</label>
                                         <input type="file" class="form-control" id="image" name="image">
                                     </div>
+                                    <div class="form-group pb-3">
+                                        <label for="pdf">PDF файл:</label>
+                                        <input type="file" class="form-control" id="pdf" name="pdf">
+                                    </div>
+                                    <div class="form-group pb-3">
+                                        <label for="video">YouTube URL:</label>
+                                        <input type="url" class="form-control" id="video" name="video"
+                                               placeholder="Введите URL видео">
+                                    </div>
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -132,9 +153,9 @@
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <script>
-        var editorUz = new Quill('#editor_uz', { theme: 'snow' });
-        var editorEn = new Quill('#editor_en', { theme: 'snow' });
-        var editorRu = new Quill('#editor_ru', { theme: 'snow' });
+        var editorUz = new Quill('#editor_uz', {theme: 'snow'});
+        var editorEn = new Quill('#editor_en', {theme: 'snow'});
+        var editorRu = new Quill('#editor_ru', {theme: 'snow'});
 
         function updateEditorContent() {
             document.getElementById('text_uz').value = editorUz.root.innerHTML;
@@ -142,7 +163,7 @@
             document.getElementById('text_ru').value = editorRu.root.innerHTML;
         }
 
-        document.querySelector('form').addEventListener('submit', function(event){
+        document.querySelector('form').addEventListener('submit', function (event) {
             updateEditorContent();
         });
     </script>

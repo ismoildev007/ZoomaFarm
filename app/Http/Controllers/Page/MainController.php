@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
 use App\Models\News;
+use App\Models\Product;
+use App\Models\Vacancy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 
 class MainController extends Controller
@@ -44,19 +47,34 @@ class MainController extends Controller
 
     public function products()
     {
-        return view('pages.page-products');
+        $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
+        $products = Product::all();
+        return view('pages.page-products', compact('products','latestNews'));
     }
-    public function singleProduct($slug)
+
+    public function singleProduct($id)
     {
-        return view('pages.single-product');
+        $lang = App::getLocale();
+        $latestProducts = Product::where('id', '!=', $id)
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+            ->get(); // So‘nggi 3 ta boshqa mahsulot
+
+        $product = Product::where('id', $id)->firstOrFail();
+        return view('pages.single-product', compact('product', 'latestProducts','lang'));
     }
 
     public function vacancy()
     {
-        return view('pages.vacancy');
+        $vacancies = Vacancy::all();
+        $lang = App::getLocale();
+        $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
+        return view('pages.vacancy',compact('latestNews','lang','vacancies'));
     }
     public function candidant($vacancy_id)
     {
-        return view('pages.candidant');
+        $lang = App::getLocale();
+        $vacancy = Vacancy::findOrFail($vacancy_id);
+        return view('pages.candidant',compact('vacancy','lang'));
     }
 }

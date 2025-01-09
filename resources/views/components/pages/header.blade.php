@@ -54,7 +54,7 @@
                                 <div class="nncorp-navigation white">
                                     <link
                                         rel="stylesheet"
-                                        href="etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.a487e143b241d955686747a344b8a9b2.css"
+                                        href="/etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.a487e143b241d955686747a344b8a9b2.css"
                                         type="text/css"
                                     />
 
@@ -182,7 +182,7 @@
 
                                     <script
                                         type="text/javascript"
-                                        src="etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.818c37b0a1ad6bacc3b4dd33257cae1c.js"
+                                        src="/etc.clientlibs/nncorp/components/structure/navigation/clientlib.min.818c37b0a1ad6bacc3b4dd33257cae1c.js"
                                         async=""
                                     ></script>
                                 </div>

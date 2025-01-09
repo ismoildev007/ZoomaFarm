@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CandidantController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\VacancyController;
 use App\Http\Controllers\auth\AuthController;
@@ -40,8 +41,14 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/news', [MainController::class, 'news'])->name('news');
 Route::get('/news/{id}', [MainController::class, 'singleNews'])->name('single.news');
 Route::get('/products', [MainController::class, 'products'])->name('products');
-Route::get('/products/{slug}', [MainController::class, 'singleProduct'])->name('single.product');
+Route::get('/products/{id}', [MainController::class, 'singleProduct'])->name('single.product');
 Route::get('/vacancy', [MainController::class, 'vacancy'])->name('vacancy');
 Route::get('/candidant/{vacancy_id}', [MainController::class, 'candidant'])->name('candidant');
+
+//order
+Route::get('/admin/orders', [OrderController::class, 'index'])->name('orders.index');
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+Route::get('/admin/orders/{id}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+Route::patch('/admin/orders/{id}', [OrderController::class, 'update'])->name('orders.update');
 
 Route::get('locale/{lang}',[LanguageController::class, 'setLocale']);

@@ -1,4 +1,4 @@
-@extends('layouts.product-news-contact')
+    @extends('layouts.product-news-contact')
 
 @section('content')
     <div class="root responsivegrid">
@@ -109,353 +109,53 @@
                                         class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                     >
                                         <div class="rowcontainer">
-                                            <div class="contentgrid_row">
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <link
-                                                                rel="stylesheet"
-                                                                href="/etc.clientlibs/nncorp/components/content/image-video/clientlibs.min.d6f3af1e3efca5e63b4d0dbb00c396bd.css"
-                                                                type="text/css"
-                                                            />
-                                                            <div>
-                                                                <a href="./product_single.html" target="_self"
-                                                                   aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"></a>
-                                                                <div class="image-video-wrapper">
-                                                                    <a href="./product_single.html" target="_self"
-                                                                       aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"
-                                                                    >
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoPen4?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$&amp;&amp;fmt=png-alpha"
-                                                                                    alt="NovoPen® 4"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div
-                                                                        >
-                                                                    </a>
-                                                                    <div class="right-arrow-animation">
-                                                                        <a href="javascript:void(0)" target="_self"
-                                                                           aria-label="NovoPensup>®/sup> 4 sahifasiga havola">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoPen
-
-                                                                            </h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-
-                                                                                4 mustahkam dizayni bilan ishlatish
-                                                                                uchun oddiy. U to'g'ri insulin etkazib
-                                                                                berish
-                                                                                uchun dozani bosishning eshitiladigan
-                                                                                dozasini etkazib berishni o'z ichiga
-                                                                                oladi
-                                                                            </p>
+                                            <div class="rowcontainer">
+                                                @foreach ($products->chunk(3) as $productChunk)
+                                                <div class="contentgrid_row">
+                                                    @foreach ($productChunk as $product)
+                                                        <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
+                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                                <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                    <div>
+                                                                        <a href="{{ route('single.product', $product->id) }}" target="_self">
+                                                                            <div class="image-video-wrapper">
+                                                                                <a href="{{ route('single.product', $product->id) }}" target="_self">
+                                                                                    <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                        <picture>
+                                                                                            <img src="{{ asset('storage/' . $product->image) }}"
+                                                                                                 alt="{{ $product->{'name_' . app()->getLocale()} }}"
+                                                                                                 loading="eager"
+                                                                                            />
+                                                                                        </picture>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="right-arrow-animation">
+                                                                                    <a href="{{ route('single.product', $product->id) }}" target="_self">
+                                                                                        <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                            {{ $product->{'name_' . app()->getLocale()} }}
+                                                                                        </h3>
+                                                                                        <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
+                                                                                            {{ Str::limit($product->{'description_' . app()->getLocale()}, 100) }}
+                                                                                        </p>
+                                                                                    </a>
+                                                                                    <div class="link m-xs-top">
+                                                                                        <a href="{{ route('single.product', $product->id) }}" target="_self"
+                                                                                           class="color-blue link-label paragraph-s">
+                                                                                            <span class="icon icon-right-arrow"></span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </a>
-                                                                        <div class="link m-xs-top">
-                                                                            <a href="javascript:void(0)" target="_self"
-                                                                               class="color-blue link-label paragraph-s"
-                                                                            ><span class="icon icon-right-arrow"></span
-                                                                                ></a>
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <link
-                                                                rel="stylesheet"
-                                                                href="/etc.clientlibs/nncorp/components/content/image-video/clientlibs.min.d6f3af1e3efca5e63b4d0dbb00c396bd.css"
-                                                                type="text/css"
-                                                            />
-                                                            <div>
-                                                                <a href="./product_single.html" target="_self"
-                                                                   aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"></a>
-                                                                <div class="image-video-wrapper">
-                                                                    <a href="./product_single.html" target="_self"
-                                                                       aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"
-                                                                    >
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoPen4?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$&amp;&amp;fmt=png-alpha"
-                                                                                    alt="NovoPen® 4"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div
-                                                                        >
-                                                                    </a>
-                                                                    <div class="right-arrow-animation">
-                                                                        <a href="javascript:void(0)" target="_self"
-                                                                           aria-label="NovoPensup>®/sup> 4 sahifasiga havola">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoPen
-
-                                                                            </h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-
-                                                                                4 mustahkam dizayni bilan ishlatish
-                                                                                uchun oddiy. U to'g'ri insulin etkazib
-                                                                                berish
-                                                                                uchun dozani bosishning eshitiladigan
-                                                                                dozasini etkazib berishni o'z ichiga
-                                                                                oladi
-                                                                            </p>
-                                                                        </a>
-                                                                        <div class="link m-xs-top">
-                                                                            <a href="javascript:void(0)" target="_self"
-                                                                               class="color-blue link-label paragraph-s"
-                                                                            ><span class="icon icon-right-arrow"></span
-                                                                                ></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <link
-                                                                rel="stylesheet"
-                                                                href="/etc.clientlibs/nncorp/components/content/image-video/clientlibs.min.d6f3af1e3efca5e63b4d0dbb00c396bd.css"
-                                                                type="text/css"
-                                                            />
-                                                            <div>
-                                                                <a href="./product_single.html" target="_self"
-                                                                   aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"></a>
-                                                                <div class="image-video-wrapper">
-                                                                    <a href="./product_single.html" target="_self"
-                                                                       aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"
-                                                                    >
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoPen4?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$&amp;&amp;fmt=png-alpha"
-                                                                                    alt="NovoPen® 4"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div
-                                                                        >
-                                                                    </a>
-                                                                    <div class="right-arrow-animation">
-                                                                        <a href="javascript:void(0)" target="_self"
-                                                                           aria-label="NovoPensup>®/sup> 4 sahifasiga havola">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoPen
-
-                                                                            </h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-
-                                                                                4 mustahkam dizayni bilan ishlatish
-                                                                                uchun oddiy. U to'g'ri insulin etkazib
-                                                                                berish
-                                                                                uchun dozani bosishning eshitiladigan
-                                                                                dozasini etkazib berishni o'z ichiga
-                                                                                oladi
-                                                                            </p>
-                                                                        </a>
-                                                                        <div class="link m-xs-top">
-                                                                            <a href="javascript:void(0)" target="_self"
-                                                                               class="color-blue link-label paragraph-s"
-                                                                            ><span class="icon icon-right-arrow"></span
-                                                                                ></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
                                             </div>
-                                            <div class="contentgrid_row">
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <link
-                                                                rel="stylesheet"
-                                                                href="/etc.clientlibs/nncorp/components/content/image-video/clientlibs.min.d6f3af1e3efca5e63b4d0dbb00c396bd.css"
-                                                                type="text/css"
-                                                            />
-                                                            <div>
-                                                                <a href="./product_single.html" target="_self"
-                                                                   aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"></a>
-                                                                <div class="image-video-wrapper">
-                                                                    <a href="./product_single.html" target="_self"
-                                                                       aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"
-                                                                    >
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoPen4?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$&amp;&amp;fmt=png-alpha"
-                                                                                    alt="NovoPen® 4"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div
-                                                                        >
-                                                                    </a>
-                                                                    <div class="right-arrow-animation">
-                                                                        <a href="javascript:void(0)" target="_self"
-                                                                           aria-label="NovoPensup>®/sup> 4 sahifasiga havola">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoPen
 
-                                                                            </h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-
-                                                                                4 mustahkam dizayni bilan ishlatish
-                                                                                uchun oddiy. U to'g'ri insulin etkazib
-                                                                                berish
-                                                                                uchun dozani bosishning eshitiladigan
-                                                                                dozasini etkazib berishni o'z ichiga
-                                                                                oladi
-                                                                            </p>
-                                                                        </a>
-                                                                        <div class="link m-xs-top">
-                                                                            <a href="javascript:void(0)" target="_self"
-                                                                               class="color-blue link-label paragraph-s"
-                                                                            ><span class="icon icon-right-arrow"></span
-                                                                                ></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <link
-                                                                rel="stylesheet"
-                                                                href="/etc.clientlibs/nncorp/components/content/image-video/clientlibs.min.d6f3af1e3efca5e63b4d0dbb00c396bd.css"
-                                                                type="text/css"
-                                                            />
-                                                            <div>
-                                                                <a href="./product_single.html" target="_self"
-                                                                   aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"></a>
-                                                                <div class="image-video-wrapper">
-                                                                    <a href="./product_single.html" target="_self"
-                                                                       aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"
-                                                                    >
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoPen4?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$&amp;&amp;fmt=png-alpha"
-                                                                                    alt="NovoPen® 4"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div
-                                                                        >
-                                                                    </a>
-                                                                    <div class="right-arrow-animation">
-                                                                        <a href="javascript:void(0)" target="_self"
-                                                                           aria-label="NovoPensup>®/sup> 4 sahifasiga havola">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoPen
-
-                                                                            </h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-
-                                                                                4 mustahkam dizayni bilan ishlatish
-                                                                                uchun oddiy. U to'g'ri insulin etkazib
-                                                                                berish
-                                                                                uchun dozani bosishning eshitiladigan
-                                                                                dozasini etkazib berishni o'z ichiga
-                                                                                oladi
-                                                                            </p>
-                                                                        </a>
-                                                                        <div class="link m-xs-top">
-                                                                            <a href="javascript:void(0)" target="_self"
-                                                                               class="color-blue link-label paragraph-s"
-                                                                            ><span class="icon icon-right-arrow"></span
-                                                                                ></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <link
-                                                                rel="stylesheet"
-                                                                href="/etc.clientlibs/nncorp/components/content/image-video/clientlibs.min.d6f3af1e3efca5e63b4d0dbb00c396bd.css"
-                                                                type="text/css"
-                                                            />
-                                                            <div>
-                                                                <a href="./product_single.html" target="_self"
-                                                                   aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"></a>
-                                                                <div class="image-video-wrapper">
-                                                                    <a href="./product_single.html" target="_self"
-                                                                       aria-label="NovoPen<sup>®</sup> 4 sahifasiga havola"
-                                                                    >
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoPen4?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$&amp;&amp;fmt=png-alpha"
-                                                                                    alt="NovoPen® 4"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div
-                                                                        >
-                                                                    </a>
-                                                                    <div class="right-arrow-animation">
-                                                                        <a href="javascript:void(0)" target="_self"
-                                                                           aria-label="NovoPensup>®/sup> 4 sahifasiga havola">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoPen
-
-                                                                            </h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-
-                                                                                4 mustahkam dizayni bilan ishlatish
-                                                                                uchun oddiy. U to'g'ri insulin etkazib
-                                                                                berish
-                                                                                uchun dozani bosishning eshitiladigan
-                                                                                dozasini etkazib berishni o'z ichiga
-                                                                                oladi
-                                                                            </p>
-                                                                        </a>
-                                                                        <div class="link m-xs-top">
-                                                                            <a href="javascript:void(0)" target="_self"
-                                                                               class="color-blue link-label paragraph-s"
-                                                                            ><span class="icon icon-right-arrow"></span
-                                                                                ></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -474,7 +174,7 @@
                         class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                         <div
                             class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h2 class="text plaintexttitle title color-blue smalltitle">In'ektsiya ignalari</h2>
+                            <h2 class="text plaintexttitle title color-blue smalltitle">So'ngi yangiliklar </h2>
                         </div>
                     </div>
                 </div>
@@ -494,131 +194,41 @@
                                     >
                                         <div class="rowcontainer">
                                             <div class="contentgrid_row">
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div>
-                                                                <a
-                                                                    href="./product_single.html"
-                                                                    aria-label="Novo Nordisk ignalari portfeli - Novo Nordisk ignalari yordamida qanday qilib in'ektsiya qilish kerak"
-                                                                >
-                                                                    <div class="image-video-wrapper">
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoFinePlus?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$"
-                                                                                    alt="NovoFine® Plus"
-                                                                                    loading="eager"
-                                                                                /></picture>
+                                                @foreach ($latestNews as $item)
+                                                    <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
+                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                <div>
+                                                                    <a href="{{ route('single.news', $item->id) }}" aria-label="{{ $item->{'name_' . app()->getLocale()} }}">
+                                                                        <div class="image-video-wrapper">
+                                                                            <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                <picture>
+                                                                                    <img src="{{ asset('storage/' . $item->image) }}"
+                                                                                         alt="{{ $item->{'name_' . app()->getLocale()} }}"
+                                                                                         loading="eager" />
+                                                                                </picture>
+                                                                            </div>
+                                                                            <div class="right-arrow-animation">
+                                                                                <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                    {{ Str::limit($item    ->{'title_' . app()->getLocale()}, 35) }}
+                                                                                </h3>
+                                                                                <div class="link m-xs-top">
+                                                                                    <a href="{{ route('single.news', $item->id) }}" target="_self"
+                                                                                       class="color-blue link-label paragraph-s">
+                                                                                        <span class="icon icon-right-arrow"></span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="right-arrow-animation">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoFine <sup>®</sup> Plus</h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text"></p>
-                                                                        </div>
-                                                                    </div
-                                                                    >
-                                                                </a>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div>
-                                                                <a
-                                                                    href="./product_single.html"
-                                                                    aria-label="Novo Nordisk ignalari portfeli - Novo Nordisk ignalari yordamida qanday qilib in'ektsiya qilish kerak"
-                                                                >
-                                                                    <div class="image-video-wrapper">
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoFinePlus?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$"
-                                                                                    alt="NovoFine® Plus"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div>
-                                                                        <div class="right-arrow-animation">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoFine <sup>®</sup> Plus</h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text"></p>
-                                                                        </div>
-                                                                    </div
-                                                                    >
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div>
-                                                                <a
-                                                                    href="./product_single.html"
-                                                                    aria-label="Novo Nordisk ignalari portfeli - Novo Nordisk ignalari yordamida qanday qilib in'ektsiya qilish kerak"
-                                                                >
-                                                                    <div class="image-video-wrapper">
-                                                                        <div
-                                                                            class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img
-                                                                                    src="https://images.novonordisk.com/is/image/novonordiskas/Overview-NovoFinePlus?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$"
-                                                                                    alt="NovoFine® Plus"
-                                                                                    loading="eager"
-                                                                                /></picture>
-                                                                        </div>
-                                                                        <div class="right-arrow-animation">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                NovoFine <sup>®</sup> Plus</h3>
-                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text"></p>
-                                                                        </div>
-                                                                    </div
-                                                                    >
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="calltoaction aem-GridColumn aem-GridColumn--default--12">
-                <div class="cta-container">
-                    <div
-                        class="gutters tb-Grid tb-Grid--24 tb-Grid--m--24 tb-Grid--xs--24 component-padding-bottom color"
-                        style="background-color: rgb(226, 240, 250)">
-                        <div
-                            class="background-styling-container tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--xs--24 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--0"
-                            style="background-color: rgb(226, 240, 250)"
-                        >
-                            <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--xs--24">
-                                <div
-                                    class="cta-grid tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2"
-                                >
-                                    <div class="cta-content frame-padding">
-                                        <p class="img-des paragraph-l color-blue cta-desc">
-                                            Inyeksiya ignalari bilan Novo Nordisk yoki boshqa markali inyeksiya
-                                            qalamlaridan foydalaning. Turli uzunlik va kengliklarga ega
-                                            bo'lib, ular siz uchun in'ektsiyalarni oson va qulayroq qilish uchun
-                                            mo'ljallangan.
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>

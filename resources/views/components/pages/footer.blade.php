@@ -5,7 +5,7 @@
                 <div class="promomatsid aem-GridColumn aem-GridColumn--default--12">
                     <link
                         rel="stylesheet"
-                        href="etc.clientlibs/nncorp/components/content/promomatsid/clientlibs.min.34a10aaa449ba556731680b8c9938d00.css"
+                        href="/etc.clientlibs/nncorp/components/content/promomatsid/clientlibs.min.34a10aaa449ba556731680b8c9938d00.css"
                         type="text/css"
                     />
                 </div>
