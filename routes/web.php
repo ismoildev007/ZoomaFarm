@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\AboutTeamController;
 use App\Http\Controllers\Admin\CandidantController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\NewsController;
@@ -29,6 +30,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('news', NewsController::class);
     Route::resource('abouts', AboutController::class);
+    Route::resource('about-teams', AboutTeamController::class);
     Route::resource('contacts', ContactController::class);
     Route::resource('vacancies', VacancyController::class);
     Route::resource('candidants', CandidantController::class);

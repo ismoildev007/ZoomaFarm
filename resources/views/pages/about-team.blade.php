@@ -52,7 +52,7 @@
 
                             <div class="image-info m-xxs-top desktop" ref="imageInfo">
                                 <div><b class="infotext" v-html="applyContentStyle('')"></b></div>
-                                <div><span class="infotext" v-html="applyContentStyle('Kristal Troy, Novo Nordisk, Clayton, ABD.')"></span></div>
+                                <div><span class="infotext" v-html="applyContentStyle('')"></span></div>
                             </div>
                         </div>
                         <div class="overlay gutters">
@@ -66,7 +66,7 @@
                                             <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('Biz kimmiz')"></h1>
                                             <p
                                                 class="img-des paragraph-l"
-                                                v-html="applyContentStyle('Biz diabet va boshqa jiddiy surunkali kasalliklar bilan yashayotgan kishilar uchun yanada samaraliroq davolash usullarini kashf qilamiz.')"
+                                                v-html="applyContentStyle('{{ $aboutTeam['short_content_' . $lang] }}')"
                                             ></p>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@
                                                     <b class="infotext" v-html="applyContentStyle('')"></b>
                                                 </div>
                                                 <div>
-                                                    <span class="infotext" v-html="applyContentStyle('Kristal Troy, Novo Nordisk, Clayton, ABD.')"></span>
+                                                    <span class="infotext" v-html="applyContentStyle('')"></span>
                                                 </div>
                                             </div>
                                             <div
@@ -108,22 +108,7 @@
                                                     <b v-html="applyContentStyle('Biz kimmiz')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
-                                                    <p>
-                                                        Biz 1923 yilda asos solingan va shtab-kvartirasi Daniyaning Kopengagen shahrining shundoq tashqarisida joylashgan
-                                                        sog‘liqni saqlash bo‘yicha global kompaniyamiz.
-                                                    </p>
-                                                    <p>
-                                                        Maqsadimiz diabet va semizlik kabi boshqa jiddiy surunkali kasalliklar hamda kam uchraydigan qon va kam uchraydigan
-                                                        endokrin tizimi kasalliklarini yengish uchun o‘zgarishlarni ilgari surishdir.
-                                                    </p>
-                                                    <p>
-                                                        Biz buni novatorlik ilmiy yutuqlari, dori-darmonlardan foydalana olish imkoniyatini kengaytirish va o‘zimiz
-                                                        davolaydigan kasalliklarning oldini olish va davolash ustida ishlash orqali amalga oshirmoqdamiz.
-                                                    </p>
-                                                    <p>
-                                                        Biz butun dunyo bo‘ylab 80 ta ofisda 64,000 dan ortiq kishilarni ish bilan ta’minlaymiz va 170 ortiq mamlakatda
-                                                        mahsulotlarimizni sotamiz.
-                                                    </p>
+                                                    {!! $aboutTeam['about_or_company_' . $lang] !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -174,7 +159,7 @@
                                     class="tb-GridColumn tb-GridColumn--l--15 tb-GridColumn--m--13 tb-GridColumn--xs--18 tb-GridColumn--offset--l--1 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 figures-box columns-two"
                                 >
                                     <div class="info">
-                                        <p class="facts h1-xs">9</p>
+                                        <p class="facts h1-xs">{{ $aboutTeam->production }}</p>
                                         <div class="paragraph-s">
                                             mamlakatdagi 16 ta ishlab chiqarish nuqtalari (Jazoir, Braziliya, Xitoy, Daniya, Fransiya, Yaponiya, Rossiya, Buyuk Britaniya va
                                             AQSh
@@ -182,21 +167,21 @@
                                     </div>
 
                                     <div class="info">
-                                        <p class="facts h1-xs">5</p>
+                                        <p class="facts h1-xs">{{ $aboutTeam->research_and_development }}</p>
                                         <div class="paragraph-s">
                                             <p>mamlakatdagi 10 ta tadqiqot va ishlab chiqish markazlari (Xitoy, Daniya, Hindiston, Buyuk Britaniya va AQSh</p>
                                         </div>
                                     </div>
 
                                     <div class="info">
-                                        <p class="facts h1-xs">64 000+</p>
+                                        <p class="facts h1-xs">{{ $aboutTeam->our_employees_work }}+</p>
                                         <div class="paragraph-s">
                                             <p>xodimlarimiz dunyo bo’ylab faoliyat yuritadi</p>
                                         </div>
                                     </div>
 
                                     <div class="info">
-                                        <p class="facts h1-xs">170</p>
+                                        <p class="facts h1-xs">{{ $aboutTeam->countries_use }}</p>
                                         <div class="paragraph-s">
                                             <p>mamlakat aholisi bizning dori mahsulotlardan foydalanish imkoniyatiga ega</p>
                                         </div>
@@ -272,23 +257,7 @@
                                                                 <h3 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h3>
 
                                                                 <div class="color-blue introtext">
-                                                                    <p>
-                                                                        Biz jiddiy surunkali kasalliklardan aziyat chekuvchi odamlarni davolashning yanada samaraliroq
-                                                                        usullarini izlab topish bo‘yicha umumiy ishga birlashgan o‘zimizning tibbiy-biologik kompaniyamiz
-                                                                        bilan faxrlanamiz. 
-                                                                    </p>
-                                                                    <p>
-                                                                        Sanoatimiz dinamik hisoblanadi. Va biz davolaydigan kasalliklar va ularga chalingan holda
-                                                                        yashayotgan kishilarni tushunish har kuni yaxshilanib boradi. Doimiy o‘zgarmas eslatma shuki, bizni
-                                                                        bugungi kunda turgan joyimizga olib kelgan narsalarning albatta bizni kelajakda muvaffaqiyat sari
-                                                                        olib boradi degani emas. 
-                                                                    </p>
-                                                                    <p>
-                                                                        Ish beruvchi sifatida biz ko‘pgina nuqtai-nazarlarni hisobga olinishini ta’minlagan holda eng yaxshi
-                                                                        qarorlar qabul qilish uchun tajribalarni amalga oshirish va turfa xillik va jalb qilishga
-                                                                        intilishimiz kerakligini anglab yetamiz.
-                                                                    </p>
-                                                                    <p>Birgalikda biz hayotni o‘zgartirmoqdamiz.</p>
+                                                                    {!! $aboutTeam['description_' . $lang] !!}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -355,25 +324,13 @@
                                 >
                                     <div class="columns m-m-top">
                                         <div class="left-column">
-                                            <h3 class="h2 color-blue">G ‘oyalaringizni amalga oshirishga yordam beruvchi hamkor</h3>
+                                            <h3 class="h2 color-blue">{{ $aboutTeam['description_title_' . $lang] }}</h3>
                                         </div>
                                         <div class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10">
                                             <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
                                                 <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
                                                 <div class="color-blue introtext">
-                                                    <p>
-                                                        Yangi dorilarni kashf qilishda hamkorlik qilish va bu jarayonni tezlashtirish uchun biz butun dunyodagi yetakchi
-                                                        universitetlar va biotexnologik kompaniyalar bilan yaqin hamkorlikda ishlaymiz.
-                                                    </p>
-                                                    <p>
-                                                        Biz o‘zimiz bir-birini to‘ldiruvchi imkoniyatlar va umumiy qiziqishlarni baham ko‘radigan va yangi peptidlar va
-                                                        oqsillarning analoglarini hamda klinikagacha bo‘lgan tadqiqotlar uchun antitanachalarni ochiq holda bo‘lishadigan
-                                                        yangi hamkorlarni muntazam ravishda qidiramiz.
-                                                    </p>
-                                                    <p>
-                                                        Biz butun dunyo bo‘ylab qiziquvchan va jo‘shqin olimlarga tanlangan yuqori sifatli va yaxshi o‘rganilgan
-                                                        birikmalardan oson va erkin foydalanish imkoniyatlarini taklif qilamiz.
-                                                    </p>
+                                                    {!! $aboutTeam['description_' . $lang] !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -431,50 +388,13 @@
                                 >
                                     <div class="columns m-m-top">
                                         <div class="left-column">
-                                            <h3 class="h2 color-blue">Novo Nordisk Way</h3>
+                                            <h3 class="h2 color-blue">{{ $aboutTeam['content_title_'  . $lang] }}</h3>
                                         </div>
                                         <div class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10">
                                             <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
                                                 <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
                                                 <div class="color-blue introtext">
-                                                    <p>
-                                                        Novo Nordisk Way - bu biz tomonimizdan qabul qilinadigan har qanday qaror ostida yotuvchi yo‘riqnomali tamoyillar
-                                                        to‘plami.  U bizning kimligimiz, qanday ishlashimiz va nimalarga erishishni xohlashimizni bayon qiladi va
-                                                        kompaniyamiz va xodimlarimiz uchun aniq yo‘nalish o‘rnatadi. Umuman olganda u bir-birlarimizga - va butun dunyo
-                                                        bo‘ylab to‘liq va sog‘lom yashash uchun mahsulotlarimizga suyanuvchi millionlab bemorlarga beradigan va’dadir.
-                                                    </p>
-                                                    <p>
-                                                        1923 yili Daniyalik asoschilarimiz diabetni o‘zgartirish bo‘yicha sayohatni boshladilar. Bugungi kunda bizlar butun
-                                                        dunyo bo‘ylab diabet va boshqa jiddiy surunkali kasalliklarni yengish uchun o‘zgarishni ilgari surish ishtiyoqi,
-                                                        malakalari va majburiyatiga ega bo‘lgan minglab xodimlarmiz.
-                                                    </p>
-                                                    <ul>
-                                                        <li>Bizlar o‘zimiz faol bo‘lgan barcha kasallik sohalarida yetakchi bo‘lishni maqsad qilamiz.</li>
-                                                        <li>
-                                                            Bizning asosiy hissamiz innovatsion biologik dori vositalari kashf qilish va ishlab chiqish va ularni dunyo
-                                                            bo‘ylab bemorlarga foydalanish mumkin bo‘ladigan qilishdan iborat.
-                                                        </li>
-                                                        <li>
-                                                            Biznesimizning o‘sib borishi va raqobatbardosh moliyaviy natijalarni yetkazib berish bemorlarga yaxshiroq
-                                                            yashashda yordam berishimiz, aksiyadorlarimizga jozibador daromadlar taklif qilishimiz va hamjamiyatlarimizga
-                                                            hissa qo‘shishimizga imkon beruvchi narsadir.
-                                                        </li>
-                                                        <li>
-                                                            Biznes falsafamiz moliyaviy, ijtimoiy va ekologik mulohazalarni muvozanatlashdan biridir - biz buni “Uchta tag
-                                                            chiziq” deb ataymiz.
-                                                        </li>
-                                                        <li>
-                                                            Biz ochiq va sofdil, ulkan maqsadlarni ko‘zlovchi va mas’uliyatlimiz va boshqalarga hurmat bilan munosabatda
-                                                            bo‘lamiz.
-                                                        </li>
-                                                        <li>Biz odamlarimizga o‘z qobiliyatlarini ochib berish uchun imkoniyatlar taklif etamiz.</li>
-                                                        <li>Biz sifat va biznes ahloqiga nisbatan hech qachon kompromissga bormaymiz.</li>
-                                                    </ul>
-                                                    <p>
-                                                        Biz har kuni bemorlar, xodimlarimiz va aksiyadorlarimiz uchun uzoq muddatli istiqbolda nima eng yaxshiligini yodda
-                                                        saqlagan holda qiyin tanlovlar qilishimiz kerak.
-                                                    </p>
-                                                    <p>Bu bizning yo‘limizdir. Bu Novo Nordisk Way.</p>
+                                                    {!! $aboutTeam['content_' . $lang] !!}
                                                 </div>
                                             </div>
                                         </div>

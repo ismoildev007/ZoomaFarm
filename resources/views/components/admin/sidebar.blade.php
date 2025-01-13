@@ -23,7 +23,7 @@
                 </li>
                 <?php
                 $about1 = \App\Models\About::find(1);
-                $about2 = \App\Models\About::find(2);
+                $aboutTeam = \App\Models\AboutTeam::find(1);
                 $contact = \App\Models\Contact::first();
                 ?>
                 <li class="nxl-item nxl-hasmenu">
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="nxl-item nxl-hasmenu">
-                    <a href="{{ route('abouts.edit', $about2->id) }}" class="nxl-link">
+                    <a href="{{ route('about-teams.edit', $aboutTeam->id) }}" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-info"></i></span> <!-- About icon -->
                         <span class="nxl-mtext">Члены команды нашей компании</span>
                     </a>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <form action="{{ route('abouts.update', $about->id) }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation" onsubmit="updateEditorContent()">
+    <form action="{{ route('about-teams.update', $aboutTeam->id) }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation" onsubmit="updateEditorContent()">
         @csrf
         @method('PUT')
 
@@ -10,11 +10,11 @@
                 <div class="page-header">
                     <div class="page-header-left d-flex align-items-center">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Редактировать информацию о компании</h5>
+                            <h5 class="m-b-10">Члены команды нашей компании</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Главная</a></li>
-                            <li class="breadcrumb-item">О компании</li>
+                            <li class="breadcrumb-item">Члены команды нашей компании</li>
                         </ul>
                     </div>
                     <div class="page-header-right ms-auto">
@@ -57,34 +57,34 @@
                                             <div class="tab-pane fade show {{ $lang == 'uz' ? 'active' : '' }}" id="{{ $lang }}Content">
                                                 <div class="form-group pb-3">
                                                     <label for="short_content_{{ $lang }}">Чем мы занимаемся (кратко) ({{ strtoupper($lang) }}):</label>
-                                                    <textarea class="form-control" id="short_content_{{ $lang }}" name="short_content_{{ $lang }}" required>{{ old('short_content_' . $lang, optional($about)->{'short_content_' . $lang}) }}</textarea>
+                                                    <textarea class="form-control" id="short_content_{{ $lang }}" name="short_content_{{ $lang }}" required>{{ old('short_content_' . $lang, optional($aboutTeam)->{'short_content_' . $lang}) }}</textarea>
                                                 </div>
                                                 <div class="form-group pb-3">
                                                     <label for="about_or_company_{{ $lang }}">About or Company ({{ strtoupper($lang) }}):</label>
                                                     <img src="/manual/about_or_company.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
-                                                    <div id="about_{{ $lang }}" style="height:200px;">{!! old('about_or_company_' . $lang, $about->{'about_or_company_' . $lang}) !!}</div>
+                                                    <div id="about_{{ $lang }}" style="height:200px;">{!! old('about_or_company_' . $lang, $aboutTeam->{'about_or_company_' . $lang}) !!}</div>
                                                     <input type="hidden" id="about_or_company_{{ $lang }}" name="about_or_company_{{ $lang }}">
                                                 </div>
                                                 <hr>
                                                 <div class="form-group pb-3">
                                                     <label for="description_title_{{ $lang }}">Описание Заголовок ({{ strtoupper($lang) }}):</label>
                                                     <img src="/manual/description.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
-                                                    <input type="text" class="form-control" id="description_title_{{ $lang }}" name="description_title_{{ $lang }}" value="{{ old('description_title_' . $lang, $about->{'description_title_' . $lang}) }}" required>
+                                                    <input type="text" class="form-control" id="description_title_{{ $lang }}" name="description_title_{{ $lang }}" value="{{ old('description_title_' . $lang, $aboutTeam->{'description_title_' . $lang}) }}" required>
                                                 </div>
                                                 <div class="form-group pb-3">
                                                     <label for="description_{{ $lang }}">Описание ({{ strtoupper($lang) }}):</label>
-                                                    <div id="descriptionEditor_{{ $lang }}" style="height:200px;">{!! old('description_' . $lang, $about->{'description_' . $lang}) !!}</div>
+                                                    <div id="descriptionEditor_{{ $lang }}" style="height:200px;">{!! old('description_' . $lang, $aboutTeam->{'description_' . $lang}) !!}</div>
                                                     <input type="hidden" id="description_{{ $lang }}" name="description_{{ $lang }}">
                                                 </div>
                                                 <hr>
                                                 <div class="form-group pb-3">
                                                     <label for="content_title_{{ $lang }}">Контент Заголовок ({{ strtoupper($lang) }}):</label>
                                                     <img src="/manual/content.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
-                                                    <input type="text" class="form-control" id="content_title_{{ $lang }}" name="content_title_{{ $lang }}" value="{{ old('content_title_' . $lang, $about->{'content_title_' . $lang}) }}" required>
+                                                    <input type="text" class="form-control" id="content_title_{{ $lang }}" name="content_title_{{ $lang }}" value="{{ old('content_title_' . $lang, $aboutTeam->{'content_title_' . $lang}) }}" required>
                                                 </div>
                                                 <div class="form-group pb-3">
                                                     <label for="content_{{ $lang }}">Контент ({{ strtoupper($lang) }}):</label>
-                                                    <div id="editor_{{ $lang }}" style="height:200px;">{!! old('content_' . $lang, $about->{'content_' . $lang}) !!}</div>
+                                                    <div id="editor_{{ $lang }}" style="height:200px;">{!! old('content_' . $lang, $aboutTeam->{'content_' . $lang}) !!}</div>
                                                     <input type="hidden" id="text_{{ $lang }}" name="content_{{ $lang }}">
                                                 </div>
                                             </div>
@@ -100,37 +100,37 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group pb-3">
-                                        <img src="/manual/percent.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
-                                        <label for="percent">процент:</label>
-                                        <input type="text" class="form-control" id="percent=" name="percent" value="{{ old('percent', $about->{'percent'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                        <img src="/manual/production.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
+                                        <label for="production">производство:</label>
+                                        <input type="text" class="form-control" id="production" name="production" value="{{ old('production', $aboutTeam->{'production'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                     </div>
                                     <div class="form-group pb-3">
-                                        <img src="/manual/using_product.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
-                                        <label for="using_product">используя нашу продукцию:</label>
-                                        <input type="text" class="form-control" id="using_product" name="using_product" value="{{ old('using_product', $about->{'using_product'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                        <img src="/manual/research_and_development.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
+                                        <label for="research_and_development">исследования и разработки:</label>
+                                        <input type="text" class="form-control" id="research_and_development" name="research_and_development" value="{{ old('research_and_development', $aboutTeam->{'research_and_development'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                     </div>
                                     <div class="form-group pb-3">
-                                        <img src="/manual/insulin.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
-                                        <label for="insulin">инсулин:</label>
-                                        <input type="text" class="form-control" id="insulin=" name="insulin" value="{{ old('insulin', $about->{'insulin'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                        <img src="/manual/our_employees_work.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
+                                        <label for="our_employees_work">наши сотрудники работают:</label>
+                                        <input type="text" class="form-control" id="our_employees_work" name="our_employees_work" value="{{ old('our_employees_work', $aboutTeam->{'our_employees_work'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                     </div>
                                     <div class="form-group pb-3">
-                                        <img src="/manual/clinical_trials.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="150">
-                                        <label for="clinical_trials">клинические испытания:</label>
-                                        <input type="text" class="form-control" id="clinical_trials=" name="clinical_trials" value="{{ old('clinical_trials', $about->{'clinical_trials'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                        <img src="/manual/countries_use.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="150">
+                                        <label for="countries_use">Cтраны используют:</label>
+                                        <input type="text" class="form-control" id="countries_use" name="countries_use" value="{{ old('countries_use', $aboutTeam->{'countries_use'}) }}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                     </div>
                                     <div class="form-group">
                                         <label for="image" style="font-weight: 900">описание изображения:</label>
                                         <input type="file" class="form-control" id="image" name="image">
-                                        @if ($about->image)
-                                            <img src="{{ asset('storage/' . $about->image) }}" alt="Current Image" class="img-thumbnail mt-2" width="200">
+                                        @if ($aboutTeam->image)
+                                            <img src="{{ asset('storage/' . $aboutTeam->image) }}" alt="Current Image" class="img-thumbnail mt-2" width="200">
                                         @endif
                                     </div>
                                     <div class="form-group mt-4">
                                         <label for="photo" style="font-weight: 900">контент изображения:</label>
                                         <input type="file" class="form-control" id="photo" name="photo">
-                                        @if ($about->content_image)
-                                            <img src="{{ asset('storage/' . $about->content_image) }}" alt="Current Image" class="img-thumbnail mt-2" width="200">
+                                        @if ($aboutTeam->content_image)
+                                            <img src="{{ asset('storage/' . $aboutTeam->content_image) }}" alt="Current Image" class="img-thumbnail mt-2" width="200">
                                         @endif
                                     </div>
                                 </div>
@@ -153,9 +153,9 @@
         var contentEditor{{ ucfirst($lang) }} = new Quill('#editor_{{ $lang }}', { theme: 'snow' });
 
         // Editorning mavjud qiymatini to'ldirish
-        aboutEditor{{ ucfirst($lang) }}.root.innerHTML = `{!! old('about_or_company_' . $lang, $about->{'about_or_company_' . $lang}) !!}`;
-        descriptionEditor{{ ucfirst($lang) }}.root.innerHTML = `{!! old('description_' . $lang, $about->{'description_' . $lang}) !!}`;
-        contentEditor{{ ucfirst($lang) }}.root.innerHTML = `{!! old('content_' . $lang, $about->{'content_' . $lang}) !!}`;
+        aboutEditor{{ ucfirst($lang) }}.root.innerHTML = `{!! old('about_or_company_' . $lang, $aboutTeam->{'about_or_company_' . $lang}) !!}`;
+        descriptionEditor{{ ucfirst($lang) }}.root.innerHTML = `{!! old('description_' . $lang, $aboutTeam->{'description_' . $lang}) !!}`;
+        contentEditor{{ ucfirst($lang) }}.root.innerHTML = `{!! old('content_' . $lang, $aboutTeam->{'content_' . $lang}) !!}`;
         @endforeach
 
         // Form yuborilishidan oldin qiymatlarni yashirin inputlarga kiritish

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
+use App\Models\About;
+use App\Models\AboutTeam;
 use App\Models\News;
 use App\Models\Product;
 use App\Models\Vacancy;
@@ -23,11 +25,15 @@ class MainController extends Controller
     }
     public function about()
     {
-        return view('pages.about');
+        $lang = App::getLocale();
+        $about = About::first();
+        return view('pages.about', compact('about', 'lang'));
     }
     public function aboutTeam()
     {
-        return view('pages.about-team');
+        $lang = App::getLocale();
+        $aboutTeam  = AboutTeam::first();
+        return view('pages.about-team', compact('aboutTeam', 'lang'));
     }
     public function contact()
     {

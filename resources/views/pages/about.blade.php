@@ -52,7 +52,7 @@
 
                             <div class="image-info m-xxs-top desktop" ref="imageInfo">
                                 <div><b class="infotext" v-html="applyContentStyle('')"></b></div>
-                                <div><span class="infotext" v-html="applyContentStyle('Marie Darting va Pernille Thomasen, Novo Nordisk Daniya')"></span></div>
+                                <div><span class="infotext" v-html="applyContentStyle('')"></span></div>
                             </div>
                         </div>
                         <div class="overlay gutters">
@@ -66,7 +66,7 @@
                                             <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('Biz nima qilamiz')"></h1>
                                             <p
                                                 class="img-des paragraph-l"
-                                                v-html="applyContentStyle('Biz g‘oyalarni jiddiy surunkali kasalliklarga chalingan odamlar uchun yaxshiroq muolajalarga aylantiramiz.')"
+                                                v-html="applyContentStyle('{{ $about[0]['short_content_' . $lang] }}')"
                                             ></p>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@
                                                     <b class="infotext" v-html="applyContentStyle('')"></b>
                                                 </div>
                                                 <div>
-                                                    <span class="infotext" v-html="applyContentStyle('Marie Darting va Pernille Thomasen, Novo Nordisk Daniya')"></span>
+                                                    <span class="infotext" v-html="applyContentStyle('')"></span>
                                                 </div>
                                             </div>
                                             <div
@@ -108,22 +108,7 @@
                                                     <b v-html="applyContentStyle('Biz nima qilamiz')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
-                                                    <p>
-                                                        <b>Kashf qilish, ishlab chiqish va yetkazib berish</b>
-                                                    </p>
-                                                    <p>
-                                                        Novo Nordisk deyarli 100 yil davomida og’ir surunkali kasallikka chalingan bemorlarning hayot sifatini yaxshilab
-                                                        kelmoqda, insulin ruchkalari va shunga o’xshash innovatsion mahsulotlar ishlab chiqarish bilan ularning muammolariga
-                                                        yechim topmoqda.
-                                                    </p>
-                                                    <p>
-                                                        Davolash usullarimiz bugungi kunda diabet, semizlik va kam uchraydigan qon va ekdokrin tizimi kasalliklari bilan
-                                                        yashayotgan millionlab kishilarga naf keltirmoqda. 
-                                                    </p>
-                                                    <p>
-                                                        Laboratoriyalarimizdan tortib zavodlardagi sexlargacha biz innovatsion biologik dorilarni yaratamiz va ishlab
-                                                        chiqamiz va ularni butun dunyodagi bemorlar uchun hamyonbop qilamiz.
-                                                    </p>
+                                                    {!! $about[0]['about_or_company_' . $lang] !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -200,7 +185,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs" v-html="applyContentStyle('50%')"></p>
+                                                    <p class="facts h1-xs" v-html="applyContentStyle('{{ $about[0]['percent'] }}')"></p>
                                                     <div class="paragraph-s">
                                                         <p v-html="recolorTriangle('<p>dunyodagi jami ishlab chiqariladigan insulinning bizga tegishli qismi.<\/p>\n')"></p>
                                                     </div>
@@ -210,7 +195,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs" v-html="applyContentStyle('40 mln.+ ')"></p>
+                                                    <p class="facts h1-xs" v-html="applyContentStyle('{{ $about[0]['using_product'] }} mln.+ ')"></p>
                                                     <div class="paragraph-s">
                                                         <p
                                                             v-html="recolorTriangle('<p>ortiq dunyo aholisi\x26nbsp;bizning\x26nbsp;diabetga qarshi mahsulotlarimizdan foydalanmoqda.<\/p>\n')"
@@ -222,7 +207,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs" v-html="applyContentStyle('800 mln.+')"></p>
+                                                    <p class="facts h1-xs">{{ $about[0]['insulin'] }} mln.+</p>
                                                     <div class="paragraph-s">
                                                         <p v-html="recolorTriangle('<p>miqdorda insulin\x26nbsp;insulin shprits ruchkalarini chiqarganmiz.<\/p>\n')"></p>
                                                     </div>
@@ -232,7 +217,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs" v-html="applyContentStyle('40+ dan')"></p>
+                                                    <p class="facts h1-xs">{{ $about[0]['clinical_trials'] }}+ dan</p>
                                                     <div class="paragraph-s">
                                                         <p v-html="recolorTriangle('<p>ortiq davlatlarda klinik sinovlar oʻtkazamiz.<\/p>\n')"></p>
                                                     </div>
@@ -278,7 +263,7 @@
                                                         class="left-column tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--m--5 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 m-s-bottom"
                                                     >
                                                         <h3 class="h2 color-blue text">
-                                                            <b>Innovatsiya va tijoriy ustunlikni birlashtirish</b>
+                                                            <b>{{ $about[0]['description_title_' . $lang] ?? 'Innovatsiya va tijoriy ustunlikni birlashtirish'}}</b>
                                                         </h3>
                                                     </div>
                                                     <div
@@ -288,19 +273,7 @@
                                                             <div class="text section-wrapper richtext color-blue introtextsection">
                                                                 <h4 class="text color-blue subsubheader h3" v-html="applyContentStyle('')"></h4>
                                                                 <div class="text color-blue introtext">
-                                                                    <p>
-                                                                        Diqqatimiz yuz millionlab odamlarga ta’sir qiluvchi va eng qiyin global sog‘liqni saqlash muammolari
-                                                                        orasida bo‘lgan jiddiy surunkali kasalliklarga qaratilgan.
-                                                                    </p>
-                                                                    <p>
-                                                                        Innovatsiyalarimiz va tijoriy ustunligimizni birlashtirgan holda biz dadil g‘oyalarni hayotiy muhim
-                                                                        va profilaktik dorilarga aylantirish uchun bemorlar va hamkorlarning fikrlariga tayanamiz.
-                                                                    </p>
-                                                                    <p>
-                                                                        Biz tibbiy qurilmalarni ishlab chiqish va raqamli sog‘liqni saqlash yechimlarini uzluksiz ilgari
-                                                                        surish uchun eng yangi davolash usullari va texnologiyalari, jumladan qon hujayralari asosidagi
-                                                                        davolash usullariga uzoq muddatli sarmoyalar kiritamiz.<br />
-                                                                    </p>
+                                                                    {!! $about[0]['description_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -384,7 +357,7 @@
                                                 <div class="columns m-m-top">
                                                     <div class="left-column">
                                                         <h3 class="h2 color-blue">
-                                                            <b v-html="applyContentStyle('Aholining zaif qatlamlarida surunkali kasalliklarga e’tibor berish')"></b>
+                                                            <b>{{ $about[0]['content_title_' . $lang] }}</b>
                                                         </h3>
                                                     </div>
                                                     <div
@@ -394,26 +367,7 @@
                                                             <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
                                                                 <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
                                                                 <div class="color-blue introtext">
-                                                                    <p>
-                                                                        Biror bir surunkali kasallik bilan og‘rigan bemor noto‘g‘ri davolanganida yoki umuman davolanmasdan
-                                                                        tashlab qo‘yilganida u hayotga tahdid soluvchi murakkablashuvlarning yuzaga kelish xavfi ostida
-                                                                        bo‘ladi. Diabet holatida bu amputatsiyalar va ko‘rish qobiliyatining yo‘qotilishiga olib kelishi va
-                                                                        ayrim hollarda murakkablashuvlar o‘lim bilan tugashi mumkin.
-                                                                    </p>
-                                                                    <p>
-                                                                        Aholining zaif qatlamlari va past daromadli mamlakatlar ko‘pincha bundan eng ko‘p zarar ko‘radilar.
-                                                                        Tibbiy davolashning narxi va hamyonbopligi alohida kishilar, ularning oilalari va hattoki butun
-                                                                        jamiyat uchun og‘ir yuk bo‘lishi mumkin.
-                                                                    </p>
-                                                                    <p>
-                                                                        Bizning uzoq muddatli maqsadimiz - har bir mamlakatdagi aholining zaif qatlamiga, ayniqsa dunyoning
-                                                                        ayrim qismlarida tibbiy yordam va dori vositalarisiz yaqqol o‘lim xavf solib turuvchi 1-turdagi
-                                                                        diabet bilan og‘rigan bolalarga diabetda arzon davolanishdan foydalanish imkoniyatini taqdim etish.
-                                                                    </p>
-                                                                    <p>
-                                                                        Biz surunkali kasallikning oldini olishga ham sarmoya kiritamiz. Bizning maqsadimiz 2045-yilgacha
-                                                                        100 milliondan ortiq odamning 2-toifa diabetga chalinishining oldini olish. 
-                                                                    </p>
+                                                                    {!! $about[0]['content_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
                                                                 </div>
                                                             </div>
                                                         </div>
