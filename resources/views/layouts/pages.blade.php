@@ -2,13 +2,37 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8" />
-    <title>O‘zbekcha</title>
+    <title>Zuma Pharma | Фармацевтическая компания на территории Республики Узбекистан</title>
+
 
     <link rel="canonical" href="/" />
 
     <link rel="stylesheet" href="pxc7vyl.css" />
 
-    <link rel="icon" type="image/x-icon" href="/etc.clientlibs/nncorp/components/structure/page/clientlib/resources/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+
+
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://zumapharma.uz/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zuma Pharma | Фармацевтическая компания на территории Республики Узбекистан">
+    <meta property="og:description"
+          content="Zuma Pharma - Одна из лидирующих компаний на фармацевтическом рынке Республики Узбекистан.">
+    <meta property="og:image" content="/assets/img/zuma_meta_img.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="zumapharma.uz">
+    <meta property="twitter:url" content="https://zumapharma.uz/">
+    <meta name="twitter:title" content="Zuma Pharma | Фармацевтическая компания на территории Республики Узбекистан">
+    <meta name="twitter:description"
+          content="Zuma Pharma - Одна из лидирующих компаний на фармацевтическом рынке Республики Узбекистан.">
+    <meta name="twitter:image" content="/assets/img/zuma_meta_img.png">
 
     <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/vendor/clientlib-vuejs/production.min.js"></script>
 

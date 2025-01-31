@@ -19,7 +19,7 @@
                                 <div class="tb-GridColumn tb-GridColumn--l--14">
                                     <div id="left-side-header" class="left-side header-item" :class="showLeftHeader">
                                         <a href="/" class="logo-lnk">
-                                            <span class="logo icon-logo-white m-m-right"></span>
+                                            <img src="/assets/img/logo.png" alt="logo" width="70px">
                                         </a>
                                         <div class="left-side-header-content">
                                             <div class="display-flex-center m-xxs-top">
@@ -72,77 +72,76 @@
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
                                                     <a
                                                         href="javascript:void(0)"
-                                                        :class="{dirty: navHoveredItems.includes('Bosh sahifa')}"
-                                                        v-on:mouseover="onLinkHover('Bosh sahifa')"
-                                                        v-on:click="openSubNav('Bosh sahifa')"
+                                                        :class="{dirty: navHoveredItems.includes('Главная ')}"
+                                                        v-on:mouseover="onLinkHover('Главная ')"
+                                                        v-on:click="openSubNav('Главная ')"
                                                         class="cmp-navigation__item-link true"
                                                     >
-                                                        <span class="text hyphenate">Bosh sahifa</span>
+                                                        <span class="text hyphenate">Главная </span>
                                                     </a>
                                                 </li>
-
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
                                                     <a
                                                         href="javascript:void(0)"
-                                                        :class="{dirty: navHoveredItems.includes('Kompaniya haqida')}"
-                                                        v-on:mouseover="onLinkHover('Kompaniya haqida')"
-                                                        v-on:click="openSubNav('Kompaniya haqida')"
-                                                        aria-label="Kompaniya haqida"
+                                                        :class="{dirty: navHoveredItems.includes('О компании')}"
+                                                        v-on:mouseover="onLinkHover('О компании')"
+                                                        v-on:click="openSubNav('О компании')"
+                                                        aria-label="О компании"
                                                         class="cmp-navigation__item-link true"
                                                         onclick="openModal('modal1')"
                                                     >
-                                                        <span class="text hyphenate">Kompaniya haqida</span>
+                                                        <span class="text hyphenate">О компании</span>
                                                     </a>
                                                 </li>
-
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
                                                     <a
                                                         href="{{ route('products') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Mahsulotlar')}"
-                                                        v-on:mouseover="onLinkHover('Mahsulotlar')"
-                                                        v-on:click="openSubNav('Mahsulotlar')"
-                                                        aria-label="Mahsulotlar"
+                                                        :class="{dirty: navHoveredItems.includes('Продукты')}"
+                                                        v-on:mouseover="onLinkHover('Продукты')"
+                                                        v-on:click="openSubNav('Продукты')"
+                                                        aria-label="Продукты"
                                                         class="cmp-navigation__item-link true"
                                                     >
-                                                        <span class="text hyphenate">Mahsulotlar</span>
+                                                        <span class="text hyphenate">Продукты</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
                                                     <a
                                                         href="{{ route('vacancy') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Bo‘sh ish o‘rinlari')}"
-                                                        v-on:mouseover="onLinkHover('Bo‘sh ish o‘rinlari')"
-                                                        v-on:click="openSubNav('Bo‘sh ish o‘rinlari')"
-                                                        aria-label="Bo‘sh ish o‘rinlari"
+                                                        :class="{dirty: navHoveredItems.includes('Вакансии')}"
+                                                        v-on:mouseover="onLinkHover('Вакансии')"
+                                                        v-on:click="openSubNav('Вакансии')"
+                                                        aria-label="Вакансии"
                                                         class="cmp-navigation__item-link true"
                                                     >
-                                                        <span class="text hyphenate">Bo‘sh ish o‘rinlari</span>
+                                                        <span class="text hyphenate">Вакансии</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
                                                     <a
                                                         href="{{ route('news') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Yangiliklar')}"
-                                                        v-on:mouseover="onLinkHover('Yangiliklar')"
-                                                        v-on:click="openSubNav('Yangiliklar')"
-                                                        aria-label="Yangiliklar"
+                                                        :class="{dirty: navHoveredItems.includes('Новости')}"
+                                                        v-on:mouseover="onLinkHover('Новости')"
+                                                        v-on:click="openSubNav('Новости')"
+                                                        aria-label="Новости"
                                                         class="cmp-navigation__item-link true"
                                                     >
-                                                        <span class="text hyphenate">Yangiliklar</span>
+                                                        <span class="text hyphenate">Новости</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
                                                     <a
                                                         href="{{ route('contact') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Biz bilan bog‘lanish')}"
-                                                        v-on:mouseover="onLinkHover('Biz bilan bog‘lanish')"
-                                                        v-on:click="openSubNav('Biz bilan bog‘lanish')"
-                                                        aria-label="Biz bilan bog‘lanish"
+                                                        :class="{dirty: navHoveredItems.includes('Контакты')}"
+                                                        v-on:mouseover="onLinkHover('Контакты')"
+                                                        v-on:click="openSubNav('Контакты')"
+                                                        aria-label="Связаться с нами"
                                                         class="cmp-navigation__item-link true"
                                                     >
-                                                        <span class="text hyphenate">Biz bilan bog‘lanish</span>
+                                                        <span class="text hyphenate">Контакты</span>
                                                     </a>
                                                 </li>
+
 {{--                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">--}}
 {{--                                                    <a--}}
 {{--                                                        href="uz/search.html"--}}

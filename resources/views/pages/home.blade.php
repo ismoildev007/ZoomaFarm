@@ -77,11 +77,11 @@
                                                     class="tb-GridColumn tb-GridColumn--l--12 tb-GridColumn--m--12 tb-GridColumn--s--12 tb-GridColumn--xs--16 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2"
                                                 >
                                                     <div class="details-title">
-                                                        <h2 class="h2">Kompaniya bayonoti</h2>
+                                                        <h2 class="h2">ООО "ZUMA PHARMA"</h2>
                                                     </div>
                                                     <h4
                                                         class="richtext"
-                                                        v-html="applyContentStyle('Biz uchta chiqarish maydonchasini sotib olishni yakunlash bilan muhim bosqichga erishdik. Novo Holding A/S')"
+                                                        v-html="applyContentStyle('Фармацевтическая компания на территории Республики Узбекистан')"
                                                     ></h4>
                                                 </div>
                                             </div>
@@ -92,11 +92,10 @@
                                                 >
                                                     <div class="details-button">
                                                         <a aria-label="İrsimiz haqqında məlumat əldə edin"
-                                                           href="./uz/news/news.html" target="_self">
+                                                           href="{{route('news')}}" target="_self">
                                                             <button
                                                                 class="button desktop-button m-s-top button-link-animation">
-                                                                <span
-                                                                    class="text">Eng so'nggi yangiliklarni o'qing</span>
+                                                                <span class="text">Читайте последние новости</span>
                                                                 <span class="icon icon-right-arrow"></span>
                                                             </button>
                                                         </a>
@@ -158,11 +157,11 @@
                                                 >
                                                     <div class="details-title">
                                                         <h2 class="h2"
-                                                            v-html="applyContentStyle('O‘zgarishni ilgari surish')"></h2>
+                                                            v-html="applyContentStyle('Продвижение изменений')"></h2>
                                                     </div>
                                                     <h4
                                                         class="richtext"
-                                                        v-html="applyContentStyle('Biz diabet va boshqa jiddiy surunkali kasalliklarni yengish uchun o‘zgarishni ilgari surmoqdamiz.\r\n')"
+                                                        v-html="applyContentStyle('Мы продвигаем изменения для борьбы с диабетом и другими серьезными хроническими заболеваниями.')"
                                                     ></h4>
                                                 </div>
                                             </div>
@@ -172,11 +171,11 @@
                                                     class="tb-GridColumn tb-GridColumn--m--20 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2"
                                                 >
                                                     <div class="details-button">
-                                                        <a aria-label="Biz nimalar qilamiz"
-                                                           href="uz/about/what-we-do.html" target="_self">
+                                                        <a aria-label="Что мы делаем"
+                                                           href="{{route('about')}}" target="_self">
                                                             <button
                                                                 class="button desktop-button m-s-top button-link-animation">
-                                                                <span class="text">Biz nimalar qilamiz</span>
+                                                                <span class="text">Что мы делаем</span>
                                                                 <span class="icon icon-right-arrow"></span>
                                                             </button>
                                                         </a>
@@ -186,6 +185,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </li>
                     </ol>
@@ -210,18 +210,19 @@
                             <div
                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 container-grid-header">
                                 <p class="tagline m-xxs-bottom">
-                                    <span style="vertical-align: inherit">Mahsulotlar</span>
+                                    <span style="vertical-align: inherit">Продукты</span>
                                 </p>
                                 <h2 class="h5-s m-xs-bottom title">
-                                    <span style="vertical-align: inherit">Dorilar</span>
+                                    <span style="vertical-align: inherit">Лекарства</span>
                                 </h2>
                                 <p class="description leadtext m-m-bottom">
-                                            <span style="vertical-align: inherit"
-                                            >Quyida mavjud bo'lgan insulin qalamlari tanlovini ko'ring. Sizni qiziqtirgan qalamga boring va diabetga qarshi dori-darmonlarni
-                                                qabul qilish uchun insulin qalamini qanday ishlatishni o'rganing.</span
-                                            >
+                <span style="vertical-align: inherit">
+                Ознакомьтесь с представленным ниже выбором инсулиновых шприц-ручек.
+                Перейдите к интересующей вас ручке и узнайте, как использовать инсулиновую ручку для приема противодиабетических препаратов.
+                </span>
                                 </p>
                             </div>
+
                             <div
                                 class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                 style="background-color: rgb(226, 240, 250)"
@@ -308,7 +309,7 @@
                     <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
                         <div
                             class="frame small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h1 class="text plaintexttitle title color-blue smalltitle">Karyera</h1>
+                            <h1 class="text plaintexttitle title color-blue smalltitle">Карьера</h1>
                         </div>
                         <div
                             class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
@@ -376,31 +377,21 @@
         <!-- Hamkorlik -->
         <div class="plaintext aem-GridColumn aem-GridColumn--default--12">
             <div>
-                <div
-                    class="background gutters component-padding-top frame tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                <div class="background gutters component-padding-top frame tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                     <div>
                         <div class="introplaintext-wrapper">
-                            <div
-                                class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                                <div
-                                    class="frame small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                                    <h1 class="text plaintexttitle title color-blue smalltitle">Hamkorlik</h1>
+                            <div class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                                <div class="frame small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                                    <h1 class="text plaintexttitle title color-blue smalltitle">Сотрудничество</h1>
                                 </div>
                             </div>
-                            <div
-                                class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                                <div
-                                    class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 frame-padding frame small"
-                                    style="background-color: rgb(226, 240, 250)"
-                                >
-                                    <div
-                                        class="text color-blue intro leadtext frame right-column tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
-                                    >
-                                        Muayyan mavzular, hamkorlikning maxsus shakllari yoki mintaqaviy mukammallik
-                                        klasterlari uchun biz maxsus hamkorlik
-                                        tashabbuslarini yaratdik. Bu yerda ular haqida koʻproq bilib oling va
-                                        oʻzgarishlarni birgalikda olib borishimiz uchun toʻgʻri
-                                        yoʻl boʻlsa, biz bilan bogʻlaning.
+                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                                <div class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 frame-padding frame small"
+                                     style="background-color: rgb(226, 240, 250)">
+                                    <div class="text color-blue intro leadtext frame right-column tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1">
+                                        Для определенных тем, специальных форм сотрудничества или региональных кластеров совершенства
+                                        мы разработали специальные инициативы по сотрудничеству. Узнайте о них больше здесь и
+                                        свяжитесь с нами, если это правильный путь для совместного продвижения изменений.
                                     </div>
                                 </div>
                             </div>
@@ -409,194 +400,128 @@
                 </div>
             </div>
         </div>
-        <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
-            <link
-                rel="stylesheet"
-                href="/etc.clientlibs/nncorp/components/content/layoutcontainergrid/clientlibs.min.8e68a20a5b5ff888db6d5b26377b9644.css"
-                type="text/css"
-            />
-            <script
-                type="text/javascript"
-                src="/etc.clientlibs/nncorp/components/content/layoutcontainergrid/clientlibs.min.171a7ca77be56f15301624914902fc77.js"
-                async=""
-            ></script>
 
+        <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
             <div class="layout-container-grid">
                 <div class="gutters component-padding-bottom frame outer-container" style="background-color: white">
                     <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
-                        <div
-                            class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                            style="background-color: rgb(226, 240, 250)"
-                        >
+                        <div class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                             style="background-color: rgb(226, 240, 250)">
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                                >
+                                <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1">
                                     <div class="rowcontainer">
                                         <div>
                                             <div class="contentgrid_row">
-                                                <div
-                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
                                                     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a
-                                                                    href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                    target="_self"
-                                                                    aria-label="Ochiq innovatsiya"
-                                                                >
-                                                                    <div
-                                                                        class="image-video-content-wrapper m-xs-bottom">
+                                                                <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                    <div class="image-video text-center m-xs-bottom">
                                                                         <picture>
-                                                                            <img
-                                                                                src="https://images.novonordisk.com/is/image/novonordiskas/Compound-sharing-image?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$"
-                                                                                alt="Murakkab almashish"
-                                                                                loading="eager"
-                                                                            />
+                                                                            <img src="/assets/img/ugp.png"
+                                                                                 alt="Обмен соединениями"
+                                                                                 loading="eager" height="50" width="50px" />
                                                                         </picture>
-                                                                    </div
-                                                                    >
+                                                                    </div>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
-                                                                    <a
-                                                                        href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                        target="_self"
-                                                                        aria-label="Ochiq innovatsiya"
-                                                                    >
+                                                                    <a href="#!" target="_self" aria-label="Открытые инновации">
                                                                         <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            <span style="vertical-align: inherit">Murakkab almashish</span>
+                                                                            <span style="vertical-align: inherit">UZGERMED PHARM</span>
                                                                         </h3>
                                                                         <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                        <span
-                                                                                            style="vertical-align: inherit"
-                                                                                        >Innovatsiyalarni tezlashtirish uchun biz yangi peptid va oqsil analoglarini,
-                                                                                            shuningdek, klinikadan oldingi tadqiqotlar uchun antikorlarni ochiq baham
-                                                                                            ko'ramiz.</span
-                                                                                        >
-                                                                        </p></a
-                                                                    >
+                                                                    <span style="vertical-align: inherit">
+                                                                        Для ускорения инноваций мы открыто делимся новыми аналогами
+                                                                        пептидов и белков, а также антителами для доклинических исследований.
+                                                                    </span>
+                                                                        </p>
+                                                                    </a>
                                                                     <div class="link m-xs-top">
-                                                                        <a
-                                                                            href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                            target="_self"
-                                                                            class="color-blue link-label paragraph-s"
-                                                                        ><span class="icon icon-right-arrow"></span
-                                                                            ></a>
+                                                                        <a href="/#!" target="_self"
+                                                                           class="color-blue link-label paragraph-s">
+                                                                            <span class="icon icon-right-arrow"></span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+
+                                                <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
                                                     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a
-                                                                    href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                    target="_self"
-                                                                    aria-label="Ochiq innovatsiya"
-                                                                >
-                                                                    <div
-                                                                        class="image-video-content-wrapper m-xs-bottom">
+                                                                <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                    <div class="image-video m-xs-bottom">
                                                                         <picture>
-                                                                            <img
-                                                                                src="https://images.novonordisk.com/is/image/novonordiskas/Compound-sharing-image?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$"
-                                                                                alt="Murakkab almashish"
-                                                                                loading="eager"
-                                                                            />
+                                                                            <img src="/assets/img/samo.png"
+                                                                                 alt="Обмен соединениями"  height="50" width="140"
+                                                                                 loading="eager" />
                                                                         </picture>
-                                                                    </div
-                                                                    >
+                                                                    </div>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
-                                                                    <a
-                                                                        href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                        target="_self"
-                                                                        aria-label="Ochiq innovatsiya"
-                                                                    >
+                                                                    <a href="#!" target="_self" aria-label="Открытые инновации">
                                                                         <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            <span style="vertical-align: inherit">Murakkab almashish</span>
+                                                                            <span style="vertical-align: inherit">SAMO PHARM</span>
                                                                         </h3>
                                                                         <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                        <span
-                                                                                            style="vertical-align: inherit"
-                                                                                        >Innovatsiyalarni tezlashtirish uchun biz yangi peptid va oqsil analoglarini,
-                                                                                            shuningdek, klinikadan oldingi tadqiqotlar uchun antikorlarni ochiq baham
-                                                                                            ko'ramiz.</span
-                                                                                        >
-                                                                        </p></a
-                                                                    >
+                                                                    <span style="vertical-align: inherit">
+                                                                        Для ускорения инноваций мы открыто делимся новыми аналогами
+                                                                        пептидов и белков, а также антителами для доклинических исследований.
+                                                                    </span>
+                                                                        </p>
+                                                                    </a>
                                                                     <div class="link m-xs-top">
-                                                                        <a
-                                                                            href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                            target="_self"
-                                                                            class="color-blue link-label paragraph-s"
-                                                                        ><span class="icon icon-right-arrow"></span
-                                                                            ></a>
+                                                                        <a href="/#!" target="_self"
+                                                                           class="color-blue link-label paragraph-s">
+                                                                            <span class="icon icon-right-arrow"></span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
                                                     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a
-                                                                    href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                    target="_self"
-                                                                    aria-label="Ochiq innovatsiya"
-                                                                >
-                                                                    <div
-                                                                        class="image-video-content-wrapper m-xs-bottom">
+                                                                <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                    <div class="image-video m-xs-bottom">
                                                                         <picture>
-                                                                            <img
-                                                                                src="https://images.novonordisk.com/is/image/novonordiskas/Compound-sharing-image?wid=768&amp;fit=constrain&amp;qlt=90&amp;$$"
-                                                                                alt="Murakkab almashish"
-                                                                                loading="eager"
-                                                                            />
+                                                                            <img src="/assets/img/fazo.png" height="50"
+                                                                                 alt="Обмен соединениями"
+                                                                                 loading="eager" />
                                                                         </picture>
-                                                                    </div
-                                                                    >
+                                                                    </div>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
-                                                                    <a
-                                                                        href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                        target="_self"
-                                                                        aria-label="Ochiq innovatsiya"
-                                                                    >
+                                                                    <a href="#!" target="_self" aria-label="Открытые инновации">
                                                                         <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            <span style="vertical-align: inherit">Murakkab almashish</span>
+                                                                            <span style="vertical-align: inherit">FAZO LUXE</span>
                                                                         </h3>
                                                                         <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                        <span
-                                                                                            style="vertical-align: inherit"
-                                                                                        >Innovatsiyalarni tezlashtirish uchun biz yangi peptid va oqsil analoglarini,
-                                                                                            shuningdek, klinikadan oldingi tadqiqotlar uchun antikorlarni ochiq baham
-                                                                                            ko'ramiz.</span
-                                                                                        >
-                                                                        </p></a
-                                                                    >
+                            <span style="vertical-align: inherit">
+                                Для ускорения инноваций мы открыто делимся новыми аналогами
+                                пептидов и белков, а также антителами для доклинических исследований.
+                            </span>
+                                                                        </p>
+                                                                    </a>
                                                                     <div class="link m-xs-top">
-                                                                        <a
-                                                                            href="/partnering-and-open-innovation/compound-sharing.html"
-                                                                            target="_self"
-                                                                            class="color-blue link-label paragraph-s"
-                                                                        ><span class="icon icon-right-arrow"></span
-                                                                            ></a>
+                                                                        <a href="/#!" target="_self"
+                                                                           class="color-blue link-label paragraph-s">
+                                                                            <span class="icon icon-right-arrow"></span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -607,6 +532,7 @@
                 </div>
             </div>
         </div>
+
         <div class="latestnews aem-GridColumn aem-GridColumn--default--12">
             <link
                 rel="stylesheet"
@@ -622,7 +548,7 @@
             <div class="gutters component-padding" style="background-color: white">
                 <div class="ln-wrapper small tb-Grid tb-Grid--24 tb-Grid--l--24">
                     <div class="ln-header tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
-                        <h1 class="h1-s">So'ngi yangiliklar</h1>
+                        <h1 class="h1-s">Последние новости</h1>
                     </div>
                     <div class="ln-box tb-GridColumn tb-GridColumn--l--24" style="background-color: white">
                         <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24">
@@ -630,7 +556,9 @@
                                 class="ln-container tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--2">
                                 <div class="ln-link-list d-flex">
                                     @foreach ($latestNews as $news)
-                                        <a href="{{route('single.news',$news->id)}}" aria-label="{{ $news['title_'.$lang] }}" class="ln-link-item m-l-bottom right-arrow-animation color-blue">
+                                        <a href="{{route('single.news',$news->id)}}"
+                                           aria-label="{{ $news['title_'.$lang] }}"
+                                           class="ln-link-item m-l-bottom right-arrow-animation color-blue">
                                             <p class="job-name">
                                                 {{ $news->date }}
                                             </p>
@@ -641,7 +569,8 @@
                                             </div>
                                             <div class="job-category m-xxs-top">
                                                 <p class="paragraph-s">
-                                                    <font style="vertical-align: inherit"><font style="vertical-align: inherit">Ko'proq o'qish</font></font>
+                                                    <font style="vertical-align: inherit"><font
+                                                            style="vertical-align: inherit">Ko'proq o'qish</font></font>
                                                     <span class="icon icon-right-arrow m-xxs-left"></span>
                                                 </p>
                                             </div>
