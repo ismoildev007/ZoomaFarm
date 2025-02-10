@@ -13,6 +13,8 @@ return [
     'company_name' => 'ООО "ZUMA PHARMA"',
     'company_description' => 'O‘zbekiston Respublikasida farmatsevtika kompaniyasi',
     'latest_news' => 'Oxirgi yangiliklarni o‘qing',
+    'latest_news2' => '  So`ngi yangiliklar',
+    'selected_stories' => 'Tanlangan hikoyalar',
     'promoting_changes' => 'O‘zgarishlarni ilgari surish',
     'promoting_changes_description' => 'Biz diabet va boshqa jiddiy surunkali kasalliklarga qarshi kurashish uchun o‘zgarishlarni ilgari suramiz.',
     'what_we_do' => 'Biz nima qilamiz',
@@ -36,7 +38,8 @@ return [
     'data_processing' => 'Shaxsiy ma’lumotlarni qayta ishlash',
     'terms_of_use' => 'Foydalanish shartlari',
     'copyright' => '© 2024 ZUMA PHARMA O‘zbekiston',
-
+    'read_more' => "Batafsil ma'lumot",
+    'read_more_text' => "Ko'proq o'qish",
 ];
 
 

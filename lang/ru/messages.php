@@ -13,6 +13,8 @@ return [
     'company_name' => 'ООО "ZUMA PHARMA"',
     'company_description' => 'Фармацевтическая компания на территории Республики Узбекистан',
     'latest_news' => 'Читайте последние новости',
+    'latest_news2' => '     Последние новости',
+    'selected_stories' => 'Избранные истории',
     'promoting_changes' => 'Продвижение изменений',
     'promoting_changes_description' => 'Мы продвигаем изменения для борьбы с диабетом и другими серьезными хроническими заболеваниями.',
     'what_we_do' => 'Что мы делаем',
@@ -36,5 +38,7 @@ return [
     'data_processing' => 'Обработка персональных данных',
     'terms_of_use' => 'Условия использования',
     'copyright' => '© 2024 ZUMA PHARMA Uzbekistan',
+    'read_more' => "Подробнее",
+    'read_more_text' => "Читать далее",
 
 ];

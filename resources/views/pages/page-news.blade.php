@@ -21,7 +21,7 @@ $lang = app()->getLocale();
                     <div class="ln-wrapper small tb-Grid tb-Grid--24 tb-Grid--l--24">
                         <div class="ln-header tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
                             <h1 class="h1-s">
-                                So'ngi yangiliklar
+                              @lang('messages.latest_news2')
                             </h1>
                         </div>
                         <div class="ln-box tb-GridColumn tb-GridColumn--l--24" style="background-color: white">
@@ -87,7 +87,8 @@ $lang = app()->getLocale();
                                 <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
                                     <div
                                         class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 container-grid-header">
-                                        <h2 class="h5-s m-xs-bottom title">Tanlangan hikoyalar</h2>
+                                        <h2 class="h5-s m-xs-bottom title">{{ __('messages.selected_stories') }}</h2>
+
                                     </div>
                                     <div
                                         class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
@@ -120,7 +121,7 @@ $lang = app()->getLocale();
                                                                                    target="_self"
                                                                                    aria-label="{{ $newsLatest1->title_uz }}"
                                                                                    class="color-blue link-label m-xxs-right paragraph-s">
-                                                                                    Batafsil ma'lumot
+                                                                                    {{ __('messages.read_more') }}
                                                                                     <span class="icon icon-right-arrow m-xxs-left"></span>
                                                                                 </a>
                                                                             </div>
@@ -159,7 +160,7 @@ $lang = app()->getLocale();
                                                                                        target="_self"
                                                                                        aria-label="{{ $item['title_'.$lang]}}"
                                                                                        class="color-blue link-label m-xxs-right paragraph-s">
-                                                                                        Ko'proq o'qish
+                                                                                        {{ __('messages.read_more_text') }}
                                                                                         <span
                                                                                             class="icon icon-right-arrow m-xxs-left"></span>
                                                                                     </a>

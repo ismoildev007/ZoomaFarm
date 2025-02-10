@@ -13,6 +13,8 @@ return [
     'company_name' => 'LLC "ZUMA PHARMA"',
     'company_description' => 'A pharmaceutical company in the Republic of Uzbekistan',
     'latest_news' => 'Read the latest news',
+    'latest_news2' => '    Latest News',
+    'selected_stories' => 'Selected Stories',
     'promoting_changes' => 'Promoting Changes',
     'promoting_changes_description' => 'We promote changes to combat diabetes and other serious chronic diseases.',
     'what_we_do' => 'What We Do',
@@ -36,6 +38,7 @@ return [
     'data_processing' => 'Personal Data Processing',
     'terms_of_use' => 'Terms of Use',
     'copyright' => '© 2024 ZUMA PHARMA Uzbekistan',
-
+    'read_more' => "Read more",
+    'read_more_text' => "Read more",
 ];
 
