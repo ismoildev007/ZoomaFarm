@@ -26,6 +26,7 @@
          background-image: url('{{ asset('storage/' . $product->image) }}');
          background-position: center;
          background-size: contain;
+             background-repeat: no-repeat;
      "
                             ></div>
 
