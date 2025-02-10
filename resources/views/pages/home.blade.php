@@ -216,10 +216,10 @@
                                     <span style="vertical-align: inherit">Лекарства</span>
                                 </h2>
                                 <p class="description leadtext m-m-bottom">
-                <span style="vertical-align: inherit">
-                Ознакомьтесь с представленным ниже выбором инсулиновых шприц-ручек.
-                Перейдите к интересующей вас ручке и узнайте, как использовать инсулиновую ручку для приема противодиабетических препаратов.
-                </span>
+                                    <span style="vertical-align: inherit">
+                                    Ознакомьтесь с представленным ниже выбором инсулиновых шприц-ручек.
+                                    Перейдите к интересующей вас ручке и узнайте, как использовать инсулиновую ручку для приема противодиабетических препаратов.
+                                    </span>
                                 </p>
                             </div>
 
@@ -261,7 +261,7 @@
                                                                                 {{ $product['name_'.$lang] }}
                                                                             </h3>
                                                                             <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                {{ $product['description_'.$lang] }}
+                                                                                {{ Str::words($product['description_'.$lang], 15, '...') }}
                                                                             </p>
                                                                             <div class="link m-xs-top">
                                                                                 <a href="{{route('single.product',$product->id)}}"
