@@ -12,10 +12,11 @@ use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\auth\SuperAdminController;
 use App\Http\Controllers\auth\AdminController;
 use App\Http\Controllers\Page\MainController;
+use App\Http\Controllers\TranslationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
-
-
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 
 //Admin panel login register start
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -34,6 +35,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('contacts', ContactController::class);
     Route::resource('vacancies', VacancyController::class);
     Route::resource('candidants', CandidantController::class);
+    Route::resource('translations', TranslationController::class);
 });
 
 Route::get('/', [MainController::class, 'home'])->name('home');
@@ -55,3 +57,19 @@ Route::patch('/admin/orders/{id}', [OrderController::class, 'update'])->name('or
 Route::post('/orders/{order}/update-status', [OrderController::class,'updateStatus'])->name('orders.update-status');
 
 Route::get('locale/{lang}',[LanguageController::class, 'setLocale']);
+
+
+// Tarjimalarni ko‘rsatish
+Route::get('/admin/lang', function () {
+    $langs = ['uz', 'ru', 'en'];
+    $translations = [];
+
+    foreach ($langs as $lang) {
+        $path = base_path("lang/{$lang}/messages.php");
+        $translations[$lang] = File::exists($path) ? include $path : [];
+    }
+
+    return view('admin.translations.index', compact('translations', 'langs'));
+});
+
+Route::post('/admin/lang/update', [TranslationController::class, 'update'])->name('admin.lang.update');

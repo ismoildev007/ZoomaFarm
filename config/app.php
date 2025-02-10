@@ -84,6 +84,7 @@ return [
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'ru_RU'), // Faker uchun o'zbek tilini o'rnating
 
+    'lang_path' => base_path('lang'),
 
     /*
     |--------------------------------------------------------------------------
