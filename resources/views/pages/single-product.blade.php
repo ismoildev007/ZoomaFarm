@@ -20,12 +20,12 @@
 
                 <div id="supergraphic" class="super-graphic-wrapper" :class="readDetails" style="background-color: #e2f0fa">
                     <div class="box box-image tb-Grid tb-Grid--24 tb-Grid--l--24">
-                        <div class="image">
+                        <div class="image" style="width: 54%!important;">
                             <div class="focuspoint-image desktop focuspoint-container"
                                  style="
          background-image: url('{{ asset('storage/' . $product->image) }}');
          background-position: center;
-         background-size: cover;
+         background-size: contain;
      "
                             ></div>
 
