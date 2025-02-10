@@ -75,7 +75,12 @@
                         <span class="nxl-mtext">Заказы</span>
                     </a>
                 </li>
-
+                <li class="nxl-item">
+                    <a href="/admin/lang" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-key"></i></span>
+                        <span class="nxl-mtext" style="font-size: 12px">Редактирование переводов</span>
+                    </a>
+                </li>
                 {{--                @can('admins')--}}
 {{--                    <li class="nxl-item nxl-hasmenu">--}}
 {{--                        <a href="{{ route('news.index') }}" class="nxl-link">--}}
