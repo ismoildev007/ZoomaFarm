@@ -70,92 +70,67 @@
                                         <div id="cmp-navigation__top-bar" class="top-bar" :class="{'navigation-display': isOverflowed}">
                                             <ul class="cmp-navigation__group main-navigation">
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        :class="{dirty: navHoveredItems.includes('Главная ')}"
-                                                        v-on:mouseover="onLinkHover('Главная ')"
-                                                        v-on:click="openSubNav('Главная ')"
-                                                        class="cmp-navigation__item-link true"
-                                                    >
-                                                        <span class="text hyphenate">Главная </span>
+                                                    <a href="javascript:void(0)"
+                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.home') }}')}"
+                                                       v-on:mouseover="onLinkHover('{{ __('messages.home') }}')"
+                                                       v-on:click="openSubNav('{{ __('messages.home') }}')"
+                                                       class="cmp-navigation__item-link true">
+                                                        <span class="text hyphenate">{{ __('messages.home') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="javascript:void(0)"
-                                                        :class="{dirty: navHoveredItems.includes('О компании')}"
-                                                        v-on:mouseover="onLinkHover('О компании')"
-                                                        v-on:click="openSubNav('О компании')"
-                                                        aria-label="О компании"
-                                                        class="cmp-navigation__item-link true"
-                                                        onclick="openModal('modal1')"
-                                                    >
-                                                        <span class="text hyphenate">О компании</span>
+                                                    <a href="javascript:void(0)"
+                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.about') }}')}"
+                                                       v-on:mouseover="onLinkHover('{{ __('messages.about') }}')"
+                                                       v-on:click="openSubNav('{{ __('messages.about') }}')"
+                                                       aria-label="{{ __('messages.about') }}"
+                                                       class="cmp-navigation__item-link true"
+                                                       onclick="openModal('modal1')">
+                                                        <span class="text hyphenate">{{ __('messages.about') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="{{ route('products') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Продукты')}"
-                                                        v-on:mouseover="onLinkHover('Продукты')"
-                                                        v-on:click="openSubNav('Продукты')"
-                                                        aria-label="Продукты"
-                                                        class="cmp-navigation__item-link true"
-                                                    >
-                                                        <span class="text hyphenate">Продукты</span>
+                                                    <a href="{{ route('products') }}"
+                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.products') }}')}"
+                                                       v-on:mouseover="onLinkHover('{{ __('messages.products') }}')"
+                                                       v-on:click="openSubNav('{{ __('messages.products') }}')"
+                                                       aria-label="{{ __('messages.products') }}"
+                                                       class="cmp-navigation__item-link true">
+                                                        <span class="text hyphenate">{{ __('messages.products') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="{{ route('vacancy') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Вакансии')}"
-                                                        v-on:mouseover="onLinkHover('Вакансии')"
-                                                        v-on:click="openSubNav('Вакансии')"
-                                                        aria-label="Вакансии"
-                                                        class="cmp-navigation__item-link true"
-                                                    >
-                                                        <span class="text hyphenate">Вакансии</span>
+                                                    <a href="{{ route('vacancy') }}"
+                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.vacancy') }}')}"
+                                                       v-on:mouseover="onLinkHover('{{ __('messages.vacancy') }}')"
+                                                       v-on:click="openSubNav('{{ __('messages.vacancy') }}')"
+                                                       aria-label="{{ __('messages.vacancy') }}"
+                                                       class="cmp-navigation__item-link true">
+                                                        <span class="text hyphenate">{{ __('messages.vacancy') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="{{ route('news') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Новости')}"
-                                                        v-on:mouseover="onLinkHover('Новости')"
-                                                        v-on:click="openSubNav('Новости')"
-                                                        aria-label="Новости"
-                                                        class="cmp-navigation__item-link true"
-                                                    >
-                                                        <span class="text hyphenate">Новости</span>
+                                                    <a href="{{ route('news') }}"
+                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.news') }}')}"
+                                                       v-on:mouseover="onLinkHover('{{ __('messages.news') }}')"
+                                                       v-on:click="openSubNav('{{ __('messages.news') }}')"
+                                                       aria-label="{{ __('messages.news') }}"
+                                                       class="cmp-navigation__item-link true">
+                                                        <span class="text hyphenate">{{ __('messages.news') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a
-                                                        href="{{ route('contact') }}"
-                                                        :class="{dirty: navHoveredItems.includes('Контакты')}"
-                                                        v-on:mouseover="onLinkHover('Контакты')"
-                                                        v-on:click="openSubNav('Контакты')"
-                                                        aria-label="Связаться с нами"
-                                                        class="cmp-navigation__item-link true"
-                                                    >
-                                                        <span class="text hyphenate">Контакты</span>
+                                                    <a href="{{ route('contact') }}"
+                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.contact') }}')}"
+                                                       v-on:mouseover="onLinkHover('{{ __('messages.contact') }}')"
+                                                       v-on:click="openSubNav('{{ __('messages.contact') }}')"
+                                                       aria-label="{{ __('messages.contact') }}"
+                                                       class="cmp-navigation__item-link true">
+                                                        <span class="text hyphenate">{{ __('messages.contact') }}</span>
                                                     </a>
                                                 </li>
-
-{{--                                                <li class="cmp-navigation__item cmp-navigation__item--level-0">--}}
-{{--                                                    <a--}}
-{{--                                                        href="uz/search.html"--}}
-{{--                                                        :class="{dirty: navHoveredItems.includes('Qidirish')}"--}}
-{{--                                                        v-on:mouseover="onLinkHover('Qidirish')"--}}
-{{--                                                        aria-label="Qidirish"--}}
-{{--                                                        class="cmp-navigation__item-link false"--}}
-{{--                                                    >--}}
-{{--                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"--}}
-{{--                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span--}}
-{{--                                                                        ></span>--}}
-{{--                                                    </a>--}}
-{{--                                                </li>--}}
                                             </ul>
+
                                         </div>
 
                                         <div v-if="!isTop && !tabletView" class="burger-float desktop" :class="{'top': isTop, 'not-top': !isTop}">
@@ -199,22 +174,22 @@
                                 </div>
                                 <div class="">
                                     <div class="">
-                                        <span class="tagline hyphenate">Biz haqimizda</span>
+                                        <span class="tagline hyphenate">{{ __('messages.about') }}</span>
                                     </div>
                                     <div class="">
                                         <a href="{{ route('about') }}" aria-label="1-turdagi diabet" class="item m-s-bottom animate"
-                                        ><span class="text hyphenate">Kompaniya haqida ma'lumotlar</span></a
+                                        ><span class="text hyphenate">{{ __('messages.about_company') }}</span></a
                                         >
                                     </div>
                                     <div class="">
                                         <a href="{{ route('about.team') }}" aria-label="Semizlik" class="item m-s-bottom animate"
-                                        ><span class="text hyphenate">Jamoa a'zolari</span></a
+                                        ><span class="text hyphenate">{{ __('messages.team') }}</span></a
                                         >
                                     </div>
 
                                     <div class="">
                                         <a href="{{ route('vacancy') }}" aria-label="Gemofiliya" class="item m-s-bottom animate"
-                                        ><span class="text hyphenate">Bo'sh ish o'rinlari</span></a
+                                        ><span class="text hyphenate">{{ __('messages.vacancies') }}</span></a
                                         >
                                     </div>
                                 </div>

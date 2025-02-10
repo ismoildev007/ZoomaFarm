@@ -424,93 +424,65 @@
                                             <div id="cmp-navigation__top-bar" class="top-bar" :class="{'navigation-display': isOverflowed}">
                                                 <ul class="cmp-navigation__group main-navigation">
                                                     <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="/"
-                                                            :class="{dirty: navHoveredItems.includes('Bosh sahifa')}"
-                                                            v-on:mouseover="onLinkHover('Bosh sahifa')"
-                                                            v-on:click="openSubNav('Bosh sahifa')"
-                                                            class="cmp-navigation__item-link true"
-                                                        >
-                                                            <span class="text hyphenate">Bosh sahifa</span>
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="javascript:void(0)"
-                                                            :class="{dirty: navHoveredItems.includes('Kompaniya haqida')}"
-                                                            v-on:mouseover="onLinkHover('Kompaniya haqida')"
-                                                            v-on:click="openSubNav('Kompaniya haqida')"
-                                                            aria-label="Kompaniya haqida"
-                                                            class="cmp-navigation__item-link true"
-                                                            onclick="openModal('modal1')"
-                                                        >
-                                                            <span class="text hyphenate">Kompaniya haqida</span>
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="{{ route('products') }}"
-                                                            :class="{dirty: navHoveredItems.includes('Mahsulotlar')}"
-                                                            v-on:mouseover="onLinkHover('Mahsulotlar')"
-                                                            v-on:click="openSubNav('Mahsulotlar')"
-                                                            aria-label="Mahsulotlar"
-                                                            class="cmp-navigation__item-link true"
-                                                        >
-                                                            <span class="text hyphenate">Mahsulotlar</span>
+                                                        <a href="javascript:void(0)"
+                                                           :class="{dirty: navHoveredItems.includes('{{ __('messages.home') }}')}"
+                                                           v-on:mouseover="onLinkHover('{{ __('messages.home') }}')"
+                                                           v-on:click="openSubNav('{{ __('messages.home') }}')"
+                                                           class="cmp-navigation__item-link true">
+                                                            <span class="text hyphenate">{{ __('messages.home') }}</span>
                                                         </a>
                                                     </li>
                                                     <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="{{ route('vacancy') }}"
-                                                            :class="{dirty: navHoveredItems.includes('Bo‘sh ish o‘rinlari')}"
-                                                            v-on:mouseover="onLinkHover('Bo‘sh ish o‘rinlari')"
-                                                            v-on:click="openSubNav('Bo‘sh ish o‘rinlari')"
-                                                            aria-label="Bo‘sh ish o‘rinlari"
-                                                            class="cmp-navigation__item-link true"
-                                                        >
-                                                            <span class="text hyphenate">Bo‘sh ish o‘rinlari</span>
+                                                        <a href="javascript:void(0)"
+                                                           :class="{dirty: navHoveredItems.includes('{{ __('messages.about') }}')}"
+                                                           v-on:mouseover="onLinkHover('{{ __('messages.about') }}')"
+                                                           v-on:click="openSubNav('{{ __('messages.about') }}')"
+                                                           aria-label="{{ __('messages.about') }}"
+                                                           class="cmp-navigation__item-link true"
+                                                           onclick="openModal('modal1')">
+                                                            <span class="text hyphenate">{{ __('messages.about') }}</span>
                                                         </a>
                                                     </li>
                                                     <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="{{ route('news') }}"
-                                                            :class="{dirty: navHoveredItems.includes('Yangiliklar')}"
-                                                            v-on:mouseover="onLinkHover('Yangiliklar')"
-                                                            v-on:click="openSubNav('Yangiliklar')"
-                                                            aria-label="Yangiliklar"
-                                                            class="cmp-navigation__item-link true"
-                                                        >
-                                                            <span class="text hyphenate">Yangiliklar</span>
+                                                        <a href="{{ route('products') }}"
+                                                           :class="{dirty: navHoveredItems.includes('{{ __('messages.products') }}')}"
+                                                           v-on:mouseover="onLinkHover('{{ __('messages.products') }}')"
+                                                           v-on:click="openSubNav('{{ __('messages.products') }}')"
+                                                           aria-label="{{ __('messages.products') }}"
+                                                           class="cmp-navigation__item-link true">
+                                                            <span class="text hyphenate">{{ __('messages.products') }}</span>
                                                         </a>
                                                     </li>
-
                                                     <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                        <a
-                                                            href="{{ route('contact') }}"
-                                                            :class="{dirty: navHoveredItems.includes('Biz bilan bog‘lanish')}"
-                                                            v-on:mouseover="onLinkHover('Biz bilan bog‘lanish')"
-                                                            v-on:click="openSubNav('Biz bilan bog‘lanish')"
-                                                            aria-label="Biz bilan bog‘lanish"
-                                                            class="cmp-navigation__item-link true"
-                                                        >
-                                                            <span class="text hyphenate">Biz bilan bog‘lanish</span>
+                                                        <a href="{{ route('vacancy') }}"
+                                                           :class="{dirty: navHoveredItems.includes('{{ __('messages.vacancy') }}')}"
+                                                           v-on:mouseover="onLinkHover('{{ __('messages.vacancy') }}')"
+                                                           v-on:click="openSubNav('{{ __('messages.vacancy') }}')"
+                                                           aria-label="{{ __('messages.vacancy') }}"
+                                                           class="cmp-navigation__item-link true">
+                                                            <span class="text hyphenate">{{ __('messages.vacancy') }}</span>
                                                         </a>
                                                     </li>
-{{--                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">--}}
-{{--                                                        <a--}}
-{{--                                                            href="uz/search.html"--}}
-{{--                                                            :class="{dirty: navHoveredItems.includes('Qidirish')}"--}}
-{{--                                                            v-on:mouseover="onLinkHover('Qidirish')"--}}
-{{--                                                            aria-label="Qidirish"--}}
-{{--                                                            class="cmp-navigation__item-link false"--}}
-{{--                                                        >--}}
-{{--                                                                    <span role="button" aria-label="Search icon navigation" class="icon icon-search"--}}
-{{--                                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span--}}
-{{--                                                                        ></span>--}}
-{{--                                                        </a>--}}
-{{--                                                    </li>--}}
+                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                        <a href="{{ route('news') }}"
+                                                           :class="{dirty: navHoveredItems.includes('{{ __('messages.news') }}')}"
+                                                           v-on:mouseover="onLinkHover('{{ __('messages.news') }}')"
+                                                           v-on:click="openSubNav('{{ __('messages.news') }}')"
+                                                           aria-label="{{ __('messages.news') }}"
+                                                           class="cmp-navigation__item-link true">
+                                                            <span class="text hyphenate">{{ __('messages.news') }}</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0">
+                                                        <a href="{{ route('contact') }}"
+                                                           :class="{dirty: navHoveredItems.includes('{{ __('messages.contact') }}')}"
+                                                           v-on:mouseover="onLinkHover('{{ __('messages.contact') }}')"
+                                                           v-on:click="openSubNav('{{ __('messages.contact') }}')"
+                                                           aria-label="{{ __('messages.contact') }}"
+                                                           class="cmp-navigation__item-link true">
+                                                            <span class="text hyphenate">{{ __('messages.contact') }}</span>
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div v-if="!isTop && !tabletView" class="burger-float desktop" :class="{'top': isTop, 'not-top': !isTop}">
@@ -554,22 +526,22 @@
                                     </div>
                                     <div class="">
                                         <div class="">
-                                            <span class="tagline hyphenate">Biz haqimizda</span>
+                                            <span class="tagline hyphenate">{{ __('messages.about') }}</span>
                                         </div>
                                         <div class="">
                                             <a href="{{ route('about') }}" aria-label="1-turdagi diabet" class="item m-s-bottom animate"
-                                            ><span class="text hyphenate">Kompaniya haqida ma'lumotlar</span></a
+                                            ><span class="text hyphenate">{{ __('messages.about_company') }}</span></a
                                             >
                                         </div>
                                         <div class="">
                                             <a href="{{ route('about.team') }}" aria-label="Semizlik" class="item m-s-bottom animate"
-                                            ><span class="text hyphenate">Jamoa a'zolari</span></a
+                                            ><span class="text hyphenate">{{ __('messages.team') }}</span></a
                                             >
                                         </div>
 
                                         <div class="">
                                             <a href="{{ route('vacancy') }}" aria-label="Gemofiliya" class="item m-s-bottom animate"
-                                            ><span class="text hyphenate">Bo'sh ish o'rinlari</span></a
+                                            ><span class="text hyphenate">{{ __('messages.vacancies') }}</span></a
                                             >
                                         </div>
                                     </div>
@@ -583,129 +555,7 @@
         </div>
     </div>
     @yield('content')
-    <div class="footer experiencefragment">
-        <div id="experiencefragment-094a6cfa36" class="cmp-experiencefragment cmp-experiencefragment--xf-footer">
-            <div class="xf-content-height">
-                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                    <div class="promomatsid aem-GridColumn aem-GridColumn--default--12">
-                        <link
-                            rel="stylesheet"
-                            href="/etc.clientlibs/nncorp/components/content/promomatsid/clientlibs.min.34a10aaa449ba556731680b8c9938d00.css"
-                            type="text/css"
-                        />
-                    </div>
-                    <div class="footer aem-GridColumn aem-GridColumn--default--12">
-                        <footer id="footer" class="ft-wrapper gutters">
-                            <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 position-relative">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--offset--l--0 tb-GridColumn--m--5 tb-GridColumn--offset--m--1 tb-GridColumn--s--10 tb-GridColumn--offset--s--2 m-xl-bottom"
-                                >
-                                    <p class="tagline m-xxs-bottom">Novo Nordisk Uzbekistan</p>
-                                    <div class="infotext">
-                                        <p>Novo Nordisk A / S Uzbekistan vakolatxonasi</p>
-                                        <p>O'zbekiston Respublikasi, 100017, Toshkent,</p>
-                                        <p>Ts-5, 57-uy, 3-ofis</p>
-                                        <p>Telefon: +99 878 120 6655</p>
-                                        <p><a href="../index.htm">www.novonordisk.uz</a></p>
-                                        <p><a href="mailto:io-rom-safety@novonordisk.com">io-rom-safety@novonordisk.com</a></p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--offset--l--1 tb-GridColumn--m--5 tb-GridColumn--offset--m--1 tb-GridColumn--s--8 tb-GridColumn--offset--s--2 m-xl-bottom"
-                                >
-                                    <p class="tagline m-xxs-bottom">FOYDALI LINKLAR</p>
-                                    <div class="list">
-                                        <a href="/contact" target="_self" class="infotext"
-                                        >Biz bilan bog&#39;laning <span class="icon icon-right-arrow m-xxs-left"></span
-                                            ></a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--offset--l--1 tb-GridColumn--m--5 tb-GridColumn--offset--m--1 tb-GridColumn--s--10 tb-GridColumn--offset--s--2 m-xl-bottom social-media-links"
-                                >
-                                    <p class="tagline m-xxs-bottom">Bizni kuzatib boring</p>
-                                    <div class="list">
-                                        <a href="https://www.linkedin.com/company/novo-nordisk" target="_blank" class="infotext"
-                                        >LinkedIn <span class="icon icon-right-arrow m-xxs-left"></span
-                                            ></a>
-
-                                        <a href="https://www.youtube.com/user/novonordisk" target="_blank" class="infotext"
-                                        >YouTube <span class="icon icon-right-arrow m-xxs-left"></span
-                                            ></a>
-
-                                        <a href="https://www.facebook.com/novonordisk" target="_blank" class="infotext"
-                                        >Facebook <span class="icon icon-right-arrow m-xxs-left"></span
-                                            ></a>
-
-                                        <a href="https://twitter.com/novonordisk" target="_blank" class="infotext"
-                                        >X (Twitter) <span class="icon icon-right-arrow m-xxs-left"></span
-                                            ></a>
-
-                                        <a href="https://www.instagram.com/novonordisk" target="_blank" class="infotext"
-                                        >Instagram <span class="icon icon-right-arrow m-xxs-left"></span
-                                            ></a>
-                                    </div>
-                                </div>
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--6 tb-GridColumn--offset--l--1 tb-GridColumn--m--5 tb-GridColumn--offset--m--1 tb-GridColumn--s--10 tb-GridColumn--offset--s--2 local-office"
-                                >
-                                    <p class="tagline m-xxs-bottom">Boshqa ofislar</p>
-                                    <a href="javascript:void(0)" target="_self" class="infotext"
-                                    ><span class="icon icon-location-blue-edge m-xxs-right"
-                                        ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
-                                            ></span>
-                                        Mamlakatni tanlang</a
-                                    >
-                                </div>
-                                <div
-                                    :ref="'legalLinks'"
-                                    class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--offset--l--0 tb-GridColumn--m--22 tb-GridColumn--s--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--2 legal-links m-xl-top"
-                                >
-                                    <a href="javascript:void(0)" target="_self" class="infotext"
-                                    >© 2024 Novo Nordisk Uzbekistan
-                                        <div class="righ-arrow-icon-block">
-                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0)" target="_self" class="infotext"
-                                    >Maxfiylik siyosati
-                                        <div class="righ-arrow-icon-block">
-                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0)" target="_self" class="infotext"
-                                    >Cookie siyosati
-                                        <div class="righ-arrow-icon-block">
-                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0)" target="_self" class="infotext"
-                                    >Shaxsga doir ma&#39;lumotlarga ishlov berish to&#39;g&#39;risida
-                                        <div class="righ-arrow-icon-block">
-                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                        </div>
-                                    </a>
-
-                                    <a href="javascript:void(0)" target="_self" class="infotext"
-                                    >Foydalanish kelishuvi
-                                        <div class="righ-arrow-icon-block">
-                                            <span class="icon icon-right-arrow m-xxs-left"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="water-mark-container" ref="water-mark-container">
-                                    <p class="watermark-text" :style="waterMarkStyles" ref="watermark-text">change</p>
-                                </div>
-                            </div>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-pages.footer></x-pages.footer>
 </div>
 
 <script type="text/javascript" src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.c8339545b501e3db3abc37c9a4cc2d6e.js"></script>

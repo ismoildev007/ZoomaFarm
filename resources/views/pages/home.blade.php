@@ -74,28 +74,25 @@
                                             <div
                                                 class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24 m-xxs-bottom">
                                                 <div
-                                                    class="tb-GridColumn tb-GridColumn--l--12 tb-GridColumn--m--12 tb-GridColumn--s--12 tb-GridColumn--xs--16 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2"
-                                                >
+                                                    class="tb-GridColumn tb-GridColumn--l--12 tb-GridColumn--m--12 tb-GridColumn--s--12 tb-GridColumn--xs--16 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2">
                                                     <div class="details-title">
-                                                        <h2 class="h2">ООО "ZUMA PHARMA"</h2>
+                                                        <h2 class="h2">{{ __('messages.company_name') }}</h2>
                                                     </div>
-                                                    <h4
-                                                        class="richtext"
-                                                        v-html="applyContentStyle('Фармацевтическая компания на территории Республики Узбекистан')"
-                                                    ></h4>
+                                                    <h4 class="richtext"
+                                                        v-html="applyContentStyle('{{ __('messages.company_description') }}')"></h4>
                                                 </div>
                                             </div>
                                             <div
                                                 class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                                                 <div
-                                                    class="tb-GridColumn tb-GridColumn--m--20 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2"
-                                                >
+                                                    class="tb-GridColumn tb-GridColumn--m--20 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2">
                                                     <div class="details-button">
-                                                        <a aria-label="İrsimiz haqqında məlumat əldə edin"
-                                                           href="{{route('news')}}" target="_self">
+                                                        <a aria-label="{{ __('messages.latest_news') }}"
+                                                           href="{{ route('news') }}" target="_self">
                                                             <button
                                                                 class="button desktop-button m-s-top button-link-animation">
-                                                                <span class="text">Читайте последние новости</span>
+                                                                <span
+                                                                    class="text">{{ __('messages.latest_news') }}</span>
                                                                 <span class="icon icon-right-arrow"></span>
                                                             </button>
                                                         </a>
@@ -103,6 +100,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -153,29 +151,26 @@
                                             <div
                                                 class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24 m-xxs-bottom">
                                                 <div
-                                                    class="tb-GridColumn tb-GridColumn--l--12 tb-GridColumn--m--12 tb-GridColumn--s--12 tb-GridColumn--xs--16 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2"
-                                                >
+                                                    class="tb-GridColumn tb-GridColumn--l--12 tb-GridColumn--m--12 tb-GridColumn--s--12 tb-GridColumn--xs--16 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2">
                                                     <div class="details-title">
                                                         <h2 class="h2"
-                                                            v-html="applyContentStyle('Продвижение изменений')"></h2>
+                                                            v-html="applyContentStyle('{{ __('messages.promoting_changes') }}')"></h2>
                                                     </div>
-                                                    <h4
-                                                        class="richtext"
-                                                        v-html="applyContentStyle('Мы продвигаем изменения для борьбы с диабетом и другими серьезными хроническими заболеваниями.')"
-                                                    ></h4>
+                                                    <h4 class="richtext"
+                                                        v-html="applyContentStyle('{{ __('messages.promoting_changes_description') }}')"></h4>
                                                 </div>
                                             </div>
                                             <div
                                                 class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                                                 <div
-                                                    class="tb-GridColumn tb-GridColumn--m--20 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2"
-                                                >
+                                                    class="tb-GridColumn tb-GridColumn--m--20 tb-GridColumn--offset--l--0 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--2 tb-GridColumn--offset--xs--2">
                                                     <div class="details-button">
-                                                        <a aria-label="Что мы делаем"
-                                                           href="{{route('about')}}" target="_self">
+                                                        <a aria-label="{{ __('messages.what_we_do') }}"
+                                                           href="{{ route('about') }}" target="_self">
                                                             <button
                                                                 class="button desktop-button m-s-top button-link-animation">
-                                                                <span class="text">Что мы делаем</span>
+                                                                <span
+                                                                    class="text">{{ __('messages.what_we_do') }}</span>
                                                                 <span class="icon icon-right-arrow"></span>
                                                             </button>
                                                         </a>
@@ -185,6 +180,7 @@
                                         </div>
                                     </div>
                                 </div>
+
 
                             </div>
                         </li>
@@ -210,18 +206,18 @@
                             <div
                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 container-grid-header">
                                 <p class="tagline m-xxs-bottom">
-                                    <span style="vertical-align: inherit">Продукты</span>
+                                    <span style="vertical-align: inherit">{{ __('messages.products') }}</span>
                                 </p>
                                 <h2 class="h5-s m-xs-bottom title">
-                                    <span style="vertical-align: inherit">Лекарства</span>
+                                    <span style="vertical-align: inherit">{{ __('messages.medicines') }}</span>
                                 </h2>
                                 <p class="description leadtext m-m-bottom">
                                     <span style="vertical-align: inherit">
-                                    Ознакомьтесь с представленным ниже выбором инсулиновых шприц-ручек.
-                                    Перейдите к интересующей вас ручке и узнайте, как использовать инсулиновую ручку для приема противодиабетических препаратов.
+                                        {{ __('messages.insulin_description') }}
                                     </span>
                                 </p>
                             </div>
+
 
                             <div
                                 class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
@@ -309,7 +305,8 @@
                     <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
                         <div
                             class="frame small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h1 class="text plaintexttitle title color-blue smalltitle">Карьера</h1>
+                            <h1 class="text plaintexttitle title color-blue smalltitle">{{ __('messages.career') }}</h1>
+
                         </div>
                         <div
                             class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
@@ -377,25 +374,25 @@
         <!-- Hamkorlik -->
         <div class="plaintext aem-GridColumn aem-GridColumn--default--12">
             <div>
-                <div class="background gutters component-padding-top frame tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                <div
+                    class="background gutters component-padding-top frame tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                     <div>
                         <div class="introplaintext-wrapper">
                             <div class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                                 <div class="frame small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                                    <h1 class="text plaintexttitle title color-blue smalltitle">Сотрудничество</h1>
+                                    <h1 class="text plaintexttitle title color-blue smalltitle">{{ __('messages.cooperation') }}</h1>
                                 </div>
                             </div>
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                                 <div class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 frame-padding frame small"
                                      style="background-color: rgb(226, 240, 250)">
                                     <div class="text color-blue intro leadtext frame right-column tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1">
-                                        Для определенных тем, специальных форм сотрудничества или региональных кластеров совершенства
-                                        мы разработали специальные инициативы по сотрудничеству. Узнайте о них больше здесь и
-                                        свяжитесь с нами, если это правильный путь для совместного продвижения изменений.
+                                        {{ __('messages.cooperation_text') }}
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -405,28 +402,35 @@
             <div class="layout-container-grid">
                 <div class="gutters component-padding-bottom frame outer-container" style="background-color: white">
                     <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
-                        <div class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                             style="background-color: rgb(226, 240, 250)">
+                        <div
+                            class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                            style="background-color: rgb(226, 240, 250)">
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
-                                <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1">
+                                <div
+                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1">
                                     <div class="rowcontainer">
                                         <div>
                                             <div class="contentgrid_row">
-                                                <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                <div
+                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
                                                     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                        <div
+                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                <a href="#!" target="_self"
+                                                                   aria-label="Открытые инновации">
                                                                     <div class="image-video text-center m-xs-bottom">
                                                                         <picture>
                                                                             <img src="/assets/img/ugp.png"
                                                                                  alt="Обмен соединениями"
-                                                                                 loading="eager" height="50" width="50px" />
+                                                                                 loading="eager" height="50"
+                                                                                 width="50px"/>
                                                                         </picture>
                                                                     </div>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
-                                                                    <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                    <a href="#!" target="_self"
+                                                                       aria-label="Открытые инновации">
                                                                         <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
                                                                             <span style="vertical-align: inherit">UZGERMED PHARM</span>
                                                                         </h3>
@@ -449,21 +453,26 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                <div
+                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
                                                     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                        <div
+                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                <a href="#!" target="_self"
+                                                                   aria-label="Открытые инновации">
                                                                     <div class="image-video m-xs-bottom">
                                                                         <picture>
                                                                             <img src="/assets/img/samo.png"
-                                                                                 alt="Обмен соединениями"  height="50" width="140"
-                                                                                 loading="eager" />
+                                                                                 alt="Обмен соединениями" height="50"
+                                                                                 width="140"
+                                                                                 loading="eager"/>
                                                                         </picture>
                                                                     </div>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
-                                                                    <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                    <a href="#!" target="_self"
+                                                                       aria-label="Открытые инновации">
                                                                         <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
                                                                             <span style="vertical-align: inherit">SAMO PHARM</span>
                                                                         </h3>
@@ -485,21 +494,25 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                <div
+                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
                                                     <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                        <div
+                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                <a href="#!" target="_self"
+                                                                   aria-label="Открытые инновации">
                                                                     <div class="image-video m-xs-bottom">
                                                                         <picture>
                                                                             <img src="/assets/img/fazo.png" height="50"
                                                                                  alt="Обмен соединениями"
-                                                                                 loading="eager" />
+                                                                                 loading="eager"/>
                                                                         </picture>
                                                                     </div>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
-                                                                    <a href="#!" target="_self" aria-label="Открытые инновации">
+                                                                    <a href="#!" target="_self"
+                                                                       aria-label="Открытые инновации">
                                                                         <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
                                                                             <span style="vertical-align: inherit">FAZO LUXE</span>
                                                                         </h3>
@@ -548,7 +561,8 @@
             <div class="gutters component-padding" style="background-color: white">
                 <div class="ln-wrapper small tb-Grid tb-Grid--24 tb-Grid--l--24">
                     <div class="ln-header tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
-                        <h1 class="h1-s">Последние новости</h1>
+                        <h1 class="h1-s">{{ __('messages.latest_news') }}</h1>
+
                     </div>
                     <div class="ln-box tb-GridColumn tb-GridColumn--l--24" style="background-color: white">
                         <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24">
