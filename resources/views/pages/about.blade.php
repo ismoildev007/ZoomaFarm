@@ -66,7 +66,7 @@
                                             <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('Biz nima qilamiz')"></h1>
                                             <p
                                                 class="img-des paragraph-l"
-                                                v-html="applyContentStyle('{{ $about[0]['short_content_' . $lang] }}')"
+                                                v-html="applyContentStyle('{{ $about['short_content_' . $lang] }}')"
                                             ></p>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@
                                                     <b v-html="applyContentStyle('Biz nima qilamiz')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
-                                                    {!! $about[0]['about_or_company_' . $lang] !!}
+                                                    {!! $about['about_or_company_' . $lang] !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -185,7 +185,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs" v-html="applyContentStyle('{{ $about[0]['percent'] }}')"></p>
+                                                    <p class="facts h1-xs" v-html="applyContentStyle('{{ $about['percent'] }}')"></p>
                                                     <div class="paragraph-s">
                                                         <p v-html="recolorTriangle('<p>dunyodagi jami ishlab chiqariladigan insulinning bizga tegishli qismi.<\/p>\n')"></p>
                                                     </div>
@@ -195,7 +195,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs" v-html="applyContentStyle('{{ $about[0]['using_product'] }} mln.+ ')"></p>
+                                                    <p class="facts h1-xs" v-html="applyContentStyle('{{ $about['using_product'] }} mln.+ ')"></p>
                                                     <div class="paragraph-s">
                                                         <p
                                                             v-html="recolorTriangle('<p>ortiq dunyo aholisi\x26nbsp;bizning\x26nbsp;diabetga qarshi mahsulotlarimizdan foydalanmoqda.<\/p>\n')"
@@ -207,7 +207,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs">{{ $about[0]['insulin'] }} mln.+</p>
+                                                    <p class="facts h1-xs">{{ $about['insulin'] }} mln.+</p>
                                                     <div class="paragraph-s">
                                                         <p v-html="recolorTriangle('<p>miqdorda insulin\x26nbsp;insulin shprits ruchkalarini chiqarganmiz.<\/p>\n')"></p>
                                                     </div>
@@ -217,7 +217,7 @@
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs">{{ $about[0]['clinical_trials'] }}+ dan</p>
+                                                    <p class="facts h1-xs">{{ $about['clinical_trials'] }}+ dan</p>
                                                     <div class="paragraph-s">
                                                         <p v-html="recolorTriangle('<p>ortiq davlatlarda klinik sinovlar oʻtkazamiz.<\/p>\n')"></p>
                                                     </div>
@@ -263,7 +263,7 @@
                                                         class="left-column tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--m--5 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 m-s-bottom"
                                                     >
                                                         <h3 class="h2 color-blue text">
-                                                            <b>{{ $about[0]['description_title_' . $lang] ?? 'Innovatsiya va tijoriy ustunlikni birlashtirish'}}</b>
+                                                            <b>{{ $about['description_title_' . $lang] ?? 'Innovatsiya va tijoriy ustunlikni birlashtirish'}}</b>
                                                         </h3>
                                                     </div>
                                                     <div
@@ -273,7 +273,7 @@
                                                             <div class="text section-wrapper richtext color-blue introtextsection">
                                                                 <h4 class="text color-blue subsubheader h3" v-html="applyContentStyle('')"></h4>
                                                                 <div class="text color-blue introtext">
-                                                                    {!! $about[0]['description_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
+                                                                    {!! $about['description_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -357,7 +357,7 @@
                                                 <div class="columns m-m-top">
                                                     <div class="left-column">
                                                         <h3 class="h2 color-blue">
-                                                            <b>{{ $about[0]['content_title_' . $lang] }}</b>
+                                                            <b>{{ $about['content_title_' . $lang] }}</b>
                                                         </h3>
                                                     </div>
                                                     <div
@@ -367,7 +367,7 @@
                                                             <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
                                                                 <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
                                                                 <div class="color-blue introtext">
-                                                                    {!! $about[0]['content_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
+                                                                    {!! $about['content_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
                                                                 </div>
                                                             </div>
                                                         </div>
