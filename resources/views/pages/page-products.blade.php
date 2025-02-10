@@ -20,55 +20,35 @@
                     >
                         <div>
                             <div class="introplaintext-wrapper">
-                                <div
-                                    class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                                    <div
-                                        class="titleframe color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                                        <div
-                                            class="tb-Grid tb-Grid--20 tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
-                                            <div
-                                                class="tb-GridColumn tb-GridColumn--l--6 tb-GridColumn--m--9 tb-GridColumn--s--12 tb-GridColumn--xs--20">
+                                <div class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                                    <div class="titleframe color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                                        <div class="tb-Grid tb-Grid--20 tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
+                                            <div class="tb-GridColumn tb-GridColumn--l--6 tb-GridColumn--m--9 tb-GridColumn--s--12 tb-GridColumn--xs--20">
                                                 <p class="text tagline color-blue m-xxs-bottom">
-                                                    Bizning mahsulotlarimiz
+                                                    {{ __('messages.our_products') }}
                                                 </p>
                                             </div>
-                                            <div
-                                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--16 tb-GridColumn--s--18 tb-GridColumn--xs--20">
+                                            <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--16 tb-GridColumn--s--18 tb-GridColumn--xs--20">
                                                 <h1 class="text plaintexttitle title color-blue smalltitle">
-                                                    Qalamlar va ignalar
+                                                    {{ __('messages.pens_and_needles') }}
                                                 </h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                                    <div
-                                        class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--1"
-                                    >
-                                        <div
-                                            class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 no-frame-padding color small"
-                                            style="background-color: rgb(226, 240, 250)"
-                                        >
-                                            <div
-                                                class="tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 m-l-bottom"
-                                            >
+                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                                    <div class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--1">
+                                        <div class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 no-frame-padding color small" style="background-color: rgb(226, 240, 250)">
+                                            <div class="tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 m-l-bottom">
                                                 <div class="text color-blue intro leadtext color right-column">
-                                                    Bizning innovatsion in'ektsiya ruchkalarimiz dori yetkazib berishni
-                                                    iloji boricha soddalashtirish uchun bemor
-                                                    tushunchasini muhandislik mukammalligi bilan birlashtiradi.
-                                                    Ehtiyojlaringizga javob beradigan bir martalik
-                                                    oldindan toʻldirilgan qalamlar, almashtiriladigan insulin
-                                                    kartrijlari boʻlgan mustahkam qalamlar va qandli
-                                                    diabetni davolash uchun aqlli ulangan ruchkalarimizning keng
-                                                    assortimentini koʻring.
-
+                                                    {{ __('messages.intro_text') }}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -174,7 +154,7 @@
                         class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                         <div
                             class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h2 class="text plaintexttitle title color-blue smalltitle">So'ngi yangiliklar </h2>
+                            <h2 class="text plaintexttitle title color-blue smalltitle">{{__('messages.latest_news2')}}</h2>
                         </div>
                     </div>
                 </div>

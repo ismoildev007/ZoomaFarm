@@ -54,14 +54,17 @@
                             <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
                                 <div class="top-info m-s-bottom tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
                                     <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--16 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
-                                        <h1 class="h1-s m-xxs-bottom">Karyera imkoniyatlari</h1>
+                                        <h1 class="h1-s m-xxs-bottom">{{ __('messages.career_opportunities') }}</h1>
                                     </div>
                                     <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--s--16 tb-GridColumn--xs--20 tb-GridColumn--offset--l--0">
                                         <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
-                                            <div class="leadtext description richtext color-white">Hayotingizni o‘zgartiruvchi karyera uchun tayyormisiz?<br /></div>
+                                            <div class="leadtext description richtext color-white">
+                                                {{ __('messages.career_description') }}<br />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -93,7 +96,7 @@
 
                     <div class="background gutters component-padding-top white tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                         <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h2 class="text plaintexttitle title color-blue smalltitle">Ish uchun ariza berish</h2>
+                            <h2 class="text plaintexttitle title color-blue smalltitle">    {{ __('messages.job_application') }}</h2>
                         </div>
                     </div>
                 </div>
@@ -143,7 +146,7 @@
                                                                             ></p>
                                                                             <div class="link m-xs-top right-arrow-animation">
                                                                                 <a href="{{ route('contact') }}" class="color-blue link-label m-xxs-right paragraph-s">
-                                                                                    <span>Biz bilan bog'lanib va batafsil ma'lumot oling</span>
+                                                                                    <span>{{ __('messages.contact_us2') }}</span>
                                                                                     <span class="icon icon-right-arrow m-xxs-left"></span>
                                                                                 </a>
                                                                             </div>
@@ -175,7 +178,7 @@
                     class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                     <div
                         class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                        <h2 class="text plaintexttitle title color-blue smalltitle">So'ngi yangiliklar </h2>
+                        <h2 class="text plaintexttitle title color-blue smalltitle">{{__('messages.latest_news2')}} </h2>
                     </div>
                 </div>
             </div>

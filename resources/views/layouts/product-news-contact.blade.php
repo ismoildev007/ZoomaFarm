@@ -2,7 +2,7 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8" />
-    <title>Biz bilan bog‘lanish</title>
+    <title>Zuma Pharma | Фармацевтическая компания на территории Республики Узбекистан</title>
     <meta name="keywords" content="Contact us" />
 
     <meta name="template" content="content-page" />

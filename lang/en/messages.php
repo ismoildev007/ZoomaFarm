@@ -40,5 +40,28 @@ return [
     'copyright' => '© 2024 ZUMA PHARMA Uzbekistan',
     'read_more' => "Read more",
     'read_more_text' => "Read more",
+    'about_us' => 'About Us',
+    'who_we_are' => 'Who We Are',
+    'facts_and_figures' => 'Facts and Figures',
+    'production_sites' => '16 production sites in countries (Algeria, Brazil, China, Denmark, France, Japan, Russia, United Kingdom, and USA)',
+    'research_centers' => '10 research and development centers (China, Denmark, India, United Kingdom, and USA)',
+    'employees_worldwide' => 'our employees work worldwide',
+    'countries_using' => 'people in different countries have access to our medical products',
+    'percent' => 'the share of the world’s total insulin production that belongs to us.',
+    'using_product' => 'more people worldwide use our diabetes care products.',
+    'insulin' => 'amount of insulin and insulin pen syringes we have produced.',
+    'clinical_trials' => 'conducting clinical trials in more than countries.',
+    'treatment_for_five_diseases' => 'Providing treatment for five diseases',
+    'career_opportunities' => 'Career Opportunities',
+    'career_description' => 'Are you ready for a life-changing career?',
+    'job_application' => 'Job Application',
+    'contact_us2' => "Contact us and get more information",
+    'our_products' => "Our Products",
+    'pens_and_needles' => "Pens and Needles",
+    'intro_text' => "Our innovative injection pens combine patient convenience with engineering
+        excellence to simplify drug delivery as much as possible.
+        Explore our wide range of disposable pre-filled pens,
+        durable pens with replaceable insulin cartridges, and smart connected pens for
+        diabetes treatment."
 ];
 

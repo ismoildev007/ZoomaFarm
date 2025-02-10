@@ -62,8 +62,9 @@
                                 >
                                     <div class="container">
                                         <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
-                                            <p class="tagline m-xxs-bottom" v-html="applyContentStyle('Biz haqimizda')"></p>
-                                            <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('Biz nima qilamiz')"></h1>
+                                            <p class="tagline m-xxs-bottom">{{ __('messages.about_us') }}</p>
+                                            <h1 class="title smalltitle m-xs-bottom">{{ __('messages.what_we_do') }}</h1>
+
                                             <p
                                                 class="img-des paragraph-l"
                                                 v-html="applyContentStyle('{{ $about['short_content_' . $lang] }}')"
@@ -105,7 +106,7 @@
                                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex"
                                             >
                                                 <h2 class="h2 m-xxs-bottom">
-                                                    <b v-html="applyContentStyle('Biz nima qilamiz')"></b>
+                                                    <b v-html="applyContentStyle('<p>{{ __('messages.what_we_do') }}</p>')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
                                                     {!! $about['about_or_company_' . $lang] !!}
@@ -156,7 +157,7 @@
                                         class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--s--20 tb-GridColumn--xs-20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--2 facts-and-figure-title-frame title-desktop titleframe"
                                     >
                                         <p class="tagline"></p>
-                                        <h2 class="color-blue smalltitle" v-html="applyContentStyle(`Faktlar va raqamlar`)"></h2>
+                                        <h2 class="color-blue smalltitle">{{ __('messages.facts_and_figures') }}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +176,7 @@
                                 >
                                     <div class="title-frame-mobile m-s-bottom">
                                         <p class="tagline"></p>
-                                        <h2 class="color-blue smalltitle" v-html="applyContentStyle(`Faktlar va raqamlar`)"></h2>
+                                        <h2 class="color-blue smalltitle">{{ __('messages.facts_and_figures') }}</h2>
                                     </div>
                                     <p class="leadtext two"></p>
                                     <div class="figures-box">
@@ -187,7 +188,7 @@
                                                 <div class="info">
                                                     <p class="facts h1-xs" v-html="applyContentStyle('{{ $about['percent'] }}')"></p>
                                                     <div class="paragraph-s">
-                                                        <p v-html="recolorTriangle('<p>dunyodagi jami ishlab chiqariladigan insulinning bizga tegishli qismi.<\/p>\n')"></p>
+                                                        <p v-html="recolorTriangle('<p>{{ __('messages.percent') }}</p>')"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -197,9 +198,7 @@
                                                 <div class="info">
                                                     <p class="facts h1-xs" v-html="applyContentStyle('{{ $about['using_product'] }} mln.+ ')"></p>
                                                     <div class="paragraph-s">
-                                                        <p
-                                                            v-html="recolorTriangle('<p>ortiq dunyo aholisi\x26nbsp;bizning\x26nbsp;diabetga qarshi mahsulotlarimizdan foydalanmoqda.<\/p>\n')"
-                                                        ></p>
+                                                        <p v-html="recolorTriangle('<p>{{ __('messages.using_product') }}</p>')"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -209,18 +208,16 @@
                                                 <div class="info">
                                                     <p class="facts h1-xs">{{ $about['insulin'] }} mln.+</p>
                                                     <div class="paragraph-s">
-                                                        <p v-html="recolorTriangle('<p>miqdorda insulin\x26nbsp;insulin shprits ruchkalarini chiqarganmiz.<\/p>\n')"></p>
-                                                    </div>
+                                                        <p v-html="recolorTriangle('<p>{{ __('messages.insulin') }}</p>')"></p>                                                    </div>
                                                 </div>
                                             </div>
 
                                             <div class="block">
                                                 <p class="h4" v-html="applyContentStyle('')"></p>
                                                 <div class="info">
-                                                    <p class="facts h1-xs">{{ $about['clinical_trials'] }}+ dan</p>
+                                                    <p class="facts h1-xs">{{ $about['clinical_trials'] }}+ </p>
                                                     <div class="paragraph-s">
-                                                        <p v-html="recolorTriangle('<p>ortiq davlatlarda klinik sinovlar oʻtkazamiz.<\/p>\n')"></p>
-                                                    </div>
+                                                        <p v-html="recolorTriangle('<p>{{ __('messages.clinical_trials') }}</p>')"></p>                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +242,9 @@
                         <div class="introplaintext-wrapper">
                             <div class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                                 <div class="titleframe white small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                                    <div class="text plaintexttitle title color-blue smalltitle">Beshta kasallik uchun davolash taqdim etish</div>
+                                    <div class="text plaintexttitle title color-blue smalltitle">
+                                        {{ __('messages.treatment_for_five_diseases') }}
+                                    </div>
                                 </div>
                             </div>
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">

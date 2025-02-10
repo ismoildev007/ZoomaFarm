@@ -62,8 +62,9 @@
                                 >
                                     <div class="container">
                                         <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
-                                            <p class="tagline m-xxs-bottom" v-html="applyContentStyle('Biz haqimizda')"></p>
-                                            <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('Biz kimmiz')"></h1>
+                                            <p class="tagline m-xxs-bottom" v-html="applyContentStyle('{{ __('messages.about_us') }}')"></p>
+                                            <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('{{ __('messages.who_we_are') }}')"></h1>
+
                                             <p
                                                 class="img-des paragraph-l"
                                                 v-html="applyContentStyle('{{ $aboutTeam['short_content_' . $lang] }}')"
@@ -105,7 +106,7 @@
                                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex"
                                             >
                                                 <h2 class="h2 m-xxs-bottom">
-                                                    <b v-html="applyContentStyle('Biz kimmiz')"></b>
+                                                    <b v-html="applyContentStyle('{{ __('messages.who_we_are') }}')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
                                                     {!! $aboutTeam['about_or_company_' . $lang] !!}
@@ -141,7 +142,7 @@
                         <div
                             class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
                         >
-                            <h1 class="color-blue smalltitle">Faktlar va raqamlar</h1>
+                            <h1 class="color-blue smalltitle">{{ __('messages.facts_and_figures') }}</h1>
                         </div>
                     </div>
 
@@ -151,7 +152,7 @@
                         >
                             <div class="title-frame-mobile m-s-bottom">
                                 <p class="tagline"></p>
-                                <h1 class="color-blue smalltitle">Faktlar va raqamlar</h1>
+                                <h1 class="color-blue smalltitle">{{ __('messages.facts_and_figures') }}</h1>
                             </div>
                             <p class="leadtext two extrasmall"></p>
                             <div class="figures-box">
@@ -161,29 +162,28 @@
                                     <div class="info">
                                         <p class="facts h1-xs">{{ $aboutTeam->production }}</p>
                                         <div class="paragraph-s">
-                                            mamlakatdagi 16 ta ishlab chiqarish nuqtalari (Jazoir, Braziliya, Xitoy, Daniya, Fransiya, Yaponiya, Rossiya, Buyuk Britaniya va
-                                            AQSh
+                                            {{ __('messages.production_sites') }}
                                         </div>
                                     </div>
 
                                     <div class="info">
                                         <p class="facts h1-xs">{{ $aboutTeam->research_and_development }}</p>
                                         <div class="paragraph-s">
-                                            <p>mamlakatdagi 10 ta tadqiqot va ishlab chiqish markazlari (Xitoy, Daniya, Hindiston, Buyuk Britaniya va AQSh</p>
+                                            <p>{{ __('messages.research_centers') }}</p>
                                         </div>
                                     </div>
 
                                     <div class="info">
                                         <p class="facts h1-xs">{{ $aboutTeam->our_employees_work }}+</p>
                                         <div class="paragraph-s">
-                                            <p>xodimlarimiz dunyo bo’ylab faoliyat yuritadi</p>
+                                            <p>{{ __('messages.employees_worldwide') }}</p>
                                         </div>
                                     </div>
 
                                     <div class="info">
                                         <p class="facts h1-xs">{{ $aboutTeam->countries_use }}</p>
                                         <div class="paragraph-s">
-                                            <p>mamlakat aholisi bizning dori mahsulotlardan foydalanish imkoniyatiga ega</p>
+                                            <p>{{ __('messages.countries_using') }}</p>
                                         </div>
                                     </div>
                                 </div>

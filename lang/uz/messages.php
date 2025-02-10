@@ -40,6 +40,30 @@ return [
     'copyright' => '© 2024 ZUMA PHARMA O‘zbekiston',
     'read_more' => "Batafsil ma'lumot",
     'read_more_text' => "Ko'proq o'qish",
+    'about_us' => 'Biz haqimizda',
+    'who_we_are' => 'Biz kimmiz',
+    'facts_and_figures' => 'Faktlar va raqamlar',
+    'production_sites' => 'mamlakatdagi 16 ta ishlab chiqarish nuqtalari (Jazoir, Braziliya, Xitoy, Daniya, Fransiya, Yaponiya, Rossiya, Buyuk Britaniya va AQSh)',
+    'research_centers' => 'mamlakatdagi 10 ta tadqiqot va ishlab chiqish markazlari (Xitoy, Daniya, Hindiston, Buyuk Britaniya va AQSh)',
+    'employees_worldwide' => 'xodimlarimiz dunyo bo’ylab faoliyat yuritadi',
+    'countries_using' => 'mamlakat aholisi bizning dori mahsulotlardan foydalanish imkoniyatiga ega',
+    'percent' => 'dunyodagi jami ishlab chiqariladigan insulinning bizga tegishli qismi.',
+    'using_product' => 'ortiq dunyo aholisi bizning diabetga qarshi mahsulotlarimizdan foydalanmoqda.',
+    'insulin' => 'miqdorda insulin insulin shprits ruchkalarini chiqarganmiz.',
+    'clinical_trials' => 'ortiq davlatlarda klinik sinovlar oʻtkazamiz.',
+    'treatment_for_five_diseases' => 'Beshta kasallik uchun davolash taqdim etish',
+    'career_opportunities' => 'Karyera imkoniyatlari',
+    'career_description' => 'Hayotingizni o‘zgartiruvchi karyera uchun tayyormisiz?',
+    'job_application' => 'Ish uchun ariza berish',
+    'contact_us2' => "Biz bilan bog'lanib va batafsil ma'lumot oling",
+        'our_products' => "Bizning mahsulotlarimiz",
+        'pens_and_needles' => "Qalamlar va ignalar",
+        'intro_text' => "Bizning innovatsion in'ektsiya ruchkalarimiz dori yetkazib berishni
+        iloji boricha soddalashtirish uchun bemor tushunchasini muhandislik mukammalligi bilan birlashtiradi.
+        Ehtiyojlaringizga javob beradigan bir martalik oldindan toʻldirilgan qalamlar,
+        almashtiriladigan insulin kartrijlari boʻlgan mustahkam qalamlar va qandli diabetni
+        davolash uchun aqlli ulangan ruchkalarimizning keng assortimentini koʻring."
+
 ];
 
 
