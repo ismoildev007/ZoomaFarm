@@ -62,6 +62,23 @@ return [
         excellence to simplify drug delivery as much as possible.
         Explore our wide range of disposable pre-filled pens,
         durable pens with replaceable insulin cartridges, and smart connected pens for
-        diabetes treatment."
+        diabetes treatment.",
+    'diabetes' => 'diabetes',
+    'insulin_pens' => 'Insulin Pens',
+    'insulin_pens_desc' => 'See the selection of available insulin pens below. Go to the pen you are interested in and learn how to use an insulin pen to take diabetes medication.',
+    'info' => 'Information',
+        'download' => 'Download',
+        'download_guide' => 'Download the user guide',
+        'guide' => 'Guide',
+        'guide_not_available' => 'Guide not available',
+    'other_products' => 'Other products',
+        'patient_safety' => 'Patient safety is a priority for Novo Nordisk.',
+        'contact_email' => 'Please, in case of adverse effects, contact us via email at',
+        'contact_phone' => 'or by phone at +99 878 120 6655.',
+        'contact_us3' => 'You can also contact us through the "Contact Us" section.',
+    'your_name' => 'Your Name',
+    'your_phone' => 'Your Phone Number',
+    'your_message' => 'Your Message',
+    'send' => 'Send',
 ];
 

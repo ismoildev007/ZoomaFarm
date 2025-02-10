@@ -70,16 +70,14 @@
                     <div class="gutters component-padding-topAndBottom color outer-container"
                          style="background-color: rgb(226, 240, 250)">
                         <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
-                            <div
-                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 container-grid-header">
-                                <p class="tagline m-xxs-bottom">qandli diabet</p>
-                                <h2 class="h5-s m-xs-bottom title">Insulin qalamlari</h2>
+                            <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 container-grid-header">
+                                <p class="tagline m-xxs-bottom">{{ __('messages.diabetes') }}</p>
+                                <h2 class="h5-s m-xs-bottom title">{{ __('messages.insulin_pens') }}</h2>
                                 <p class="description leadtext m-m-bottom">
-                                    Quyida mavjud bo'lgan insulin qalamlari tanlovini ko'ring. Sizni qiziqtirgan qalamga
-                                    boring va diabetga qarshi dori-darmonlarni qabul
-                                    qilish uchun insulin qalamini qanday ishlatishni o'rganing.
+                                    {{ __('messages.insulin_pens_desc') }}
                                 </p>
                             </div>
+
                             <div
                                 class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                 style="background-color: rgb(226, 240, 250)"

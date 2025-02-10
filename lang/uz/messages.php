@@ -56,14 +56,30 @@ return [
     'career_description' => 'Hayotingizni o‘zgartiruvchi karyera uchun tayyormisiz?',
     'job_application' => 'Ish uchun ariza berish',
     'contact_us2' => "Biz bilan bog'lanib va batafsil ma'lumot oling",
-        'our_products' => "Bizning mahsulotlarimiz",
-        'pens_and_needles' => "Qalamlar va ignalar",
-        'intro_text' => "Bizning innovatsion in'ektsiya ruchkalarimiz dori yetkazib berishni
+    'our_products' => "Bizning mahsulotlarimiz",
+    'pens_and_needles' => "Qalamlar va ignalar",
+    'intro_text' => "Bizning innovatsion in'ektsiya ruchkalarimiz dori yetkazib berishni
         iloji boricha soddalashtirish uchun bemor tushunchasini muhandislik mukammalligi bilan birlashtiradi.
         Ehtiyojlaringizga javob beradigan bir martalik oldindan toʻldirilgan qalamlar,
         almashtiriladigan insulin kartrijlari boʻlgan mustahkam qalamlar va qandli diabetni
-        davolash uchun aqlli ulangan ruchkalarimizning keng assortimentini koʻring."
-
+        davolash uchun aqlli ulangan ruchkalarimizning keng assortimentini koʻring.",
+    'diabetes' => 'qandli diabet',
+    'insulin_pens' => 'Insulin qalamlari',
+    'insulin_pens_desc' => 'Quyida mavjud bo\'lgan insulin qalamlari tanlovini ko\'ring. Sizni qiziqtirgan qalamga boring va diabetga qarshi dori-darmonlarni qabul qilish uchun insulin qalamini qanday ishlatishni o\'rganing.',
+    'info' => 'Ma`lumotlar',
+    'download' => 'Yuklab olish',
+    'download_guide' => "Foydalanish bo'yicha qo'llanmani yuklab olish",
+    'guide' => "Qo'llanma",
+    'guide_not_available' => "Qo'llanma mavjud emas",
+    'other_products' => 'Boshqa mahsulotlar',
+    'patient_safety' => 'Bemorlar xavfsizligi Novo Nordisk uchun ustuvor hisoblanadi.',
+    'contact_email' => 'Iltimos, nojo’ya ta’sir ro’y bergan holda elektron pochta orqali',
+    'contact_phone' => 'ga yoki telefon orqali +99 878 120 6655 raqamiga murojaat qiling.',
+    'contact_us3' => 'Shuningdek “Biz bilan bog‘lanish” bo‘limida biz bilan aloqaga chiqishingiz mumkin.',
+    'your_name' => 'Ismingiz',
+    'your_phone' => 'Telefon raqamingiz',
+    'your_message' => 'Sizning xabaringiz',
+    'send' => 'Yuborish',
 ];
 
 

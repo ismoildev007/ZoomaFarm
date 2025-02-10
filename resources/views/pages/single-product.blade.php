@@ -123,7 +123,9 @@
                                         >
                                             <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
                                                 <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
-                                                    <span class="cmp-accordion__title"><h3 class="h6" v-html="applyContentStyle('Ma`lumotlar')"></h3></span>
+                                                          <span class="cmp-accordion__title">
+                                                            <h3 class="h6" v-html="applyContentStyle('{{ __('messages.info') }}')"></h3>
+                                                        </span>
                                                     <span class="cmp-accordion__icon"></span>
                                                     <span class="icon icon-plus"
                                                     ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
@@ -246,24 +248,21 @@
                                     class="cta-grid tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2"
                                 >
                                     <div class="cta-content frame-padding">
-                                        <h2 class="title cta-title h1-s m-xs-bottom color-blue">Yuklab olish</h2>
-                                        <p class="img-des paragraph-l color-blue cta-desc">Foydalanish bo'yicha qo'llanmani yuklab olish</p>
+                                        <h2 class="title cta-title h1-s m-xs-bottom color-blue">{{ __('messages.download') }}</h2>
+                                        <p class="img-des paragraph-l color-blue cta-desc">{{ __('messages.download_guide') }}</p>
 
                                         @if ($product->pdf)
-                                            <a
-                                                href="{{ asset('storage/' . $product->pdf) }}"
-                                                target="_blank"
-                                                aria-label="Download guide"
-                                            >
+                                            <a href="{{ asset('storage/' . $product->pdf) }}" target="_blank" aria-label="Download guide">
                                                 <button class="button m-s-top button-link-animation">
-                                                    <span class="text">Qo'llanma</span>
+                                                    <span class="text">{{ __('messages.guide') }}</span>
                                                     <span class="icon icon-right-arrow"></span>
                                                 </button>
                                             </a>
                                         @else
-                                            <p class="text-muted">Qo'llanma mavjud emas</p>
+                                            <p class="text-muted">{{ __('messages.guide_not_available') }}</p>
                                         @endif
                                     </div>
+
                                 </div>
                             </div>
 
@@ -298,7 +297,8 @@
 
                                         class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                     >
-                                        <h1 style="margin-bottom: 15px"><b>Boshqa mahsulotlar</b></h1>
+                                        <h1 style="margin-bottom: 15px"><b>{{ __('messages.other_products') }}</b></h1>
+
                                         <div>
                                             <div class="rowcontainer">
                                                 <div class="contentgrid_row">

@@ -50,7 +50,7 @@ $lang = app()->getLocale();
                                                     </div>
                                                     <div class="job-category m-xxs-top">
                                                         <p class="paragraph-s">
-                                                            Ko'proq o'qish<span
+                                                            {{ __('messages.read_more_text') }}<span
                                                                 class="icon icon-right-arrow m-xxs-left"></span>
                                                         </p>
                                                     </div>
