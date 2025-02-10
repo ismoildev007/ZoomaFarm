@@ -85,22 +85,63 @@
         </div>
     </main>
 
+    <!-- Modal (Ko'rinmas holatda) -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>Muvaffaqiyatli saqlandi!</p>
+        </div>
+    </div>
+
+    <!-- CSS (Modal va Blur Effekt) -->
+    <style>
+        /* Modalni boshlang‘ich ko‘rinishi (yashirin) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Orqa fondi qora va yarim shaffof */
+            backdrop-filter: blur(5px); /* Orqa fonni blur qilish */
+            justify-content: center;
+            align-items: center;
+            display: none; /* Yashirin holat */
+            z-index: 1000;
+        }
+
+        /* Modal ko‘rsatilganda */
+        .modal-overlay.active {
+            display: flex; /* Faqat active qo‘shilganda ko‘rsatiladi */
+        }
+
+        /* Modal tarkibi */
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+
+    <!-- JavaScript (Modalni ochish, yopish va formni yuborish) -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".lang-form").forEach(function (form) {
                 form.addEventListener("submit", function (e) {
-                    e.preventDefault(); // Form yuborilishini bloklash
+                    e.preventDefault(); // Form yuborilishini to'xtatish
 
-                    let modal = document.getElementById("successModal");
-                    let bootstrapModal = new bootstrap.Modal(modal);
-                    bootstrapModal.show();
+                    let modal = document.getElementById("customModal");
+                    modal.classList.add("active"); // Modalni ochish
 
                     setTimeout(() => {
-                        bootstrapModal.hide(); // Modalni yopish
+                        modal.classList.remove("active"); // Modalni yopish
                         form.submit(); // Formni jo‘natish
-                    }, 6000);
+                    }, 5000); // 3 soniyadan keyin modal yopiladi va form yuboriladi
                 });
             });
         });
     </script>
+
 @endsection
