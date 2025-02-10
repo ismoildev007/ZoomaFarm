@@ -25,6 +25,20 @@
                                 <div class="px-2 py-3">
                                     <div class="d-flex justify-content-between">
                                         <h4 class="bold">Til Fayllari</h4>
+                                        @if(session('success'))
+                                            <!-- Сообщение об успешном сохранении перевода -->
+                                            <div class="alert alert-success">{{ session('success') }}</div>
+
+                                            <!-- Скрипт для показа модального окна -->
+                                            <script>
+                                                window.onload = function () {
+                                                    $('#successModal').modal('show'); // Открытие модального окна
+                                                    setTimeout(function () {
+                                                        location.reload(); // Обновление страницы через 3 секунды
+                                                    }, 3000);
+                                                };
+                                            </script>
+                                        @endif
                                     </div>
                                 </div>
 
@@ -85,63 +99,21 @@
         </div>
     </main>
 
-    <!-- Modal (Ko'rinmas holatda) -->
-    <div id="customModal" class="modal-overlay">
-        <div class="modal-content">
-            <p>Muvaffaqiyatli saqlandi!</p>
+
+    <!-- JavaScript (Modalni ochish, yopish va formni yuborish) -->
+    <!-- Модальное окно -->
+    <div id="successModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Перевод обновлён!</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Подождите 3 секунды, чтобы изменения вступили в силу...</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- CSS (Modal va Blur Effekt) -->
-    <style>
-        /* Modalni boshlang‘ich ko‘rinishi (yashirin) */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Orqa fondi qora va yarim shaffof */
-            backdrop-filter: blur(5px); /* Orqa fonni blur qilish */
-            justify-content: center;
-            align-items: center;
-            display: none; /* Yashirin holat */
-            z-index: 1000;
-        }
-
-        /* Modal ko‘rsatilganda */
-        .modal-overlay.active {
-            display: flex; /* Faqat active qo‘shilganda ko‘rsatiladi */
-        }
-
-        /* Modal tarkibi */
-        .modal-content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            font-size: 18px;
-        }
-    </style>
-
-    <!-- JavaScript (Modalni ochish, yopish va formni yuborish) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll(".lang-form").forEach(function (form) {
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault(); // Form yuborilishini to'xtatish
-
-                    let modal = document.getElementById("customModal");
-                    modal.classList.add("active"); // Modalni ochish
-
-                    setTimeout(() => {
-                        modal.classList.remove("active"); // Modalni yopish
-                        form.submit(); // Formni jo‘natish
-                    }, 5000); // 3 soniyadan keyin modal yopiladi va form yuboriladi
-                });
-            });
-        });
-    </script>
 
 @endsection
