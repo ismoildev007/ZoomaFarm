@@ -38,7 +38,7 @@
                                     <focuspoint-image
                                         :coordinates="'-0.5:0.5'"
                                         :dynamic-media-info="{
-                            dynamicMediaImagePath: 'https://images.novonordisk.com/is/image/novonordiskas/front-page-banner-nn100-num1-11',
+                            dynamicMediaImagePath: '/assets/img/2.png',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -111,10 +111,10 @@
                                 <div class="asset">
                                     <div class="hero-image-container">
                                         <focuspoint-image
-                                            image-url="/content/dam/nncorp/language-masters/en/front-page/Group 6 - Operators AP - Sabrina AO6I4141.jpg"
+                                            image-url="/assets/img/1.png"
                                             :coordinates="'-0.5:0.5'"
                                             :dynamic-media-info="{
-                            dynamicMediaImagePath: 'https://images.novonordisk.com/is/image/novonordiskas/Group 6 - Operators AP - Sabrina AO6I4141-1',
+                            dynamicMediaImagePath: '/assets/img/1.png',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
