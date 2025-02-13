@@ -338,15 +338,7 @@
                                     style="background-color: #e2f0fa"
                                     :style="textContainerStyles"
                                 >
-                                    <div
-                                        class="image-info tb-GridColumn tb-GridColumn--l--7 tb-GridColumn--m--7 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 tb-GridColumn--xs--20"
-                                    >
-                                        <b class="infotext" v-html="applyContentStyle('')"></b>
-                                        <p
-                                            class="infotext"
-                                            v-html="applyContentStyle('Safiatou Diallo Gvineyada yashaydi, 1\u002Dtoifa diabetga chalingan va “Bolalarda diabetni o‘zgartirish® ” dasturiga a’zo bo‘lgan.')"
-                                        ></p>
-                                    </div>
+
 
                                     <div
                                         class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
