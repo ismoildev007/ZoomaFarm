@@ -39,7 +39,7 @@
                                         <thead>
                                         <tr>
                                             <th>№</th>
-                                            <th>Название (РУ)</th>
+
                                             <th>Изображение</th>
                                             <th class="text-end">Действия</th>
                                         </tr>
@@ -48,7 +48,6 @@
                                         @foreach ($vacancies as $vacancy)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $vacancy->title_ru }}</td>
 
                                                 <td>
                                                     @if ($vacancy->image)
