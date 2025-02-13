@@ -70,7 +70,7 @@
                                         <div id="cmp-navigation__top-bar" class="top-bar" :class="{'navigation-display': isOverflowed}">
                                             <ul class="cmp-navigation__group main-navigation">
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0">
-                                                    <a href="javascript:void(0)"
+                                                    <a href="/"
                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.home') }}')}"
                                                        v-on:mouseover="onLinkHover('{{ __('messages.home') }}')"
                                                        v-on:click="openSubNav('{{ __('messages.home') }}')"
