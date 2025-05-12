@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
 
 class OrderController extends Controller
 {
@@ -30,9 +31,36 @@ class OrderController extends Controller
             'message' => 'nullable|string',
         ]);
 
-        Order::create($request->all());
+        $data = Order::create($request->all());
+        $this->sendToTelegram($data);
+        
 
         return redirect()->back()->with('success', 'Zayafka muvaffaqiyatli qabul qilindi!');
+    }
+    private function sendToTelegram($data)
+    {
+        $token = '7674421439:AAGc9RX1cjNk8ua-VtD9oWrpJC4qQFZC9oM';
+        $chat_id = '6583641407';
+
+        function escapeMarkdown($text) {
+            $special_chars = ['_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!'];
+            return str_replace($special_chars, array_map(fn($c) => '\\' . $c, $special_chars), $text);
+        }
+
+        $message = "⚖️ *Yangi mijoz xabar qoldirdi* ⚖️\n\n\n" .
+            "👤 *Ism:* " . escapeMarkdown($data['name']) . "\n" .
+            "📞 *Telefon raqam:* " . ($data['phone'] ?? 'N/A') . "\n" .
+            "📝 *Xabar:* " . escapeMarkdown($data['message']) . "\n" ;
+
+        $client = new Client();
+        $url = "https://api.telegram.org/bot{$token}/sendMessage";
+
+        $client->post($url, [
+            'form_params' => [
+                'chat_id' => $chat_id,
+                'text' => $message,
+            ],
+        ]);
     }
 
     public function edit($id)

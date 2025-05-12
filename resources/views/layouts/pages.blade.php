@@ -275,6 +275,9 @@
     </script>
 </head>
 <style>
+    .nncorp-navigation .cmp-navigation {
+        width: 210px;
+    }
     /* Modalning asosiy uslubi */
     .modals {
         display: none;

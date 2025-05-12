@@ -33,7 +33,7 @@ $lang = app()->getLocale();
                                             @foreach($newsLatest3 as $item)
                                                 <a href="{{route('single.news',$item->id)}}" aria-label=""
                                                    class="ln-link-item m-l-bottom right-arrow-animation color-blue">
-                                                    @php
+                                                     @php
                                                         $date = \Carbon\Carbon::parse($item->date);
                                                         $month = __('messages.months')[$date->month];
                                                         $year = __('messages.year');
@@ -92,13 +92,13 @@ $lang = app()->getLocale();
                                     </div>
                                     <div
                                         class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                                        style="background-color: white"
+                                        style="background-color: white; margin-top: 30px;"
                                     >
                                         <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
                                             <div
                                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                             >
-                                                <div class="rowcontainer">
+                                                <div class="rowcontainer" style="margin: 3rem 0; position: static;">
                                                     @if($newsLatest1)
                                                         <div class="contentgrid_row">
                                                             <div class="columns-1 column has-content-true column-0 top_align contentgrid_column">
@@ -111,20 +111,11 @@ $lang = app()->getLocale();
                                                                                      loading="eager" />
                                                                             </div>
                                                                             <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                {{ $newsLatest1->title_uz }}
+                                                                                {{ $newsLatest1['title_'.$lang] }}
                                                                             </h3>
                                                                             <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                {!!   $newsLatest1->content_uz !!}
+                                                                                {!!   $newsLatest1['content_'.$lang] !!}
                                                                             </p>
-                                                                            <div class="link m-xs-top right-arrow-animation">
-                                                                                <a href="{{route('single.news',['id' => $item->id])}}"
-                                                                                   target="_self"
-                                                                                   aria-label="{{ $newsLatest1->title_uz }}"
-                                                                                   class="color-blue link-label m-xxs-right paragraph-s">
-                                                                                    {{ __('messages.read_more') }}
-                                                                                    <span class="icon icon-right-arrow m-xxs-left"></span>
-                                                                                </a>
-                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>

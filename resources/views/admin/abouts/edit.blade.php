@@ -99,6 +99,24 @@
                                     <h5 class="card-title">Изображение</h5>
                                 </div>
                                 <div class="card-body">
+                                    <div class="form-group mt-4">
+                                        <label for="youtube_link" style="font-weight: 900">ссылка на ютуб:</label>
+                                        <input type="text" class="form-control" id="youtube_link" name="youtube_link" value="{{ $about->youtube_link}}">
+                                        <div class="video-wrapper mt-2 mb-2">
+                                            {!! $about->youtube_link !!}
+                                        </div>
+                                    </div>
+                                    <style>
+                                        .video-wrapper iframe {
+                                            max-width: 100%;
+                                            width: 100%;
+                                            height: auto;
+                                            border-radius: 10px;
+                                            aspect-ratio: 16 / 9;
+                                            display: block;
+                                        }
+                                    </style>
+
                                     <div class="form-group pb-3">
                                         <img src="/manual/percent.png" alt="Current Image" class="img-thumbnail mt-2" height="50" width="200">
                                         <label for="percent">процент:</label>

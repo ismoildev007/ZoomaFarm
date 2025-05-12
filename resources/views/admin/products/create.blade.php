@@ -62,11 +62,10 @@
                                                 <input type="text" class="form-control" id="name_uz" name="name_uz"
                                                        value="{{ old('name_uz') }}" required>
                                             </div>
-
                                             <div class="form-group pb-3">
                                                 <label for="description_uz">Описание (UZ):</label>
-                                                <textarea class="form-control" id="description_uz" name="description_uz"
-                                                          rows="3">{{ old('description_uz') }}</textarea>
+                                                <div id="editor_description_uz" style="height:200px;"></div>
+                                                <input type="hidden" id="description_uz" name="description_uz">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -85,8 +84,8 @@
 
                                             <div class="form-group pb-3">
                                                 <label for="description_en">Описание (EN):</label>
-                                                <textarea class="form-control" id="description_en" name="description_en"
-                                                          rows="3">{{ old('description_en') }}</textarea>
+                                                <div id="editor_description_en" style="height:200px;"></div>
+                                                <input type="hidden" id="description_en" name="description_en">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -105,8 +104,8 @@
 
                                             <div class="form-group pb-3">
                                                 <label for="description_ru">Описание (RU):</label>
-                                                <textarea class="form-control" id="description_ru" name="description_ru"
-                                                          rows="3">{{ old('description_ru') }}</textarea>
+                                                <div id="editor_description_ru" style="height:200px;"></div>
+                                                <input type="hidden" id="description_ru" name="description_ru">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -126,8 +125,12 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <div class="form-group pb-3">
-                                        <label for="image">Изображение:</label>
+                                        <label for="image">Изображения:</label>
                                         <input type="file" class="form-control" id="image" name="image">
+                                    </div>
+                                    <div class="form-group pb-3">
+                                        <label for="gallery">Изображения-2:</label>
+                                        <input type="file" class="form-control" id="gallery" name="gallery[]" multiple>
                                     </div>
                                     <div class="form-group pb-3">
                                         <label for="pdf">PDF файл:</label>
@@ -156,11 +159,17 @@
         var editorUz = new Quill('#editor_uz', {theme: 'snow'});
         var editorEn = new Quill('#editor_en', {theme: 'snow'});
         var editorRu = new Quill('#editor_ru', {theme: 'snow'});
+        var editorDescriptionUz = new Quill('#editor_description_uz', {theme: 'snow'});
+        var editorDescriptionEn = new Quill('#editor_description_en', {theme: 'snow'});
+        var editorDescriptionRu = new Quill('#editor_description_ru', {theme: 'snow'});
 
         function updateEditorContent() {
             document.getElementById('text_uz').value = editorUz.root.innerHTML;
             document.getElementById('text_en').value = editorEn.root.innerHTML;
             document.getElementById('text_ru').value = editorRu.root.innerHTML;
+            document.getElementById('description_uz').value = editorDescriptionUz.root.innerHTML;
+            document.getElementById('description_en').value = editorDescriptionEn.root.innerHTML;
+            document.getElementById('description_en').value = editorDescriptionRu.root.innerHTML;
         }
 
         document.querySelector('form').addEventListener('submit', function (event) {

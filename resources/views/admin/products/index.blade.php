@@ -49,16 +49,16 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($products as $product)
-                                            <tr>
-                                                <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $product->name_uz }}</td>
-                                                <td>{{ $product->name_ru }}</td>
-                                                <td>{{ $product->name_en }}</td>
-                                                <td>
-                                                    @if ($product->image)
-                                                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name_en }}" width="50">
-                                                    @endif
+                                            @foreach ($products as $product)
+                                                <tr>
+                                                        <td>{{ $loop->iteration }}</td>
+                                                        <td>{{ $product->name_uz }}</td>
+                                                        <td>{{ $product->name_ru }}</td>
+                                                        <td>{{ $product->name_en }}</td>
+                                                        <td>
+                                                        @if ($product->image)  
+                                                            <img src="{{ asset('storage/' . $product->image) }}" alt="rasm" width="80" class="mb-1 rounded">
+                                                        @endif
                                                 </td>
                                                 <td >
                                                     <div class="hstack gap-2 justify-content-end">

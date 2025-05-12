@@ -29,6 +29,7 @@ class ContactController extends Controller
             'instagram' => 'nullable|url',
             'telegram' => 'nullable|url',
             'youtube' => 'nullable|url',
+            'twitter' => 'nullable|url',
         ]);
 
         $contact = Contact::findOrFail($id);

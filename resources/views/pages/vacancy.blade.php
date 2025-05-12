@@ -17,10 +17,10 @@
                 <div id="careersearch" class="career-search-wrapper white" style="background-color: white" v-cloak="">
                     <div v-if="true || isMobile" class="background-wrapper image">
                         <focuspoint-image
-                            :image-url="'/content/dam/nncorp/language-masters/uz/careers/images/NN_EVP_Beijing_RNGG_MCES_LLJG.jpg'"
+                            :image-url="'/content/dam/nncorp/language-masters/uz/careers/images/NN_EVP_Beijing_RNGG_MCES_LLJG'"
                             :coordinates="'0.33:0.35'"
                             :dynamic-media-info="{
-                            dynamicMediaImagePath: 'https://images.novonordisk.com/is/image/novonordiskas/NN_EVP_Beijing_RNGG_MCES_LLJG-16',
+                            dynamicMediaImagePath: '/assets/vacancyImage.jpg',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -81,26 +81,7 @@
                     async=""
                 ></script>
             </div>
-            <div class="plaintext aem-GridColumn aem-GridColumn--default--12">
-                <div>
-                    <link
-                        rel="stylesheet"
-                        href="../../etc.clientlibs/nncorp/components/content/plaintext/clientlibs.min.05c0cb6c0e2d2ba7d5278d5246770cfe.css"
-                        type="text/css"
-                    />
-                    <script
-                        type="text/javascript"
-                        src="../../etc.clientlibs/nncorp/components/content/plaintext/clientlibs.min.49e418542985e1df66dcd09169fcce86.js"
-                        async=""
-                    ></script>
 
-                    <div class="background gutters component-padding-top white tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                        <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h2 class="text plaintexttitle title color-blue smalltitle">    {{ __('messages.job_application') }}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
                 <link
                     rel="stylesheet"
@@ -119,47 +100,12 @@
                                     <div
                                         class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
                                     >
-                                        <div>
-                                            <div class="rowcontainer">
-                                                @foreach ($vacancies->chunk(3) as $vacancyChunk)
-                                                    <div class="contentgrid_row">
-                                                        @foreach ($vacancyChunk as $vacancy)
-                                                            <div class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                                    <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                        <div class="image-video-wrapper">
-                                                                            <div class="image-video-content-wrapper m-xs-bottom">
-                                                                                <img
-                                                                                    src="{{ asset('storage/' . $vacancy->image) }}"
-                                                                                    alt="{{ $vacancy->{'name_' . $lang} }}"
-                                                                                    loading="eager"
-                                                                                />
-                                                                            </div>
+                                        <div class="rowcontainer">
+                                            <div class="contentgrid_row">
 
-                                                                            <h3
-                                                                                class="color-blue subtext subheadline paragraph-s rtl-text"
-                                                                                v-html="applyContentStyle('{{ $vacancy->{'name_' . $lang} }}')"
-                                                                            ></h3>
-                                                                            <p
-                                                                                class="color-blue subtext paragraph-s paragraph-line-break rtl-text"
-                                                                                v-html="applyContentStyle('{{ $vacancy->{'content_' . $lang} }}')"
-                                                                            ></p>
-                                                                            <div class="link m-xs-top right-arrow-animation">
-                                                                                <a href="{{ route('contact') }}" class="color-blue link-label m-xxs-right paragraph-s">
-                                                                                    <span>{{ __('messages.contact_us2') }}</span>
-                                                                                    <span class="icon icon-right-arrow m-xxs-left"></span>
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                @endforeach
                                             </div>
-
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -168,74 +114,206 @@
                 </div>
             </div>
 
-        </div>
-        <div class="plaintext aem-GridColumn aem-GridColumn--default--12" style="margin-top: 25px">
-            <div
-                class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
-                style="background-color: #e2f0fa"
-            >
+            <!-- sdsdsd -->
+            <div class="plaintext aem-GridColumn aem-GridColumn--default--12" style="margin-top: 7rem;">
                 <div
-                    class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                    class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
+                    style="background-color: #ffffff;"
+                >
                     <div
-                        class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                        <h2 class="text plaintexttitle title color-blue smalltitle">{{__('messages.latest_news2')}} </h2>
+                        class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                        <div
+                            class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                            <h2 class="text plaintexttitle title color-blue smalltitle">{{ __('messages.job_application') }} </h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
-            <div class="layout-container-grid">
-                <div class="gutters component-padding-bottom color outer-container"
-                     style="background-color: rgb(226, 240, 250)">
-                    <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
-                        <div
-                            class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                            style="background-color: rgb(226, 240, 250)"
-                        >
-                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                                >
-                                    <div class="rowcontainer">
-                                        <div class="contentgrid_row">
-                                            @foreach ($latestNews as $item)
-                                                <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div>
-                                                                <a href="{{ route('single.news', $item->id) }}" aria-label="{{ $item->{'name_' . app()->getLocale()} }}">
-                                                                    <div class="image-video-wrapper">
-                                                                        <div class="image-video-content-wrapper m-xs-bottom">
-                                                                            <picture>
-                                                                                <img src="{{ asset('storage/' . $item->image) }}"
-                                                                                     alt="{{ $item->{'name_' . app()->getLocale()} }}"
-                                                                                     loading="eager" />
-                                                                            </picture>
-                                                                        </div>
-                                                                        <div class="right-arrow-animation">
-                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                {{ Str::limit($item    ->{'title_' . app()->getLocale()}, 35) }}
-                                                                            </h3>
-                                                                            <div class="link m-xs-top">
-                                                                                <a href="{{ route('single.news', $item->id) }}" target="_self"
-                                                                                   class="color-blue link-label paragraph-s">
-                                                                                    <span class="icon icon-right-arrow"></span>
-                                                                                </a>
+            <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <div class="layout-container-grid">
+                    <div class="gutters component-padding-bottom color outer-container"
+                         style="background-color: #ffffff;">
+                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
+                            <div
+                                class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                style="background-color: #ffffff;"
+                            >
+                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
+                                    <div
+                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                    >
+                                        <div class="rowcontainer">
+                                            <div class="contentgrid_row" style="display: grid; grid-template-columns: auto auto auto;">
+                                                @foreach ($vacancies as $vacancy)
+                                                    <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
+                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                <div>
+                                                                    <a href="{{ route('single.vacancy', $vacancy->id) }}" aria-label="{{ $vacancy->{'name_' . $lang} }}">
+                                                                        <div class="image-video-wrapper">
+                                                                            <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                <picture>
+                                                                                    <img src="{{ asset('storage/' . $vacancy->image) }}"
+                                                                                        alt="{{ $vacancy->{'name_' . $lang} }}"
+                                                                                        loading="eager" />
+                                                                                </picture>
+                                                                            </div>
+                                                                            <div class="right-arrow-animation">
+                                                                                <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                    {{ $vacancy->{'name_' . $lang} }}
+                                                                                </h3>
+                                                                                <div class="link m-xs-top">
+                                                                                    <a href="{{ route('single.vacancy', $vacancy->id) }}" target="_self"
+                                                                                    class="color-blue link-label paragraph-s">
+                                                                                        <span class="icon icon-right-arrow"></span>
+                                                                                    </a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </a>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            @endforeach
+                                                @endforeach
+                                            </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plaintext aem-GridColumn aem-GridColumn--default--12" style="margin-top: 25px">
+                <div
+                    class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
+                    style="background-color: #e2f0fa"
+                >
+                    <div
+                        class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                        <div
+                            class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                            <h2 class="text plaintexttitle title color-blue smalltitle">{{__('messages.latest_news2')}} </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <div class="layout-container-grid">
+                    <div class="gutters component-padding-bottom color outer-container"
+                         style="background-color: rgb(226, 240, 250)">
+                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
+                            <div
+                                class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                style="background-color: rgb(226, 240, 250)"
+                            >
+                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
+                                    <div
+                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                    >
+                                        <div class="rowcontainer">
+                                            <div class="contentgrid_row">
+                                                @foreach ($latestNews as $item)
+                                                    <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
+                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                <div>
+                                                                    <a href="{{ route('single.news', $item->id) }}" aria-label="{{ $item->{'name_' . app()->getLocale()} }}">
+                                                                        <div class="image-video-wrapper">
+                                                                            <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                <picture>
+                                                                                    <img src="{{ asset('storage/' . $item->image) }}"
+                                                                                         alt="{{ $item->{'name_' . app()->getLocale()} }}"
+                                                                                         loading="eager" />
+                                                                                </picture>
+                                                                            </div>
+                                                                            <div class="right-arrow-animation">
+                                                                                <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                    {{ Str::limit($item    ->{'title_' . app()->getLocale()}, 35) }}
+                                                                                </h3>
+                                                                                <div class="link m-xs-top">
+                                                                                    <a href="{{ route('single.news', $item->id) }}" target="_self"
+                                                                                       class="color-blue link-label paragraph-s">
+                                                                                        <span class="icon icon-right-arrow"></span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion aem-GridColumn aem-GridColumn--default--12">
+                <div class="cmp-accordion is-accordion gutters white" data-cmp-is="accordion" style="background-color: white">
+                    <div id="accordion" class="cmp-accordion-list component-padding-topAndBottom">
+                        <input ref="singleExpansion" type="hidden" value="false" />
+                        @foreach($faqs as $index => $faq)
+                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--xs--24">
+                                <div class="tb-GridColumn tb-GridColumn--l--22 tb-GridColumn--xs--24 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--0">
+                                    <div
+                                        id="accordion-item-0"
+                                        class="cmp-accordion__item"
+                                        :class="{'edit-mode': true}"
+                                        data-cmp-hook-accordion="item"
+                                        v-on:mouseover="onItemHover(0)"
+                                    >
+                                        <div
+                                            class="cmp-accordion__item-background tb-Grid tb-Grid--22 tb-Grid--l--22 tb-Grid--m--22 tb-Grid--xs--24"
+                                            :style="{'background': background(0)}"
+                                            v-cloak=""
+                                        >
+                                            <div
+                                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--2 cmp-accordion__item-wrapper"
+                                            >
+                                                <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
+                                                    <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
+                                                          <span class="cmp-accordion__title">
+                                                            <h3 class="h6" v-html="applyContentStyle('{{ $faq['question_' . $lang] }}')"></h3>
+                                                        </span>
+                                                        <span class="cmp-accordion__icon"></span>
+                                                        <span class="icon icon-plus"
+                                                        ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
+                                                            ></span>
+                                                    </button>
+                                                </h2>
+                                                <div
+                                                    data-cmp-hook-accordion="panel"
+                                                    class="cmp-accordion__panel cmp-accordion__panel--hidden"
+                                                    role="region"
+                                                    ref="panel-0"
+                                                    :style="{'--accordion-height': panelHeight[0]}"
+                                                >
+                                                    <div class="accordioncontent">
+                                                        <div class="ac-wrapper p-m-bottom">
+
+                                                            <div class="richtext color-blue paragraph-s" style="margin-bottom: 50px;">
+                                                                {{ $faq['answer_' . $lang] }}
+                                                            </div>
+                                                            <div class="iframe-box p-s-top"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -117,6 +117,14 @@
                                         <label for="youtube">YouTube:</label>
                                         <input type="text" class="form-control" id="youtube" name="youtube" value="{{ old('youtube', $contact->youtube) }}">
                                     </div>
+                                    <div class="form-group pb-3">
+                                        <label for="twitter">Twitter:</label>
+                                        <input type="text" class="form-control" id="twitter" name="twitter" value="{{ old('twitter', $contact->twitter) }}">
+                                    </div>  
+                                    <div class="form-group pb-3">
+                                        <label for="linkedIn">LinkedIn:</label>
+                                        <input type="text" class="form-control" id="linkedIn" name="linkedIn" value="{{ old('linkedIn', $contact->linkedIn) }}">
+                                    </div>
                                 </div>
                             </div>
                         </div>

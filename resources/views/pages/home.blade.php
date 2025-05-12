@@ -38,7 +38,7 @@
                                     <focuspoint-image
                                         :coordinates="'-0.5:0.5'"
                                         :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/img/2.png',
+                            dynamicMediaImagePath: '/assets/img/zumafarm.webp',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -111,10 +111,10 @@
                                 <div class="asset">
                                     <div class="hero-image-container">
                                         <focuspoint-image
-                                            image-url="/assets/img/1.png"
+                                            image-url="/assets/home7.jpg"
                                             :coordinates="'-0.5:0.5'"
                                             :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/img/1.png',
+                            dynamicMediaImagePath: '/assets/home7.jpg',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -240,7 +240,7 @@
                                                                    target="_self"
                                                                    aria-label="{{ $product['name_'.$lang] }} sahifasiga havola">
                                                                     <div class="image-video-wrapper">
-                                                                        <a href="{{ url('/product/' . $product->id) }}"
+                                                                        <a href="{{ url('/products/' . $product->id) }}"
                                                                            target="_self"
                                                                            aria-label="{{ $product['name_'.$lang] }} sahifasiga havola">
                                                                             <div
@@ -257,7 +257,7 @@
                                                                                 {{ $product['name_'.$lang] }}
                                                                             </h3>
                                                                             <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                {{ Str::words($product['description_'.$lang], 15, '...') }}
+                                                                                {!! Str::words($product['description_'.$lang], 15, '...') !!}
                                                                             </p>
                                                                             <div class="link m-xs-top">
                                                                                 <a href="{{route('single.product',$product->id)}}"
@@ -305,18 +305,18 @@
                     <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
                         <div
                             class="frame small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
-                            <h1 class="text plaintexttitle title color-blue smalltitle">{{ __('messages.career') }}</h1>
+                            <h1 class="text plaintexttitle title color-blue smalltitle" style="margin-bottom: 3rem;">{{ __('messages.career') }}</h1>
 
                         </div>
                         <div
                             class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                            style="background-color: rgb(252, 242, 245)"
+                            style="background-color: rgb(252, 242, 245); margin-top: 0;"
                         >
-                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
+                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24" style="margin: 4rem 0;">
                                 <div
-                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1" style="margin-top: 0;"
                                 >
-                                    <div class="rowcontainer">
+                                    <div class="rowcontainer" style="position: static;">
 
                                         <div class="contentgrid_row">
                                             @foreach ($latestVacancy as $vacancy)
@@ -326,17 +326,17 @@
                                                         <div
                                                             class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                             <div class="image-video-wrapper">
-                                                                <a href="{{ url('/vacancy/' . $vacancy->id) }}">
+                                                                <a href="{{ route('single.vacancy', $vacancy->id) }}">
                                                                     <div
                                                                         class="image-video-content-wrapper m-xs-bottom">
                                                                         <img
                                                                             src="{{ asset('storage/' . $vacancy->image) }}"
-                                                                            alt="{{ $vacancy['title_'.$lang] }}"
+                                                                            alt="{{ $vacancy['name_'.$lang] }}"
                                                                             loading="eager"
                                                                         />
                                                                     </div>
                                                                     <p class="infotext color-blue m-xxs-bottom rtl-text">
-                                                                        {{ $vacancy['title_'.$lang] }}
+                                                                        {{ $vacancy['name_'.$lang] }}
                                                                     </p>
                                                                 </a>
                                                                 <div class="right-arrow-animation">
@@ -411,129 +411,50 @@
                                     <div class="rowcontainer">
                                         <div>
                                             <div class="contentgrid_row">
-                                                <div
-                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div class="image-video-wrapper">
-                                                                <a href="#!" target="_self"
-                                                                   aria-label="Открытые инновации">
-                                                                    <div class="image-video text-center m-xs-bottom">
-                                                                        <picture>
-                                                                            <img src="/assets/img/ugp.png"
-                                                                                 alt="Обмен соединениями"
-                                                                                 loading="eager" height="50"
-                                                                                 width="50px"/>
-                                                                        </picture>
-                                                                    </div>
-                                                                </a>
-                                                                <div class="right-arrow-animation">
+                                                @foreach($partners as $partner)
+                                                    <div
+                                                        class="columns-3 column has-content-true column-2 top_align contentgrid_column">
+                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                            <div
+                                                                class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                <div class="image-video-wrapper">
                                                                     <a href="#!" target="_self"
-                                                                       aria-label="Открытые инновации">
-                                                                        <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            <span style="vertical-align: inherit">UZGERMED PHARM</span>
-                                                                        </h3>
-                                                                        <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                    <span style="vertical-align: inherit">
-                                                                        Для ускорения инноваций мы открыто делимся новыми аналогами
-                                                                        пептидов и белков, а также антителами для доклинических исследований.
-                                                                    </span>
-                                                                        </p>
+                                                                    aria-label="Открытые инновации">
+                                                                        <div class="image-video text-center m-xs-bottom">
+                                                                            <picture>
+                                                                                <img src="{{ asset('storage/' . $partner->logo) ?? '/assets/img/ugp.png' }}"
+                                                                                    alt="Обмен соединениями"
+                                                                                    loading="eager" height="50"
+                                                                                    height="70px"
+                                                                                    style="object-fit: contain;"/>
+                                                                            </picture>
+                                                                        </div>
                                                                     </a>
-                                                                    <div class="link m-xs-top">
-                                                                        <a href="/#!" target="_self"
-                                                                           class="color-blue link-label paragraph-s">
-                                                                            <span class="icon icon-right-arrow"></span>
+                                                                    <div class="right-arrow-animation">
+                                                                        <a href="#!" target="_self"
+                                                                        aria-label="Открытые инновации">
+                                                                            <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                <span style="vertical-align: inherit">{{ $partner['name_' . $lang] ?? 'UZGERMED PHARM' }}</span>
+                                                                            </h3>
+                                                                            <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
+                                                                        <span style="vertical-align: inherit">
+                                                                            {{ $partner['description_' . $lang] ?? 'Для ускорения инноваций мы открыто делимся новыми аналогами
+                                                                            пептидов и белков, а также антителами для доклинических исследований.' }}
+                                                                        </span>
+                                                                            </p>
                                                                         </a>
+                                                                        <div class="link m-xs-top">
+                                                                            <a href="{{ $partner->website }}" target="_self"
+                                                                            class="color-blue link-label paragraph-s">
+                                                                                <span class="icon icon-right-arrow"></span>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                <div
-                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div class="image-video-wrapper">
-                                                                <a href="#!" target="_self"
-                                                                   aria-label="Открытые инновации">
-                                                                    <div class="image-video m-xs-bottom">
-                                                                        <picture>
-                                                                            <img src="/assets/img/samo.png"
-                                                                                 alt="Обмен соединениями" height="50"
-                                                                                 width="140"
-                                                                                 loading="eager"/>
-                                                                        </picture>
-                                                                    </div>
-                                                                </a>
-                                                                <div class="right-arrow-animation">
-                                                                    <a href="#!" target="_self"
-                                                                       aria-label="Открытые инновации">
-                                                                        <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            <span style="vertical-align: inherit">SAMO PHARM</span>
-                                                                        </h3>
-                                                                        <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                    <span style="vertical-align: inherit">
-                                                                        Для ускорения инноваций мы открыто делимся новыми аналогами
-                                                                        пептидов и белков, а также антителами для доклинических исследований.
-                                                                    </span>
-                                                                        </p>
-                                                                    </a>
-                                                                    <div class="link m-xs-top">
-                                                                        <a href="/#!" target="_self"
-                                                                           class="color-blue link-label paragraph-s">
-                                                                            <span class="icon icon-right-arrow"></span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="columns-3 column has-content-true column-2 top_align contentgrid_column">
-                                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                        <div
-                                                            class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                            <div class="image-video-wrapper">
-                                                                <a href="#!" target="_self"
-                                                                   aria-label="Открытые инновации">
-                                                                    <div class="image-video m-xs-bottom">
-                                                                        <picture>
-                                                                            <img src="/assets/img/fazo.png" height="50"
-                                                                                 alt="Обмен соединениями"
-                                                                                 loading="eager"/>
-                                                                        </picture>
-                                                                    </div>
-                                                                </a>
-                                                                <div class="right-arrow-animation">
-                                                                    <a href="#!" target="_self"
-                                                                       aria-label="Открытые инновации">
-                                                                        <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                            <span style="vertical-align: inherit">FAZO LUXE</span>
-                                                                        </h3>
-                                                                        <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                            <span style="vertical-align: inherit">
-                                Для ускорения инноваций мы открыто делимся новыми аналогами
-                                пептидов и белков, а также антителами для доклинических исследований.
-                            </span>
-                                                                        </p>
-                                                                    </a>
-                                                                    <div class="link m-xs-top">
-                                                                        <a href="/#!" target="_self"
-                                                                           class="color-blue link-label paragraph-s">
-                                                                            <span class="icon icon-right-arrow"></span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
 
                                             </div>
                                         </div>
@@ -573,8 +494,13 @@
                                         <a href="{{route('single.news',$news->id)}}"
                                            aria-label="{{ $news['title_'.$lang] }}"
                                            class="ln-link-item m-l-bottom right-arrow-animation color-blue">
+                                           @php
+                                                $date = \Carbon\Carbon::parse($news->date);
+                                                $month = __('messages.months')[$date->month];
+                                                $year = __('messages.year');
+                                            @endphp
                                             <p class="job-name">
-                                                {{ $news->date }}
+                                                {{ $date->year }} {{ $year }} {{ $date->day }} {{ $month }}
                                             </p>
                                             <div class="location-info m-xxs-top">
                                                 <p class="paragraph-s">

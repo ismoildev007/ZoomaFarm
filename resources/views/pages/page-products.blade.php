@@ -45,14 +45,28 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="tb-Grid tb-Grid--24">
+                                            <div class="tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20
+                                                        tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1">
+                                                <div class="details-button" style="margin-top: 0;">
+                                                    <a href="{{ route('documents.downloadFile') }}" target="_self">
+                                                        <button class="button desktop-button button-link-animation">
+                                                            <span class="text">Yuklab olish</span>
+                                                            <span class="icon fa fa-download"></span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
                 <link
@@ -100,10 +114,10 @@
                                                                                 <a href="{{ route('single.product', $product->id) }}" target="_self">
                                                                                     <div class="image-video-content-wrapper m-xs-bottom">
                                                                                         <picture>
-                                                                                            <img src="{{ asset('storage/' . $product->image) }}"
+                                                                                                <img src="{{ asset('storage/' . $product->image) }}"
                                                                                                  alt="{{ $product->{'name_' . app()->getLocale()} }}"
                                                                                                  loading="eager"
-                                                                                            />
+                                                                                                />
                                                                                         </picture>
                                                                                     </div>
                                                                                 </a>
@@ -113,7 +127,7 @@
                                                                                             {{ $product->{'name_' . app()->getLocale()} }}
                                                                                         </h3>
                                                                                         <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                            {{ Str::limit($product->{'description_' . app()->getLocale()}, 100) }}
+                                                                                            {!! Str::limit($product->{'description_' . app()->getLocale()}, 100) !!}
                                                                                         </p>
                                                                                     </a>
                                                                                     <div class="link m-xs-top">
@@ -142,6 +156,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="plaintext aem-GridColumn aem-GridColumn--default--12">
                 <div
@@ -214,6 +229,69 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="accordion aem-GridColumn aem-GridColumn--default--12">
+                <div class="cmp-accordion is-accordion gutters white" data-cmp-is="accordion" style="background-color: white">
+                    <div id="accordion" class="cmp-accordion-list component-padding-topAndBottom">
+                        <input ref="singleExpansion" type="hidden" value="false" />
+                        @foreach($faqs as $index => $faq)
+                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--xs--24">
+                            <div class="tb-GridColumn tb-GridColumn--l--22 tb-GridColumn--xs--24 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--0">
+                                <div
+                                    id="accordion-item-0"
+                                    class="cmp-accordion__item"
+                                    :class="{'edit-mode': true}"
+                                    data-cmp-hook-accordion="item"
+                                    v-on:mouseover="onItemHover(0)"
+                                >
+                                    <div
+                                        class="cmp-accordion__item-background tb-Grid tb-Grid--22 tb-Grid--l--22 tb-Grid--m--22 tb-Grid--xs--24"
+                                        :style="{'background': background(0)}"
+                                        v-cloak=""
+                                    >
+                                        <div
+                                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--1 tb-GridColumn--offset--xs--2 cmp-accordion__item-wrapper"
+                                        >
+                                            <h2 class="cmp-accordion__header" v-on:click="handleClick(0)">
+                                                <button class="cmp-accordion__button" data-cmp-hook-accordion="button">
+                                                          <span class="cmp-accordion__title">
+                                                            <h3 class="h6" v-html="applyContentStyle('{{ $faq['question_' . $lang] }}')"></h3>
+                                                        </span>
+                                                    <span class="cmp-accordion__icon"></span>
+                                                    <span class="icon icon-plus"
+                                                    ><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span
+                                                        ></span>
+                                                </button>
+                                            </h2>
+                                            <div
+                                                data-cmp-hook-accordion="panel"
+                                                class="cmp-accordion__panel cmp-accordion__panel--hidden"
+                                                role="region"
+                                                ref="panel-0"
+                                                :style="{'--accordion-height': panelHeight[0]}"
+                                            >
+                                                <div class="accordioncontent">
+                                                    <div class="ac-wrapper p-m-bottom">
+
+                                                        <div class="richtext color-blue paragraph-s" style="margin-bottom: 50px;">
+                                                            {{ $faq['answer_' . $lang] }}
+                                                        </div>
+                                                        <div class="iframe-box p-s-top"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 @endsection

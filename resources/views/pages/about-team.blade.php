@@ -27,10 +27,10 @@
                             </template>
 
                             <focuspoint-image
-                                :image-url="'/content/dam/nncorp/language-masters/en/about-us/images/us-dfp-2018-photo-hires-abl-KLTY-2.jpg'"
+                                :image-url="'/assets/news5.jpg'"
                                 :coordinates="'0.04:0.30'"
                                 :dynamic-media-info="{
-                            dynamicMediaImagePath: 'https://images.novonordisk.com/is/image/novonordiskas/us-dfp-2018-photo-hires-abl-KLTY-2-13',
+                            dynamicMediaImagePath: '/assets/news5.jpg',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -80,13 +80,13 @@
                         <div
                             ref="section-wraper"
                             class="section-wraper gutters component-padding-topAndBottom tb-GridColumn tb-GridColumn--l--24"
-                            style="background-color: white"
+                            style="background-color: white !important"
                         >
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24">
                                 <div
                                     class="frame tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--offset--m--1 tb-GridColumn--xs--24 tb-GridColumn--offset--xs--0"
                                 >
-                                    <div class="long-container" style="background-color: #e2f0fa" :style="longContainerStyleMobile">
+                                    <div class="long-container" style="background-color: white" :style="longContainerStyleMobile">
                                         <div
                                             :class="{'p-l-top' : !isMobileSize}"
                                             class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24"
@@ -129,69 +129,7 @@
                 ></script>
             </div>
 
-            <div class="factsandfigures responsivegrid aem-GridColumn aem-GridColumn--default--12">
-                <link
-                    rel="stylesheet"
-                    href="../../etc.clientlibs/nncorp/components/content/factsandfigures/clientlibs.min.6ded5de59a917d66ec5a7b65976a0f4f.css"
-                    type="text/css"
-                />
-
-
-                <div id="factsandfigures" class="faf-wrapper gutters component-padding-topAndBottom smallshift">
-                    <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
-                        <div
-                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
-                        >
-                            <h1 class="color-blue smalltitle">{{ __('messages.facts_and_figures') }}</h1>
-                        </div>
-                    </div>
-
-                    <div class="facts-and-figure-grid-description frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 white small">
-                        <div
-                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
-                        >
-                            <div class="title-frame-mobile m-s-bottom">
-                                <p class="tagline"></p>
-                                <h1 class="color-blue smalltitle">{{ __('messages.facts_and_figures') }}</h1>
-                            </div>
-                            <p class="leadtext two extrasmall"></p>
-                            <div class="figures-box">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--15 tb-GridColumn--m--13 tb-GridColumn--xs--18 tb-GridColumn--offset--l--1 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 figures-box columns-two"
-                                >
-                                    <div class="info">
-                                        <p class="facts h1-xs">{{ $aboutTeam->production }}</p>
-                                        <div class="paragraph-s">
-                                            {{ __('messages.production_sites') }}
-                                        </div>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="facts h1-xs">{{ $aboutTeam->research_and_development }}</p>
-                                        <div class="paragraph-s">
-                                            <p>{{ __('messages.research_centers') }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="facts h1-xs">{{ $aboutTeam->our_employees_work }}+</p>
-                                        <div class="paragraph-s">
-                                            <p>{{ __('messages.employees_worldwide') }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="facts h1-xs">{{ $aboutTeam->countries_use }}</p>
-                                        <div class="paragraph-s">
-                                            <p>{{ __('messages.countries_using') }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="imagevideotext focuspointimage image aem-GridColumn aem-GridColumn--default--12">
                 <div>
@@ -293,10 +231,10 @@
                                 >
                                     <div class="full-height">
                                         <focuspoint-image
-                                            :image-url="'/content/dam/nncorp/language-masters/uz/about-us/images/rnd-talentattraction-CMC-MDRT-PNTO-2018-7.jpg'"
+                                            :image-url="'/assets/news4.jpg'"
                                             :coordinates="'0.13:-0.02'"
                                             :dynamic-media-info="{
-                                        dynamicMediaImagePath: 'https://images.novonordisk.com/is/image/novonordiskas/rnd-talentattraction-CMC-MDRT-PNTO-2018-7-12',
+                                        dynamicMediaImagePath: '/assets/news4.jpg',
                                         disableDynamicMedia: false,
                                         mobileDynamicMediaWidth: '525',
                                         tabletPortraitDynamicMediaWidth: '768',
@@ -357,10 +295,10 @@
                                 >
                                     <div class="full-height">
                                         <focuspoint-image
-                                            :image-url="'/content/dam/nncorp/language-masters/uz/about-us/images/NNWAY_Cluster_1.png'"
+                                            :image-url="'/assets/team.jpg'"
                                             :coordinates="'-0.03:-0.01'"
                                             :dynamic-media-info="{
-                                        dynamicMediaImagePath: 'https://images.novonordisk.com/is/image/novonordiskas/NNWAY_Cluster_1-11',
+                                        dynamicMediaImagePath: '/assets/team.jpg',
                                         disableDynamicMedia: false,
                                         mobileDynamicMediaWidth: '525',
                                         tabletPortraitDynamicMediaWidth: '768',

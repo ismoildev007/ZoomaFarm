@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('instagram')->nullable();
             $table->text('telegram')->nullable();
             $table->text('youtube')->nullable();
+            $table->text('twitter')->nullable();
             $table->timestamps();
         });
     }

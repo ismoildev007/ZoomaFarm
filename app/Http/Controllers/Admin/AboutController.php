@@ -42,9 +42,15 @@ class AboutController extends Controller
             $about->photo = $request->file('photo')->store('abouts/content_image', 'public');
         }
 
+        if ($request->filled('youtube_link')) {
+        $about->youtube_link = $request->input('youtube_link');
+    }
+
         $about->update($request->all());
 
         return redirect()->back()->with('success', 'Data updated successfully');
+
+        
     }
 
 

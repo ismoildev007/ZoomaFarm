@@ -33,16 +33,25 @@ class ProductController extends Controller
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'video' => 'nullable|url', // Video uchun URL validatsiyasi
-            'pdf' => 'nullable|mimes:pdf|max:5120', // PDF fayl uchun validatsiya
+            'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'video' => 'nullable|url',
+            'pdf' => 'nullable|mimes:pdf|max:10200',
         ]);
 
-        $image = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('image', 'public');
+        }
+
+        $galleryPaths = [];
         $pdf = null;
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image')->store('images', 'public');
+        if ($request->hasFile('gallery')) {
+            foreach ($request->file('gallery') as $gallery) {
+                $path = $gallery->store('gallery', 'public');
+                $galleryPaths[] = $path;
+            }
         }
+
         if ($request->hasFile('pdf')) {
             $pdf = $request->file('pdf')->store('pdfs', 'public');
         }
@@ -57,8 +66,9 @@ class ProductController extends Controller
             'description_uz' => $request->description_uz,
             'description_ru' => $request->description_ru,
             'description_en' => $request->description_en,
-            'image' => $image,
-            'video' => $request->video, // URL saqlash
+            'image' => $imagePath,
+            'gallery' => json_encode($galleryPaths),
+            'video' => $request->video,
             'pdf' => $pdf,
         ]);
 
@@ -71,7 +81,7 @@ class ProductController extends Controller
         return view('admin.products.edit', compact('product'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
         $request->validate([
             'name_uz' => 'required|string|max:255',
@@ -84,27 +94,28 @@ class ProductController extends Controller
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'video' => 'nullable|url', // Video uchun URL validatsiyasi
-            'pdf' => 'nullable|mimes:pdf|max:5120', // PDF fayl uchun validatsiya
+            'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'video' => 'nullable|url',
+            'pdf' => 'nullable|mimes:pdf|max:10200',
         ]);
 
-        $product = Product::findOrFail($id);
-
-        $image = $product->image;
-        $pdf = $product->pdf;
-
+        $imagePath = $product->image; // agar yangi rasm bo'lmasa, eski saqlanadi
         if ($request->hasFile('image')) {
-            if ($image) {
-                Storage::delete('public/' . $image);
-            }
-            $image = $request->file('image')->store('images', 'public');
+            $imagePath = $request->file('image')->store('image', 'public');
         }
 
-        if ($request->hasFile('pdf')) {
-            if ($pdf) {
-                Storage::delete('public/' . $pdf);
+        $galleryPaths = json_decode($product->gallery, true) ?? [];
+        if ($request->hasFile('gallery')) {
+            $galleryPaths = []; // eski fayllarni o'chirsa bo'ladi
+            foreach ($request->file('gallery') as $gallery) {
+                $path = $gallery->store('gallery', 'public');
+                $galleryPaths[] = $path;
             }
-            $pdf = $request->file('pdf')->store('pdfs', 'public');
+        }
+
+        $pdfPath = $product->pdf;
+        if ($request->hasFile('pdf')) {
+            $pdfPath = $request->file('pdf')->store('pdfs', 'public');
         }
 
         $product->update([
@@ -117,13 +128,15 @@ class ProductController extends Controller
             'description_uz' => $request->description_uz,
             'description_ru' => $request->description_ru,
             'description_en' => $request->description_en,
-            'image' => $image,
-            'video' => $request->video, // URL saqlash
-            'pdf' => $pdf,
+            'image' => $imagePath,
+            'gallery' => json_encode($galleryPaths),
+            'video' => $request->video,
+            'pdf' => $pdfPath,
         ]);
 
         return redirect()->route('products.index')->with('success', 'Mahsulot muvaffaqiyatli yangilandi.');
     }
+
 
     public function destroy($id)
     {

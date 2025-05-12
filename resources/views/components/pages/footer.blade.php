@@ -1,3 +1,7 @@
+<?php
+use App\Models\Contact;
+$contact = Contact::first();
+ ?>
 <div class="footer experiencefragment">
     <div class="cmp-experiencefragment cmp-experiencefragment--xf-footer">
         <div class="xf-content-height">
@@ -6,10 +10,8 @@
                     <div class="tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--offset--l--0">
                         <p class="tagline">{{ __('messages.company_name') }}</p>
                         <div class="infotext">
-                            <p>{{ __('messages.office_info') }}</p>
                             <p>{{ __('messages.address') }}</p>
                             <p>{{ __('messages.phone') }}</p>
-                            <p><a href="index.htm">{{ __('messages.website') }}</a></p>
                             <p><a href="mailto:{{ __('messages.email') }}">{{ __('messages.email') }}</a></p>
                         </div>
                     </div>
@@ -26,31 +28,49 @@
                     <div class="tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--offset--l--1">
                         <p class="tagline">{{ __('messages.follow_us') }}</p>
                         <div class="list">
-                            <a href="https://www.linkedin.com/company/novo-nordisk" class="infotext">LinkedIn</a>
-                            <a href="https://www.youtube.com/user/novonordisk" class="infotext">YouTube</a>
-                            <a href="https://www.facebook.com/novonordisk" class="infotext">Facebook</a>
-                            <a href="https://twitter.com/novonordisk" class="infotext">X (Twitter)</a>
-                            <a href="https://www.instagram.com/novonordisk" class="infotext">Instagram</a>
+                            <a href="{{ $contact->telegram ?? 'https://t.me/Zuma_pharma' }}" class="infotext">Telegram</a>
+                            <a href="{{ $contact->youtube ?? 'https://www.youtube.com/' }}" class="infotext">YouTube</a>
+                            <a href="{{ $contact->facebook ?? 'https://www.facebook.com' }}" class="infotext">Facebook</a>
+                            <a href="{{ $contact->twitter ?? 'https://twitter.com' }}" class="infotext">X (Twitter)</a>
+                            <a href="{{ $contact->instagram ?? 'https://www.instagram.com' }}" class="infotext">Instagram</a>
+                            <a href="{{ $contact->linkedIn ?? 'https://www.linkedIn.com' }}" class="infotext">LinkedIN</a>
                         </div>
                     </div>
 
                     <div class="tb-GridColumn tb-GridColumn--l--6 tb-GridColumn--offset--l--1">
                         <p class="tagline">{{ __('messages.other_offices') }}</p>
-                        <a href="" class="infotext">
+                        <a href="https://maps.app.goo.gl/fwrYwkV2dNSBGt3p8" class="infotext" target="_black">
                             <span class="icon icon-location-blue-edge"></span>
                             {{ __('messages.choose_country') }}
                         </a>
                     </div>
 
                     <div class="tb-GridColumn tb-GridColumn--l--24 legal-links">
-                        <a href="" class="infotext">{{ __('messages.copyright') }}</a>
-                        <a href="" class="infotext">{{ __('messages.privacy_policy') }}</a>
-                        <a href="" class="infotext">{{ __('messages.cookie_policy') }}</a>
-                        <a href="" class="infotext">{{ __('messages.data_processing') }}</a>
-                        <a href="" class="infotext">{{ __('messages.terms_of_use') }}</a>
+                        <a href="{{ route('privacy_policy') }}" class="infotext">{{ __('messages.copyright') }}</a>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
 </div>
+
+<style>
+    .item.animate {
+        font-size: 34px;
+    }
+    .dr_menu-lang-items a{
+        margin: 0 5px;
+    }
+    .nncorp-navigation .cmp-navigation .cmp-navigation__item a {
+        font-size: 18px;
+    }
+</style>
+
+<script>
+    function openModalMenu () {
+        document.body.style.overflow = "hidden";
+    }
+    function closeModalMenu () {
+        document.body.style.overflow = "auto";
+    }
+</script>

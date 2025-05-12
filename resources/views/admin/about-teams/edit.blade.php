@@ -12,6 +12,7 @@
                         <div class="page-header-title">
                             <h5 class="m-b-10">Члены команды нашей компании</h5>
                         </div>
+
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Главная</a></li>
                             <li class="breadcrumb-item">Члены команды нашей компании</li>

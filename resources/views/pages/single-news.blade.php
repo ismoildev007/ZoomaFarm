@@ -1,4 +1,5 @@
 @extends('layouts.product-news-contact')
+
 <?php
  $lang = app()->getLocale();
     ?>
@@ -26,17 +27,14 @@
                                     <div class="tb-Grid tb-Grid--l--19 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
                                         <div
                                             class="tb-GridColumn tb-GridColumn--l--19 tb-GridColumn--m--16 tb-GridColumn--s--18 tb-GridColumn--xs--20">
-                                            <h1 class="plaintexttitle title color-blue xsmalltitle"
-                                                v-html="applyContentStyle('{{ implode(' ', array_slice(explode(' ', $news['title_' . $lang]), 0, 3)) }}')"></h1>
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <img
-                                src="{{asset('storage/'.$news->image)}}"
-                                alt=""
-                            />
+                           <img style="width: 100%; object-fit: cover;"
+     src="{{ asset('storage/'.$news->image) }}"
+     alt="News Image" />
                             <div class="tb-Grid tb-Grid--24">
                                 <div
                                     class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--offset--m--1">
@@ -103,5 +101,6 @@
             </div>
         </div>
     </div>
+    
 @endsection
 

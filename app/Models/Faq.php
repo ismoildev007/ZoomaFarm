@@ -21,5 +21,6 @@ class Faq extends Model
         'answer_uz',
         'answer_ru',
         'answer_en',
+        'type',
     ];
 }

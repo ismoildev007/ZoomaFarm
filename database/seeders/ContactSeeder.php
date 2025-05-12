@@ -23,6 +23,7 @@ class ContactSeeder extends Seeder
             'instagram' => 'https://instagram.com/example',
             'telegram' => 'https://t.me/example',
             'youtube' => 'https://youtube.com/channel/example',
+            'twitter' => 'https://twitter.com/elonmusk',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

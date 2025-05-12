@@ -61,7 +61,8 @@
 
                                             <div class="form-group pb-3">
                                                 <label for="description_uz">Description (UZ):</label>
-                                                <textarea class="form-control" id="description_uz" name="description_uz" rows="3">{{ old('description_uz', $product->description_uz) }}</textarea>
+                                                <div id="editor_description_uz" style="height:200px;">{!! old('description_uz', $product->description_uz) !!}</div>
+                                                <input type="hidden" id="description_uz" name="description_uz">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -79,7 +80,8 @@
 
                                             <div class="form-group pb-3">
                                                 <label for="description_en">Description (EN):</label>
-                                                <textarea class="form-control" id="description_en" name="description_en" rows="3">{{ old('description_en', $product->description_en) }}</textarea>
+                                                <div id="editor_description_en" style="height:200px;">{!! old('description_en', $product->description_en) !!}</div>
+                                                <input type="hidden" id="description_en" name="description_en">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -97,9 +99,9 @@
 
                                             <div class="form-group pb-3">
                                                 <label for="description_ru">Description (RU):</label>
-                                                <textarea class="form-control" id="description_ru" name="description_ru" rows="3">{{ old('description_ru', $product->description_ru) }}</textarea>
+                                                <div id="editor_description_ru" style="height:200px;">{!! old('description_ru', $product->description_ru) !!}</div>
+                                                <input type="hidden" id="description_ru" name="description_ru">
                                             </div>
-
                                             <div class="form-group pb-3">
                                                 <label for="content_ru">Content (RU):</label>
                                                 <div id="editor_ru" style="height:400px;">{!! old('content_ru', $product->content_ru) !!}</div>
@@ -118,17 +120,42 @@
                                     <h5 class="card-title">Изображение продукта</h5>
                                 </div>
                                 <div class="card-body p-4">
-                                    <!-- Mavjud rasmni ko'rsatish -->
+                                    <!-- Rasm yuklash -->
+                                    <div class="form-group pb-3">
+                                        <label for="image">Изображение:</label>
+                                        <input type="file" class="form-control" id="image" name="image">
+                                    </div>
+
                                     @if ($product->image)
                                         <div class="mb-3">
                                             <img src="{{ asset('storage/' . $product->image) }}" alt="Изображение продукта" class="img-fluid" width="100" >
                                         </div>
                                     @endif
 
-                                    <!-- Rasm yuklash -->
                                     <div class="form-group pb-3">
-                                        <label for="image">Изображение:</label>
-                                        <input type="file" class="form-control" id="image" name="image">
+                                        <label for="gallery">Изображения-2:</label>
+                                        <input type="file" class="form-control" id="gallery" name="gallery[]" multiple>
+                                    </div>
+
+                                    @php
+                                        $galleryItems = is_array($product->gallery) ? $product->gallery : json_decode($product->gallery, true);
+                                    @endphp
+
+                                    @if ($galleryItems)
+                                        <div class="mb-3">
+                                            @foreach($galleryItems as $gallery)
+                                                <img src="{{ asset('storage/' . $gallery) }}" alt="Изображение продукта" class="img-fluid" width="100">
+                                            @endforeach
+                                        </div>
+                                    @endif
+
+
+
+
+                                    <!-- PDF fayl yuklash -->
+                                    <div class="form-group pb-3">
+                                        <label for="pdf">PDF файл:</label>
+                                        <input type="file" class="form-control" id="pdf" name="pdf">
                                     </div>
 
                                     <!-- Mavjud PDF faylni ko'rsatish -->
@@ -139,12 +166,6 @@
                                             </a>
                                         </div>
                                     @endif
-
-                                    <!-- PDF fayl yuklash -->
-                                    <div class="form-group pb-3">
-                                        <label for="pdf">PDF файл:</label>
-                                        <input type="file" class="form-control" id="pdf" name="pdf">
-                                    </div>
 
                                     <!-- Mavjud YouTube URLni ko'rsatish -->
                                     @if ($product->video)
@@ -177,11 +198,18 @@
         var editorUz = new Quill('#editor_uz', { theme: 'snow' });
         var editorEn = new Quill('#editor_en', { theme: 'snow' });
         var editorRu = new Quill('#editor_ru', { theme: 'snow' });
+        var editorDescriptionUz = new Quill('#editor_description_uz', { theme: 'snow' });
+        var editorDescriptionEn = new Quill('#editor_description_en', { theme: 'snow' });
+        var editorDescriptionRu = new Quill('#editor_description_ru', { theme: 'snow' });
+
 
         function updateEditorContent() {
             document.getElementById('text_uz').value = editorUz.root.innerHTML;
             document.getElementById('text_en').value = editorEn.root.innerHTML;
             document.getElementById('text_ru').value = editorRu.root.innerHTML;
+            document.getElementById('description_uz').value = editorDescriptionUz.root.innerHTML;
+            document.getElementById('description_en').value = editorDescriptionEn.root.innerHTML;
+            document.getElementById('description_ru').value = editorDescriptionRu.root.innerHTML;
         }
 
         document.querySelector('form').addEventListener('submit', function(event){

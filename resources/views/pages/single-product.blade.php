@@ -21,19 +21,17 @@
                 <div id="supergraphic" class="super-graphic-wrapper" :class="readDetails" style="background-color: #e2f0fa">
                     <div class="box box-image tb-Grid tb-Grid--24 tb-Grid--l--24">
                         <div class="image" style="width: 54%!important;">
+                        
                             <div class="focuspoint-image desktop focuspoint-container"
-                                 style="
-         background-image: url('{{ asset('storage/' . $product->image) }}');
-         background-position: center;
-         background-size: contain;
-             background-repeat: no-repeat;
-     "
+                                style="
+                                    background-image: url('{{ asset('storage/' . $product->image) }}');
+                                    background-position: center;
+                                    background-size: contain;
+                                    background-repeat: no-repeat; "
                             ></div>
-
                             <div class="image-info m-xxs-top desktop">
                                 <div><b class="infotext"></b></div>
                                 <div>
-                                    <span class="infotext">{{$product['name_'.$lang]}}</span>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +42,7 @@
                                 >
                                     <div class="container">
                                         <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
-                                            <h1 class="title smalltitle m-xs-bottom">{{$product['name_'.$lang]}}</h1>
+                                            <h1 class="title smalltitle m-xs-bottom" style="color:black;">{{$product['name_'.$lang]}}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -142,7 +140,8 @@
                                             >
                                                 <div class="accordioncontent">
                                                     <div class="ac-wrapper p-m-bottom">
-                                                        <div class="richtext color-blue paragraph-s">
+
+                                                        <div class="richtext color-blue paragraph-s" style="margin-bottom: 50px;">
                                                            {!!  $product['content_'.$lang]!!}
                                                         </div>
                                                         <div class="iframe-box p-s-top"></div>
@@ -157,79 +156,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <div style="" class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
-                <div class="layout-container-grid">
-                    <div class="gutters component-padding-none color outer-container" style="background-color: #e2f0fa">
-                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
-                            <div
-                                class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                                style="background-color: #e2f0fa"
-                            >
-                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
-                                    <div
-                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
-                                    >
-                                        <div>
-                                            <div class="rowcontainer">
-                                                <div>
-                                                    <div class="contentgrid_row">
-                                                        <div class="columns-1 column has-content-true column-0 top_align contentgrid_column">
-                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                                <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                    <div style="padding-top: 50px">
-                                                                        <a target="_self">
-                                                                            <div class="image-video-wrapper">
-                                                                                <div class="image-video-content-wrapper m-xs-bottom">
-                                                                                    <div aria-label="How to use NovoPen Echo® - Quick Guide" class="video">
-                                                                                        <div style="width: 100%; height: 0; position: relative; padding-bottom: 56.25%">
-                                                                                            @if ($product->video)
-                                                                                                @php
-                                                                                                    // YouTube URL-ni `embed` formatiga o'zgartirish
-                                                                                                    $videoUrl = str_replace('watch?v=', 'embed/', $product->video);
-                                                                                                @endphp
-                                                                                                <iframe
-                                                                                                    src="{{ $videoUrl }}"
-                                                                                                    style="width: 100%; height: 100%; position: absolute; top: 0; left: 0"
-                                                                                                    frameborder="0"
-                                                                                                    allow="autoplay; fullscreen"
-                                                                                                    allowfullscreen
-                                                                                                ></iframe>
-                                                                                            @endif
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <div class="right-arrow-animation">
-                                                                                    <h3
-                                                                                        class="color-blue subtext subheadline paragraph-s rtl-text"
-                                                                                        v-html="applyContentStyle('')"
-                                                                                    ></h3>
-                                                                                    <p
-                                                                                        class="color-blue subtext paragraph-s paragraph-line-break rtl-text"
-                                                                                        v-html="applyContentStyle('')"
-                                                                                    ></p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="calltoaction aem-GridColumn aem-GridColumn--default--12">
                 <link
                     rel="stylesheet"
@@ -301,47 +227,40 @@
                                         <h1 style="margin-bottom: 15px"><b>{{ __('messages.other_products') }}</b></h1>
 
                                         <div>
-                                            <div class="rowcontainer">
-                                                <div class="contentgrid_row">
-                                                    @foreach ($latestProducts as $latestProduct)
-                                                        <div class="columns-3 column has-content-true column-1 top_align contentgrid_column">
-                                                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-                                                                <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
-                                                                    <div>
-                                                                        <div>
-                                                                            <div class="image-video-wrapper">
-                                                                                <div class="image-video-content-wrapper m-xs-bottom">
-                                                                                    <img
-                                                                                        src="{{ asset('storage/' . $latestProduct->image) }}"
-                                                                                        alt="{{ $latestProduct->{'name_' . app()->getLocale()} }}"
-                                                                                        loading="eager"
-                                                                                    />
-                                                                                </div>
-                                                                                <div class="right-arrow-animation">
-                                                                                    <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                        {{ $latestProduct->{'name_' . app()->getLocale()} }}
-                                                                                    </h3>
-                                                                                    <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
-                                                                                        {{ Str::limit($latestProduct->{'description_' . app()->getLocale()}, 100) }}
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="link m-xs-top">
-                                                                                    <a href="{{ route('single.product', $latestProduct->id) }}" target="_self"
-                                                                                       class="color-blue link-label paragraph-s">
-                                                                                        <span class="icon icon-right-arrow"></span>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                        <div class="rowcontainer">
+                                            <div class="contentgrid_row">
+                                                @foreach ($latestProducts as $latestProduct)
+                                                    <div class="columns-3 column has-content-true column-1 top_align contentgrid_column">
+                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                <div class="image-video-wrapper">
+                                                                    <div class="image-video-content-wrapper m-xs-bottom">
+                                                                        <img src="{{ asset('storage/' . $latestProduct->image) }}"
+                                                                            alt="{{ $latestProduct->{'name_' . app()->getLocale()} }}"
+                                                                            loading="eager"
+                                                                        />
+                                                                    </div>
+                                                                    <div class="right-arrow-animation">
+                                                                        <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                            {{ $latestProduct->{'name_' . app()->getLocale()} }}
+                                                                        </h3>
+                                                                        <p class="color-blue subtext paragraph-s paragraph-line-break rtl-text">
+                                                                            {!! Str::limit($latestProduct->{'description_' . app()->getLocale()}, 100) !!}
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="link m-xs-top">
+                                                                        <a href="{{ route('single.product', $latestProduct->id) }}" target="_self"
+                                                                        class="color-blue link-label paragraph-s">
+                                                                            <span class="icon icon-right-arrow"></span>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    @endforeach
-                                                </div>
+                                                    </div>
+                                                @endforeach
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +268,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 @endsection

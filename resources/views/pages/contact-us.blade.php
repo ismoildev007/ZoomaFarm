@@ -1,4 +1,4 @@
-﻿@extends('layouts.product-news-contact')
+@extends('layouts.product-news-contact')
 
 @section('content')
     <div class="root responsivegrid">
@@ -54,10 +54,12 @@
                         <input type="hidden" id="fieldsCrossValidation" ref="fieldsCrossValidation" />
                         <div class="tb-Grid tb-Grid--l--24">
                             <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 title-frame desktop large">
-                                <h1 class="color-blue h1-l" v-html="applyContentStyle('{{__('messages.contact_us')}}')"></h1>
+                                <!--<h1 class="color-blue h1-l" v-html="applyContentStyle('{{__('messages.contact_us')}}')"></h1>-->
                             </div>
                         </div>
-                        <div class="tb-Grid tb-Grid--l--24 frame-padding has-title large" style="background-color: #fcf2f5">
+                        
+                        <div class="tb-Grid tb-Grid--l--24 frame-padding has-title small" style="background-color: #fcf2f5; margin-top: 3rem;">
+                        
                             <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 title-frame mobile">
                                 <div class="tagline color-blue"></div>
                                 <p class="color-blue h1-l" v-html="applyContentStyle('Biz bilan bog‘lanish')"></p>
@@ -102,6 +104,7 @@
 }, "groups": ""}'
                             />
                             <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
+                            <h2 class="color-blue" v-html="applyContentStyle('{{__('messages.contact_us')}}')" style="font-size: 76px; padding: 0"></h2>
                                 <div class="tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
                                     <div class="hidden tb-GridColumn">
                                         <input type="hidden" id="form-hidden-1452412041" name="location" value="Uzbekistan:io-rom-safety@novonordisk.com" />
@@ -162,9 +165,9 @@
                                                     data-cmp-hook-form-text="input"
                                                     type="text"
                                                     id="form-text-354937868"
-                                                    v-model="model.name"
+                                                    v-model="model.phone"
                                                     name="phone"
-                                                    @blur="crossValidateFields('name'); $v.model['name'].$touch()"
+                                                    @blur="crossValidateFields('phone'); $v.model['phone'].$touch()"
                                                 />
                                             </div>
                                             <span class="infotext color-blue"></span>

@@ -34,5 +34,6 @@ class About extends Model
         'percent',
         'image',
         'content_image',
+        'youtube_link',
     ];
 }

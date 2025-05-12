@@ -13,5 +13,6 @@ class Contact extends Model
         'address_uz', 'address_ru', 'address_en',
         'email', 'phone1', 'phone2',
         'facebook', 'instagram', 'telegram', 'youtube',
+        'twitter', 'linkedIn',
     ];
 }

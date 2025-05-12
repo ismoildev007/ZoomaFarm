@@ -48,16 +48,15 @@
                                 @csrf
                                 <input type="hidden" name="save_key" value="{{ $key }}">
                                 <td>
-                                            <textarea name="translations[uz]"
-                                                      class="form-control">{{ $translations['uz'][$key] ?? '' }}</textarea>
+                                            <textarea name="translations[uz]" class="form-control">{{ is_array($translations['uz'][$key] ?? '') ? json_encode($translations['uz'][$key]) : ($translations['uz'][$key] ?? '') }}</textarea>
                                 </td>
                                 <td>
                                             <textarea name="translations[ru]"
-                                                      class="form-control">{{ $translations['ru'][$key] ?? '' }}</textarea>
+                                                      class="form-control">{{ is_array($translations['ru'][$key] ?? '') ? json_encode($translations['ru'][$key]) : ($translations['ru'][$key] ?? '') }}</textarea>
                                 </td>
                                 <td>
                                             <textarea name="translations[en]"
-                                                      class="form-control">{{ $translations['en'][$key] ?? '' }}</textarea>
+                                                      class="form-control">{{ is_array($translations['en'][$key] ?? '') ? json_encode($translations['en'][$key]) : ($translations['en'][$key] ?? '') }}</textarea>
                                 </td>
                                 <td>
                                     <button type="submit" class="btn btn-success">Saqlash</button>
