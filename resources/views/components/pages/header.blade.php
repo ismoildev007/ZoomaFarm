@@ -30,15 +30,15 @@
                                                     <nav class="cmp-languagenavigation">
                                                         <ul class="cmp-languagenavigation__group">
                                                             <li class="cmp-languagenavigation__item">
-                                                                
+
                                                             </li>
 
                                                             <li class="cmp-languagenavigation__item">
-                                                            
+
                                                             </li>
 
                                                             <li class="cmp-languagenavigation__item">
-                                                                
+
                                                             </li>
                                                         </ul>
                                                     </nav>
@@ -115,7 +115,7 @@
                                                         <span class="text hyphenate">{{ __('messages.documents') }}</span>
                                                     </a>
                                                 </li>
-                                                
+
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
                                                     <a href="{{ route('news') }}"
                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.news') }}')}"
@@ -136,22 +136,22 @@
                                                         <span class="text hyphenate">{{ __('messages.vacancy') }}</span>
                                                     </a>
                                                 </li>
-            
+
+{{--                                                <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">--}}
+{{--                                                    <a href="{{ route('company_direction')}}"--}}
+{{--                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.mission_values_strategy') }}')}"--}}
+{{--                                                       v-on:mouseover="onLinkHover('{{ __('messages.mission_values_strategy') }}')"--}}
+{{--                                                       v-on:click="openSubNav('{{ __('messages.mission_values_strategy') }}')"--}}
+{{--                                                       aria-label="{{ __('messages.mission_values_strategy') }}"--}}
+{{--                                                       class="cmp-navigation__item-link true">--}}
+{{--                                                        <span class="text hyphenate">{{ __('messages.mission_values_strategy') }}</span>--}}
+{{--                                                    </a>--}}
+{{--                                                </li>--}}
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
-                                                    <a href="{{ route('company_direction')}}"
-                                                       :class="{dirty: navHoveredItems.includes('{{ __('messages.mission_values_strategy') }}')}"
-                                                       v-on:mouseover="onLinkHover('{{ __('messages.mission_values_strategy') }}')"
-                                                       v-on:click="openSubNav('{{ __('messages.mission_values_strategy') }}')"
-                                                       aria-label="{{ __('messages.mission_values_strategy') }}"
-                                                       class="cmp-navigation__item-link true">
-                                                        <span class="text hyphenate">{{ __('messages.mission_values_strategy') }}</span>
-                                                    </a>
-                                                </li>
-                                                <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
-                                                    <a href="{{ route('cooperation') }}"  
-                                                    :class="{dirty: navHoveredItems.includes('{{ __('messages.partners') }}')}" 
-                                                    v-on:mouseover="onLinkHover('{{ __('messages.partners') }}')" 
-                                                    v-on:click="openSubNav('{{ __('messages.partners') }}')"  
+                                                    <a href="{{ route('cooperation') }}"
+                                                    :class="{dirty: navHoveredItems.includes('{{ __('messages.partners') }}')}"
+                                                    v-on:mouseover="onLinkHover('{{ __('messages.partners') }}')"
+                                                    v-on:click="openSubNav('{{ __('messages.partners') }}')"
                                                     aria-label="{{ __('messages.partners') }}"
                                                     class="cmp-navigation__item-link true">
                                                         <span class="text hyphenate">{{ __('messages.partners') }}</span>
@@ -170,7 +170,7 @@
                                                     </a>
                                                 </li>
 
-                                                
+
                                             </ul>
 
                                         </div>
@@ -228,7 +228,12 @@
                                         ><span class="text hyphenate">{{ __('messages.team') }}</span></a
                                         >
                                     </div>
-                                    
+                                    <div class="">
+                                        <a href="{{ route('company_direction')}}" aria-label="Semizlik" class="item m-s-bottom animate"
+                                        ><span class="text hyphenate">{{ __('messages.mission_values_strategy') }}</span></a
+                                        >
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

@@ -20,7 +20,7 @@
                             :image-url="'/content/dam/nncorp/language-masters/uz/careers/images/NN_EVP_Beijing_RNGG_MCES_LLJG'"
                             :coordinates="'0.33:0.35'"
                             :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/vacancyImage.jpg',
+                            dynamicMediaImagePath: '{{ $dynamicMediaImagePath}}',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',

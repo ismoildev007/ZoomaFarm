@@ -29,7 +29,6 @@
                     src="etc.clientlibs/nncorp/components/content/herodeck/v2/herodeck/clientlib/clientlib-herodeck.min.7aba53fe9092be5d3241a8675d566872.js"
                     async=""
                 ></script>
-
                 <div class="herodeck-wrapper">
                     <ol class="heroes-wrapper">
                         <li class="hero slides" id="hero-0">
@@ -38,7 +37,7 @@
                                     <focuspoint-image
                                         :coordinates="'-0.5:0.5'"
                                         :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/img/zumafarm.webp',
+                            dynamicMediaImagePath: '{{ $dynamicMediaImagePath }}',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -105,16 +104,16 @@
                                 </div>
                             </div>
                         </li>
-
+                        
                         <li class="hero slides" id="hero-1">
                             <div class="slide-wrapper">
                                 <div class="asset">
                                     <div class="hero-image-container">
                                         <focuspoint-image
-                                            image-url="/assets/home7.jpg"
+                                            image-url='{{ $dynamicMediaImagePath2 }}'
                                             :coordinates="'-0.5:0.5'"
                                             :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/home7.jpg',
+                            dynamicMediaImagePath: '{{ $dynamicMediaImagePath2 }}',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',

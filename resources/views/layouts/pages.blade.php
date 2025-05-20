@@ -344,6 +344,7 @@
     @yield('content')
     <x-pages.footer></x-pages.footer>
 </div>
+<script type="text/javascript" src="https://zumapharma.uz/assets/js/main.js"></script>
 <script type="text/javascript" src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.c8339545b501e3db3abc37c9a4cc2d6e.js"></script>
 <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/vuejs/components/disclaimer-dialog.min.js"></script>
 <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/vuejs/components/confirm-dialog.min.js"></script>

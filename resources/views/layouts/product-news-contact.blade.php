@@ -385,7 +385,7 @@
                                             <a href="/" class="logo-lnk">
                                             <img src="/assets/img/logo.png" alt="logo" width="170px">
                                             </a>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -477,20 +477,10 @@
                                                     </li>
 
                                                     <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
-                                                        <a href="{{ route('company_direction')}}"
-                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.mission_values_strategy') }}')}"
-                                                        v-on:mouseover="onLinkHover('{{ __('messages.mission_values_strategy') }}')"
-                                                        v-on:click="openSubNav('{{ __('messages.mission_values_strategy') }}')"
-                                                        aria-label="{{ __('messages.mission_values_strategy') }}"
-                                                        class="cmp-navigation__item-link true">
-                                                            <span class="text hyphenate">{{ __('messages.mission_values_strategy') }}</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
-                                                        <a href="{{ route('cooperation') }}"  
-                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.partners') }}')}" 
-                                                        v-on:mouseover="onLinkHover('{{ __('messages.partners') }}')" 
-                                                        v-on:click="openSubNav('{{ __('messages.partners') }}')"  
+                                                        <a href="{{ route('cooperation') }}"
+                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.partners') }}')}"
+                                                        v-on:mouseover="onLinkHover('{{ __('messages.partners') }}')"
+                                                        v-on:click="openSubNav('{{ __('messages.partners') }}')"
                                                         aria-label="{{ __('messages.partners') }}"
                                                         class="cmp-navigation__item-link true">
                                                             <span class="text hyphenate">{{ __('messages.partners') }}</span>
@@ -562,6 +552,11 @@
                                             ><span class="text hyphenate">{{ __('messages.team') }}</span></a
                                             >
                                         </div>
+                                        <div class="">
+                                            <a href="{{ route('company_direction')}}" aria-label="Semizlik" class="item m-s-bottom animate"
+                                            ><span class="text hyphenate">{{ __('messages.mission_values_strategy') }}</span></a
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -575,7 +570,7 @@
     @yield('content')
     <x-pages.footer></x-pages.footer>
 </div>
-
+<script type="text/javascript" src="https://zumapharma.uz/assets/js/main.js"></script>
 <script type="text/javascript" src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.c8339545b501e3db3abc37c9a4cc2d6e.js"></script>
 <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/vuejs/components/disclaimer-dialog.min.js"></script>
 <script type="text/javascript" src="/etc.clientlibs/nncorp/clientlibs/vuejs/components/confirm-dialog.min.js"></script>

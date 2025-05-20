@@ -31,28 +31,24 @@
                             </div>
                         </div>
 
-                        <img style="width: 100%; height: 400px; object-fit: cover;"
-                            src="{{ asset('storage/'.$news->image) }}"
-                            alt="News Image" />
+                        <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--m--10 tb-GridColumn--xs--24">
+                            <img style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px;"
+                                 src="{{ asset('storage/'.$news->image) }}"
+                                 alt="News Image" />
+                        </div>
 
-                        <div class="tb-Grid tb-Grid--24">
-                            <div
-                                class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--offset--m--1">
-                                <div
-                                    class="frame-box tb-Grid tb-Grid--l--24 tb-Grid--m--22 frame-padding">
-
-                                    <div
-                                        class="news-content color-blue paragraph-l tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1">
-                                        <div class="section-wrapper richtext color-blue introtextsection">
-                                            <h2 class="subsubheader h2 m-m-bottom">
-                                                {{$news['title_'.$lang]}}
-                                            </h2>
-                                            <div class="content">
-                                                {!!  $news['content_'.$lang] !!}
-                                            </div>
+                        <!-- Matn (o‘ng tomonda) -->
+                        <div class="tb-GridColumn tb-GridColumn--l--14 tb-GridColumn--m--14 tb-GridColumn--xs--24">
+                            <div class="frame-box frame-padding">
+                                <div class="news-content color-blue paragraph-l">
+                                    <div class="section-wrapper richtext color-blue introtextsection">
+                                        <h2 class="subsubheader h2 m-m-bottom">
+                                            {{ $news['title_'.$lang] }}
+                                        </h2>
+                                        <div class="content">
+                                            {!! $news['content_'.$lang] !!}
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -111,6 +107,7 @@
         </div>
     </div>
 </div>
+
 <!-- Modal oynasi -->
 <style>
     .dr-form input {

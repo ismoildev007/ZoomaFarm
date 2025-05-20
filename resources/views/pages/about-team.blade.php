@@ -4,17 +4,22 @@
     <div class="root responsivegrid">
         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
             <div class="supergraphic focuspointimage image aem-GridColumn aem-GridColumn--default--12">
-                <link rel="stylesheet" href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/gradient-cover.min.css" type="text/css" /><link
+                <link rel="stylesheet"
+                      href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/gradient-cover.min.css"
+                      type="text/css"/>
+                <link
                     rel="stylesheet"
                     href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.css"
                     type="text/css"
-                /><link
+                />
+                <link
                     rel="stylesheet"
                     href="../../etc.clientlibs/nncorp/components/content/supergraphic/clientlib.min.8a33ce8cddfa7f9231da5479d3864335.css"
                     type="text/css"
                 />
 
-                <div id="supergraphic" class="super-graphic-wrapper" :class="readDetails" style="background-color: white">
+                <div id="supergraphic" class="super-graphic-wrapper" :class="readDetails"
+                     style="background-color: white">
                     <div class="box box-image tb-Grid tb-Grid--24 tb-Grid--l--24">
                         <div class="image">
                             <template v-if="isDisplayGradient">
@@ -27,10 +32,10 @@
                             </template>
 
                             <focuspoint-image
-                                :image-url="'/assets/news5.jpg'"
-                                :coordinates="'0.04:0.30'"
+                                :image-url="'/content/dam/nncorp/language-masters/uz/about-us/images/rnd-talentattraction-CMC-MDRT-PNTO-2018-5-lowres.jpeg'"
+                                :coordinates="'0.09:0.07'"
                                 :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/news5.jpg',
+                            dynamicMediaImagePath: '{{ $dynamicMediaImagePath }}',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -62,8 +67,8 @@
                                 >
                                     <div class="container">
                                         <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
-                                            <p class="tagline m-xxs-bottom" v-html="applyContentStyle('{{ __('messages.about_us') }}')"></p>
-                                            <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('{{ __('messages.who_we_are') }}')"></h1>
+                                            <p class="tagline m-xxs-bottom">{{ __('messages.about_us') }}</p>
+                                            <h1 class="title smalltitle m-xs-bottom">{{ __('messages.what_we_do') }}</h1>
 
                                             <p
                                                 class="img-des paragraph-l"
@@ -80,13 +85,14 @@
                         <div
                             ref="section-wraper"
                             class="section-wraper gutters component-padding-topAndBottom tb-GridColumn tb-GridColumn--l--24"
-                            style="background-color: white !important"
+                            style="background-color: white"
                         >
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24">
                                 <div
-                                    class="frame tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--offset--m--1 tb-GridColumn--xs--24 tb-GridColumn--offset--xs--0"
+                                    class="white tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--offset--m--1 tb-GridColumn--xs--24 tb-GridColumn--offset--xs--0"
                                 >
-                                    <div class="long-container" style="background-color: white" :style="longContainerStyleMobile">
+                                    <div class="long-container" style="background-color: white"
+                                         :style="longContainerStyleMobile">
                                         <div
                                             :class="{'p-l-top' : !isMobileSize}"
                                             class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24"
@@ -106,7 +112,7 @@
                                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex"
                                             >
                                                 <h2 class="h2 m-xxs-bottom">
-                                                    <b v-html="applyContentStyle('{{ __('messages.who_we_are') }}')"></b>
+                                                    <b v-html="applyContentStyle('<p>{{ __('messages.what_we_do') }}</p>')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
                                                     {!! $aboutTeam['about_or_company_' . $lang] !!}
@@ -120,83 +126,97 @@
                     </div>
                 </div>
 
-                <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/gradient-cover.min.js"></script>
-                <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.js"></script>
+                <script type="text/javascript"
+                        src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/gradient-cover.min.js"></script>
+                <script type="text/javascript"
+                        src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.js"></script>
                 <script
                     type="text/javascript"
                     src="../../etc.clientlibs/nncorp/components/content/supergraphic/clientlib.min.a6c04bd87d43dc3059886559ee41a1de.js"
                     async=""
                 ></script>
             </div>
-
-            
-
-            <div class="imagevideotext focuspointimage image aem-GridColumn aem-GridColumn--default--12">
-                <div>
-                    <link rel="stylesheet" href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.css" type="text/css" /><link
-                        rel="stylesheet"
-                        href="../../etc.clientlibs/nncorp/components/content/imagevideotext/clientlib.min.fb1e00ef8aa5907c5f9ed3cc77cb1ad6.css"
-                        type="text/css"
-                    />
-
-                    <div id="imagevideotext_1729012645" class="gutters ivt-wrapper component-padding-topAndBottom frameinverted" style="background-color: #e2f0fa">
-                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+            <div class="factsandfigures responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <link
+                    rel="stylesheet"
+                    href="../../etc.clientlibs/nncorp/components/content/factsandfigures/clientlibs.min.6ded5de59a917d66ec5a7b65976a0f4f.css"
+                    type="text/css"
+                />
+                <script
+                    type="text/javascript"
+                    src="../../etc.clientlibs/nncorp/components/content/factsandfigures/clientlibs.min.e6653649a9c3b222534db3d677242fe3.js"
+                    async=""
+                ></script>
+                <div
+                    class="facts-and-figure-title-grid tb-Grid tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                    <div
+                        class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--1"
+                    >
+                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
                             <div
-                                class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
+                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
                             >
                                 <div
-                                    class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 ivt-media-box ivt-media-box-video"
-                                    :style="mediaBoxContainerStyles"
+                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--s--20 tb-GridColumn--xs-20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--2 facts-and-figure-title-frame title-desktop titleframe"
                                 >
-                                    <div
-                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 ivt-media-container ivt-media-container-video"
-                                        :style="ivtMediaContainerStyles"
-                                    >
-                                        <div class="full-height" aria-label="Novo Nordisk kompaniyasidagi hayotni o‘zgartiruvchi karyera videosi.">
-                                            <div class="video" aria-label="Novo Nordisk kompaniyasidagi hayotni o‘zgartiruvchi karyera videosi.">
-                                                <div style="width: 100%; height: 0; position: relative; padding-bottom: 46.875%">
-                                                    <iframe
-                                                        src="https://video.novonordisk.com/38660205.ihtml/player.html?token=1aca84d5b490864e5e4c4086296e68e1&source=embed&photo%5fid=12592543"
-                                                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0"
-                                                        frameborder="0"
-                                                        \
-                                                        scrolling="no"
-                                                        mozallowfullscreen="1"
-                                                        webkitallowfullscreen="1"
-                                                        allowfullscreen="1"
-                                                        allow="autoplay; fullscreen"
-                                                    ></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 text-container text-container-video"
-                                    style="background-color: white"
-                                    :style="textContainerStyles"
-                                >
-                                    <div
-                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
-                                    >
-                                        <div>
-                                            <div>
-                                                <div class="columns m-m-top">
-                                                    <div class="left-column">
-                                                        <h2 class="h2 color-blue">
-                                                            <b v-html="applyContentStyle('Hayotni o‘zgartiruvchi karyeralar')"></b>
-                                                        </h2>
-                                                    </div>
-                                                    <div
-                                                        class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10"
-                                                    >
-                                                        <div>
-                                                            <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
-                                                                <h3 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h3>
+                                    <p class="tagline"></p>
 
-                                                                <div class="color-blue introtext">
-                                                                    {!! $aboutTeam['description_' . $lang] !!}
-                                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="plaintext aem-GridColumn aem-GridColumn--default--12" style="padding: -0 -0 !important">
+            <div>
+                <link
+                    rel="stylesheet"
+                    href="../../etc.clientlibs/nncorp/components/content/plaintext/clientlibs.min.05c0cb6c0e2d2ba7d5278d5246770cfe.css"
+                    type="text/css"
+                />
+                <div
+                    class="background gutters component-padding-topAndBottom white tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
+                    style="background-color: white;padding-top: 0px;"
+                >
+                    <div class="introplaintext-wrapper">
+
+                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                            <div
+                                class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--1"
+                            >
+                                <div
+                                    class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 no-frame-padding white small"
+                                    style="background-color: white;padding-top: 0px;"
+                                >
+                                    <div>
+                                        <div>
+                                            <div
+                                                class="columns tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
+
+                                                    <div class="tab-pane fade text-align-center" id="video" role="tabpanel"
+                                                         aria-labelledby="video-tab" style="margin-bottom: 50px">
+                                                        <img src="{{ $dynamicMediaImagePath3 }}" alt="" style="object-fit: cover; width: 1300px; height: 560px">
+                                                    </div>
+                                                <div
+                                                    class="left-column tb-GridColumn tb-GridColumn--l--5 tb-GridColumn--m--5 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 m-s-bottom"
+                                                >
+                                                    <h3 class="h2 color-blue text">
+                                                        <b>{{ $aboutTeam['description_title_' . $lang] ?? 'Innovatsiya va tijoriy ustunlikni birlashtirish'}}</b>
+                                                    </h3>
+                                                </div>
+                                                <div
+                                                    class="right-column color-blue paragraph-l tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--13 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--2 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--1"
+                                                >
+                                                    <div>
+                                                        <div
+                                                            class="text section-wrapper richtext color-blue introtextsection">
+                                                            <h4 class="text color-blue subsubheader h3"
+                                                                v-html="applyContentStyle('')"></h4>
+                                                            <div class="text color-blue introtext">
+                                                                {!! $aboutTeam['description_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -209,32 +229,39 @@
                         </div>
                     </div>
                 </div>
-
-                <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.js"></script>
-                <script
-                    type="text/javascript"
-                    src="../../etc.clientlibs/nncorp/components/content/imagevideotext/clientlib.min.da5b0b5591323b02f5f1722a1266d215.js"
-                    async=""
-                ></script>
             </div>
+        </div>
 
-            <div class="imagevideotext focuspointimage image aem-GridColumn aem-GridColumn--default--12">
-                <div id="imagevideotext_1980486897" class="gutters ivt-wrapper component-padding-topAndBottom color" style="background-color: #e2f0fa">
+        <div class="imagevideotext focuspointimage image aem-GridColumn aem-GridColumn--default--12">
+            <div>
+                <link rel="stylesheet"
+                      href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.css"
+                      type="text/css"/>
+                <link
+                    rel="stylesheet"
+                    href="../../etc.clientlibs/nncorp/components/content/imagevideotext/clientlib.min.fb1e00ef8aa5907c5f9ed3cc77cb1ad6.css"
+                    type="text/css"
+                />
+
+                <div id="imagevideotext" class="gutters ivt-wrapper component-padding-topAndBottom color"
+                     style="background-color: #e2f0fa">
                     <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
                         <div
                             class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
                         >
-                            <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 ivt-media-box" :style="mediaBoxContainerStyles">
+                            <div
+                                class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 ivt-media-box"
+                                :style="mediaBoxContainerStyles">
                                 <div
                                     class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 ivt-media-container ivt-media-container-image"
                                     :style="ivtMediaContainerStyles"
                                 >
                                     <div class="full-height">
                                         <focuspoint-image
-                                            :image-url="'/assets/news4.jpg'"
-                                            :coordinates="'0.13:-0.02'"
+                                            :image-url="'/content/dam/nncorp/language-masters/uz/about-us/images/Guinea - Safiatou Diallo - type 1 diabetes-lowres.jpeg'"
+                                            :coordinates="'-0.20:0.18'"
                                             :dynamic-media-info="{
-                                        dynamicMediaImagePath: '/assets/news4.jpg',
+                                        dynamicMediaImagePath: '{{ $dynamicMediaImagePath2 }}',
                                         disableDynamicMedia: false,
                                         mobileDynamicMediaWidth: '525',
                                         tabletPortraitDynamicMediaWidth: '768',
@@ -256,83 +283,39 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 text-container">
+
+
+                            <div
+                                class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 text-container"
+                                style="background-color: #e2f0fa"
+                                :style="textContainerStyles"
+                            >
+
+
                                 <div
                                     class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
                                 >
-                                    <div class="columns m-m-top">
-                                        <div class="left-column">
-                                            <h3 class="h2 color-blue">{{ $aboutTeam['description_title_' . $lang] }}</h3>
-                                        </div>
-                                        <div class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10">
-                                            <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
-                                                <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
-                                                <div class="color-blue introtext">
-                                                    {!! $aboutTeam['description_' . $lang] !!}
+                                    <div>
+                                        <div>
+                                            <div class="columns m-m-top">
+                                                <div class="left-column">
+                                                    <h3 class="h2 color-blue">
+                                                        <b>{{ $aboutTeam['content_title_' . $lang] }}</b>
+                                                    </h3>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.js"></script>
-            </div>
-
-            <div class="imagevideotext focuspointimage image aem-GridColumn aem-GridColumn--default--12">
-                <div id="imagevideotext_1926467161" class="gutters ivt-wrapper component-padding-topAndBottom color" style="background-color: #e2f0fa">
-                    <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                        <div
-                            class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
-                        >
-                            <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 ivt-media-box" :style="mediaBoxContainerStyles">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 ivt-media-container ivt-media-container-image"
-                                    :style="ivtMediaContainerStyles"
-                                >
-                                    <div class="full-height">
-                                        <focuspoint-image
-                                            :image-url="'/assets/team.jpg'"
-                                            :coordinates="'-0.03:-0.01'"
-                                            :dynamic-media-info="{
-                                        dynamicMediaImagePath: '/assets/team.jpg',
-                                        disableDynamicMedia: false,
-                                        mobileDynamicMediaWidth: '525',
-                                        tabletPortraitDynamicMediaWidth: '768',
-                                        tabletLandscapeDynamicMediaWidth: '1280',
-                                        desktopDynamicMediaWidth: '2000',
-                                        jpegQuality: '90',
-                                        urlModifiers: ''
-                                      }"
-                                            :renditions-image-info="{
-                                        typeOfRendition: '',
-                                        mobileRenditionSuffix: '.corpimgw.525.525.jpg',
-                                        tabletPortraitRenditionSuffix: '.corpimgw.768.768.jpg',
-                                        tabletLandscapeRenditionSuffix: '.corpimgw.1280.1280.jpg',
-                                        desktopRenditionSuffix: '.corpimgw.2000.2000.jpg'
-                                      }"
-                                            :has-prohibited-extension="'false'"
-                                        >
-                                        </focuspoint-image>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 text-container">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
-                                >
-                                    <div class="columns m-m-top">
-                                        <div class="left-column">
-                                            <h3 class="h2 color-blue">{{ $aboutTeam['content_title_'  . $lang] }}</h3>
-                                        </div>
-                                        <div class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10">
-                                            <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
-                                                <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
-                                                <div class="color-blue introtext">
-                                                    {!! $aboutTeam['content_' . $lang] !!}
+                                                <div
+                                                    class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10"
+                                                >
+                                                    <div>
+                                                        <div
+                                                            class="section-wrapper richtext color-blue introtextsection m-m-bottom">
+                                                            <h4 class="h3 color-blue subsubheader"
+                                                                v-html="applyContentStyle('')"></h4>
+                                                            <div class="color-blue introtext">
+                                                                {!! $aboutTeam['content_' . $lang] ?? 'Ma\'lumot mavjud emas.' !!}
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -343,6 +326,12 @@
                     </div>
                 </div>
             </div>
+
+            <script
+                type="text/javascript"
+                src="../../etc.clientlibs/nncorp/components/content/imagevideotext/clientlib.min.da5b0b5591323b02f5f1722a1266d215.js"
+                async=""
+            ></script>
         </div>
     </div>
 @endsection

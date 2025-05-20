@@ -15,7 +15,7 @@
             <div id="supergraphic" class="super-graphic-wrapper" style="background-color: white;">
                 <div class="box box-image tb-Grid tb-Grid--24 tb-Grid--l--24">
                     <div class="image"><!----> <span><div class="focuspoint-image desktop focuspoint-container"
-                                                          style="background-image: url(&quot;/assets/news5.jpg?wid=1440&amp;fit=constrain&amp;qlt=90&quot;); background-position: 52% 35%; background-size: cover;"></div>
+                                                          style="background-image: url(&quot;{{ asset($dynamicMediaImagePath) }}?wid=1440&amp;fit=constrain&amp;qlt=90&quot;); background-position: 52% 35%; background-size: cover;"></div>
                             <!----> <!----> <!----></span>
                         <div class="image-info m-xxs-top desktop">
                             <div><b class="infotext"></b></div>
@@ -101,7 +101,7 @@
                 </div>
             </section>
         </div>
-        <div class="partner-form-wrapper" style="padding: 60px 20px; background-color: #ffffff;">
+        <div class="partner-form-wrapper" id="partner-form-wrapper" style="padding: 60px 20px; background-color: #ffffff;">
             <div class="container" style="max-width: 800px; margin: auto;">
                 <h2 style="text-align: center; color: #0056a4; margin-bottom: 30px;">
                     {{ __('messages.partner_form_title') ?? 'Hamkorlik uchun murojaat' }}

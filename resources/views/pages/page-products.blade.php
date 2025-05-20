@@ -1,4 +1,4 @@
-    @extends('layouts.product-news-contact')
+@extends('layouts.product-news-contact')
 
 @section('content')
     <div class="root responsivegrid">

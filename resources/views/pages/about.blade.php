@@ -35,7 +35,7 @@
                                 :image-url="'/content/dam/nncorp/language-masters/uz/about-us/images/rnd-talentattraction-CMC-MDRT-PNTO-2018-5-lowres.jpeg'"
                                 :coordinates="'0.09:0.07'"
                                 :dynamic-media-info="{
-                            dynamicMediaImagePath: '/assets/about9.jpg',
+                            dynamicMediaImagePath: '{{ $dynamicMediaImagePath }}',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
@@ -194,7 +194,7 @@
                                     <div>
                                         <div>
                                             <div
-                                                class="columns tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
+                                                                 class="columns tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
                                                 <div class="tab-pane fade" id="video" role="tabpanel"
                                                      aria-labelledby="video-tab">
                                                     <iframe width="100%" height="600"
@@ -266,7 +266,7 @@
                                             :image-url="'/content/dam/nncorp/language-masters/uz/about-us/images/Guinea - Safiatou Diallo - type 1 diabetes-lowres.jpeg'"
                                             :coordinates="'-0.20:0.18'"
                                             :dynamic-media-info="{
-                                        dynamicMediaImagePath: '/assets/about8.jpg',
+                                        dynamicMediaImagePath: '{{ $dynamicMediaImagePath2 }}',
                                         disableDynamicMedia: false,
                                         mobileDynamicMediaWidth: '525',
                                         tabletPortraitDynamicMediaWidth: '768',

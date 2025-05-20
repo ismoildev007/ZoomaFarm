@@ -21,7 +21,7 @@
                 <div id="supergraphic" class="super-graphic-wrapper" :class="readDetails" style="background-color: #e2f0fa">
                     <div class="box box-image tb-Grid tb-Grid--24 tb-Grid--l--24">
                         <div class="image" style="width: 54%!important;">
-                        
+
                             <div class="focuspoint-image desktop focuspoint-container"
                                 style="
                                     background-image: url('{{ asset('storage/' . $product->image) }}');
@@ -29,11 +29,12 @@
                                     background-size: contain;
                                     background-repeat: no-repeat; "
                             ></div>
+
+
                             <div class="image-info m-xxs-top desktop">
                                 <div><b class="infotext"></b></div>
-                                <div>
-                                </div>
                             </div>
+
                         </div>
                         <div class="overlay gutters">
                             <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24 full-height">
@@ -48,6 +49,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div
                             ref="section-wraper"
                             class="section-wraper gutters component-padding-topAndBottom tb-GridColumn tb-GridColumn--l--24"
@@ -59,23 +61,48 @@
                                 >
                                     <div class="long-container" style="background-color: white" :style="longContainerStyleMobile">
                                         <div
-                                            :class="{'p-l-top' : !isMobileSize}"
                                             class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24"
-                                            :style="longContainerStyle"
                                         >
-                                            <div
-                                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex"
-                                            >
-                                                <h2 class="h2 m-xxs-bottom">
-                                                    <b v-html="applyContentStyle('{{ $product->{'name_' . app()->getLocale()} }}')"></b>
+                                        <!-- Slider main container -->
+                                        <!-- CSS -->
+                                        <link
+                                            rel="stylesheet"
+                                            href="/assets/css/main.css"
+                                            type="text/css"
+                                        />
+                                       
+                                        <!-- HTML -->
+                                        @if ($product->gallery)
+<div class="dr-swiper" style="margin-bottom: 50px;">
+    <button class="dr-prev">←</button>
+    <div class="dr-wrapper">
+        <div class="dr-slide-track">
+            @foreach (json_decode($product->gallery) as $image)
+            <div class="dr-slide">
+                <img src="{{ asset('storage/' . $image) }}" alt="Slide">
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <button class="dr-next">→</button>
+</div>
+@endif
+                                        
 
-                                                </h2>
-                                                <div class="long-description richtext color-blue">
-                                                    <p>
-                                                        {!!  $product['description_'.$lang]!!}
-                                                    </p>
-                                                </div>
+                                        <!-- End Slider main container -->
+
+                                        <div
+                                            class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex">
+                                            <h2 class="h2 m-xxs-bottom">
+                                                <b v-html="applyContentStyle('{{ $product->{'name_' . app()->getLocale()} }}')"></b>
+
+                                            </h2>
+                                            <div class="long-description richtext color-blue">
+                                                <p>
+                                                    {!!  $product['description_'.$lang]!!}
+                                                </p>
                                             </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -83,6 +110,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Swiper JS -->
 
                 <script
                     type="text/javascript"

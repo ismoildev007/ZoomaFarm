@@ -69,6 +69,12 @@
                     </a>
                 </li>
                 <li class="nxl-item nxl-hasmenu">
+                    <a href="{{ route('images.index') }}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-image"></i></span> <!-- Images icon -->
+                        <span class="nxl-mtext">Изображения</span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
                     <a href="{{ route('products.index') }}" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-box"></i></span> <!-- Box icon for products -->
                         <span class="nxl-mtext">Продукты</span>

@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Public papkasini yashirish va root'dan ishga tushirish
+    RewriteRule ^(.*)$ public/$1 [L]
+
+</IfModule>

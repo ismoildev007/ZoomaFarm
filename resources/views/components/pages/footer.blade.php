@@ -1,6 +1,7 @@
 <?php
 use App\Models\Contact;
 $contact = Contact::first();
+$vacancy = \App\Models\Vacancy::where('id', 7)->get();
  ?>
 <div class="footer experiencefragment">
     <div class="cmp-experiencefragment cmp-experiencefragment--xf-footer">
@@ -21,6 +22,12 @@ $contact = Contact::first();
                         <div class="list">
                             <a href="{{ route('contact') }}" class="infotext">
                                 {{ __('messages.contact_us') }} <span class="icon icon-right-arrow"></span>
+                            </a>
+                            <a href="{{ route('single.vacancy', $vacancy) }}#resumeForm" class="infotext">
+                                {{ __('messages.vacancy') }} <span class="icon icon-right-arrow"></span>
+                            </a>
+                            <a href="{{ route('cooperation') }}#partner-form-wrapper" class="infotext">
+                                {{ __('messages.cooperation') }} <span class="icon icon-right-arrow"></span>
                             </a>
                         </div>
                     </div>

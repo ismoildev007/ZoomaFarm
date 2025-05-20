@@ -16,7 +16,7 @@ class PartnerRequestController extends Controller
             'phone' => 'required|string',
             'email' => 'nullable|email',
             'message' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'inn' => 'nullable',
         ]);
 
         PartnerRequest::create($request->all());
@@ -47,7 +47,7 @@ class PartnerRequestController extends Controller
         $request = PartnerRequest::findOrFail($id);
         $request->delete();
 
-        return redirect()->route('admin.partnerRequest.index')
+        return redirect()->route('partner-requests.index')
             ->with('success', 'Заявка успешно удалена.');
     }
 

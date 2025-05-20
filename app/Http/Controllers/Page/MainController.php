@@ -12,6 +12,7 @@ use App\Models\Product;
 use App\Models\PrivacyPolicy;
 use App\Models\Vacancy;
 use App\Models\Mission;
+use App\Models\Image;
 use App\Models\Values;
 use App\Models\Strategy;
 use Illuminate\Http\Request;
@@ -29,7 +30,12 @@ class MainController extends Controller
         $latestVacancy = Vacancy::orderBy('created_at', 'desc')->take(3)->get();
         $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
         $partners = Partner::orderBy('created_at', 'desc')->take(3)->get();
-        return view('pages.home',compact('latestProducts','lang','latestVacancy','latestNews', 'partners'));
+        $homiImages = Image::all();
+        $homi1 = $homiImages->firstWhere('section', 'home_1');
+        $dynamicMediaImagePath = $homi1 ? asset('storage/' . $homi1->image_path) : '/assets/img/zumafarm.webp';
+        $homi2 = $homiImages->firstWhere('section', 'home_2');
+        $dynamicMediaImagePath2 = $homi2 ? asset('storage/' . $homi2->image_path) : '/assets/home7.jpg';
+        return view('pages.home',compact('latestProducts','lang','latestVacancy','latestNews', 'partners','dynamicMediaImagePath','dynamicMediaImagePath2'));
     }
 
     public function cooperation()
@@ -42,7 +48,10 @@ class MainController extends Controller
         $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
         $partners = Partner::orderBy('created_at', 'desc')->take(3)->get();
         $partners = Partner::orderBy('created_at', 'desc')->take(3)->get();
-        return view('pages.page-cooperation',compact('latestProducts','lang','latestVacancy','latestNews', 'partners'));
+        $cooperationImages = Image::all();
+        $cooperation1 = $cooperationImages->firstWhere('section', 'cooperation');
+        $dynamicMediaImagePath = $cooperation1 ? asset('storage/' . $cooperation1->image_path) : '/assets/news5.jpg';
+        return view('pages.page-cooperation',compact('latestProducts','lang','latestVacancy','latestNews', 'partners','dynamicMediaImagePath'));
 
 
     }
@@ -51,13 +60,25 @@ class MainController extends Controller
     {
         $lang = App::getLocale();
         $about = About::first();
-        return view('pages.about', compact('about', 'lang'));
+        $aboutImages = Image::all();
+        $about1 = $aboutImages->firstWhere('section', 'about_1');
+        $dynamicMediaImagePath = $about1 ? asset('storage/' . $about1->image_path) : '/assets/about9.jpg';
+        $about2 = $aboutImages->firstWhere('section', 'about_2');
+        $dynamicMediaImagePath2 = $about2 ? asset('storage/' . $about2->image_path) : '/assets/about8.jpg';
+        return view('pages.about', compact('about', 'lang','dynamicMediaImagePath','dynamicMediaImagePath2'));
     }
     public function aboutTeam()
     {
         $lang = App::getLocale();
         $aboutTeam  = AboutTeam::first();
-        return view('pages.about-team', compact('aboutTeam', 'lang'));
+        $aboutImages = Image::all();
+        $about1 = $aboutImages->firstWhere('section', 'about_team_1');
+        $dynamicMediaImagePath = $about1 ? asset('storage/' . $about1->image_path) : '/assets/about9.jpg';
+        $about2 = $aboutImages->firstWhere('section', 'about_team_2');
+        $about3 = $aboutImages->firstWhere('section', 'about_team_3');
+        $dynamicMediaImagePath2 = $about2 ? asset('storage/' . $about2->image_path) : '/assets/about8.jpg';
+        $dynamicMediaImagePath3 = $about3 ? asset('storage/' . $about3->image_path) : '/assets/about8.jpg';
+        return view('pages.about-team', compact('aboutTeam', 'lang', 'dynamicMediaImagePath','dynamicMediaImagePath2', 'dynamicMediaImagePath3'));
     }
 
     public function direction()
@@ -119,7 +140,10 @@ class MainController extends Controller
         $lang = App::getLocale();
         $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
         $faqs = AnswerQuestion::where('type', '=', 'vacancy')->get();
-        return view('pages.vacancy',compact('latestNews','lang','vacancies', 'faqs'));
+        $vacancyImages = Image::all();
+        $vacancy1 = $vacancyImages->firstWhere('section', 'vacancy');
+        $dynamicMediaImagePath = $vacancy1 ? asset('storage/' . $vacancy1->image_path) : '/assets/vacancyImage.jpg';
+        return view('pages.vacancy',compact('latestNews','lang','vacancies', 'faqs','dynamicMediaImagePath'));
     }
     public function singleVacancy($id)
     {
@@ -132,7 +156,10 @@ class MainController extends Controller
         $documents = Document::all();
         $lang = App::getLocale();
         $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
-        return view('pages.page-document',compact('latestNews','lang','documents'));
+        $documentsImages = Image::all();
+        $documents1 = $documentsImages->firstWhere('section', 'documents');
+        $dynamicMediaImagePath = $documents1 ? asset('storage/' . $documents1->image_path) : '/assets/vacancyImage.jpg';
+        return view('pages.page-document',compact('latestNews','lang','documents','dynamicMediaImagePath'));
     }
     public function singleDocument($id)
     {
