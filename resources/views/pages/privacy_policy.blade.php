@@ -1,6 +1,55 @@
 @extends('layouts.product-news-contact')
 
 @section('content')
+<div class="root responsivegrid">
+        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+            <div class="plaintext aem-GridColumn aem-GridColumn--default--12">
+                <div>
+                    <link rel="stylesheet"
+                          href="/etc.clientlibs/nncorp/components/content/plaintext/clientlibs.min.05c0cb6c0e2d2ba7d5278d5246770cfe.css"
+                          type="text/css"/>
+                    <script
+                        type="text/javascript"
+                        src="/etc.clientlibs/nncorp/components/content/plaintext/clientlibs.min.49e418542985e1df66dcd09169fcce86.js"
+                        async=""
+                    ></script>
+
+                    <div
+                        class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
+                        style="background-color: #e2f0fa"
+                    >
+                        <div>
+                            <div class="introplaintext-wrapper">
+                                <div class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                                    <div class="titleframe color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                                        <div class="tb-Grid tb-Grid--20 tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
+                                            <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--16 tb-GridColumn--s--18 tb-GridColumn--xs--20">
+                                                <h1 class="text plaintexttitle title color-blue smalltitle">
+                                                    {{ __('messages.privacy_policy') }}
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                                    <div class="tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--xs--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1 tb-GridColumn--offset--xs--1">
+                                        <div class="frame-box tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22 no-frame-padding color small" style="background-color: rgb(226, 240, 250)">
+                                            <div class="tb-GridColumn tb-GridColumn--l--16 tb-GridColumn--m--19 tb-GridColumn--s--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1 m-l-bottom">
+                                                <div class="text color-blue intro leadtext color right-column">
+                                                    {!! $privacyPolicies['content_' . $lang] !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="root responsivegrid">
         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
             <div class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">

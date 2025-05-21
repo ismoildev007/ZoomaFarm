@@ -66,7 +66,9 @@
                                         role="navigation"
                                         itemscope=""
                                         itemtype="http://schema.org/SiteNavigationElement"
+                                
                                     >
+                                
                                         <div id="cmp-navigation__top-bar" class="top-bar" :class="{'navigation-display': isOverflowed}">
                                             <ul class="cmp-navigation__group main-navigation">
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0 dr_menu-lang-items"
@@ -127,6 +129,16 @@
                                                     </a>
                                                 </li>
                                                 <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
+                                                    <a href="{{ route('responsibility') }}"
+                                                    :class="{dirty: navHoveredItems.includes('{{ __('messages.responsibility') }}')}"
+                                                    v-on:mouseover="onLinkHover('{{ __('messages.responsibility') }}')"
+                                                    v-on:click="openSubNav('{{ __('messages.responsibility') }}')"
+                                                    aria-label="{{ __('messages.responsibility') }}"
+                                                    class="cmp-navigation__item-link true">
+                                                        <span class="text hyphenate">{{ __('messages.responsibility') }}</span>
+                                                    </a>
+                                                </li>
+                                                <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
                                                     <a href="{{ route('vacancy') }}"
                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.vacancy') }}')}"
                                                        v-on:mouseover="onLinkHover('{{ __('messages.vacancy') }}')"
@@ -172,6 +184,7 @@
 
 
                                             </ul>
+
 
                                         </div>
 

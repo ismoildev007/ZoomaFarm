@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <form action="{{ route('documents.store') }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">
+    <form action="{{ route('responsibility.store') }}" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">
         @csrf
 
         <main class="nxl-container">
@@ -9,12 +9,12 @@
                 <div class="page-header">
                     <div class="page-header-left d-flex align-items-center">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Создать Документ</h5>
+                            <h5 class="m-b-10">Создать Ответственность</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a>Главная</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('responsibility.index') }}">Документы</a></li>
-                            <li class="breadcrumb-item">Создать Документ</li>
+                            <li class="breadcrumb-item"><a href="{{ route('responsibility.index') }}">Ответственности</a></li>
+                            <li class="breadcrumb-item">Создать Ответственность</li>
                         </ul>
                     </div>
                     <div class="page-header-right ms-auto">
@@ -37,7 +37,7 @@
                         <div class="col-lg-8">
                             <div class="card stretch">
                                 <div class="card-header">
-                                    <h5 class="card-title">Детали Документа</h5>
+                                    <h5 class="card-title">Детали Ответственности</h5>
                                 </div>
                                 <div class="card-body p-4">
                                     <ul class="nav-tab-items-wrapper nav nav-justified invoice-overview-tab-item">
@@ -55,8 +55,8 @@
                                     <div class="tab-content pt-3">
                                         <div class="tab-pane fade show active" id="uzContent">
                                             <div class="form-group pb-3">
-                                                <label for="name_uz">Имя (UZ):</label>
-                                                <input type="text" class="form-control" id="name_uz" name="name_uz" value="{{ old('name_uz') }}">
+                                                <label for="title_uz">Заголовок (UZ):</label>
+                                                <input type="text" class="form-control" id="title_uz" name="title_uz" value="{{ old('title_uz') }}">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -67,8 +67,8 @@
 
                                         <div class="tab-pane fade" id="enContent">
                                             <div class="form-group pb-3">
-                                                <label for="name_en">Имя (EN):</label>
-                                                <input type="text" class="form-control" id="name_en" name="name_en" value="{{ old('name_en') }}">
+                                                <label for="title_en">Заголовок (EN):</label>
+                                                <input type="text" class="form-control" id="title_en" name="title_en" value="{{ old('title_en') }}">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -79,8 +79,8 @@
 
                                         <div class="tab-pane fade" id="ruContent">
                                             <div class="form-group pb-3">
-                                                <label for="name_ru">Имя (RU):</label>
-                                                <input type="text" class="form-control" id="name_ru" name="name_ru" value="{{ old('name_ru') }}">
+                                                <label for="title_ru">Заголовок (RU):</label>
+                                                <input type="text" class="form-control" id="title_ru" name="title_ru" value="{{ old('title_ru') }}">
                                             </div>
 
                                             <div class="form-group pb-3">
@@ -96,27 +96,17 @@
                         <div class="col-lg-4">
                             <div class="card stretch">
                                 <div class="card-header">
-                                    <h5 class="card-title">Изображения и Дата</h5>
+                                    <h5 class="card-title">Изображение и Файл</h5>
                                 </div>
                                 <div class="card-body p-4">
                                     <div class="form-group pb-3">
-                                        <label for="image_uz">Изображение (UZ):</label>
-                                        <input type="file" class="form-control" id="image_uz" name="image_uz">
+                                        <label for="image">Изображение:</label>
+                                        <input type="file" class="form-control" id="image" name="image">
                                     </div>
 
                                     <div class="form-group pb-3">
-                                        <label for="image_en">Изображение (EN):</label>
-                                        <input type="file" class="form-control" id="image_en" name="image_en">
-                                    </div>
-
-                                    <div class="form-group pb-3">
-                                        <label for="image_ru">Изображение (RU):</label>
-                                        <input type="file" class="form-control" id="image_ru" name="image_ru">
-                                    </div>
-
-                                    <div class="form-group pb-3">
-                                        <label for="date">Дата:</label>
-                                        <input type="date" class="form-control" id="date" name="date" value="{{ old('date') }}">
+                                        <label for="attachment">Файл:</label>
+                                        <input type="file" class="form-control" id="attachment" name="attachment">
                                     </div>
                                 </div>
                             </div>

@@ -456,6 +456,16 @@
                                                         </a>
                                                     </li>
                                                     <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
+                                                        <a href="{{ route('responsibility') }}"
+                                                        :class="{dirty: navHoveredItems.includes('{{ __('messages.responsibility') }}')}"
+                                                        v-on:mouseover="onLinkHover('{{ __('messages.responsibility') }}')"
+                                                        v-on:click="openSubNav('{{ __('messages.responsibility') }}')"
+                                                        aria-label="{{ __('messages.responsibility') }}"
+                                                        class="cmp-navigation__item-link true">
+                                                            <span class="text hyphenate">{{ __('messages.responsibility') }}</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="cmp-navigation__item cmp-navigation__item--level-0" style="line-height: 34px;">
                                                         <a href="{{ route('documents') }}"
                                                         :class="{dirty: navHoveredItems.includes('{{ __('messages.documents') }}')}"
                                                         v-on:mouseover="onLinkHover('{{ __('messages.documents') }}')"

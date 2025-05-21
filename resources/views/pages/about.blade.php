@@ -194,7 +194,7 @@
                                     <div>
                                         <div>
                                             <div
-                                                                 class="columns tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
+                                                class="columns tb-Grid tb-Grid--l--24 tb-Grid--m--22 tb-Grid--s--22 tb-Grid--xs--22">
                                                 <div class="tab-pane fade" id="video" role="tabpanel"
                                                      aria-labelledby="video-tab">
                                                     <iframe width="100%" height="600"

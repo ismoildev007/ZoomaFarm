@@ -1,4 +1,3 @@
-
 <style>
     #careersearch .career-search-content {
         position: relative;
@@ -51,6 +50,7 @@
 </style>
 
 @extends('layouts.pages')
+
 @section('content')
     <div class="root responsivegrid">
         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
@@ -105,12 +105,12 @@
                             <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
                                 <div class="top-info m-s-bottom tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
                                     <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--16 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
-                                        <h1 class="h1-s m-xxs-bottom">{{ __('messages.certificates') }}</h1>
+                                        <h1 class="h1-s m-xxs-bottom">{{ __('messages.responsibility_title') }}</h1>
                                     </div>
                                     <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--s--16 tb-GridColumn--xs--20 tb-GridColumn--offset--l--0">
                                         <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
                                             <div class="leadtext description richtext color-white">
-                                                {{ __('messages.certificat_description') }}<br />
+                                                {{ __('messages.responsibility_description') }}<br />
                                             </div>
                                         </div>
                                     </div>
@@ -132,52 +132,89 @@
                 ></script>
             </div>
 
+            <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <link
+                    rel="stylesheet"
+                    href="../../etc.clientlibs/nncorp/components/content/layoutcontainergrid/clientlibs.min.8e68a20a5b5ff888db6d5b26377b9644.css"
+                    type="text/css"
+                />
+
+                <div class="layout-container-grid">
+                    <div class="gutters component-padding-none white shift outer-container" style="background-color: white">
+                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
+                            <div
+                                class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                style="background-color: white"
+                            >
+                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
+                                    <div
+                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                    >
+                                        <div class="rowcontainer">
+                                            <div class="contentgrid_row">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- sdsdsd -->
             <div class="plaintext aem-GridColumn aem-GridColumn--default--12" style="margin-top: 7rem;">
-                <div class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24" style="background-color: #ffffff;">
-                    <div class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                        <div class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2"></div>
+                <div
+                    class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
+                    style="background-color: #ffffff;"
+                >
+                    <div
+                        class="titlegrid tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                        <div
+                            class="color small tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2">
+                            <h2 class="text plaintexttitle title color-blue smalltitle">{{ __('messages.responsibility_projects') }} </h2>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
                 <div class="layout-container-grid">
-                    <div class="gutters component-padding-bottom color outer-container" style="background-color: #ffffff;">
+                    <div class="gutters component-padding-bottom color outer-container"
+                         style="background-color: #ffffff;">
                         <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
-                            <div class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1" style="background-color: #ffffff;">
+                            <div
+                                class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                style="background-color: #ffffff;"
+                            >
                                 <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
-                                    <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1">
+                                    <div
+                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                    >
                                         <div class="rowcontainer">
                                             <div class="contentgrid_row" style="display: grid; grid-template-columns: auto auto auto;">
-                                                @foreach ($documents as $document)
+                                                @foreach ($responsibilities as $vacancy)
                                                     <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
                                                         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
                                                             <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
                                                                 <div>
-                                                                    <a href="{{ route('single.document', $document->id) }}" aria-label="{{ $document->{'name_' . $lang} }}">
+                                                                    <a href="{{ route('single.responsibility', $vacancy->id) }}" aria-label="{{ $vacancy->{'title_' . $lang} }}">
                                                                         <div class="image-video-wrapper">
                                                                             <div class="image-video-content-wrapper m-xs-bottom">
                                                                                 <picture>
-                                                                                    <img src="{{ asset('storage/' . $document['image_' . $lang]) }}" alt="{{ $document->{'name_' . $lang} }}" loading="eager" style="width: 400px"/>
+                                                                                    <img src="{{ asset('storage/' . $vacancy->image) }}"
+                                                                                         alt="{{ $vacancy->{'title_' . $lang} }}"
+                                                                                         loading="eager" />
                                                                                 </picture>
-                                                                            </div>
-                                                                            @php
-                                                                                $date = \Carbon\Carbon::parse($document->date);
-                                                                                $month = __('messages.months')[$date->month];
-                                                                                $year = __('messages.year');
-                                                                            @endphp
-                                                                            <div class="datetime">
-                                                                                <p id="news_time" class="paragraph-s color-blue">
-                                                                                    {{ $date->year }} {{ $year }} {{ $date->day }} {{ $month }}
-                                                                                </p>
                                                                             </div>
                                                                             <div class="right-arrow-animation">
                                                                                 <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
-                                                                                    {{ $document->{'name_' . $lang} }}
+                                                                                    {{ $vacancy->{'title_' . $lang} }}
                                                                                 </h3>
                                                                                 <div class="link m-xs-top">
-                                                                                    <a href="{{ route('single.document', $document->id) }}" target="_self" class="color-blue link-label paragraph-s">
+                                                                                    <a href="{{ route('single.responsibility', $vacancy->id) }}" target="_self"
+                                                                                       class="color-blue link-label paragraph-s">
                                                                                         <span class="icon icon-right-arrow"></span>
                                                                                     </a>
                                                                                 </div>
@@ -191,6 +228,7 @@
                                                 @endforeach
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -213,76 +251,62 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="background gutters component-padding-topAndBottom color tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24"
-                style="background-color: #e2f0fa"
-            >
-                <div class="custom-row">
-                    @foreach ($latestNews as $item)
-                        <div class="custom-col">
-                            <a href="{{ route('single.news', $item->id) }}" class="image-link" aria-label="{{ $item->{'name_' . app()->getLocale()} }}">
-                                <img src="{{ asset('storage/' . $item->image) }}"
-                                     class="custom-img"
-                                     alt="{{ $item->{'name_' . app()->getLocale()} }}">
-                            </a>
-                            <div class="custom-card-body">
-                                <h5 class="custom-title">
-                                    {{ Str::limit($item->{'title_' . app()->getLocale()}, 35) }}
-                                </h5>
+            <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <div class="layout-container-grid">
+                    <div class="gutters component-padding-bottom color outer-container"
+                         style="background-color: rgb(226, 240, 250)">
+                        <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24">
+                            <div
+                                class="frame-padding tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--none tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                style="background-color: rgb(226, 240, 250)"
+                            >
+                                <div class="tb-Grid tb-Grid--24 tb-Grid--l--22 tb-Grid--m--24 tb-Grid--s--24">
+                                    <div
+                                        class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--22 tb-GridColumn--s--22 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--s--1"
+                                    >
+                                        <div class="rowcontainer">
+                                            <div class="contentgrid_row">
+                                                @foreach ($latestNews as $item)
+                                                    <div class="columns-3 column has-content-true column-0 top_align contentgrid_column">
+                                                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                                                            <div class="image-video image aem-GridColumn aem-GridColumn--default--12">
+                                                                <div>
+                                                                    <a href="{{ route('single.news', $item->id) }}" aria-label="{{ $item->{'name_' . app()->getLocale()} }}">
+                                                                        <div class="image-video-wrapper">
+                                                                            <div class="image-video-content-wrapper m-xs-bottom">
+                                                                                <picture>
+                                                                                    <img src="{{ asset('storage/' . $item->image) }}"
+                                                                                         alt="{{ $item->{'name_' . app()->getLocale()} }}"
+                                                                                         loading="eager" />
+                                                                                </picture>
+                                                                            </div>
+                                                                            <div class="right-arrow-animation">
+                                                                                <h3 class="color-blue subtext subheadline paragraph-s rtl-text">
+                                                                                    {{ Str::limit($item    ->{'title_' . app()->getLocale()}, 35) }}
+                                                                                </h3>
+                                                                                <div class="link m-xs-top">
+                                                                                    <a href="{{ route('single.news', $item->id) }}" target="_self"
+                                                                                       class="color-blue link-label paragraph-s">
+                                                                                        <span class="icon icon-right-arrow"></span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    @endforeach
+                    </div>
                 </div>
-                <style>
-                    .custom-row {
-                        display: flex;
-                        flex-wrap: wrap;
-                        margin: -10px;
-                    }
-
-                    .custom-col {
-                        width: 100%;
-                        padding: 10px;
-                        box-sizing: border-box;
-                    }
-
-                    .custom-img {
-                        width: 100%;
-                        height: auto;
-                        display: block;
-                        border-radius: 8px;
-                    }
-
-                    .custom-card-body {
-                        margin-top: 10px;
-                    }
-
-                    .custom-title {
-                        font-size: 18px;
-                        color: #000; /* Bootstrapdagi 'text-primary' ga o‘xshash */
-                        font-weight: 600;
-                    }
-
-                    .image-link {
-                        display: block;
-                        text-decoration: none;
-                    }
-
-                    /* Medium ekranlar uchun 2 ustun */
-                    @media (min-width: 768px) {
-                        .custom-col {
-                            width: 50%;
-                        }
-                    }
-
-                    /* Katta ekranlar uchun 3 ustun */
-                    @media (min-width: 992px) {
-                        .custom-col {
-                            width: 50%;
-                        }
-                    }
-
-                </style>
             </div>
         </div>
     </div>

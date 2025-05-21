@@ -6,6 +6,8 @@ return array (
   'about' => 'About Us',
   'visit_site' => 'Visit Website',
   'send_resume' => 'Submit resume',
+  'certificates' => 'Certificates',
+  'certificat_description' => 'Our certificates validate your skills and knowledge. They comply with international standards and support your professional growth.',
   'email_vacansy' => 'Email',
   'resume' => 'Resume (PDF or Word)',
   'motivational' => 'Motivational letter (optional)',
@@ -28,7 +30,7 @@ return array (
   'promoting_changes_description' => NULL,
   'what_we_do' => 'ABOUT THE COMPANY',
   'medicines' => 'Medicines',
-  'insulin_description' => NULL,
+  'insulin_description' => 'Sog‘lom hayot sari ishonchli qadam – ZUMA PHARMA mahsulotlari bilan! Biz sifat, ishonch va samaradorlikni birlashtiramiz.',
   'career' => 'Career',
   'cooperation' => 'Cooperation',
   'cooperation_text' => 'ZUMA-PHARMA is open for full cooperation. We are advocates of joining forces to achieve common goals. We invite interested parties to collaborate with ZUMA-PHARMA.',
@@ -72,7 +74,7 @@ return array (
         Explore our wide range of disposable pre-filled pens,
         durable pens with replaceable insulin cartridges, and smart connected pens for
         diabetes treatment.',
-  'diabetes' => NULL,
+  'diabetes' => 'Eksport va mahalliy savdo',
   'insulin_pens' => 'Insulin Pens',
   'insulin_pens_desc' => 'See the selection of available insulin pens below. Go to the pen you are interested in and learn how to use an insulin pen to take diabetes medication.',
   'info' => 'Information',
@@ -90,7 +92,7 @@ return array (
   'your_message' => 'Your Message',
   'send' => 'Send',
   'year' => 'year',
-  'months' =>
+  'months' => 
   array (
     1 => 'January',
     2 => 'February',
@@ -105,19 +107,20 @@ return array (
     11 => 'November',
     12 => 'December',
   ),
-    'partner_form_title' => 'Submit a request for partnership',
-
-    'placeholder_company_name' => 'Company name *',
-    'placeholder_contact_person' => 'Contact person *',
-    'placeholder_phone' => 'Phone number *',
-    'placeholder_email' => 'Email (optional)',
-    'placeholder_message' => 'Message (optional)',
-    'placeholder_image' => 'Upload image (optional)',
-
-    'inn' => 'Inn',
-
-    'our_partners_tagline' => 'Our Partners',
-    'our_partners_title' => 'Trusted partners',
-    'our_partners_description' => 'ZUMA PHARMA develops long-term partnerships with top-tier companies. Their trust and experience mean a lot to us.',
-
+  'partner_form_title' => 'Submit a request for partnership',
+  'placeholder_company_name' => 'Company name *',
+  'placeholder_contact_person' => 'Contact person *',
+  'placeholder_phone' => 'Phone number *',
+  'placeholder_email' => 'Email (optional)',
+  'placeholder_message' => 'Message (optional)',
+  'placeholder_image' => 'Upload image (optional)',
+  'inn' => 'Inn',
+  'our_partners_tagline' => 'Our Partners',
+  'our_partners_title' => 'Trusted partners',
+  'order_success' => 'Your request has been successfully submitted!',
+  'our_partners_description' => 'ZUMA PHARMA develops long-term partnerships with top-tier companies. Their trust and experience mean a lot to us.',
+  'responsibility' => 'Social and environmental responsibility',
+  'responsibility_title' => 'Social and environmental responsibility',
+  'responsibility_description' => 'Our company considers social and environmental responsibility to be one of its priorities.We always support initiatives aimed at the well-being of society and the protection of the environment.',
+  'responsibility_projects' => 'Our social and environmental projects',
 );

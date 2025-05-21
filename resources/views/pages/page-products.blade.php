@@ -65,9 +65,6 @@
                     </div>
                 </div>
             </div>
-
-
-
             <div class="layoutcontainergrid responsivegrid aem-GridColumn aem-GridColumn--default--12">
                 <link
                     rel="stylesheet"

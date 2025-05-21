@@ -10,6 +10,7 @@ use App\Models\Partner;
 use App\Models\Document;
 use App\Models\Product;
 use App\Models\PrivacyPolicy;
+use App\Models\Responsibility;
 use App\Models\Vacancy;
 use App\Models\Mission;
 use App\Models\Image;
@@ -106,11 +107,28 @@ class MainController extends Controller
         return view('pages.page-news', compact('newsLatest1', 'newsLatest3', 'news'));
     }
 
-
     public function singleNews($id)
     {
         $news = News::where('id', $id)->firstOrFail();
         return view('pages.single-news', compact('news'));
+    }
+    public function responsibility()
+    {
+        $responsibilities = Responsibility::all();
+        $lang = App::getLocale();
+        $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
+        $faqs = AnswerQuestion::where('type', '=', 'vacancy')->get();
+        $responsibilityImages = Image::all();
+        $responsibility1 = $responsibilityImages->firstWhere('section', 'responsibility');
+        $dynamicMediaImagePath = $responsibility1 ? asset('storage/' . $responsibility1->image_path) : '/assets/vacancyImage.jpg';
+
+        return view('pages.page-responsibility', compact('responsibilities', 'lang', 'latestNews', 'faqs', 'dynamicMediaImagePath'));
+    }
+
+    public function singleResponsibility($id)
+    {
+        $news = Responsibility::where('id', $id)->firstOrFail();
+        return view('pages.single-responsibility', compact('news'));
     }
 
     public function products()
@@ -137,13 +155,14 @@ class MainController extends Controller
     public function vacancy()
     {
         $vacancies = Vacancy::all();
+        $documents = Document::all();
         $lang = App::getLocale();
         $latestNews = News::orderBy('created_at', 'desc')->take(3)->get();
         $faqs = AnswerQuestion::where('type', '=', 'vacancy')->get();
         $vacancyImages = Image::all();
         $vacancy1 = $vacancyImages->firstWhere('section', 'vacancy');
         $dynamicMediaImagePath = $vacancy1 ? asset('storage/' . $vacancy1->image_path) : '/assets/vacancyImage.jpg';
-        return view('pages.vacancy',compact('latestNews','lang','vacancies', 'faqs','dynamicMediaImagePath'));
+        return view('pages.vacancy',compact('latestNews','lang','vacancies', 'faqs','documents','dynamicMediaImagePath'));
     }
     public function singleVacancy($id)
     {

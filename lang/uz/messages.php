@@ -6,12 +6,18 @@ return array (
   'documents' => 'Hujjatlar',
   'send_resume' => 'Rezume yuborish',
   'email_vacansy' => 'Elektron pochta',
+  'certificates' => 'Sertifikatlar',
+  'certificat_description' => 'Bizning sertifikatlarimiz sizning malakangiz va bilimlaringizni tasdiqlaydi. Ular xalqaro standartlarga mos kelib, professional rivojlanishingizga yordam beradi.',
   'resume' => 'Rezyume (PDF yoki Word)',
   'motivational' => 'Motivatsion xat (ixtiyoriy)',
   'products' => 'Mahsulotlar',
   'vacancy' => 'Karyera',
   'mission_values_strategy' => 'Kompaniya yo‘nalishi',
   'partners' => 'Hamkorlar',
+  'responsibility' => 'Barqarorlik',
+  'responsibility_title' => 'Ijtimoiy va ekologik',
+  'responsibility_projects' => 'Ijtimoiy va ekologik loyihalarimiz',
+  'responsibility_description' => 'Kompaniyamiz ijtimoiy va ekologik mas\'uliyatni o\'zining ustuvor yo\'nalishlaridan biri deb biladi. Biz har doim jamiyat manfaati va atrof-muhitni muhofaza qilishga qaratilgan tashabbuslarni qo\'llab-quvvatlaymiz.',
   'news' => 'Yangiliklar',
   'contact' => 'Kontaktlar',
   'about' => 'Biz haqimizda',
@@ -28,7 +34,7 @@ return array (
   'promoting_changes_description' => 'Kuchlarni birlashtirgan holda, sifatli dorilarni ishlab chiqarish orqali insonlar hayotini uzaytirish',
   'what_we_do' => 'Kompaniyaga kirish',
   'medicines' => 'Bizning mahsulotlarimiz',
-  'insulin_description' => NULL,
+  'insulin_description' => 'Sog‘lom hayot sari ishonchli qadam – ZUMA PHARMA mahsulotlari bilan! Biz sifat, ishonch va samaradorlikni birlashtiramiz.',
   'career' => 'Jamoamiz bo\'ling',
   'cooperation' => 'Hamkorlik',
   'cooperation_text' => 'ZUMA-PHARMA to\'liq hamkorlik uchun ochiq. Biz umumiy maqsadlarga erishish uchun kuchlarni birlashtirish tarafdorimiz. Biz manfaatdor tomonlarni ZUMA-PHARMA kompaniyasi bilan hamkorlikka taklif qilamiz.',
@@ -74,7 +80,7 @@ Asosiy yo‘nalishlar:
 – Energiyani tiklovchi vositalar (fosfokreatin)
 – Gematologik preparatlar (eritropoetin)
 – Metabolik terapiya vositalari (levokarnitin, arginin)',
-  'diabetes' => NULL,
+  'diabetes' => 'Eksport va mahalliy savdo',
   'insulin_pens' => 'Eksport va ichki bozor balansi',
   'insulin_pens_desc' => 'Mahsulotlarimiz ichki bozorga hamda eksportga yo‘naltiriladi. Ishlab chiqarish jarayoni tajribali mutaxassislar, xalqaro ekspertlar va ilg‘or texnologiyalar bilan amalga oshiriladi. Har bir preparat qat’iy sifat nazorati ostida ishlab chiqiladi va hamkorlarimizga ishonchli va barqaror ta\'minot kafolatlanadi',
   'info' => 'Ma`lumotlar',
@@ -92,7 +98,7 @@ Asosiy yo‘nalishlar:
   'your_message' => 'Sizning xabaringiz',
   'send' => 'Yuborish',
   'year' => 'Yil',
-  'months' =>
+  'months' => 
   array (
     1 => 'yanvar',
     2 => 'fevral',
@@ -107,19 +113,15 @@ Asosiy yo‘nalishlar:
     11 => 'noyabr',
     12 => 'dekabr',
   ),
-
-    'partner_form_title' => 'Hamkorlik uchun murojaat qoldiring',
-
-    'placeholder_company_name' => 'Kompaniya nomi *',
-    'placeholder_contact_person' => 'Aloqa uchun shaxs *',
-    'placeholder_phone' => 'Telefon raqam *',
-    'placeholder_email' => 'Email (ixtiyoriy)',
-    'placeholder_message' => 'Xabar (ixtiyoriy)',
-    'inn' => 'Inn',
-
-    'our_partners_tagline' => 'Bizning hamkorlar',
-    'our_partners_title' => 'Ishonchli hamkorlar',
-    'our_partners_description' => 'ZUMA PHARMA bir nechta nufuzli kompaniyalar bilan uzoq muddatli hamkorlik aloqalarini rivojlantirmoqda. Ularning tajribasi va ishonchi biz uchun katta ahamiyatga ega.',
-
-
+  'partner_form_title' => 'Hamkorlik uchun murojaat qoldiring',
+  'placeholder_company_name' => 'Kompaniya nomi *',
+  'placeholder_contact_person' => 'Aloqa uchun shaxs *',
+  'placeholder_phone' => 'Telefon raqam *',
+  'placeholder_email' => 'Email (ixtiyoriy)',
+  'placeholder_message' => 'Xabar (ixtiyoriy)',
+  'inn' => 'Inn',
+  'our_partners_tagline' => 'Bizning hamkorlar',
+  'order_success' => 'Zayafka muvaffaqiyatli qabul qilindi!',
+  'our_partners_title' => 'Ishonchli hamkorlar',
+  'our_partners_description' => 'ZUMA PHARMA bir nechta nufuzli kompaniyalar bilan uzoq muddatli hamkorlik aloqalarini rivojlantirmoqda. Ularning tajribasi va ishonchi biz uchun katta ahamiyatga ega.',
 );

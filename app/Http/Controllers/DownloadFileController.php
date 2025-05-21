@@ -63,7 +63,6 @@ class DownloadFileController extends Controller
             $file = DownloadFile::findOrFail($id);
 
             $filePath = storage_path('app/public/pdf/' . $file->file_name);
-            
             if (file_exists($filePath)) {
                 return response()->download($filePath, $file->file_name);
             } else {

@@ -62,6 +62,14 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{ route('responsibility.index') }}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-globe"></i></span> <!-- Box icon for products -->
+                        <span class="nxl-mtext">Ответственность</span>
+                    </a>
+                </li>
+
                 <li class="nxl-item nxl-hasmenu">
                     <a href="{{ route('news.index') }}" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-globe"></i></span> <!-- News icon -->

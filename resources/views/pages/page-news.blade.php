@@ -163,7 +163,6 @@ $lang = app()->getLocale();
                                                             </div>
                                                         @endforeach
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>

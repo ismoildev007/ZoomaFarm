@@ -278,6 +278,16 @@
     .nncorp-navigation .cmp-navigation {
         width: 210px;
     }
+    .nncorp-navigation .cmp-navigation::before {
+        content: "";
+        left: 0;
+        top: -30px;
+        position: absolute;
+        width: 240px !important;
+        height: 100vh;
+        z-index: 7;
+        box-sizing: border-box;
+    }
     /* Modalning asosiy uslubi */
     .modals {
         display: none;

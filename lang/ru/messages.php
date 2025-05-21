@@ -6,6 +6,8 @@ return array (
   'visit_site' => 'Перейти на сайт',
   'email_vacansy' => 'Электронная почта',
   'phone_vacancy' => 'Ваш номер телефона',
+  'certificat_description' => 'Наши сертификаты подтверждают ваши навыки и знания. Они соответствуют международным стандартам и помогают вашему профессиональному развитию.',
+  'certificates' => 'Сертификаты',
   'resume' => 'Резюме (PDF или Word)',
   'motivational' => 'Мотивационное письмо (по желанию)',
   'mission_values_strategy' => 'Направление компании',
@@ -28,7 +30,7 @@ return array (
   'promoting_changes_description' => NULL,
   'what_we_do' => 'О КОМПАНИИ',
   'medicines' => 'Лекарства',
-  'insulin_description' => NULL,
+  'insulin_description' => 'Sog‘lom hayot sari ishonchli qadam – ZUMA PHARMA mahsulotlari bilan! Biz sifat, ishonch va samaradorlikni birlashtiramiz.',
   'career' => 'Карьера',
   'cooperation' => 'Сотрудничество',
   'cooperation_text' => 'ZUMA-PHARMA открыта для полного сотрудничества. Мы поддерживаем объединение усилий для достижения общих целей. Мы приглашаем заинтересованные стороны к сотрудничеству с компанией ZUMA-PHARMA.',
@@ -72,7 +74,7 @@ return array (
         Ознакомьтесь с нашим широким ассортиментом одноразовых предварительно заполненных ручек,
         прочных ручек с заменяемыми инсулиновыми картриджами и умных подключенных ручек
         для лечения диабета.',
-  'diabetes' => NULL,
+  'diabetes' => 'Eksport va mahalliy savdo',
   'insulin_pens' => 'Инсулиновые ручки',
   'insulin_pens_desc' => 'Посмотрите ассортимент инсулиновых ручек ниже. Перейдите к ручке, которая вас интересует, и узнайте, как использовать инсулиновую ручку для приема противодиабетических препаратов.',
   'info' => 'Информация',
@@ -90,7 +92,7 @@ return array (
   'your_message' => 'Ваше сообщение',
   'send' => 'Отправить',
   'year' => 'год',
-  'months' =>
+  'months' => 
   array (
     1 => 'январь',
     2 => 'февраль',
@@ -105,21 +107,20 @@ return array (
     11 => 'ноябрь',
     12 => 'декабрь',
   ),
-
-    'partner_form_title' => 'Оставьте заявку на сотрудничество',
-
-
-    'placeholder_company_name' => 'Название компании *',
-    'placeholder_contact_person' => 'Контактное лицо *',
-    'placeholder_phone' => 'Номер телефона *',
-    'placeholder_email' => 'Эл. почта (необязательно)',
-    'placeholder_message' => 'Сообщение (необязательно)',
-    'placeholder_image' => 'Загрузить изображение (необязательно)',
-
-    'inn' => 'Инн',
-
-    'our_partners_tagline' => 'Наши партнёры',
-    'our_partners_title' => 'Надёжные партнёры',
-    'our_partners_description' => 'ZUMA PHARMA развивает долгосрочные партнёрские отношения с ведущими компаниями. Их доверие и опыт имеют для нас большое значение.',
-
+  'partner_form_title' => 'Оставьте заявку на сотрудничество',
+  'placeholder_company_name' => 'Название компании *',
+  'placeholder_contact_person' => 'Контактное лицо *',
+  'placeholder_phone' => 'Номер телефона *',
+  'placeholder_email' => 'Эл. почта (необязательно)',
+  'placeholder_message' => 'Сообщение (необязательно)',
+  'placeholder_image' => 'Загрузить изображение (необязательно)',
+  'inn' => 'Инн',
+  'our_partners_tagline' => 'Наши партнёры',
+  'our_partners_title' => 'Надёжные партнёры',
+  'order_success' => 'Заявка успешно принята!',
+  'our_partners_description' => 'ZUMA PHARMA развивает долгосрочные партнёрские отношения с ведущими компаниями. Их доверие и опыт имеют для нас большое значение.',
+  'responsibility' => 'Социальная и экологическая ответственность',
+  'responsibility_title' => 'Социальная и экологическая ответственность',
+  'responsibility_description' => 'Наша компания считает социальную и экологическую ответственность одним из своих приоритетов.Мы всегда поддерживаем инициативы, направленные на благо общества и защиту окружающей среды.',
+  'responsibility_projects' => 'Наши социальные и экологические проекты',
 );

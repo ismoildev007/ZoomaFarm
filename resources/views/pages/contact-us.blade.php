@@ -4,6 +4,7 @@
     <div class="root responsivegrid">
         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
             <div class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
                 <link rel="stylesheet" href="../etc.clientlibs/nncorp/clientlibs/vuejs/components/loading-indicator.min.css" type="text/css" />
                 <link rel="stylesheet" href="../etc.clientlibs/nncorp/clientlibs/vuejs/components/loading-button.min.css" type="text/css" />
                 <link
@@ -206,26 +207,37 @@
                                             <span class="infotext error-mgs" v-if="$v.model['message'].maxLength === false"></span>
                                         </div>
                                     </div>
-
-
-
                                     <div class="form-button button tb-GridColumn">
                                         <link
                                             rel="stylesheet"
                                             href="../etc.clientlibs/nncorp/components/content/form/form-button/clientlibs.min.018dcb5a50472b99b1583d3575ad899c.css"
                                             type="text/css"
                                         />
-
                                         <div class="form-button">
                                             <button class="custom-button" type="s">{{ __('messages.send') }}</button>
                                         </div>
-
                                     </div>
+                                    @if(session('success'))
+                                        <script>
+                                            toastr.options = {
+                                                "closeButton": true,
+                                                "progressBar": true,
+                                                "positionClass": "toast-top-right", // yuqori o‘ngda chiqadi
+                                                "timeOut": "5000"
+                                            };
+                                            toastr.success("{{ session('success') }}");
+                                        </script>
+                                    @endif
+
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 
                 <script src="../etc.clientlibs/nncorp/clientlibs/vuejs/services/base-http.min.0977b3d22d6ef3c04a2b1fc94d6581bc.js"></script>
                 <script src="../etc.clientlibs/nncorp/clientlibs/vuejs/components/loading-indicator.min.js"></script>

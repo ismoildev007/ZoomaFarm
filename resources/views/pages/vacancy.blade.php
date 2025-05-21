@@ -1,3 +1,54 @@
+<style>
+#careersearch .career-search-content {
+    position: relative;
+    min-height: 100%;
+    z-index: 1;
+}
+
+#careersearch .career-search-content .top-info {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    width: auto;
+    animation: slideUpFromBottom 1s ease-out 0.5s forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+#careersearch .career-search-content .tb-GridColumn--l--20 {
+    position: static;
+}
+
+#careersearch .career-search-content .leadtext.description.richtext.color-white {
+    margin: 0;
+    padding: 10px;
+}
+
+#careersearch .gradient-cover {
+    z-index: 0;
+}
+
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #careersearch .career-search-content .top-info {
+        bottom: 10px;
+        right: 10px;
+        font-size: 14px;
+    }
+}
+</style>
+
 @extends('layouts.pages')
 
 @section('content')
@@ -64,7 +115,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
