@@ -103,11 +103,6 @@
                                         <label for="image">Изображение:</label>
                                         <input type="file" class="form-control" id="image" name="image">
                                     </div>
-
-                                    <div class="form-group pb-3">
-                                        <label for="attachment">Файл:</label>
-                                        <input type="file" class="form-control" id="attachment" name="attachment">
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -16,7 +16,7 @@ return array (
   'partners' => 'Hamkorlar',
   'responsibility' => 'Barqarorlik',
   'responsibility_title' => 'Ijtimoiy va ekologik',
-  'responsibility_projects' => 'Ijtimoiy va ekologik loyihalarimiz',
+  'responsibility_projects' => 'Ijtimoiy va ekologik loyihalarimiz jnjijij',
   'responsibility_description' => 'Kompaniyamiz ijtimoiy va ekologik mas\'uliyatni o\'zining ustuvor yo\'nalishlaridan biri deb biladi. Biz har doim jamiyat manfaati va atrof-muhitni muhofaza qilishga qaratilgan tashabbuslarni qo\'llab-quvvatlaymiz.',
   'news' => 'Yangiliklar',
   'contact' => 'Kontaktlar',
@@ -32,7 +32,7 @@ return array (
   'selected_stories' => 'Tanlangan hikoyalar',
   'promoting_changes' => 'Oliy maqsad',
   'promoting_changes_description' => 'Kuchlarni birlashtirgan holda, sifatli dorilarni ishlab chiqarish orqali insonlar hayotini uzaytirish',
-  'what_we_do' => 'Kompaniyaga kirish',
+  'what_we_do' => 'Rahbariyat va boshqaruv',
   'medicines' => 'Bizning mahsulotlarimiz',
   'insulin_description' => 'Sog‘lom hayot sari ishonchli qadam – ZUMA PHARMA mahsulotlari bilan! Biz sifat, ishonch va samaradorlikni birlashtiramiz.',
   'career' => 'Jamoamiz bo\'ling',
@@ -57,6 +57,8 @@ return array (
   'read_more_text' => 'Ko\'proq o\'qish',
   'about_us' => 'Jamoa a\'zolari',
   'who_we_are' => 'Rahbariyat va boshqaruv',
+    'about_team_us' => 'Jamoa a\'zolari',
+  'what_we_do_team' => 'Rahbariyat va boshqaruv',
   'facts_and_figures' => 'Faktlar va raqamlar',
   'production_sites' => 'mamlakatdagi 16 ta ishlab chiqarish nuqtalari (Jazoir, Braziliya, Xitoy, Daniya, Fransiya, Yaponiya, Rossiya, Buyuk Britaniya va AQSh)',
   'research_centers' => 'mamlakatdagi 10 ta tadqiqot va ishlab chiqish markazlari (Xitoy, Daniya, Hindiston, Buyuk Britaniya va AQSh)',
@@ -98,7 +100,7 @@ Asosiy yo‘nalishlar:
   'your_message' => 'Sizning xabaringiz',
   'send' => 'Yuborish',
   'year' => 'Yil',
-  'months' => 
+  'months' =>
   array (
     1 => 'yanvar',
     2 => 'fevral',

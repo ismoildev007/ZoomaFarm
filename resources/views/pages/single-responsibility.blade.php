@@ -32,7 +32,7 @@ $lang = app()->getLocale();
                             </div>
 
                             <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--m--10 tb-GridColumn--xs--24">
-                                <img style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px;"
+                                <img style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;"
                                      src="{{ asset('storage/'.$news->image) }}"
                                      alt="News Image" />
                             </div>
@@ -46,7 +46,7 @@ $lang = app()->getLocale();
                                                 {{ $news['title_'.$lang] }}
                                             </h2>
                                             <div class="content">
-                                                {!! $news['content_'.$lang] !!}
+                                                {!! $news['description_'.$lang] !!}
                                             </div>
                                         </div>
                                     </div>
@@ -72,9 +72,9 @@ $lang = app()->getLocale();
             border: none;
         }
     </style>
-    <!-- Bootstrap JS (agar layout faylda mavjud bo'lmasa, pastga qo'yiladi) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{{--    <!-- Bootstrap JS (agar layout faylda mavjud bo'lmasa, pastga qo'yiladi) -->--}}
+{{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">--}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>--}}
 
     <!-- AJAX Submit -->
     <script>

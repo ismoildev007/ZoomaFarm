@@ -68,7 +68,7 @@
                                     <div class="container">
                                         <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
                                             <p class="tagline m-xxs-bottom">{{ __('messages.about_us') }}</p>
-                                            <h1 class="title smalltitle m-xs-bottom">{{ __('messages.what_we_do') }}</h1>
+                                            <h1 class="title smalltitle m-xs-bottom">{{ __('messages.who_we_are') }}</h1>
 
                                             <p
                                                 class="img-des paragraph-l"
@@ -112,7 +112,7 @@
                                                 class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex"
                                             >
                                                 <h2 class="h2 m-xxs-bottom">
-                                                    <b v-html="applyContentStyle('<p>{{ __('messages.what_we_do') }}</p>')"></b>
+                                                    <b v-html="applyContentStyle('<p>{{ __('messages.who_we_are') }}</p>')"></b>
                                                 </h2>
                                                 <div class="long-description richtext color-blue">
                                                     {!! $about['about_or_company_' . $lang] !!}

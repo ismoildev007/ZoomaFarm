@@ -19,7 +19,7 @@
 
                 <div>
                     <div class="background gutters component-padding" style="background-color: #fcf2f5">
-                        <div class="investornews-wrapper" v-cloak="">
+                        <div class="investornews-wrapper text-center" v-cloak="" style="text-align: center !important;">
                             <div class="titlegrid tb-Grid tb-Grid--24">
                                 <div
                                     class="titleframe frameinverted xsmall tb-GridColumn tb-GridColumn--l--19 tb-GridColumn--m--20 tb-GridColumn--offset--l--2">
@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
                             </div>
-                           <img style="width: 100%; object-fit: cover;"
+                           <img style="height: auto; object-fit: contain;"
      src="{{ asset('storage/'.$document['image_' . $lang]) }}"
      alt="News Image" />
                             <div class="tb-Grid tb-Grid--24">
@@ -40,6 +40,7 @@
                                     <div class="frame-box tb-Grid tb-Grid--l--24 tb-Grid--m--22 frame-padding">
                                         <div
                                             class="below-title-container tb-GridColumn tb-GridColumn--l--17 tb-GridColumn--m--20 tb-GridColumn--offset--l--4 tb-GridColumn--offset--m--1"
+                                            style="text-align: center"
                                         >
                                             @php
                                                 $date = \Carbon\Carbon::parse($document->date);
@@ -67,6 +68,7 @@
 
                                         <div
                                             class="news-content color-blue paragraph-l tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1"
+                                            style="text-align: left !important;"
                                         >
                                             <div class="section-wrapper richtext color-blue introtextsection">
                                                 <h2 class="subsubheader h2 m-m-bottom">

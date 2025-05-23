@@ -99,27 +99,15 @@
                                     <h5 class="card-title">Изображения и Дата</h5>
                                 </div>
                                 <div class="card-body p-4">
-                                    
+
                                     {{-- Rasm yuklash --}}
                                     <div class="form-group pb-3">
-                                        <label for="image">Изображение (UZ):</label>
+                                        <label for="image">Изображение </label>
                                         <input type="file" class="form-control" id="image" name="image">
                                         @if($responsibility->image)
                                             <img src="{{ asset('storage/' . $responsibility->image) }}" class="img-fluid mt-2" width="100">
                                         @endif
                                     </div>
-
-                                    {{-- Fayl yuklash --}}
-                                    <div class="form-group pb-3">
-                                        <label for="attachment">Файл (UZ):</label>
-                                        <input type="file" class="form-control" id="attachment" name="attachment">
-                                        @if($responsibility->attachment)
-                                            <a href="{{ asset('storage/' . $responsibility->attachment) }}" target="_blank" class="d-block mt-2">
-                                                <i class="feather icon-download"></i> Загруженный файл
-                                            </a>
-                                        @endif
-                                    </div>
-
                                 </div>
                             </div>
                         </div>

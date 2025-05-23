@@ -105,11 +105,11 @@
                             <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
                                 <div class="top-info m-s-bottom tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
                                     <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--16 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
-                                        <h1 class="h1-s m-xxs-bottom">{{ __('messages.certificates') }}</h1>
+                                        <h1 class="h1-s m-xxs-bottom" style="margin-left: 120px; text-align: start;">{{ __('messages.certificates') }}</h1>
                                     </div>
                                     <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--s--16 tb-GridColumn--xs--20 tb-GridColumn--offset--l--0">
                                         <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
-                                            <div class="leadtext description richtext color-white">
+                                            <div class="leadtext description richtext color-white" style="margin-left: 90px !important;">
                                                 {{ __('messages.certificat_description') }}<br />
                                             </div>
                                         </div>

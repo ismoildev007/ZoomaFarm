@@ -67,8 +67,8 @@
                                 >
                                     <div class="container">
                                         <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
-                                            <p class="tagline m-xxs-bottom">{{ __('messages.about_us') }}</p>
-                                            <h1 class="title smalltitle m-xs-bottom">{{ __('messages.what_we_do') }}</h1>
+                                            <p class="tagline m-xxs-bottom">{{ __('messages.about_team_us') }}</p>
+                                            <h1 class="title smalltitle m-xs-bottom">{{ __('messages.what_we_do_team') }}</h1>
 
                                             <p
                                                 class="img-des paragraph-l"

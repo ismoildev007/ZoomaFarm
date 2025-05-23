@@ -28,7 +28,7 @@ return array (
   'selected_stories' => 'Selected Stories',
   'promoting_changes' => 'Promoting Changes',
   'promoting_changes_description' => NULL,
-  'what_we_do' => 'ABOUT THE COMPANY',
+  'what_we_do' => 'Leadership and management',
   'medicines' => 'Medicines',
   'insulin_description' => 'Sog‘lom hayot sari ishonchli qadam – ZUMA PHARMA mahsulotlari bilan! Biz sifat, ishonch va samaradorlikni birlashtiramiz.',
   'career' => 'Career',
@@ -53,6 +53,8 @@ return array (
   'read_more_text' => 'Read more',
   'about_us' => 'Team members',
   'who_we_are' => 'Who We Are',
+    'about_team_us' => 'Jamoa a\'zolari',
+    'what_we_do_team' => 'Rahbariyat va boshqaruv',
   'facts_and_figures' => 'Facts and Figures',
   'production_sites' => '16 production sites in countries (Algeria, Brazil, China, Denmark, France, Japan, Russia, United Kingdom, and USA)',
   'research_centers' => '10 research and development centers (China, Denmark, India, United Kingdom, and USA)',
@@ -92,7 +94,7 @@ return array (
   'your_message' => 'Your Message',
   'send' => 'Send',
   'year' => 'year',
-  'months' => 
+  'months' =>
   array (
     1 => 'January',
     2 => 'February',

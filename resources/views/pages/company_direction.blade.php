@@ -1,116 +1,116 @@
+
+<style>
+    #careersearch .career-search-content {
+        position: relative;
+        min-height: 100%;
+        z-index: 1;
+    }
+
+    #careersearch .career-search-content .top-info {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        text-align: right;
+        width: auto;
+        animation: slideUpFromBottom 1s ease-out 0.5s forwards;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    #careersearch .career-search-content .tb-GridColumn--l--20 {
+        position: static;
+    }
+
+    #careersearch .career-search-content .leadtext.description.richtext.color-white {
+        margin: 0;
+        padding: 10px;
+    }
+
+    #careersearch .gradient-cover {
+        z-index: 0;
+    }
+
+    @keyframes slideUpFromBottom {
+        0% {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #careersearch .career-search-content .top-info {
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+        }
+    }
+</style>
 @extends('layouts.pages')
 
 @section('content')
     <div class="root responsivegrid">
         <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
-            <div class="supergraphic focuspointimage image aem-GridColumn aem-GridColumn--default--12">
+            <div class="careersearch focuspointimage image aem-GridColumn aem-GridColumn--default--12">
                 <link rel="stylesheet" href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/gradient-cover.min.css" type="text/css" /><link
                     rel="stylesheet"
                     href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.css"
                     type="text/css"
-                /><link
+                /><link rel="stylesheet" href="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/general-video.min.css" type="text/css" /><link
                     rel="stylesheet"
-                    href="../../etc.clientlibs/nncorp/components/content/supergraphic/clientlib.min.8a33ce8cddfa7f9231da5479d3864335.css"
+                    href="../../etc.clientlibs/nncorp/components/careers/careersearch/clientlib.min.c9cf85213e5945652b71773e47b0c113.css"
                     type="text/css"
                 />
 
-                <div id="supergraphic" class="super-graphic-wrapper" :class="readDetails" style="background-color: white">
-                    <div class="box box-image tb-Grid tb-Grid--24 tb-Grid--l--24">
-                        <div class="image">
-                            <template v-if="isDisplayGradient">
-                                <gradient-cover
-                                    :visibility="true"
-                                    :bottom-content-height="gradientBottomHeight"
-                                    :dynamic-gradient="true"
-                                    :disabled-areas="{top: true}"
-                                ></gradient-cover>
-                            </template>
-
-                            <focuspoint-image
-                                :image-url="'{{ asset('storage/' . $missions->image) }}'"
-                                :coordinates="'0.04:0.30'"
-                                :dynamic-media-info="{
+                <div id="careersearch" class="career-search-wrapper white" style="background-color: white" v-cloak="">
+                    <div v-if="true || isMobile" class="background-wrapper image">
+                        <focuspoint-image
+                            :image-url="'/content/dam/nncorp/language-masters/uz/careers/images/NN_EVP_Beijing_RNGG_MCES_LLJG'"
+                            :coordinates="'0.33:0.35'"
+                            :dynamic-media-info="{
                             dynamicMediaImagePath: '{{ asset('storage/' . $missions->image) }}',
                             disableDynamicMedia: false,
                             mobileDynamicMediaWidth: '525',
                             tabletPortraitDynamicMediaWidth: '768',
                             tabletLandscapeDynamicMediaWidth: '1280',
-                            desktopDynamicMediaWidth: '1440',
+                            desktopDynamicMediaWidth: '2000',
                             jpegQuality: '90',
                             urlModifiers: ''
                           }"
-                                :renditions-image-info="{
+                            :renditions-image-info="{
                             typeOfRendition: '',
                             mobileRenditionSuffix: '.corpimgw.525.525.jpg',
                             tabletPortraitRenditionSuffix: '.corpimgw.768.768.jpg',
                             tabletLandscapeRenditionSuffix: '.corpimgw.1280.1280.jpg',
                             desktopRenditionSuffix: '.corpimgw.2000.2000.jpg'
-                            }"
-                                :has-prohibited-extension="'false'"
-                            >
-                            </focuspoint-image>
-
-                            <div class="image-info m-xxs-top desktop" ref="imageInfo">
-                                <div><b class="infotext" v-html="applyContentStyle('')"></b></div>
-                                <div><span class="infotext" v-html="applyContentStyle('')"></span></div>
-                            </div>
-                        </div>
-                        <div class="overlay gutters">
-                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24 full-height">
-                                <div
-                                    class="tb-GridColumn tb-GridColumn--l--24 full-height tb-GridColumn--m--20 tb-GridColumn--offset--m--2 tb-GridColumn--xs--20 tb-GridColumn--offset--xs--2"
-                                >
-                                    <div class="container">
-                                        <div class="title-wrapper mobileScreenHeight" ref="titleContainer" v-cloak="">
-                                            <p class="tagline m-xxs-bottom" v-html="applyContentStyle('{{ __('messages.about_us') }}')"></p>
-                                            <h1 class="title smalltitle m-xs-bottom" v-html="applyContentStyle('{{ __('messages.who_we_are') }}')"></h1>
-
-                                            <p
-                                                class="img-des paragraph-l"
-                                                v-html="applyContentStyle('{{ $aboutTeam['short_content_' . $lang] }}')"
-                                            ></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-box display-flex">
-                                <span class="icon icon-right-arrow-white"></span>
-                            </div>
-                        </div>
-                        <div
-                            ref="section-wraper"
-                            class="section-wraper gutters component-padding-topAndBottom tb-GridColumn tb-GridColumn--l--24"
-                            style="background-color: white !important"
+                          }"
+                            :has-prohibited-extension="'false'"
                         >
-                            <div class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24">
-                                <div
-                                    class="frame tb-GridColumn tb-GridColumn--l--24 tb-GridColumn--m--22 tb-GridColumn--offset--m--1 tb-GridColumn--xs--24 tb-GridColumn--offset--xs--0"
-                                >
-                                    <div class="long-container" style="background-color: white" :style="longContainerStyleMobile">
-                                        <div
-                                            :class="{'p-l-top' : !isMobileSize}"
-                                            class="tb-Grid tb-Grid--24 tb-Grid--l--24 tb-Grid--m--24 tb-Grid--xs--24"
-                                            :style="longContainerStyle"
-                                        >
-                                            <div
-                                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 m-xs-bottom m-xs-top image-info mobile"
-                                            >
-                                                <div>
-                                                    <b class="infotext" v-html="applyContentStyle('')"></b>
-                                                </div>
-                                                <div>
-                                                    <span class="infotext" v-html="applyContentStyle('')"></span>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2 tb-GridColumn--m--22 tb-GridColumn--xs--20 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--2 text-container display-flex"
-                                            >
-                                                <h2 class="h2 m-xxs-bottom">
-                                                    <b v-html="applyContentStyle('{!! $missions['title_' . $lang] !!}')"></b>
-                                                </h2>
-                                                <div class="long-description richtext color-blue">
-                                                    {!! $missions['description_' . $lang] !!}
-                                                </div>
+                        </focuspoint-image>
+                    </div>
+                    <div v-if="false && !isMobile" class="background-wrapper video">
+                        <div class="video-wrapper">
+                            <general-video alt="Novo Nordisk Pekin. Hamkasblar yurib ketishyapti. "> </general-video>
+                        </div>
+                    </div>
+                    <div class="icon-box display-flex">
+                        <span class="icon icon-right-arrow-white"></span>
+                    </div>
+                    <gradient-cover :visibility="fullImageLoaded"></gradient-cover>
+                    <div class="career-search-content gutters">
+                        <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
+                            <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
+                                <div class="top-info m-s-bottom tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20" style="margin-left: 70px !important;">
+                                    <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--16 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
+                                        <h1 class="h1-s m-xxs-bottom" style="text-align: start;">{{ $missions['title_' . $lang] }}</h1>
+                                    </div>
+                                    <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--s--16 tb-GridColumn--xs--20 tb-GridColumn--offset--l--0">
+                                        <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
+                                            <div class="leadtext description richtext color-white">
+                                                {!! $missions['description_' . $lang]  !!}<br />
                                             </div>
                                         </div>
                                     </div>
@@ -120,16 +120,19 @@
                     </div>
                 </div>
 
+                <script type="text/javascript" src="../../etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.652a558c3774088b61b0530c184710d1.js"></script>
+                <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/services/base-http.min.0977b3d22d6ef3c04a2b1fc94d6581bc.js"></script>
                 <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/gradient-cover.min.js"></script>
                 <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/focuspoint-image.min.js"></script>
+                <script type="text/javascript" src="../../etc.clientlibs/nncorp/clientlibs/vuejs/components/general-video.min.js"></script>
                 <script
                     type="text/javascript"
-                    src="../../etc.clientlibs/nncorp/components/content/supergraphic/clientlib.min.a6c04bd87d43dc3059886559ee41a1de.js"
+                    src="../../etc.clientlibs/nncorp/components/careers/careersearch/clientlib.min.03d59ff5048168c7467f493bab79f5b1.js"
                     async=""
                 ></script>
             </div>
 
-            
+
 
             <div class="imagevideotext focuspointimage image aem-GridColumn aem-GridColumn--default--12">
                 <div>
@@ -261,6 +264,9 @@
                                     class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--m--20 tb-GridColumn--xs--20 tb-GridColumn--offset--l--2 tb-GridColumn--offset--m--1 tb-GridColumn--offset--xs--1"
                                 >
                                     <div class="columns m-m-top">
+                                        <div class="left-column">
+                                            <h3 class="h2 color-blue">{!! $values['title_' . $lang] !!}</h3>
+                                        </div>
                                         <div class="right-column color-blue paragraph-l tb-Grid tb-Grid-24 tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--offset--l--10">
                                             <div class="section-wrapper richtext color-blue introtextsection m-m-bottom">
                                                 <h4 class="h3 color-blue subsubheader" v-html="applyContentStyle('')"></h4>
@@ -268,9 +274,6 @@
                                                     {!! $values['description_' . $lang] !!}
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="left-column">
-                                            <h3 class="h2 color-blue">{!! $values['title_' . $lang] !!}</h3>
                                         </div>
                                     </div>
                                 </div>

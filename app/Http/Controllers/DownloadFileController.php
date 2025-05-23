@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DownloadFileController extends Controller
 {
-        public function index()
+    public function index()
     {
         $file = DownloadFile::first();
 
@@ -15,16 +15,16 @@ class DownloadFileController extends Controller
     }
 
     public function edit($id)
-    {   
+    {
         $filename = DownloadFile::find($id)->file_name;
-        return view('admin.fayl.edit', compact('id','filename'));
+        return view('admin.fayl.edit', compact('id', 'filename'));
     }
 
 
     public function update($id, Request $request)
     {
         $request->validate([
-        'file' => 'required|mimes:pdf|max:10240', // 10MB ga qadar faqat PDF fayl
+            'file' => 'required|mimes:pdf|max:10240', // 10MB ga qadar faqat PDF fayl
         ]);
 
         $file = DownloadFile::find($id);
@@ -34,40 +34,38 @@ class DownloadFileController extends Controller
         }
 
         $oldFilePath = public_path('uploads/' . $file->file_name);
-        
+
         if (file_exists($oldFilePath)) {
             unlink($oldFilePath);
         }
 
         if ($request->hasFile('file')) {
             $newFile = $request->file('file');
-            $newFileName =$newFile->getClientOriginalName();
-            
+            $newFileName = time() . '.' . $newFile->getClientOriginalExtension();
             $newFile->storeAs('public/pdf', $newFileName);
-            
+
             $file->update([
                 'file_name' => $newFileName,
             ]);
 
             return redirect()->route('file.index')->with('success', 'Fayl muvaffaqiyatli yangilandi!');
-            return redirect()->back()->with('success', 'Fayl muvaffaqiyatli yangilandi!');
-
-            }
-            return redirect()->back()->with('success', 'Yangi fayl yuborilmadi');
 
         }
+    }
 
     public function downloadFile()
-        {
-            $id=1;
-            $file = DownloadFile::findOrFail($id);
+    {
+        $id = 1;
+        $file = DownloadFile::findOrFail($id);
 
-            $filePath = storage_path('app/public/pdf/' . $file->file_name);
-            if (file_exists($filePath)) {
-                return response()->download($filePath, $file->file_name);
-            } else {
-                abort(404, 'Fayl topilmadi');
-            }
+        $filePath = storage_path('/app/public/public/pdf/' . $file->file_name);
+//        dd($filePath);
+        if (file_exists($filePath)) {
+            return response()->download($filePath, $file->file_name);
+        } else {
+            logger("Fayl topilmadi: " . $filePath);
+            abort(404, 'Fayl topilmadi');
         }
+    }
 
 }

@@ -8,7 +8,7 @@
 #careersearch .career-search-content .top-info {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     text-align: right;
     width: auto;
     animation: slideUpFromBottom 1s ease-out 0.5s forwards;
@@ -100,14 +100,14 @@
                         <span class="icon icon-right-arrow-white"></span>
                     </div>
                     <gradient-cover :visibility="fullImageLoaded"></gradient-cover>
-                    <div class="career-search-content gutters">
+                    <div class="career-search-content gutters" style="display: flex; align-items: end;" >
                         <div class="tb-Grid tb-Grid--l--24 tb-Grid--m--24 tb-Grid--s--24 tb-Grid--xs--24">
-                            <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2">
-                                <div class="top-info m-s-bottom tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20">
-                                    <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--16 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
-                                        <h1 class="h1-s m-xxs-bottom">{{ __('messages.career_opportunities') }}</h1>
+                            <div class="tb-GridColumn tb-GridColumn--l--20 tb-GridColumn--offset--l--2" style="margin-left: 0;">
+                                <div class="top-info m-s-bottom tb-Grid tb-Grid--l--20 tb-Grid--m--20 tb-Grid--s--20 tb-Grid--xs--20" style="position: unset; margin-bottom: 10%;">
+                                    <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--m--16 tb-GridColumn--s--20 tb-GridColumn--offset--l--0" style="width: auto;">
+                                        <h1 class="h1-s m-xxs-bottom" >{{ __('messages.career_opportunities') }}</h1>
                                     </div>
-                                    <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--s--16 tb-GridColumn--xs--20 tb-GridColumn--offset--l--0">
+                                    <div class="tb-GridColumn tb-GridColumn--l--10 tb-GridColumn--s--16 tb-GridColumn--xs--20 tb-GridColumn--offset--l--0" style="width: auto;">
                                         <div class="tb-GridColumn tb-GridColumn--l--13 tb-GridColumn--s--20 tb-GridColumn--offset--l--0">
                                             <div class="leadtext description richtext color-white">
                                                 {{ __('messages.career_description') }}<br />
